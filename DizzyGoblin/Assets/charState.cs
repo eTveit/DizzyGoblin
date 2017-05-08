@@ -9,38 +9,41 @@ public class charState : MonoBehaviour {
     public Transform terrain = null;
     public float heightOffset = 0;
 
+    public float rotationSpeed = 0;
+    public float rotationBoost = 0;
+
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-    
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update() {
+
         float x = transform.position.x;
         float z = transform.position.z;
-        float speed = 1.5f;
+        float speed = 2.5f;
 
 
         //TODO: refactor this into a control FSM 
         //(see steering from last semester)
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.LeftArrow))
             x = x + speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.RightArrow))
             x = x - speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.UpArrow))
             z = z - speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.DownArrow))
             z = z + speed * Time.deltaTime;
 
-        float y = transform.position.y;       
+        float y = transform.position.y;
 
         // place the dude
         //first  get the exact height
-        float goalY = terrain.GetComponent<TerrainMesh>().getHeightAt( new Vector3(x, 1, z) ) + heightOffset;
+        float goalY = terrain.GetComponent<TerrainMesh>().getHeightAt(new Vector3(x, 1, z)) + heightOffset;
 
         Vector3 goalpos = new Vector3(x, goalY, z);
 
@@ -48,5 +51,20 @@ public class charState : MonoBehaviour {
         //and set new position
         transform.position = Vector3.Lerp(transform.position, goalpos, Time.deltaTime * 10);
 
+        Rotate();
+
+    }
+
+    void Rotate() {
+        if(Mathf.Cos((Time.time*4) + 3.141593f) > 0.9f) {
+            rotationBoost = 50;
+        }
+        else {
+            rotationBoost = 0;
+        }
+
+        // this is not physics, it should be rebuilt
+        Quaternion rotation = Quaternion.AngleAxis(-(rotationSpeed + rotationBoost) * Time.deltaTime, transform.up);
+        transform.rotation *= rotation;
     }
 }

@@ -14,9 +14,27 @@ public class charState : MonoBehaviour {
     public float rotationSpeed = 0;
     public float rotationBoost = 0;
 
+    public Transform lFootTarget = null;
+    private targetMove lWalkingTarget = null;
+    private targetMoveSpin lSpinningTarget = null;
+    public Transform rFootTarget = null;
+    private targetMove rWalkingTarget = null;
+    private targetMoveSpin rSpinningTarget = null;
+
+    private enum MovementState { walking, spinning };
+    private MovementState myMovementState = MovementState.walking;
+
     // Use this for initialization
     void Start() {
+        lWalkingTarget = lFootTarget.GetComponent<targetMove>();
+        lSpinningTarget = lFootTarget.GetComponent<targetMoveSpin>();
+        rWalkingTarget = rFootTarget.GetComponent<targetMove>();
+        rSpinningTarget = rFootTarget.GetComponent<targetMoveSpin>();
 
+        lWalkingTarget.enabled = true;
+        lSpinningTarget.enabled = false;
+        rWalkingTarget.enabled = true;
+        rSpinningTarget.enabled = false;
     }
 
     // Update is called once per frame
@@ -53,8 +71,29 @@ public class charState : MonoBehaviour {
         //and set new position
         transform.position = Vector3.Lerp(transform.position, goalpos, Time.deltaTime * 10);
 
-        if(rotationSpeed != 0) {
+        if(myMovementState == MovementState.spinning) {
             Rotate();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            SwitchState();
+        }
+    }
+
+    void SwitchState() {
+        if(myMovementState == MovementState.walking) {
+            myMovementState = MovementState.spinning;
+            lWalkingTarget.enabled = false;
+            lSpinningTarget.enabled = true;
+            rWalkingTarget.enabled = false;
+            rSpinningTarget.enabled = true;
+        }
+        else if(myMovementState == MovementState.spinning) {
+            myMovementState = MovementState.walking;
+            lWalkingTarget.enabled = true;
+        lSpinningTarget.enabled = false;
+        rWalkingTarget.enabled = true;
+        rSpinningTarget.enabled = false;
         }
     }
 

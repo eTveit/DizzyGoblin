@@ -103,16 +103,25 @@ public class Segment3d : MonoBehaviour
     public void pointAt(Vector3 target)
     {
         transform.LookAt(target);
-       
-    }
+
+		Quaternion rot = transform.localRotation;
+		Vector3 euler = rot.eulerAngles;
+
+		euler.Set(euler.x, euler.y, 0);  //we can clamp all other axes
+
+		transform.localRotation = Quaternion.Euler(euler.x, euler.y, euler.z);
+
+	}
 
     public void drag(Vector3 target)
     {
         if (interpolate)
             pointAtInterpolated(target);
-        else if (limitX > 0)
+        else if (limitX > 0 )
             pointAtLimitX(target);
-        else
+		else if (xtraX > 0)
+			pointAtLimitX(target);
+		else
             pointAt(target);
 
 

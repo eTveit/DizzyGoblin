@@ -8,7 +8,7 @@ public class TerrainMesh : MonoBehaviour {
 
     public int xSize, zSize;
 
-    private Mesh mesh;
+    public Mesh mesh;
     private Vector3[] verts;  // I want a buffer of my initial verts
 
     //to debug the wave
@@ -43,7 +43,10 @@ public class TerrainMesh : MonoBehaviour {
 
 
     }
-
+	void placeTrees()
+	{
+		//mesh.vertices
+	}
 
     void Generate()
     {
@@ -136,12 +139,14 @@ public class TerrainMesh : MonoBehaviour {
 
     }
 
-    /*
+    
     private void OnDrawGizmos()
     {
+		if (mesh == null)
+			return;
 
-        if (mesh.vertices == null)
-            return;
+		if (mesh.vertices == null)
+			return;
 
         Gizmos.color = Color.black;
         for (int i = 0; i < mesh.vertices.Length; i++)
@@ -150,7 +155,7 @@ public class TerrainMesh : MonoBehaviour {
         }
 
     }
-    */
+    
 
     public float getHeightAt(Vector3 pos)
     {

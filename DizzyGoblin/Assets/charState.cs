@@ -13,6 +13,7 @@ public class charState : MonoBehaviour {
 
     public float rotationSpeed = 0;
     public float rotationBoost = 0;
+    private bool boostRotation = false;
 
     public Transform lFootTarget = null;
     private targetMove lWalkingTarget = null;
@@ -42,28 +43,28 @@ public class charState : MonoBehaviour {
 
         float x = transform.position.x;
         float z = transform.position.z;
-        
+
 
 
         //TODO: refactor this into a control FSM 
         //(see steering from last semester)
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.LeftArrow))
             x = x + speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.RightArrow))
             x = x - speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.UpArrow))
             z = z - speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.DownArrow))
             z = z + speed * Time.deltaTime;
 
-        float y = transform.position.y;       
+        float y = transform.position.y;
 
         // place the dude
         //first  get the exact height
-        float goalY = terrain.GetComponent<TerrainMesh>().getHeightAt( new Vector3(x, 1, z) ) + heightOffset;
+        float goalY = terrain.GetComponent<TerrainMesh>().getHeightAt(new Vector3(x, 1, z)) + heightOffset;
 
         Vector3 goalpos = new Vector3(x, goalY, z);
 
@@ -78,6 +79,10 @@ public class charState : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Q)) {
             SwitchState();
         }
+
+        if(Input.GetKeyDown(KeyCode.F)) {
+            SwitchRotateDirection();
+        }
     }
 
     void SwitchState() {
@@ -91,22 +96,53 @@ public class charState : MonoBehaviour {
         else if(myMovementState == MovementState.spinning) {
             myMovementState = MovementState.walking;
             lWalkingTarget.enabled = true;
-        lSpinningTarget.enabled = false;
-        rWalkingTarget.enabled = true;
-        rSpinningTarget.enabled = false;
+            lSpinningTarget.enabled = false;
+            rWalkingTarget.enabled = true;
+            rSpinningTarget.enabled = false;
         }
     }
 
     void Rotate() {
         if(Mathf.Cos((Time.time * 4) + 3.141593f) > 0.9f) {
-            rotationBoost = 50;
+            boostRotation = true;
         }
         else {
-            rotationBoost = 0;
+            boostRotation = false;
+        }
+        Quaternion rotation = new Quaternion(0,0,0,0);
+        // this is not physics, it should be rebuilt
+        if(boostRotation) {
+            rotation = Quaternion.AngleAxis(-(rotationSpeed + rotationBoost) * Time.deltaTime, transform.up);
+        }
+        else {
+            rotation = Quaternion.AngleAxis(-(rotationSpeed) * Time.deltaTime, transform.up);
         }
 
-        // this is not physics, it should be rebuilt
-        Quaternion rotation = Quaternion.AngleAxis(-(rotationSpeed + rotationBoost) * Time.deltaTime, transform.up);
         transform.rotation *= rotation;
+    }
+
+    void SwitchRotateDirection() {
+        //temp storage of values
+        float lPhase = lSpinningTarget.phase;
+        float lSpeed = lSpinningTarget.speed;
+        float lRange = lSpinningTarget.range;
+        float lCircularHeight = lSpinningTarget.circularHeight;
+        float rPhase = rSpinningTarget.phase;
+        float rSpeed = rSpinningTarget.speed;
+        float rRange = rSpinningTarget.range;
+        float rCircularHeight = rSpinningTarget.circularHeight;
+
+        //assign values to opposite legs
+        lSpinningTarget.phase = rPhase;
+        lSpinningTarget.speed = rSpeed;
+        lSpinningTarget.range = rRange;
+        lSpinningTarget.circularHeight = rCircularHeight;
+        rSpinningTarget.phase = lPhase;
+        rSpinningTarget.speed = lSpeed;
+        rSpinningTarget.range = lRange;
+        rSpinningTarget.circularHeight = lCircularHeight;
+
+        rotationSpeed = -rotationSpeed;
+        rotationBoost = -rotationBoost;
     }
 }

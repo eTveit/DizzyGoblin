@@ -25,6 +25,8 @@ public class charState : MonoBehaviour {
     private enum MovementState { walking, spinning };
     private MovementState myMovementState = MovementState.walking;
 
+    public bool isSpinning = false;
+
     // Use this for initialization
     void Start() {
         lWalkingTarget = lFootTarget.GetComponent<targetMove>();
@@ -74,6 +76,10 @@ public class charState : MonoBehaviour {
 
         if(myMovementState == MovementState.spinning) {
             Rotate();
+            isSpinning = true;
+        }
+        else {
+            isSpinning = false;
         }
 
         if(Input.GetKeyDown(KeyCode.Q)) {
@@ -109,7 +115,7 @@ public class charState : MonoBehaviour {
         else {
             boostRotation = false;
         }
-        Quaternion rotation = new Quaternion(0,0,0,0);
+        Quaternion rotation = new Quaternion(0, 0, 0, 0);
         // this is not physics, it should be rebuilt
         if(boostRotation) {
             rotation = Quaternion.AngleAxis(-(rotationSpeed + rotationBoost) * Time.deltaTime, transform.up);

@@ -20,6 +20,7 @@ public class targetMove : MonoBehaviour {
 
 	public Transform AvatarObj;
 	private charState AvatarState;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -31,11 +32,13 @@ public class targetMove : MonoBehaviour {
 	void Update ()
     {
 		speed = AvatarState.speed;
+    
         //to keep our targets in line with the hips, we simply want to
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
         lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
+
 
         //set the local
         transform.localPosition = lpos;
@@ -44,7 +47,7 @@ public class targetMove : MonoBehaviour {
         Vector3 pos = transform.position;
         float y = mesh.getHeightAt(pos);
         pos.y = y + 0.2f;
-
+        
         //set the final position
         transform.position = pos;
 

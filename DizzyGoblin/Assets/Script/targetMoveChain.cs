@@ -30,7 +30,7 @@ public class targetMoveChain : targetMove {
     }
 
     void MoveChain(Vector3 targetPos) {
-        print(targetPos);
+        //print(targetPos);
         transform.localPosition = Vector3.Slerp(transform.localPosition, targetPos, Time.deltaTime * 4);
     }
 }

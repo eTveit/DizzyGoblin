@@ -22,8 +22,6 @@ ExportedObj/
 
 # Unity3D generated meta files
 *.pidb.meta
-*.meta
-
 *.fbx
 *.png
 
@@ -33,11 +31,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-DizzyGoblin/Temp/UnityLockfile
 *.dwlt
-DizzyGoblin/Library/metadata/1d/1de73abac82c4274b97beb02b60db02e
-DizzyGoblin/Library/ScriptAssemblies/Assembly-CSharp.dll
 *.dll
-DizzyGoblin/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
 *.mdb
 Library

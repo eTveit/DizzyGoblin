@@ -36,8 +36,8 @@ public class IKSystem3dTrees : MonoBehaviour
         firstSegment = segments[0];
         lastSegment = segments[childcount - 1];
 
-		Debug.Log(firstSegment.transform.name);
-		Debug.Log(lastSegment.transform.name);
+		//Debug.Log(firstSegment.transform.name);
+		//Debug.Log(lastSegment.transform.name);
 	}
 
     // Update is called once per frame

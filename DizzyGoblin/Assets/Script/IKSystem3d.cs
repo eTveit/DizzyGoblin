@@ -34,7 +34,7 @@ public class IKSystem3d : MonoBehaviour
 
 
         firstSegment = segments[0];
-        lastSegment = segments[childcount - 2];  //keep foot around for now
+        lastSegment = segments[childcount - 1];  
     }
 
     // Update is called once per frame

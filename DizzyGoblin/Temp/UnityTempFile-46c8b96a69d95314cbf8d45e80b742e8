@@ -78,18 +78,22 @@
 -define:UNITY_EDITOR_WIN
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
-Assets/IKSystem3d.cs
-Assets/MakeTrees.cs
-Assets/RootState.cs
-Assets/Segment3d.cs
-Assets/StateNode.cs
-Assets/TerrainMesh.cs
-Assets/charState.cs
-Assets/follow.cs
-Assets/hipBounce.cs
-Assets/rotateCenter.cs
-Assets/targetMove.cs
-Assets/targetMoveSpin.cs
+Assets/Script/IKSystem3d.cs
+Assets/Script/IKSystem3dTrees.cs
+Assets/Script/MakeFence.cs
+Assets/Script/MakeTrees.cs
+Assets/Script/RootState.cs
+Assets/Script/Segment3d.cs
+Assets/Script/Segment3dTrees.cs
+Assets/Script/StateNode.cs
+Assets/Script/TerrainMesh.cs
+Assets/Script/charState.cs
+Assets/Script/follow.cs
+Assets/Script/hipBounce.cs
+Assets/Script/rotateCenter.cs
+Assets/Script/targetMove.cs
+Assets/Script/targetMoveSpin.cs
+Assets/Script/targetMoveTrees.cs
 -r:"D:\Program Files\Unity_5.5.1f1\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
 -r:"D:\Program Files\Unity_5.5.1f1\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
 -r:"D:\Program Files\Unity_5.5.1f1\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"

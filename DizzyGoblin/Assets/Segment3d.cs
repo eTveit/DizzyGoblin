@@ -28,7 +28,7 @@ public class Segment3d : MonoBehaviour
 
         updateSegment();
 
-        //update its children
+        //update its children!!!
         if (child)
             child.updateSegmentAndChildren();
     }

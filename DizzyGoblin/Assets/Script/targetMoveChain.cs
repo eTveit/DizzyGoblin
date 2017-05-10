@@ -23,8 +23,8 @@ public class targetMoveChain : targetMove {
         else {
             //This math needs to be fixed!
             Vector3 groundPos = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
-            float yDiff = mesh.getHeightAt(transform.position) + transform.position.y;
-            groundPos.y = initialPos.y - yDiff;
+            //float yDiff = mesh.getHeightAt(transform.position);
+            groundPos.y = -5;
             MoveChain(groundPos);
         }
     }

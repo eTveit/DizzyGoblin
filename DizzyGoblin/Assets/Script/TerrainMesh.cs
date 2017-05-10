@@ -131,6 +131,10 @@ public class TerrainMesh : MonoBehaviour {
         pnp.power = 1.5f;
         pnp.MakeSomeNoise(mesh);
 
+		//make specific hills
+
+
+
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
@@ -139,23 +143,6 @@ public class TerrainMesh : MonoBehaviour {
 
     }
 
-    
-    private void OnDrawGizmos()
-    {
-		if (mesh == null)
-			return;
-
-		if (mesh.vertices == null)
-			return;
-
-        Gizmos.color = Color.black;
-        for (int i = 0; i < mesh.vertices.Length; i++)
-        {
-            Gizmos.DrawSphere(mesh.vertices[i], 0.1f);
-        }
-
-    }
-    
 
     public float getHeightAt(Vector3 pos)
     {

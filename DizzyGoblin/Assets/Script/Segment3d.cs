@@ -13,14 +13,46 @@ public class Segment3d : MonoBehaviour
     public Segment3d parent = null;
     public Segment3d child = null;
     public bool interpolate = false;
-    public float limitX = 0;
-    public float xtraX = 0;
+	public float interpRate = 1.0f;
 
-    private Vector3 goalTarget;
+	//keep a reference to the character's forward facing
+	//and the thing that actually owns me
+	public Transform hips;
+	
+	//compensation/clamping values on each axis
+    public float Xcomp = 0;
+    public float Ycomp = 0;
+	public float Zcomp = 0;
+	public float Xrange = 1.0f;
+	public float Yrange = 0.5f;
+	public float Zrange = 0.2f;
 
+	public float Xaccum = 0;
+
+	//dot product to the next joint
+	public float dotNext;
+
+	public bool isRight = false;
+	public bool isTerminus = false;
+
+	//if interpolated
+	private Vector3 goalEuler;
+	private float lastx = 0;
+
+	private void Awake()
+	{
+		//calculate the length from me to my child, based on my initial
+		//pivot positions that we manually manipulated in the editor
+		if (child)
+		{
+			length = Vector3.Distance(transform.position, child.transform.position);
+		}
+
+	}
     void Start()
     {
-       
+		//WARNING: If you don't have a start method, you don't get the enabled box in the inspector! 	
+
     }
 
     public void updateSegmentAndChildren()
@@ -57,49 +89,6 @@ public class Segment3d : MonoBehaviour
         Bpos = Apos + transform.forward * length;
     }
     
-    public void pointAtInterpolated(Vector3 target)
-    {
-        goalTarget = target;
-        Quaternion rotA = transform.rotation;  //get current
-        transform.LookAt(target);              //look at target to get our goal rotation
-        Quaternion rotB = transform.rotation;
-                
-        //slerp the rotation
-        rotA = Quaternion.Slerp(rotA, rotB, Time.deltaTime * 10.0f );
-        //set the rotation to the slerped value (undo the previous lookat)
-        transform.rotation = rotA;
-
-    }
-    public void pointAtLimitX(Vector3 target)
-    {
-        //get our proposed rotation
-        transform.LookAt(target);
-
-        Quaternion rot = transform.localRotation;
-        Vector3 euler = rot.eulerAngles;
-
-        euler.Set(euler.x, 0, 0);  //we can clamp all other axes
-
-        if (euler.x > limitX && limitX !=0 )
-        {
-            transform.localRotation = Quaternion.Euler(limitX + xtraX, euler.y, euler.z);
-            //probably need to pass the difference up to the parent
-            if (parent != null)
-            {
-                parent.xtraX = euler.x - limitX;
-            }
-        }
-        else
-        {
-
-            transform.localRotation = Quaternion.Euler(euler.x + xtraX, euler.y, euler.z);
-            if (parent != null)
-            {
-                parent.xtraX = 0;
-            }
-        }
-
-    }
     public void pointAt(Vector3 target)
     {
         transform.LookAt(target);
@@ -107,7 +96,37 @@ public class Segment3d : MonoBehaviour
 		Quaternion rot = transform.localRotation;
 		Vector3 euler = rot.eulerAngles;
 
-		euler.Set(euler.x, 0, 0);  //we can clamp all other axes
+		float x = euler.x;
+		float z = euler.z;
+		float y = euler.y;
+
+		float xt = x ;
+		if (xt > 180)
+			xt -= 360;
+
+		if (parent )
+		{
+			if (xt < 0)
+			{
+				float d = lastx - xt;
+				x +=  (d/2);
+				parent.Xaccum = -d/2;
+			}
+			else
+				lastx = x;
+		}
+			
+
+		//left or right leg invert the clamp/z rot
+		//perhaps a setable value per joint?
+		euler.Set(x * Xrange - Xcomp + Xaccum, y * Yrange - Ycomp, z * Zrange - Zcomp);
+
+		if (interpolate)
+		{
+			goalEuler = euler;			//set the goal rotation
+			euler = rot.eulerAngles;    //reset the current rotation
+			euler = Vector3.Slerp(euler, goalEuler, Time.deltaTime * interpRate);
+		}
 
 		transform.localRotation = Quaternion.Euler(euler.x, euler.y, euler.z);
 

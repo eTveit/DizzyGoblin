@@ -125,12 +125,12 @@ public class TerrainMesh : MonoBehaviour {
         }
 
         mesh.triangles = triangles;
-
+		
         PerlinNoisePlane pnp = new PerlinNoisePlane();
-        pnp.scale = 1.5f;
-        pnp.power = 1.5f;
+        pnp.scale = 0.5f;
+        pnp.power = 0.5f;
         pnp.MakeSomeNoise(mesh);
-
+		
 		//make specific hills
 
 

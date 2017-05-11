@@ -34,7 +34,14 @@ public class IKSystem3d : MonoBehaviour
 
 
         firstSegment = segments[0];
-        lastSegment = segments[childcount - 1];  
+		//terminus is a dummy segement used only to find the length of the
+		//true last segement. it's segement code is disabled, though it can
+		//have its own script component, such as the case for the foot.
+		if (segments[childcount - 1].isTerminus)    
+			lastSegment = segments[childcount - 2];
+		else
+			lastSegment = segments[childcount - 1];
+		  
     }
 
     // Update is called once per frame

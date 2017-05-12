@@ -103,7 +103,7 @@ public class Segment3d : MonoBehaviour
 		float xt = x ;
 		if (xt > 180)
 			xt -= 360;
-
+		/*
 		if (parent )
 		{
 			if (xt < 0)
@@ -115,7 +115,7 @@ public class Segment3d : MonoBehaviour
 			else
 				lastx = x;
 		}
-			
+		*/
 
 		//left or right leg invert the clamp/z rot
 		//perhaps a setable value per joint?

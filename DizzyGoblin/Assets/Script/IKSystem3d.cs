@@ -29,17 +29,19 @@ public class IKSystem3d : MonoBehaviour
         foreach (Transform child in transform)
         {
             segments[i] = child.GetComponent<Segment3d>();
+            segments[i].IKsys = this;
             i++;
         }
 
 
         firstSegment = segments[0];
 		//terminus is a dummy segement used only to find the length of the
-		//true last segement. it's segement code is disabled, though it can
-		//have its own script component, such as the case for the foot.
-		if (segments[childcount - 1].isTerminus)    
-			lastSegment = segments[childcount - 2];
-		else
+		//true last segement such as the case for the foot or hand, it maintains
+        //consistent angular relationship with it's parent, unless its own 
+        //component tels it otherwise
+		//if (segments[childcount - 1].isTerminus)    
+		//	lastSegment = segments[childcount - 2];
+		//else
 			lastSegment = segments[childcount - 1];
 		  
     }

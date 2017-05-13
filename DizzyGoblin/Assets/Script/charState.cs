@@ -27,6 +27,8 @@ public class charState : MonoBehaviour {
 
     public bool isSpinning = false;
 
+    
+
     // Use this for initialization
     void Start() {
         lWalkingTarget = lFootTarget.GetComponent<targetMove>();
@@ -46,8 +48,7 @@ public class charState : MonoBehaviour {
         float x = transform.position.x;
         float z = transform.position.z;
 
-
-
+    
         //TODO: refactor this into a control FSM 
         //(see steering from last semester)
         if(Input.GetKey(KeyCode.LeftArrow))

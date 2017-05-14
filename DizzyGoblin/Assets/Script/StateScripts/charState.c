@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class charState : MonoBehaviour {
-
-
+public class GoblinGlobals : MonoBehaviour {
+    
 
     public Transform terrain = null;
     public float heightOffset = 0;
@@ -26,8 +25,7 @@ public class charState : MonoBehaviour {
     private MovementState myMovementState = MovementState.walking;
 
     public bool isSpinning = false;
-
-    
+       
 
     // Use this for initialization
     void Start() {

@@ -6,18 +6,18 @@ using UnityEngine;
 public class targetMoveChain : targetMove {
 
 
-    private charState AvatarState;
+    private GoblinGlobals goblinGlobals;
     private Vector3 initialPos = new Vector3(0, 0, 0);
 
     // Use this for initialization
     void Start() {
-        AvatarState = AvatarObj.GetComponent<charState>();
+        goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
         initialPos = transform.localPosition;
     }
 
     // Update is called once per frame
     void Update() {
-        if(AvatarState.isSpinning) {
+        if(false /*goblinGlobals.isSpinning*/ ) {
             MoveChain(initialPos);
         }
         else {

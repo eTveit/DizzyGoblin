@@ -23,7 +23,9 @@ public class Segment3d : MonoBehaviour
 	public float Xrange = 1.0f;
 	public float Yrange = 1.0f;
 	public float Zrange = 1.0f;
-
+    public float alignX = 0;
+    public float alignY = 0;
+    public float alignZ = 0;
 
     //the min and max euler values in each axis
     public Vector3 minEulers;
@@ -36,11 +38,13 @@ public class Segment3d : MonoBehaviour
     public Vector3 euler;
     public Vector3 fwd;
 
-
+    //values passed from children who can not achieve desired angle
     public float Xaccum = 0;
+    public float Yaccum = 0;
+    public float Zaccum = 0;
 
-	//dot product to the next joint
-	public float dotNext;
+    //dot product to the next joint
+    public float dotNext;
 
 	public bool isRight = false;
 
@@ -137,13 +141,9 @@ public class Segment3d : MonoBehaviour
         
                 
         //get an alignment to the parent transform (the ik system itself)
-        float alignZ =  Vector3.Angle(segright, sysright);
-        float alignX = 0; //Vector3.Angle(right, IKsys.transform.right);
-        float alignY = 0; //Vector3.Angle(right, IKsys.transform.right);
-
-        Xcomp = alignX;
-        Zcomp = alignZ;
-        Ycomp = alignY;
+        alignZ =  Vector3.Angle(segright, sysright);
+        //alignX = 0; //TBD;
+        //alignY = 0; //TBD;
 
         //invert where needed based on the direction of the angle
         int zc = AngleDirInt(segright, sysright, sysup);
@@ -173,7 +173,9 @@ public class Segment3d : MonoBehaviour
         if (zt > 180)
             zt -= 360;
 
-        euler.Set(x * Xrange - alignX * xc, y * Xrange - alignY * yc, z + alignZ *zc);
+        euler.Set( x * Xrange + alignX * xc + Xcomp, 
+                   y * Yrange + alignY * yc + Ycomp, 
+                   z * Zrange + alignZ * zc + Zcomp);
 
 
         if (interpolate)

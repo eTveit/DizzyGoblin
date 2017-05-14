@@ -129,13 +129,26 @@ public class Segment3d : MonoBehaviour
         //get unclamped desire rotation as a quat, an euler, and a direction;
         transform.LookAt(target);
     
-        Vector3 fwd = transform.forward; //its forward in world
-        Vector3 right = transform.right; //its perp in world
+        Vector3 sysright = IKsys.transform.right ; 
+        Vector3 segright = transform.right ;
 
+        Vector3 sysup = IKsys.transform.forward;
+        Vector3 segup = transform.forward;
+        
+                
         //get an alignment to the parent transform (the ik system itself)
-        float alignZ = Vector3.Angle(right, IKsys.transform.right);
+        float alignZ =  Vector3.Angle(segright, sysright);
         float alignX = 0; //Vector3.Angle(right, IKsys.transform.right);
         float alignY = 0; //Vector3.Angle(right, IKsys.transform.right);
+
+        Xcomp = alignX;
+        Zcomp = alignZ;
+        Ycomp = alignY;
+
+        //invert where needed based on the direction of the angle
+        int zc = AngleDirInt(segright, sysright, sysup);
+        int xc = 1;
+        int yc = 1;
 
         //get my new rotation in local
         rot = transform.localRotation;
@@ -150,7 +163,7 @@ public class Segment3d : MonoBehaviour
         float yt = y;
         float zt = z;
 
-        //convert to rangable values
+        //convert to +/- rangable values
         if (xt > 180)
 			xt -= 360;
 
@@ -160,29 +173,8 @@ public class Segment3d : MonoBehaviour
         if (zt > 180)
             zt -= 360;
 
-        if (isTerminus)
-        {
-           //maybe something else        
-        }
+        euler.Set(x * Xrange - alignX * xc, y * Xrange - alignY * yc, z + alignZ *zc);
 
-        
-        /*
-        //pass contraint corrections to parent, see if he can handle it
-        if (parent )
-        {
-            if (xt < 0)
-            {
-                float d = lastx - xt;
-                x +=  (d/2);
-                parent.Xaccum = -d/2;
-            }
-            else
-                lastx = x;
-        }
-        */
-
-        //apply alignment and compensation values to each limb
-        euler.Set(x  - Xcomp - alignX , y - Ycomp - alignY , z - Zcomp - alignZ);
 
         if (interpolate)
 		{
@@ -213,5 +205,35 @@ public class Segment3d : MonoBehaviour
     {
         drag(target);
         updateSegment();
+    }
+
+    //cross/dot product method returns v2 is "left" or "right" of v1 
+    int AngleDirInt(Vector3 v1, Vector3 v2, Vector3 up)
+    {
+        Vector3 perp = Vector3.Cross(v1, v2);
+        float dir = Vector3.Dot(perp, up);
+
+        if (dir > 0f)
+        {
+            return 1;
+        }
+        else if (dir < 0f)
+        {
+            return -1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    //return angle direction as a float (useful to know "how much" to left or right)
+    float AngleDirIntFloat(Vector3 v1, Vector3 v2, Vector3 up)
+    {
+        Vector3 perp = Vector3.Cross(v1, v2);
+        float dir = Vector3.Dot(perp, up);
+
+        return dir;
+        
     }
 }

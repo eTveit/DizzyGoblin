@@ -141,17 +141,21 @@ public class Segment3d : MonoBehaviour
         
                 
         //get an alignment to the parent transform (the ik system itself)
-        alignZ =  Vector3.Angle(segright, sysright);
-        //alignX = 0; //TBD;
-        //alignY = 0; //TBD;
+        float aZ =  Vector3.Angle(segright, sysright) * alignZ;
+        float aX = 0 * alignX; //TBD;
+        float aY = 0 * alignY; //TBD;
 
         //invert where needed based on the direction of the angle
-        int zc = AngleDirInt(segright, sysright, sysup);
-        int xc = 1;
-        int yc = 1;
+        int iZ = AngleDirInt(segright, sysright, sysup);
+        int iX = 1;
+        int iY = 1;
 
-        //get my new rotation in local
-        rot = transform.localRotation;
+		aZ *= iZ;
+		aX *= iX;
+		aY *= iY;
+
+		//get my new rotation in local
+		rot = transform.localRotation;
         euler = rot.eulerAngles;
         
         
@@ -173,9 +177,9 @@ public class Segment3d : MonoBehaviour
         if (zt > 180)
             zt -= 360;
 
-        euler.Set( x * Xrange + alignX * xc + Xcomp, 
-                   y * Yrange + alignY * yc + Ycomp, 
-                   z * Zrange + alignZ * zc + Zcomp);
+        euler.Set( x * Xrange + aX  + Xcomp, 
+                   y * Yrange + aY  + Ycomp, 
+                   z * Zrange + aZ  + Zcomp);
 
 
         if (interpolate)

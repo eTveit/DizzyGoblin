@@ -75,6 +75,11 @@ public class JK_rightarm_simple: IKAnimationTarget
 	// Update is called once per frame
 	void Update ()
     {
+
+		//we need to smoothly transition to the new start point before running the animation
+		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+			return;
+
 		speed = goblinGlobals.speed;
     
         //to keep our targets in line with the hips, we simply want to
@@ -86,11 +91,17 @@ public class JK_rightarm_simple: IKAnimationTarget
 
 		float dist = Vector3.Distance(lpos, goalPos);
 
-		if (dist < 0.01f)
-			curPos++;
+		//we can use an sdjust to interp FASTER the closer we are to the goal
+		float adjust = (3.0f - dist);
 
-		lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * (3.0f - dist) );
-		
+		//if it is too small, clamp it, otherwise we wont get anywhere
+		if (adjust < 0.5f)
+			adjust = 0.5f;
+
+		lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust );
+
+		if (dist < 0.1f)
+			curPos++;
 
 		if (curPos >= positions.Length)
 			curPos = 0;

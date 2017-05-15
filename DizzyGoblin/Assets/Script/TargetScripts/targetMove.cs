@@ -46,6 +46,11 @@ public class targetMove : IKAnimationTarget
 	// Update is called once per frame
 	void Update ()
     {
+
+		//we need to smoothly transition to the new start point before running the animation
+		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+			return;
+
 		speed = goblinGlobals.speed;
     
         //to keep our targets in line with the hips, we simply want to

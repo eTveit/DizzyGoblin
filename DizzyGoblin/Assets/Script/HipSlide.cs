@@ -8,6 +8,8 @@ public class HipSlide : MonoBehaviour {
     public float range = 0.25f;
     public float phase = 0;
     public float yOffset = 0;
+    public float speedMod = 0.2f;
+
     private float initXpos;
 
     public Transform AvatarObj;
@@ -26,7 +28,7 @@ public class HipSlide : MonoBehaviour {
     void Update()
     {
 
-        speed = goblinGlobals.speed;
+        speed = goblinGlobals.speed * speedMod;
 
         Vector3 lpos = transform.localPosition;
         lpos.Set( initXpos + Mathf.Sin((Time.time * speed) + phase) * range, lpos.y + yOffset , lpos.z);

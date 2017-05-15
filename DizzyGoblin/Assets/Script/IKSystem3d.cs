@@ -39,9 +39,9 @@ public class IKSystem3d : MonoBehaviour
 		//true last segement such as the case for the foot or hand, it maintains
         //consistent angular relationship with it's parent, unless its own 
         //component tels it otherwise
-		//if (segments[childcount - 1].isTerminus)    
-		//	lastSegment = segments[childcount - 2];
-		//else
+		if (segments[childcount - 1].isTerminus)    
+			lastSegment = segments[childcount - 2];
+		else
 			lastSegment = segments[childcount - 1];
 		  
     }

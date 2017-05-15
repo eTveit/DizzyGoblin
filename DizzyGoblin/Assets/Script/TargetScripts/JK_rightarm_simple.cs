@@ -50,8 +50,8 @@ public class JK_rightarm_simple: IKAnimationTarget
 
 		positions = new Vector3[2];
 
-		positions[0] = new Vector3(2.3f, 3.6f, 0.86f);
-		positions[1] = new Vector3(2.7f, 2.56f, 3.86f);
+		positions[0] = new Vector3(1.3f, 3.6f, 0.86f);
+		positions[1] = new Vector3(1.7f, 2.56f, 3.86f);
 		
 
 		goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();

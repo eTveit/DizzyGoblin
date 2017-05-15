@@ -61,13 +61,13 @@ public class targetLeftArmIdle : IKAnimationTarget
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-		lpos.Set(-1.5f + Mathf.Sin((Time.time * speed) + phase) * range,
-				 0.5f + Mathf.Sin((Time.time * speed) + phase) * range,
-				 0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
+        lpos.Set( -3f + Mathf.Sin((Time.time * speed) + phase) * range,
+                  1 + Mathf.Sin((Time.time * speed) + phase) * range,
+                  0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
 
 
-		//set the local
-		transform.localPosition = lpos;
+        //set the local
+        transform.localPosition = lpos;
 
 
 

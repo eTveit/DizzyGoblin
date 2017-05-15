@@ -50,6 +50,12 @@ public class targetMoveRight : IKAnimationTarget
     {
 		speed = goblinGlobals.speed;
 
+        //<JK>  added new requirement to move to a start position
+        //      this will help us transition animations
+        if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+            return;
+
+
         Vector3 rpos = transform.localPosition;
         rpos.Set(Mathf.Sin((Time.time * speed) + phase) * range + (Mathf.Clamp(transform.position.x, MinX, MaxX)), rpos.y, rpos.z);
         //Restriciting movement

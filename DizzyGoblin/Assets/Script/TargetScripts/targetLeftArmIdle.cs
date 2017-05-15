@@ -43,6 +43,11 @@ public class targetLeftArmIdle : IKAnimationTarget
         //get the avatar global properties
 		goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
 
+		Segment3d shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
+		Segment3d armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
+		armL.Xcomp = -30;
+		shoL.Xcomp = -30;
+
         //probably want to set some initial positions, and we probably want
         //to INTERPOLATE to those start positions....
 	}
@@ -56,13 +61,13 @@ public class targetLeftArmIdle : IKAnimationTarget
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(Mathf.Sin((Time.time * speed) + phase) * range,
-                 lpos.y,
-                 Mathf.Sin((Time.time * speed) + phase) * range);
+		lpos.Set(-1.5f + Mathf.Sin((Time.time * speed) + phase) * range,
+				 0.5f + Mathf.Sin((Time.time * speed) + phase) * range,
+				 0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
 
 
-        //set the local
-        transform.localPosition = lpos;
+		//set the local
+		transform.localPosition = lpos;
 
 
 

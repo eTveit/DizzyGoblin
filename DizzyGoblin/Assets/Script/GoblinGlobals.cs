@@ -54,6 +54,21 @@ public class GoblinGlobals : MonoBehaviour {
         
     }
 
-    
-    
+	//this searches for a Transform specifically
+	//TODO: make it search for anything, and cast it when it returns 
+	public Transform Search(Transform target, string name)
+	{
+		if (target.name == name) return target;
+
+		for (int i = 0; i < target.childCount; i++)
+		{
+			//we use "var" because the component could be anything
+			var result = Search(target.GetChild(i), name);
+
+			if (result != null) return result;
+		}
+
+		return null;
+	}
+
 }

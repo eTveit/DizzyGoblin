@@ -41,6 +41,13 @@ public class targetRightArmIdle : IKAnimationTarget
 	void Start () {
 
 		goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
+
+		Segment3d shoL = goblinGlobals.Search(AvatarObj, "Shoulder_R").GetComponent<Segment3d>();
+		Segment3d armL = goblinGlobals.Search(AvatarObj, "Arm_R").GetComponent<Segment3d>();
+		armL.Xcomp = 30;
+		shoL.Xcomp = 30;
+
+
 	}
 	
 	// Update is called once per frame
@@ -53,12 +60,13 @@ public class targetRightArmIdle : IKAnimationTarget
         //sort of like this:
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set( lpos.x, 
-                  Mathf.Sin((Time.time * speed) + phase) * range, 
-                  Mathf.Sin((Time.time * speed) + phase) * range);
-        
-        //set the local
-        transform.localPosition = lpos;
+		lpos.Set(3f + Mathf.Sin((Time.time * speed) + phase) * range,
+				1 + Mathf.Sin((Time.time * speed) + phase) * range,
+				 0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
+
+
+		//set the local
+		transform.localPosition = lpos;
 
 
         //to keep the target on the terrain surface

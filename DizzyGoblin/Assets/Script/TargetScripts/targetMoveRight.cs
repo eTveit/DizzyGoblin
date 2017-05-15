@@ -58,7 +58,7 @@ public class targetMoveRight : IKAnimationTarget
 
         Vector3 pos = transform.position;
         float y = mesh.getHeightAt(pos);
-        pos.y = y + 0.2f;
+        pos.y = y + heightOffset;
 
         //set the final position
         transform.position = pos;

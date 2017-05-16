@@ -54,10 +54,12 @@ public class RootState : MonoBehaviour {
         SpinState spinstate = new SpinState(this);
         walkbackstate.addChildState(spinstate);
 
+		DodgeState dodgestate = new DodgeState(this);
+		spinstate.addChildState(dodgestate);
 
-        //add more states here...
+		//add more states here...
 
-    }
+	}
 
     void Start()
     {

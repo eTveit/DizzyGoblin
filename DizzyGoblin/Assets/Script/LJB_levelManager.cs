@@ -8,7 +8,7 @@ public class LJB_levelManager : MonoBehaviour {
 
     public MakeTrees makeTrees;
     public MakeFence makeFence;
-    public int something = 1;
+    public MakeRocks makeRocks;
 
     public int levelDifficulty = 1;
     public int Trees = 0;
@@ -62,9 +62,9 @@ public class LJB_levelManager : MonoBehaviour {
     {
         Trees = 10 * levelDifficulty;
         makeTrees.BuildTrees(Trees);
-        
-        //BuildTrees;
-        //BuildRocks;
+
+        Rocks = 10 * levelDifficulty;
+        makeRocks.BuildRocks(Rocks);
         //BuildEnemies;
 
     }

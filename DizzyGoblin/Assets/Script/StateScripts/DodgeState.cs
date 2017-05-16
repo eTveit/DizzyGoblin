@@ -21,9 +21,6 @@ public class DodgeState : StateNode
 	//private IKAnimationTarget rightArmAnim = null;
 
 
-	private float rotationSpeed = 100;
-    private float rotationBoost = 1000;
-
     //ctor
     public DodgeState(RootState _rs)
     {

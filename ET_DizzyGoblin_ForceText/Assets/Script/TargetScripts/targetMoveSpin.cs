@@ -21,7 +21,9 @@ public class targetMoveSpin : targetMove {
     public float circularHeight = -1;
     public float rotationSpeed = 100;
     public float rotationBoost = 1000;
+    [Tooltip("Left foot should be set as the kicking foot.")]
     public bool isKickingFoot = false;
+    public float incrementingDT = 0;
 
     private GoblinGlobals goblinGlobals = null;
 
@@ -47,6 +49,8 @@ public class targetMoveSpin : targetMove {
     // Update is called once per frame
     void Update() {
 
+        incrementingDT += Time.deltaTime;
+
         speed = goblinGlobals.speed;
 
         float ypos = -666;
@@ -56,7 +60,7 @@ public class targetMoveSpin : targetMove {
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
+        lpos.Set(lpos.x, lpos.y, Mathf.Sin((incrementingDT * speed) + phase) * range);
 
         if(isKickingFoot) {
             lpos.x = startPosition.x;
@@ -66,7 +70,7 @@ public class targetMoveSpin : targetMove {
         }
 
         if(circularHeight > 0) {
-            ypos = Mathf.Cos((Time.time * speed) + phase + 3.141593f) * circularHeight;
+            ypos = Mathf.Cos((incrementingDT * speed) + phase + 3.141593f) * circularHeight;
             ypos = -ypos;
             lpos.y = ypos;
         }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinState : StateNode
-{
-    
+public class SpinState : StateNode {
+
     private bool boostRotation = false;
 
 
@@ -21,14 +20,13 @@ public class SpinState : StateNode
     private float rotationBoost = 1000;
 
     //ctor
-    public SpinState(RootState _rs)
-    {
+    public SpinState(RootState _rs) {
         m_childStates = new List<StateNode>();
         m_rootState = _rs;
         m_transform = m_rootState.transform;
         m_gameObject = m_transform.gameObject;
 
-        
+
         //get the target animations for Spin by type
         rightFootAnim = m_rootState.rightFoot.GetComponent<targetMoveSpin>();
         leftFootAnim = m_rootState.leftFoot.GetComponent<targetMoveSpin>();
@@ -42,12 +40,10 @@ public class SpinState : StateNode
     }
 
 
-    public override bool advanceTime(float dt)
-    {
+    public override bool advanceTime(float dt) {
 
 
-        if (advanceState(dt) == true)
-        {
+        if(advanceState(dt) == true) {
             //if any child state is true, I am false
             p_isInState = false;
             m_isDoingItsState = false;
@@ -61,18 +57,15 @@ public class SpinState : StateNode
         }
 
         //if no child state is true, see if I need to be true
-        if (Input.GetKeyUp(KeyCode.Q))
-        {
+        if(Input.GetKeyUp(KeyCode.Q)) {
             //this will toggle states for testing
             p_isInState = !p_isInState;
-            if (m_isDoingItsState)
-                m_isDoingItsState= false;
+            if(m_isDoingItsState)
+                m_isDoingItsState = false;
         }
-         
-        if (p_isInState)
-        {
-            if (!m_isDoingItsState)
-            {
+
+        if(p_isInState) {
+            if(!m_isDoingItsState) {
                 Debug.Log("SPIN STATE");
                 m_isDoingItsState = true;
 
@@ -98,45 +91,42 @@ public class SpinState : StateNode
 
             Rotate();
 
-            if (Input.GetKeyDown(KeyCode.F))
-            {
+            if(Input.GetKeyDown(KeyCode.F)) {
                 SwitchRotateDirection();
             }
-            
+
 
         }
         return p_isInState;
     }
-
-    void Rotate()
-    {
-
+    
+    void Rotate() {
         //Espen, you probably want dt here so we can do "slow-mo" or "fast-mo"
-        //also need this to sync up with kicking foot
-        if (Mathf.Cos((Time.deltaTime * 4) + 3.141593f) > 0.9f)
-        {
+        //I tried first using just dt, but that is always a small value,
+        //so the result of the cos was always very high, causing him to boost constantly
+        //Using a float that increments using dt, we get a cos wave, 
+        //while still being able to affect it through dt
+
+
+        if(Mathf.Cos((leftFootAnim.incrementingDT * leftFootAnim.speed) + Mathf.PI) > 0.9f) {
             boostRotation = true;
         }
-        else
-        {
+        else {
             boostRotation = false;
         }
         Quaternion rotation = new Quaternion(0, 0, 0, 0);
         // this is not physics, it should be rebuilt
-        if (boostRotation)
-        {
+        if(boostRotation) {
             rotation = Quaternion.AngleAxis((rotationSpeed + rotationBoost) * Time.deltaTime, m_transform.up);
         }
-        else
-        {
+        else {
             rotation = Quaternion.AngleAxis((rotationSpeed) * Time.deltaTime, m_transform.up);
         }
 
         m_transform.rotation *= rotation;
     }
 
-    void SwitchRotateDirection()
-    {
+    void SwitchRotateDirection() {
         //temp storage of values
         float lPhase = leftFootAnim.phase;
         float lSpeed = leftFootAnim.speed;

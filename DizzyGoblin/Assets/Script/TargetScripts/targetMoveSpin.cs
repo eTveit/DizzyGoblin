@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class targetMoveSpin : targetMove
-{
+public class targetMoveSpin : targetMove {
     //DONT FORGET TO NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
     //the FSM uses names of our creation to select animations to play
     //you can do it here, or in the editor. it is best to do it here
@@ -12,29 +11,41 @@ public class targetMoveSpin : targetMove
     /*
          "ET_spin";
     */
-    
-    public override string getAnimName()
-    {
+
+    public override string getAnimName() {
         return animationName;
     }
-    
-    
+
+
     //for circular movement
     public float circularHeight = -1;
     public float rotationSpeed = 100;
     public float rotationBoost = 1000;
+    public bool isKickingFoot = false;
 
     private GoblinGlobals goblinGlobals = null;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
+
+        if(isKickingFoot) {
+            phase = 0;
+            range = 1;
+            circularHeight = 1.2f;
+        }
+        else {
+            //Why would we settle for just six decimal points?
+            phase = Mathf.PI;
+            range = 0.3f;
+            circularHeight = -1.0f;
+        }
+        rotationSpeed = 100;
+        rotationBoost = 100;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
         speed = goblinGlobals.speed;
 
@@ -46,6 +57,13 @@ public class targetMoveSpin : targetMove
 
         Vector3 lpos = transform.localPosition;
         lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
+
+        if(isKickingFoot) {
+            lpos.x = startPosition.x;
+        }
+        else {
+            lpos.x = startPosition.x * 0.2f;
+        }
 
         if(circularHeight > 0) {
             ypos = Mathf.Cos((Time.time * speed) + phase + 3.141593f) * circularHeight;

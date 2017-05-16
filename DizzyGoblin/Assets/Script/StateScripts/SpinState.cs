@@ -31,12 +31,13 @@ public class SpinState : StateNode
         
         //get the target animations for Spin by type
         rightFootAnim = m_rootState.rightFoot.GetComponent<targetMoveSpin>();
-        leftFootAnim = m_rootState.rightFoot.GetComponent<targetMoveSpin>();
+        leftFootAnim = m_rootState.leftFoot.GetComponent<targetMoveSpin>();
 
         //because all we must do is enable them, we could access them as a base object
         //if we dont need to read specific property values. so we can do this, by name
         //and then cast it if we need to  
         leftArmAnim = m_rootState.targetManager.getTargetByName("targetLeftArm", "targetArmMove");
+        rightArmAnim = m_rootState.targetManager.getTargetByName("targetRightArm", "targetArmMove");
 
     }
 
@@ -52,8 +53,8 @@ public class SpinState : StateNode
             m_isDoingItsState = false;
 
             //disable my anims
-            leftFootAnim.enabled = true;
-            rightFootAnim.enabled = true;
+            leftFootAnim.enabled = false;
+            rightFootAnim.enabled = false;
 
             //since a child state is true, return this fact!
             return true;
@@ -111,7 +112,8 @@ public class SpinState : StateNode
     {
 
         //Espen, you probably want dt here so we can do "slow-mo" or "fast-mo"
-        if (Mathf.Cos((Time.time * 4) + 3.141593f) > 0.9f)
+        //also need this to sync up with kicking foot
+        if (Mathf.Cos((Time.deltaTime * 4) + 3.141593f) > 0.9f)
         {
             boostRotation = true;
         }
@@ -123,11 +125,11 @@ public class SpinState : StateNode
         // this is not physics, it should be rebuilt
         if (boostRotation)
         {
-            rotation = Quaternion.AngleAxis(-(rotationSpeed + rotationBoost) * Time.deltaTime, m_transform.up);
+            rotation = Quaternion.AngleAxis((rotationSpeed + rotationBoost) * Time.deltaTime, m_transform.up);
         }
         else
         {
-            rotation = Quaternion.AngleAxis(-(rotationSpeed) * Time.deltaTime, m_transform.up);
+            rotation = Quaternion.AngleAxis((rotationSpeed) * Time.deltaTime, m_transform.up);
         }
 
         m_transform.rotation *= rotation;
@@ -150,13 +152,15 @@ public class SpinState : StateNode
         leftFootAnim.speed = rSpeed;
         leftFootAnim.range = rRange;
         leftFootAnim.circularHeight = rCircularHeight;
+        leftFootAnim.isKickingFoot = !leftFootAnim.isKickingFoot;
         rightFootAnim.phase = lPhase;
         rightFootAnim.speed = lSpeed;
         rightFootAnim.range = lRange;
         rightFootAnim.circularHeight = lCircularHeight;
+        rightFootAnim.isKickingFoot = !rightFootAnim.isKickingFoot;
 
-        rotationSpeed = -rotationSpeed;
-        rotationBoost = -rotationBoost;
+        leftFootAnim.rotationSpeed = -leftFootAnim.rotationSpeed;
+        leftFootAnim.rotationBoost = -leftFootAnim.rotationBoost;
     }
 
 }

@@ -27,6 +27,10 @@ public class targetMoveSpin : targetMove {
 
     private GoblinGlobals goblinGlobals = null;
 
+    public string dummyString = "DUMMY";
+    public Vector4 whoa;
+    public Rigidbody2D thiIsNoGoodHere = null;
+
     // Use this for initialization
     void Start() {
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();

@@ -1334,7 +1334,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261974319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7038057789fa684ab1b28679621e457, type: 3}
   m_Name: 
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261974319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ce190c47c9d793478595203754dc196, type: 3}
   m_Name: 
@@ -1699,7 +1699,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553220540}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 15, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1707,14 +1707,14 @@ Transform:
   - {fileID: 2099304444}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!114 &553220543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553220540}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22bd23783c2bc844a8db2add800aad1e, type: 3}
   m_Name: 
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553220540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ce190c47c9d793478595203754dc196, type: 3}
   m_Name: 
@@ -2085,7 +2085,11 @@ MonoBehaviour:
   circularHeight: 0.3
   rotationSpeed: 100
   rotationBoost: 100
-  isKickingFoot: 0
+  isKickingFoot: 1
+  incrementingDT: 0
+  dummyString: DUMMY
+  whoa: {x: 0, y: 0, z: 0, w: 0}
+  thiIsNoGoodHere: {fileID: 0}
 --- !u!114 &762947061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5152,6 +5156,10 @@ MonoBehaviour:
   rotationSpeed: 100
   rotationBoost: 100
   isKickingFoot: 0
+  incrementingDT: 0
+  dummyString: DUMMY
+  whoa: {x: 0, y: 0, z: 0, w: 0}
+  thiIsNoGoodHere: {fileID: 0}
 --- !u!114 &1713687971
 MonoBehaviour:
   m_ObjectHideFlags: 0

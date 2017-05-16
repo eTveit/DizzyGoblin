@@ -23,11 +23,20 @@ public class MakeFence : MonoBehaviour {
         z = 1;
         y = 0;
 
+        int rangeX = terrain.xSize - 1;
+        int rangeZ = terrain.zSize - 1;
+
         foreach (Transform child in transform)
         {
 
        
             int vi = z * (terrain.xSize + 1) + x;
+
+
+            int yr = Random.Range(1, 360);
+            Vector3 euler = new Vector3(0, yr, 0);
+            Quaternion rot = Quaternion.Euler(euler);
+            child.rotation = rot;
 
             Vector3 pos = new Vector3((float)x, y, (float)z);
 
@@ -41,24 +50,24 @@ public class MakeFence : MonoBehaviour {
                 vi = z * (terrain.xSize + 1) + x;
 
                 //Place trees on coordinates up to 99,1
-                if (x < 99 && z == 1)
+                if (x < rangeX && z == 1)
                 {
-                    x++;
+                    x+= 2;
                 }
                 //Place trees on coordinates up to 99,99
-                else if (x == 99 && z < 98)
+                else if (x == rangeX && z < rangeZ)
                 {
-                    z++;
+                    z+= 2;
                 }
                 //Place trees on coordinates down to 1,99
-                else if (x > 1 && z == 98)
+                else if (x > 1 && z == rangeZ)
                 {
-                    x--;
+                    x-= 2;
                 }
                 //Place trees on coordinates down to 1,1
                 else if (x == 1 && z > 1)
                 {
-                    z--;
+                    z-= 2;
                 }
             }
         }

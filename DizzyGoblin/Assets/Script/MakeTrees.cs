@@ -6,6 +6,7 @@ public class MakeTrees : MonoBehaviour
 {
 
     public TerrainMesh terrain;
+    public LJB_levelManager levelManager;
 
     public bool[] occupied;
     // Use this for initialization

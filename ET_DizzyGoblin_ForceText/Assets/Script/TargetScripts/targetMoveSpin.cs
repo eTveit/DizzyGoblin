@@ -56,7 +56,7 @@ public class targetMoveSpin : targetMove {
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range+0.2f);
+        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
 
         if(isKickingFoot) {
             lpos.x = startPosition.x;

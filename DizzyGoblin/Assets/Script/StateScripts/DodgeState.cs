@@ -5,9 +5,6 @@ using UnityEngine;
 public class DodgeState : StateNode
 {
     
-    
-
-
     //we specify by type the animations we need for this state
     //they could be any animations in the Avatar's targets list 
     private targetMoveLeft leftFootAnim = null;
@@ -67,7 +64,7 @@ public class DodgeState : StateNode
         }
 
         //if no child state is true, see if I need to be true
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.J))
         {
             //this will toggle states for testing
             p_isInState = !p_isInState;
@@ -90,7 +87,7 @@ public class DodgeState : StateNode
         {
             if (!m_isDoingItsState)
             {
-                Debug.Log("SPIN STATE");
+                Debug.Log("DODGE STATE");
                 m_isDoingItsState = true;
 
                 //Do something, here we make a one-shot to initialize

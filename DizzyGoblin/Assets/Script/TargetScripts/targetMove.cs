@@ -51,6 +51,8 @@ public class targetMove : IKAnimationTarget
 		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
 			return;
 
+        Vector3 curpos = transform.position;
+
 		speed = goblinGlobals.speed;
     
         //to keep our targets in line with the hips, we simply want to
@@ -67,9 +69,13 @@ public class targetMove : IKAnimationTarget
         Vector3 pos = transform.position;
         float y = mesh.getHeightAt(pos);
         pos.y = y + heightOffset;
-        
-        //set the final position
-        transform.position = pos;
+
+        //here comes the interp to final position - we can use the object to perform the math
+        //in the correct spatial context, then do the interpolation using the position when 
+        //we first entered the Update(). Lerp or Slerp, depends on your preference
+        transform.position = Vector3.Lerp(curpos, pos, Time.deltaTime * speed);
+        //NOTE: I hate not being able to pass my own delta time to the mono update function
+        //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
 
 
     }

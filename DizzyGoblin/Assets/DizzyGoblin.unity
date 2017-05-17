@@ -5909,7 +5909,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206039053}
   m_LocalRotation: {x: -0, y: 1.2795854e-14, z: 2.7472643e-15, w: 1}
-  m_LocalPosition: {x: -1.63, y: 1.1420114, z: 1.68}
+  m_LocalPosition: {x: -2, y: 1, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2099304444}
@@ -5971,13 +5971,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206039053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87c58cb35c4220c40a7b53a115b658c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: JK_leftArmIdle
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: -2, y: 1, z: 0}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 0
@@ -7190,7 +7190,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261974319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7038057789fa684ab1b28679621e457, type: 3}
   m_Name: 
@@ -7206,7 +7206,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261974319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ce190c47c9d793478595203754dc196, type: 3}
   m_Name: 
@@ -14782,7 +14782,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553220540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 15}
+  m_LocalPosition: {x: 21.98, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 261974320}
@@ -14796,7 +14796,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553220540}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22bd23783c2bc844a8db2add800aad1e, type: 3}
   m_Name: 
@@ -20571,7 +20571,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 762947058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.14407587, z: 0.82}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2099304444}
@@ -20589,7 +20589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: ET_spin
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0.5, y: 0, z: 0}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 3.141597
@@ -20599,6 +20599,8 @@ MonoBehaviour:
   circularHeight: 0.3
   rotationSpeed: 100
   rotationBoost: 100
+  isKickingFoot: 1
+  incrementingDT: 0
 --- !u!114 &762947061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20674,7 +20676,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 762947058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c242c55e24dd1c4fa56df9fc3a7fd66, type: 3}
   m_Name: 
@@ -26608,13 +26610,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961436438}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c242c55e24dd1c4fa56df9fc3a7fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: moveSpineonRight
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 4.5, z: 0}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 1.5
@@ -27041,7 +27043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc4b96fa8e01aa45b77da357ec1022b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1733503387}
+  target: {fileID: 553220542}
   distance: -5
   height: 5
   interpRate: 10
@@ -46280,7 +46282,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713687968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.07196462, z: 0.26}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2099304444}
@@ -46298,7 +46300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: ET_spin
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: -0.5, y: 0, z: 0}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 0
@@ -46308,6 +46310,8 @@ MonoBehaviour:
   circularHeight: -1
   rotationSpeed: 100
   rotationBoost: 100
+  isKickingFoot: 0
+  incrementingDT: 0
 --- !u!114 &1713687971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46383,7 +46387,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713687968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a42785d9777d6d44a0218eba267eb3b, type: 3}
   m_Name: 
@@ -55644,7 +55648,6 @@ GameObject:
   - component: {fileID: 2136712104}
   - component: {fileID: 2136712103}
   - component: {fileID: 2136712106}
-  - component: {fileID: 2136712107}
   m_Layer: 0
   m_Name: targetRightArm
   m_TagString: Untagged
@@ -55659,7 +55662,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2136712101}
   m_LocalRotation: {x: -0, y: 3.3241325e-15, z: -4.212311e-15, w: 1}
-  m_LocalPosition: {x: 2.18, y: 0.07, z: -2.86}
+  m_LocalPosition: {x: 2, y: 1, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2099304444}
@@ -55721,37 +55724,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2136712101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a5837837e719eb46835169b7c019d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: JK_rightArmIdle
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 2, y: 1, z: 0}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 1.3
   speed: 1
   range: 0.5
-  heightOffset: 0
---- !u!114 &2136712107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2136712101}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 016c6d0fbf2447c41bff771611ccba3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationName: JK_rightarm_simple
-  startPosition: {x: 0, y: 0, z: 0}
-  AvatarObj: {fileID: 553220542}
-  mesh: {fileID: 1100547802}
-  phase: 0
-  speed: 1
-  range: 1
   heightOffset: 0
 --- !u!1 &2137537477
 GameObject:

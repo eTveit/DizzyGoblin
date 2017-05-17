@@ -29,7 +29,7 @@ public abstract class IKAnimationTarget : MonoBehaviour
 			return true;
 		}
 		//move quickly to that position
-		lpos = Vector3.Lerp(lpos, startPosition, dt * 3.0f * speed);
+		lpos = Vector3.Lerp(lpos, startPosition, dt * speed);
 
 		//set it
 		transform.localPosition = lpos;

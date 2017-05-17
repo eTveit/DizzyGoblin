@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: JK_leftArmIdle
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: -1.6, y: 1.14, z: -0.61}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 0
@@ -1318,15 +1318,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261974319}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 1.5, z: 15}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1017768248}
   - {fileID: 1620885456}
   - {fileID: 2135673311}
-  m_Father: {fileID: 1459231901}
-  m_RootOrder: 29
+  m_Father: {fileID: 553220542}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &261974321
 MonoBehaviour:
@@ -1702,7 +1702,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 261974320}
+  - {fileID: 2099304444}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2803,7 +2805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: moveSpineonRight
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 4.5, z: 0.13}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 1.5
@@ -3334,8 +3336,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0029059872, y: 0.121903494, z: 0.01299341}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2099304444}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4381,7 +4382,6 @@ Transform:
   - {fileID: 33013899}
   - {fileID: 1294522339}
   - {fileID: 1674800346}
-  - {fileID: 261974320}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5638,7 +5638,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2099304443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.002906, y: -0.121903494, z: 14.987006}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1713687969}
@@ -5646,8 +5646,8 @@ Transform:
   - {fileID: 961436439}
   - {fileID: 2136712102}
   - {fileID: 206039054}
-  m_Father: {fileID: 1100547805}
-  m_RootOrder: 0
+  m_Father: {fileID: 553220542}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107107174
 GameObject:
@@ -5936,7 +5936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: JK_rightArmIdle
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 2.18, y: 0.07, z: -2.86}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 1.3

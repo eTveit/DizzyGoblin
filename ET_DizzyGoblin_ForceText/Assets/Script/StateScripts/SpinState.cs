@@ -60,12 +60,8 @@ public class SpinState : StateNode {
         if(Input.GetKeyUp(KeyCode.Q)) {
             //this will toggle states for testing
             p_isInState = !p_isInState;
-            if (m_isDoingItsState)
-            {
-                leftFootAnim.enabled = false;
-                rightFootAnim.enabled = false;
+            if(m_isDoingItsState)
                 m_isDoingItsState = false;
-            }
         }
 
         if(p_isInState) {

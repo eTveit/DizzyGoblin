@@ -23,8 +23,8 @@ public class MakeRocks : MonoBehaviour {
 
 
         occupied = new bool[vc];
-        int min = Random.Range(1, terrain.xSize);
-        int max = min;
+        int min = 20;////Random.Range(1, terrain.xSize);
+        int max = terrain.xSize - 20; // min;
 
         Vector3 hell = new Vector3(-666, -666, -666);
 
@@ -90,7 +90,7 @@ public class MakeRocks : MonoBehaviour {
                 child.transform.position = pos;
 
 
-
+                /*
                 min--;
                 max++;
 
@@ -102,6 +102,7 @@ public class MakeRocks : MonoBehaviour {
                 {
                     max = terrain.xSize;
                 }
+                */
 
                 rockCount++;
             }

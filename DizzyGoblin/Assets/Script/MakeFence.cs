@@ -11,7 +11,9 @@ public class MakeFence : MonoBehaviour {
     public bool[] occupied;
     // Use this for initialization
 
-    void BuildFence()
+
+    //<JK> made public so it is called from level manager
+    public void BuildFence()
     {
         Mesh mesh = terrain.mesh;
         int vc = mesh.vertexCount;
@@ -28,9 +30,10 @@ public class MakeFence : MonoBehaviour {
 
         foreach (Transform child in transform)
         {
-
+            terrain.getVertexIndexFromXZ(x, z);
        
-            int vi = z * (terrain.xSize + 1) + x;
+            //terrain supports this
+            int vi = terrain.getVertexIndexFromXZ(x, z);  // z * (terrain.xSize + 1) + x;
 
 
             int yr = Random.Range(1, 360);
@@ -46,34 +49,35 @@ public class MakeFence : MonoBehaviour {
 
             child.transform.position = pos;
 
-                //check if this point is occupied
-                vi = z * (terrain.xSize + 1) + x;
+            //check if this point is occupied
+            vi = terrain.getVertexIndexFromXZ(x, z);  // z * (terrain.xSize + 1) + x;
 
-                //Place trees on coordinates up to 99,1
-                if (x < rangeX && z == 1)
-                {
-                    x+= 2;
-                }
-                //Place trees on coordinates up to 99,99
-                else if (x == rangeX && z < rangeZ)
-                {
-                    z+= 2;
-                }
-                //Place trees on coordinates down to 1,99
-                else if (x > 1 && z == rangeZ)
-                {
-                    x-= 2;
-                }
-                //Place trees on coordinates down to 1,1
-                else if (x == 1 && z > 1)
-                {
-                    z-= 2;
-                }
+            //Place trees on coordinates up to 99,1
+            if (x < rangeX && z == 1)
+            {
+                x += 2;
             }
-        }
+            //Place trees on coordinates up to 99,99
+            else if (x == rangeX && z < rangeZ)
+            {
+                z += 2;
+            }
+            //Place trees on coordinates down to 1,99
+            else if (x > 1 && z == rangeZ)
+            {
+                x -= 2;
+            }
+            //Place trees on coordinates down to 1,1
+            else if (x == 1 && z > 1)
+            {
+                z -= 2;
+            }
+            
+         }
+     }
 
-        // Update is called once per frame
-        void Update ()
+    // Update is called once per frame
+    void Update ()
     {
         if (Input.GetKeyUp(KeyCode.T))
             BuildFence();	

@@ -24,9 +24,13 @@ public class LJB_levelManager : MonoBehaviour {
     void Update()
     {
 
-        Trees = levelDifficulty * 2;
-        Rocks = levelDifficulty * 2;
-        Enemies = levelDifficulty * 2;
+        //<JK>  don't think this should be here, we set this when we build
+        //      the level below, so this would clobber those values, every frame
+        /*
+         Trees = levelDifficulty * 2;
+         Rocks = levelDifficulty * 2;
+         Enemies = levelDifficulty * 2;
+        */
 
         if (Input.GetKeyUp(KeyCode.E))
         {
@@ -65,6 +69,9 @@ public class LJB_levelManager : MonoBehaviour {
 
         Rocks = 10 * levelDifficulty;
         makeRocks.BuildRocks(Rocks);
+
+        makeFence.BuildFence();
+
         //BuildEnemies;
 
     }

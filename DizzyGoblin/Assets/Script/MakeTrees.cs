@@ -25,8 +25,12 @@ public class MakeTrees : MonoBehaviour
 
 
         occupied = new bool[vc];
-        int min = Random.Range(1, terrain.xSize);
-        int max = min;
+
+        //initial position/range
+        //<JK>  the clustering is too clustered, I think maybe better to spread evenly
+        //      keeping them 20 units from the edge
+        int min = 20;//Random.Range(20, terrain.xSize - 20);
+        int max = terrain.xSize - 20; //min ;
 
         Vector3 hell = new Vector3(-666, -666, -666);
 
@@ -52,7 +56,7 @@ public class MakeTrees : MonoBehaviour
 
 
 
-                int vi = z * (terrain.xSize + 1) + x;
+                int vi = terrain.getVertexIndexFromXZ(x, z); // z * (terrain.xSize + 1) + x;
 
 
                 int errorcount = 0;
@@ -66,7 +70,7 @@ public class MakeTrees : MonoBehaviour
                     y = 0;
 
                     //check if this point is occupied
-                    vi = z * (terrain.xSize + 1) + x;
+                    vi = terrain.getVertexIndexFromXZ(x, z); // z * (terrain.xSize + 1) + x;
                     errorcount++;
 
                     if (errorcount > 1000)
@@ -85,8 +89,10 @@ public class MakeTrees : MonoBehaviour
 
                 child.transform.position = pos;
 
-                min--;
-                max++;
+                //control the spread <JK> final analysis, full spread is better
+                /*
+                min-= 5;
+                max+= 5;
 
                 if (min < 1)
                 {
@@ -96,6 +102,7 @@ public class MakeTrees : MonoBehaviour
                 {
                     max = terrain.xSize;
                 }
+                */
 
                 treeCount++;
             }

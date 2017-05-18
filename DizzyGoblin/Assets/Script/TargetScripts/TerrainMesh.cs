@@ -126,58 +126,12 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-        //Make Some Hills
-        Vector3[] vertices = mesh.vertices;
+               
 
-        /*
-        //this gives us a ramp
-        float yup = 0;
-        float sign = 1;
-        for (int z = 30; z < 50; z++)
-        {
-            for (int x = 30; x < 50; x++)
-            {
-
-                yup += 0.01f * sign;
-
-                int i = getVertexIndexFromXZ(x, z);
-                Vector3 vert = vertices[i];
-                vert.Set(vert.x, vert.y + yup , z);
-                vertices[i] = vert;
-            }
-            if (z < 40)
-                sign = 1;
-            else
-                sign = -1;
-        }
-        */
-
-        //lets try a dome
-
-        // Iterate through phi, theta then convert r,theta,phi to  XYZ
-        float r = 10;
-
-        //make sure we have enough vertices in our terrain to make bumps of this size!!!
-        Vector3 center = new Vector3(60,0,60);
-        for (float phi = 0.0f; phi < 2 * Mathf.PI; phi += Mathf.PI / 100.0f) // Azimuth [0, 2PI]
-        {
-            for (float theta = 0.0f; theta < Mathf.PI; theta += Mathf.PI / 100.0f) // Elevation [0, PI]
-            {
-                
-                int x = Mathf.RoundToInt( r * Mathf.Cos(phi) * Mathf.Sin(theta) + center.x);
-                float y = Mathf.Abs(r * Mathf.Sin(phi) * Mathf.Sin(theta) + center.y) * 0.3f;
-                int z = Mathf.RoundToInt( r * Mathf.Cos(theta) + center.z);
-
-                //give it some detail - we could use perlin here too
-                int i = getVertexIndexFromXZ(x, z);
-                Vector3 vert = vertices[i];
-                vert.Set(x, y + Random.Range(-1,1) * 0.3f , z);
-                vertices[i] = vert;
-
-            }
-        }
+        Vector3 bumpPos = new Vector3(60, 0, 60);
+        makeBump(10, 0.3f, bumpPos);
        
-        mesh.vertices = vertices;
+   
         
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
@@ -187,6 +141,35 @@ public class TerrainMesh : MonoBehaviour {
 
     }
 
+    public void makeBump(float radius, float height, Vector3 pos)
+    {
+
+        Vector3[] vertices = mesh.vertices;
+
+        float r = radius; //LD
+        //make sure we have enough vertices in our terrain to make bumps of this size!!!
+        Vector3 center = pos;
+        for (float phi = 0.0f; phi < 2 * Mathf.PI; phi += Mathf.PI / 100.0f) // Azimuth [0, 2PI]
+        {
+            for (float theta = 0.0f; theta < Mathf.PI; theta += Mathf.PI / 100.0f) // Elevation [0, PI]
+            {
+
+                int x = Mathf.RoundToInt(r * Mathf.Cos(phi) * Mathf.Sin(theta) + center.x);
+                float y = Mathf.Abs(r * Mathf.Sin(phi) * Mathf.Sin(theta) + center.y) * height;  //LD
+                int z = Mathf.RoundToInt(r * Mathf.Cos(theta) + center.z);
+
+                //give it some detail - we could use perlin here too dont let i be too large
+                int i = getVertexIndexFromXZ(x, z);
+                Vector3 vert = vertices[i];
+                vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
+                vertices[i] = vert;
+
+            }
+        }
+
+        mesh.vertices = vertices;
+
+    }
     public int getVertexIndexFromXZ (int x, int z)
     {
         return z * (xSize + 1) + x;

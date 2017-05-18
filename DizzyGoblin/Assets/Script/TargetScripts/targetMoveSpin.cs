@@ -23,7 +23,7 @@ public class targetMoveSpin : targetMove {
     public float rotationBoost = 1000;
     [Tooltip("Left foot should be set as the kicking foot.")]
     public bool isKickingFoot = false;
-    public float incrementingDT = 0;
+    public float incrementingDT = -1;
 
     private GoblinGlobals goblinGlobals = null;
 
@@ -44,6 +44,8 @@ public class targetMoveSpin : targetMove {
         }
         rotationSpeed = 100;
         rotationBoost = 100;
+
+        incrementingDT = 0;
     }
 
     // Update is called once per frame

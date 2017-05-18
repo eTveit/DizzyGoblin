@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -484,6 +484,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &4021064
 MeshRenderer:
@@ -1511,6 +1512,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &33418836
 MeshRenderer:
@@ -7457,6 +7459,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &228513340
 MeshRenderer:
@@ -10078,6 +10081,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &308533490
 MeshRenderer:
@@ -12099,6 +12103,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &375257144
 MeshRenderer:
@@ -23141,6 +23146,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &665842007
 MeshRenderer:
@@ -25398,6 +25404,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &747005273
 MeshRenderer:
@@ -25690,6 +25697,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &751603462
 MeshRenderer:
@@ -26444,6 +26452,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &775381658
 MeshRenderer:
@@ -29668,6 +29677,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &872411394
 MeshRenderer:
@@ -33052,6 +33062,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &959520349
 MeshRenderer:
@@ -39893,6 +39904,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1128868932
 MeshRenderer:
@@ -42308,6 +42320,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1189023760
 MeshRenderer:
@@ -42465,6 +42478,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1190933652
 MeshRenderer:
@@ -42793,6 +42807,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1195749089
 MeshRenderer:
@@ -50701,6 +50716,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1458835380
 MeshRenderer:
@@ -50871,6 +50887,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1464918094
 MeshRenderer:
@@ -52375,6 +52392,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1504126402
 MeshRenderer:
@@ -54034,6 +54052,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1549077005
 MeshRenderer:
@@ -67265,6 +67284,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1962607814
 MeshRenderer:
@@ -67851,6 +67871,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &1972154689
 MeshRenderer:
@@ -69107,6 +69128,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &2005073562
 MeshRenderer:
@@ -70206,6 +70228,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &2045228679
 MeshRenderer:
@@ -71134,6 +71157,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &2074801584
 MeshRenderer:
@@ -71245,6 +71269,7 @@ MonoBehaviour:
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
   state: 1
 --- !u!23 &2078898792
 MeshRenderer:

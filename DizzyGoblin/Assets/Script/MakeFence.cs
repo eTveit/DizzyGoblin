@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿//  || Made by Lars Joar Bjørkeland
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//  || Made by Lars Joar Bjørkeland
 
 public class MakeFence : MonoBehaviour {
 

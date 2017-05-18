@@ -60,13 +60,19 @@ public class larsArmRight : IKAnimationTarget
 
         Vector3 lpos = transform.localPosition;
 
-
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
+        float xmin = lpos.x - 3.0f;
+        float zmin = lpos.z - 3.0f;
+        float xmax = lpos.x + 3.0f;
+        float zmax = lpos.z + 3.0f;
+        float xPos = UnityEngine.Random.Range(xmin, xmax);
+        float zPos = UnityEngine.Random.Range(zmin, zmax);
+        Vector3 goalPos = new Vector3(xPos, 0, zPos);
 
 
         //set the local
         transform.localPosition = lpos;
-        
+        transform.localPosition = goalPos;
+
         //get the global, keep the target on the terrain surface
         Vector3 pos = transform.position;
                 

@@ -11,13 +11,14 @@ public class LJB_levelManager : MonoBehaviour {
     public MakeRocks makeRocks;
     public Transform ratHole;
     public TerrainMesh terrain;
+    public simpleSpawn ratsSpawn;
 
     public bool[] occupied;
 
     public int levelDifficulty = 1;
     public int Trees = 0;
     public int Rocks = 0;
-    public int Enemies = 0;
+    public int Rats = 0;
 
     void Start()
     {
@@ -71,19 +72,27 @@ public class LJB_levelManager : MonoBehaviour {
 
         terrain.Generate(levelDifficulty);
 
+        //Stop objects from spawning on top of each other
         occupied = new bool[terrain.mesh.vertexCount];
 
+        //Trees
         Trees = 10 * levelDifficulty;
         makeTrees.BuildTrees(Trees);
 
+        //Rocks
         Rocks = 10 * levelDifficulty;
         makeRocks.BuildRocks(Rocks);
 
+        //Fence
         makeFence.BuildFence();
 
+        //EnemySpawn
         placeRatHole();
 
-        //BuildEnemies;
+        //Enemies
+        Rats = 10 * levelDifficulty;
+        ratsSpawn.Spawn(Rats);
+
 
     }
 

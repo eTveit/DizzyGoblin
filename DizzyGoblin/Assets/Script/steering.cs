@@ -5,7 +5,7 @@ using UnityEngine;
 /* 
 Simple steering behaiors for path following / goal seeking and obstacle avoidance
 
-for the cube objects to be static obstacles in the path, disable the steering script.
+for the cube objects to be static ratObstacles in the path, disable the steering script.
 for the cube objects to behave like the sphere vehicle, enable the script.
 
 you could also create a boolean property that could be set in the inspector.
@@ -27,30 +27,51 @@ public class steering : MonoBehaviour {
 
     //PATH
     public Transform path = null;
-    public Transform obstacles = null;
+    public Transform ratObstacles = null;
+	public Transform treeObstacles = null;
 
-    public int curPoint = 0;
+
+	public int curPoint = 0;
     public int pointCount = 0;
     private Vector3[] points;
 
+    public Transform Player;
+    public Vector3 goal;
+    public TerrainMesh terrain;
+
+
+    public enum STATES
+    {
+
+        WAIT = 0,
+        SEEK = 1,
+        FLEE = 2,
+        HIT = 3,
+    }
+     
+    public STATES state = STATES.SEEK;
 
     // Use this for initialization
     void Start()
     {
 
-        foreach (Transform pathpoint in path)
+        if (path)
         {
-            Debug.Log(pathpoint.name);
-            pointCount++;
-        }
 
-        points = new Vector3[pointCount];
+            foreach (Transform pathpoint in path)
+            {
+                Debug.Log(pathpoint.name);
+                pointCount++;
+            }
 
-        int i = 0;
-        foreach (Transform pathpoint in path)
-        {
-            points[i] = pathpoint.position;
-            i++;
+            points = new Vector3[pointCount];
+
+            int i = 0;
+            foreach (Transform pathpoint in path)
+            {
+                points[i] = pathpoint.position;
+                i++;
+            }
         }
 
 
@@ -60,12 +81,20 @@ public class steering : MonoBehaviour {
 	void Update () {
 
         float dt = Time.deltaTime;
-
-        handleKeyboard(dt);
-
+        
         handlePath(dt);
 
-        handleObstacles(dt);
+        avoidRats(dt);
+		avoidTrees(dt);
+
+		if (state == STATES.SEEK)
+			seek(dt);
+		else if (state == STATES.FLEE)
+			flee(dt);
+		else if (state == STATES.WAIT)
+			wait(dt);
+		else if (state == STATES.HIT)
+			hit(dt);
 
         handleMove(dt);
 
@@ -73,6 +102,14 @@ public class steering : MonoBehaviour {
 
     void handlePath(float dt)
     {
+
+
+        if (path == null)
+            return;
+
+        if (points.Length < 1)
+            return;
+
         Vector3 target = points[curPoint];
 
         if (Vector3.Distance(target, transform.position) < 2.0f)
@@ -118,14 +155,14 @@ public class steering : MonoBehaviour {
 
     }
 
-    void handleObstacles(float dt)
+    void avoidRats(float dt)
     {
 
 
-        if (obstacles == null)
+        if (ratObstacles == null)
             return;
 
-        foreach (Transform obstacle in obstacles)
+        foreach (Transform obstacle in ratObstacles)
         {
 
 
@@ -152,26 +189,99 @@ public class steering : MonoBehaviour {
 
     }
 
-    void handleKeyboard(float dt)
+
+	void avoidTrees(float dt)
+	{
+
+		return;
+
+		if (treeObstacles == null)
+			return;
+
+		foreach (Transform obstacle in ratObstacles)
+		{
+
+
+			float dist = Vector3.Distance(transform.position, obstacle.position);
+			if (dist < 4.0f && obstacle.transform.gameObject != this.transform.gameObject)
+			{
+				Vector3 targetDirection = Vector3.Normalize(transform.position - obstacle.position);
+
+				if (dist <= 0.0001f)
+					dist = 0.0001f;
+
+				float distfactor = 4.0f / dist;
+
+				targetDirection = Vector3.Slerp(targetDirection, transform.forward, (distfactor * dt));
+
+				velocity += targetDirection * dt * (30 * distfactor);
+
+			}
+
+
+
+		}
+
+
+	}
+
+
+	void seek(float dt)
     {
 
-        if (!useKeyboard)
-            return;
+        Vector3 target = Player.position;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Vector3.Distance(target, transform.position) < 0.5f)
         {
-            steeringForce += transform.right * dt;
+
+            state = STATES.HIT;
+            return;
         }
         
-        if (Input.GetKey(KeyCode.LeftArrow))
+        Vector3 targetDirection = Vector3.Normalize(target - transform.position);
+
+        velocity += targetDirection * dt * 50;
+
+    }
+	void hit(float dt)
+	{
+		velocity = new Vector3(0, 0, 0);
+	}
+    void flee(float dt)
+    {
+        Vector3 target = Player.position;
+
+        if (Vector3.Distance(target, transform.position) > 20.0f)
         {
-            steeringForce -= transform.right * dt;
+
+            state = STATES.SEEK;
+            return;
         }
 
-        if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+        Vector3 targetDirection = Vector3.Normalize(transform.position - target);
+
+        velocity += targetDirection * dt * 50;
+
+    }
+    void wait(float dt)
+    {
+
+        int x = Random.Range((int)transform.position.x - 2, (int)transform.position.x + 2);
+        int z = Random.Range((int)transform.position.z - 2, (int)transform.position.z + 2);
+
+        Vector3 target = new Vector3(x, 0, z);
+
+
+        if (Vector3.Distance(target, transform.position) < 0.5f)
         {
-            steeringForce = new Vector3(0, 0, 0);
+
+            //find a new point
+
         }
+
+        Vector3 targetDirection = Vector3.Normalize(target - transform.position);
+
+        velocity += targetDirection * dt * 50;
 
 
     }
@@ -181,8 +291,10 @@ public class steering : MonoBehaviour {
     {
 
 
-              
-        velocity += (steeringForce * steeringForceFactor);
+        Vector3 curpos = transform.position;
+
+
+        //velocity += (steeringForce * steeringForceFactor);
 
         //GENERAL RULE OF VELOCITY : don't let them go too fast!!!        
         float maxSpeedSquared = maxSpeed * maxSpeed;
@@ -200,6 +312,17 @@ public class steering : MonoBehaviour {
 
 
         transform.position += velocity * dt;
+
+        float y = terrain.getHeightAt(transform.position);
+        Vector3 pos = new Vector3(transform.position.x, y, transform.position.z);
+
+        transform.position = Vector3.Lerp(curpos, pos, dt * speed);
+
+
+
+
+
+
 
     }
 }

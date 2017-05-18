@@ -259,6 +259,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -1072,6 +1073,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -1992,6 +1994,7 @@ GameObject:
   - component: {fileID: 53493323}
   - component: {fileID: 53493322}
   - component: {fileID: 53493321}
+  - component: {fileID: 53493325}
   m_Layer: 0
   m_Name: LarsGoblin
   m_TagString: Untagged
@@ -2061,6 +2064,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &53493325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 53493320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6aa0e90fa5c56843a0600ebe34f22e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 5
+  playerCurrentHealth: 5
+  Invincibility: 2
+  Heart1: {fileID: 1335936573}
+  Heart2: {fileID: 384161472}
+  Heart3: {fileID: 121674313}
+  Heart4: {fileID: 1485656698}
+  Heart5: {fileID: 850228783}
 --- !u!1 &56292567
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,6 +4086,70 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 115725993}
+--- !u!1 &121674313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 121674314}
+  - component: {fileID: 121674315}
+  m_Layer: 5
+  m_Name: Heart3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121674314
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121674313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 271593629}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &121674315
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121674313}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 23d4354dbc2caa949ad4d6b73ae7b73c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &122094302
 GameObject:
   m_ObjectHideFlags: 0
@@ -7078,6 +7164,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -8587,6 +8674,103 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 270618352}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &271593625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 271593629}
+  - component: {fileID: 271593628}
+  - component: {fileID: 271593627}
+  - component: {fileID: 271593626}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &271593626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271593625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &271593627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271593625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &271593628
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271593625}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &271593629
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271593625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1335936574}
+  - {fileID: 384161473}
+  - {fileID: 121674314}
+  - {fileID: 1485656699}
+  - {fileID: 850228784}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &271820507
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,6 +9750,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 298921750}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &299485555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 299485558}
+  - component: {fileID: 299485557}
+  - component: {fileID: 299485556}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &299485556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299485555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &299485557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299485555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &299485558
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299485555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &300520925
 Prefab:
   m_ObjectHideFlags: 0
@@ -9734,6 +9980,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -11928,6 +12175,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -12077,6 +12325,70 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 378290760}
+--- !u!1 &384161472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 384161473}
+  - component: {fileID: 384161474}
+  m_Layer: 5
+  m_Name: Heart2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384161473
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384161472}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 271593629}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &384161474
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384161472}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 23d4354dbc2caa949ad4d6b73ae7b73c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &388523788
 GameObject:
   m_ObjectHideFlags: 0
@@ -21811,6 +22123,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -23844,6 +24157,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -24086,6 +24400,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -24903,6 +25218,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -26823,6 +27139,70 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 849216536}
+--- !u!1 &850228783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 850228784}
+  - component: {fileID: 850228785}
+  m_Layer: 5
+  m_Name: Heart1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &850228784
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 850228783}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 271593629}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &850228785
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 850228783}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 23d4354dbc2caa949ad4d6b73ae7b73c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &852723108
 Prefab:
   m_ObjectHideFlags: 0
@@ -27627,6 +28007,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -30739,6 +31120,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -36522,6 +36904,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -38467,6 +38850,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -38577,6 +38961,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -38849,6 +39234,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -43220,6 +43606,70 @@ Transform:
   m_Father: {fileID: 840763123}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1335936573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1335936574}
+  - component: {fileID: 1335936575}
+  m_Layer: 5
+  m_Name: Heart1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335936574
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335936573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 271593629}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1335936575
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335936573}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 23d4354dbc2caa949ad4d6b73ae7b73c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1336324453
 GameObject:
   m_ObjectHideFlags: 0
@@ -46234,6 +46684,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -46571,6 +47022,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -47522,6 +47974,70 @@ Transform:
   m_Father: {fileID: 1075130772}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 220, z: 0}
+--- !u!1 &1485656698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1485656699}
+  - component: {fileID: 1485656700}
+  m_Layer: 5
+  m_Name: Heart1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1485656699
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485656698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 271593629}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1485656700
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485656698}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 23d4354dbc2caa949ad4d6b73ae7b73c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1487825995
 GameObject:
   m_ObjectHideFlags: 0
@@ -47893,6 +48409,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -49021,6 +49538,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -60427,6 +60945,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -60777,6 +61296,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -61576,6 +62096,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -62760,6 +63281,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -63520,6 +64042,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -63826,6 +64349,7 @@ MonoBehaviour:
   treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
+  ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}

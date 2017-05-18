@@ -15,11 +15,12 @@ public class EnemyAttack : MonoBehaviour {
 		
 	}
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collision other)
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<HealthSystem>().DamagePlayer(DamageToPlayer);
+            //other.gameObject.GetComponent<HealthSystem>().DamagePlayer(DamageToPlayer);
+			Debug.Log ("HIT");
         }
     }
 

@@ -35,6 +35,7 @@ public class steering : MonoBehaviour {
     public int pointCount = 0;
     private Vector3[] points;
 
+    public Transform ratHole;
     public Transform Player;
     public Vector3 goal;
     public TerrainMesh terrain;
@@ -167,14 +168,14 @@ public class steering : MonoBehaviour {
 
 
             float dist = Vector3.Distance(transform.position, obstacle.position);
-            if (dist < 4.0f && obstacle.transform.gameObject != this.transform.gameObject)
+            if (dist < 2.0f && obstacle.transform.gameObject != this.transform.gameObject)
             {
                 Vector3 targetDirection = Vector3.Normalize(transform.position - obstacle.position);
                 
                 if (dist <= 0.0001f)
                     dist = 0.0001f;
 
-                float distfactor = 4.0f / dist;
+                float distfactor = 2.0f / dist;
 
                 targetDirection = Vector3.Slerp(targetDirection, transform.forward, (distfactor * dt));
                 
@@ -231,7 +232,7 @@ public class steering : MonoBehaviour {
 
         Vector3 target = Player.position;
 
-        if (Vector3.Distance(target, transform.position) < 0.5f)
+        if (Vector3.Distance(target, transform.position) < 1.0f)
         {
 
             state = STATES.HIT;
@@ -246,19 +247,21 @@ public class steering : MonoBehaviour {
 	void hit(float dt)
 	{
 		velocity = new Vector3(0, 0, 0);
-	}
+        Player.GetComponent<HealthSystem>().DamagePlayer(1);
+        state = STATES.FLEE;
+    }
     void flee(float dt)
     {
-        Vector3 target = Player.position;
+        Vector3 target = ratHole.position;
 
-        if (Vector3.Distance(target, transform.position) > 20.0f)
+        if (Vector3.Distance(target, transform.position) < 20.0f)
         {
 
             state = STATES.SEEK;
             return;
         }
 
-        Vector3 targetDirection = Vector3.Normalize(transform.position - target);
+        Vector3 targetDirection = Vector3.Normalize(target - transform.position);
 
         velocity += targetDirection * dt * 50;
 

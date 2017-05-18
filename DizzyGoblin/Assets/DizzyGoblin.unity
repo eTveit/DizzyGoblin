@@ -2017,7 +2017,7 @@ MonoBehaviour:
   range: 4
   phase: 0
   yOffset: 0
-  speedMod: 0.4
+  speedMod: 0.2
   AvatarObj: {fileID: 53493324}
 --- !u!114 &53493322
 MonoBehaviour:
@@ -2036,6 +2036,7 @@ MonoBehaviour:
   rightArm: {fileID: 2051472314}
   spine: {fileID: 414666810}
   ball: {fileID: 2065630824}
+  LarsGoblin: {fileID: 53493324}
 --- !u!114 &53493323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2057,7 +2058,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53493320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.98, y: 0, z: 15}
+  m_LocalPosition: {x: 56.33, y: 2.77, z: 29.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1112240912}
@@ -18209,6 +18210,7 @@ MonoBehaviour:
   rightArm: {fileID: 2136712102}
   spine: {fileID: 961436439}
   ball: {fileID: 0}
+  LarsGoblin: {fileID: 0}
 --- !u!114 &553220544
 MonoBehaviour:
   m_ObjectHideFlags: 0

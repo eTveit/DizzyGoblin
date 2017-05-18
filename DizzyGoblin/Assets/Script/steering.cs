@@ -35,6 +35,7 @@ public class steering : MonoBehaviour {
 
     public Transform Player;
     public Vector3 goal;
+    public TerrainMesh terrain;
 
 
     public enum STATES
@@ -96,6 +97,14 @@ public class steering : MonoBehaviour {
 
     void handlePath(float dt)
     {
+
+
+        if (path == null)
+            return;
+
+        if (points.Length < 1)
+            return;
+
         Vector3 target = points[curPoint];
 
         if (Vector3.Distance(target, transform.position) < 2.0f)
@@ -237,7 +246,9 @@ public class steering : MonoBehaviour {
     {
 
 
-              
+        Vector3 curpos = transform.position;
+
+
         //velocity += (steeringForce * steeringForceFactor);
 
         //GENERAL RULE OF VELOCITY : don't let them go too fast!!!        
@@ -256,6 +267,17 @@ public class steering : MonoBehaviour {
 
 
         transform.position += velocity * dt;
+
+        float y = terrain.getHeightAt(transform.position);
+        Vector3 pos = new Vector3(transform.position.x, y, transform.position.z);
+
+        transform.position = Vector3.Lerp(curpos, pos, dt * speed);
+
+
+
+
+
+
 
     }
 }

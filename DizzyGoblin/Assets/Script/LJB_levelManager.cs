@@ -11,6 +11,7 @@ public class LJB_levelManager : MonoBehaviour {
     public MakeRocks makeRocks;
     public Transform ratHole;
     public TerrainMesh terrain;
+    public simpleSpawn ratsSpawn;
 
     public bool[] occupied;
 
@@ -82,6 +83,8 @@ public class LJB_levelManager : MonoBehaviour {
         makeFence.BuildFence();
 
         placeRatHole();
+
+        ratsSpawn.Spawn();
 
         //BuildEnemies;
 

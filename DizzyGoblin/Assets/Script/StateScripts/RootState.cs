@@ -11,6 +11,7 @@ public class RootState : MonoBehaviour {
     public Transform leftArm;
     public Transform rightArm;
     public Transform spine;
+    public Transform ball;
 
     protected List<StateNode> m_childStates ;
 

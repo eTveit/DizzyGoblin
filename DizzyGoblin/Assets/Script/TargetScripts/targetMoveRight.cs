@@ -42,8 +42,8 @@ public class targetMoveRight : IKAnimationTarget
     public float heightOffset = 0;
     public float MinX = 1;
     public float MaxX = 1;
-    
-        
+
+    public int cycleCount = 0;    
 
 	// Use this for initialization
 	void Start () {
@@ -63,9 +63,18 @@ public class targetMoveRight : IKAnimationTarget
         if (interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
 
+        Vector3 curpos = transform.position;
 
         Vector3 rpos = transform.localPosition;
-        rpos.Set(Mathf.Sin((Time.time * speed) + phase) * range + (Mathf.Clamp(transform.position.x, MinX, MaxX)), rpos.y, rpos.z);
+
+        float cycleX = Mathf.Sin((Time.time * speed) + phase) * range;
+
+        rpos.Set(cycleX + (Mathf.Clamp(transform.position.x, MinX, MaxX)), rpos.y, rpos.z);
+
+        if (cycleX > 0.99f)
+            cycleCount++;
+        
+        
         //Restriciting movement
 
         transform.localPosition = rpos;
@@ -74,8 +83,12 @@ public class targetMoveRight : IKAnimationTarget
         float y = mesh.getHeightAt(pos);
         pos.y = y + heightOffset;
 
-        //set the final position
-        transform.position = pos;
+        //here comes the interp to final position - we can use the object to perform the math
+        //in the correct spatial context, then do the interpolation using the position when 
+        //we first entered the Update(). Lerp or Slerp, depends on your preference
+        transform.position = Vector3.Lerp(curpos, pos, Time.deltaTime * speed);
+        //NOTE: I hate not being able to pass my own delta time to the mono update function
+        //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
 
         /*if (leftFoot)
         {
@@ -84,14 +97,14 @@ public class targetMoveRight : IKAnimationTarget
           
         }
         */
-       
+
 
 
 
 
 
     }
-  
 
-    
+
+
 }

@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53493320}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22bd23783c2bc844a8db2add800aad1e, type: 3}
   m_Name: 
@@ -2035,7 +2035,7 @@ MonoBehaviour:
   leftArm: {fileID: 2013677768}
   rightArm: {fileID: 2051472314}
   spine: {fileID: 414666810}
-  ball: {fileID: 0}
+  ball: {fileID: 2065630824}
 --- !u!114 &53493323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13154,7 +13154,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 405017355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61fa665f6f7dd344583a898a76e2b5a9, type: 3}
   m_Name: 
@@ -13179,7 +13179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: Pvm_walkleft
-  startPosition: {x: -0.5, y: -0.07, z: 0.26}
+  startPosition: {x: -0.5, y: -0.07, z: 0.5}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   phase: 3.141597
@@ -13780,7 +13780,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414666809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4df215daabeeda4eb421b9f663e0a1e, type: 3}
   m_Name: 
@@ -13815,6 +13815,7 @@ MonoBehaviour:
   heightOffset: 4
   MinX: 0
   MaxX: 0
+  cycleCount: 0
 --- !u!23 &414666813
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24929,6 +24930,7 @@ MonoBehaviour:
   heightOffset: 0
   MinX: 1
   MaxX: 1
+  cycleCount: 0
 --- !u!1 &763122814
 GameObject:
   m_ObjectHideFlags: 0
@@ -31284,6 +31286,7 @@ MonoBehaviour:
   heightOffset: 4
   MinX: 0
   MaxX: 0
+  cycleCount: 0
 --- !u!1 &968146246
 GameObject:
   m_ObjectHideFlags: 0
@@ -31520,7 +31523,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976268012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.19999981, z: -0.592494}
+  m_LocalPosition: {x: 0.5, y: -0.19999981, z: -1.24}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 247044515}
@@ -31532,7 +31535,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976268012}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 028699b544e4e5d4791bb2661e5b4b4c, type: 3}
   m_Name: 
@@ -31557,7 +31560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: Pvm_walkright
-  startPosition: {x: 0.5, y: -0.14, z: 0.82}
+  startPosition: {x: 0.5, y: -0.14, z: -1.24}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   leftFoot: {fileID: 0}
@@ -31567,6 +31570,7 @@ MonoBehaviour:
   heightOffset: 0
   MinX: 1
   MaxX: 1
+  cycleCount: 0
 --- !u!114 &976268016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31902,8 +31906,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 53493324}
   distance: -5
-  height: 5
+  height: 10
   interpRate: 10
+  speed: 50
 --- !u!1 &994949517
 GameObject:
   m_ObjectHideFlags: 0
@@ -62361,7 +62366,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2013677767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcadcb3b390f5504e8904e4140a4bf59, type: 3}
   m_Name: 
@@ -63457,7 +63462,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2051472313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4937e379fbbaa8f428666e47f37c62a0, type: 3}
   m_Name: 
@@ -63821,6 +63826,7 @@ GameObject:
   - component: {fileID: 2065630824}
   - component: {fileID: 2065630826}
   - component: {fileID: 2065630825}
+  - component: {fileID: 2065630827}
   m_Layer: 0
   m_Name: Geo_Goblin_Weapon_Ball
   m_TagString: Untagged
@@ -63881,6 +63887,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2065630823}
   m_Mesh: {fileID: 4300002, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+--- !u!114 &2065630827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065630823}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62b27251c1a6bb4d9c9fa30023ec94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 0}
+  mesh: {fileID: 0}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  isSpinning: 0
 --- !u!1001 &2067715737
 Prefab:
   m_ObjectHideFlags: 0

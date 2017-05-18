@@ -46,6 +46,10 @@ public class DodgeState : StateNode
     {
 
 
+        if (rightFootAnim.cycleCount > 12)
+            p_isInState = false;
+
+
         if (advanceState(dt) == true)
         {
             //if any child state is true, I am false
@@ -82,12 +86,18 @@ public class DodgeState : StateNode
 				spineAnim.enabled = false;
 			}
         }
-         
+
+
+
+
         if (p_isInState)
         {
             if (!m_isDoingItsState)
             {
                 Debug.Log("DODGE STATE");
+
+                rightFootAnim.cycleCount = 0;
+
                 m_isDoingItsState = true;
 
                 //Do something, here we make a one-shot to initialize
@@ -98,11 +108,29 @@ public class DodgeState : StateNode
                 //and enable my specific
                 leftFootAnim.enabled = true;
                 rightFootAnim.enabled = true;
-				leftArmAnim.enabled = true;
-				rightArmAnim.enabled = true;
-				spineAnim.enabled = true;
+                leftArmAnim.enabled = true;
+                rightArmAnim.enabled = true;
+                spineAnim.enabled = true;
 
-			}
+            }
+
+
+
+        }
+        else
+        {
+
+            p_isInState = false;
+            m_isDoingItsState = false;
+
+            //disable my anims
+            leftFootAnim.enabled = false;
+            rightFootAnim.enabled = false;
+            leftArmAnim.enabled = false;
+            rightArmAnim.enabled = false;
+            spineAnim.enabled = false;
+
+            rightFootAnim.cycleCount = 0;
 
         }
         return p_isInState;

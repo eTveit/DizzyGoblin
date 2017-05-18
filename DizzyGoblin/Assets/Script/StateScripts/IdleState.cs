@@ -24,7 +24,9 @@ public class IdleState : StateNode
 
     public override bool advanceTime(float dt)
     {
-        ballAnim.enabled = true;
+            
+
+       
         //if any child state is true, set my state and return
         //do not continue to process state tree (this can be overridden if desired)
         if (advanceState(dt) == true)
@@ -36,6 +38,9 @@ public class IdleState : StateNode
             //since a child state is true, return this fact!
             return true;
         }
+
+        return false;
+        ballAnim.enabled = true;
 
         //lets just say I am true, which in fact I always am if none of my children are true
         //as IDLE is the first state under root...

@@ -433,7 +433,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4021062}
   - component: {fileID: 4021066}
-  - component: {fileID: 4021065}
   - component: {fileID: 4021064}
   - component: {fileID: 4021063}
   m_Layer: 0
@@ -462,7 +461,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 4021061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -481,7 +480,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -517,18 +516,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &4021065
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 4021061}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &4021066
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1461,7 +1448,6 @@ GameObject:
   m_Component:
   - component: {fileID: 33418834}
   - component: {fileID: 33418838}
-  - component: {fileID: 33418837}
   - component: {fileID: 33418836}
   - component: {fileID: 33418835}
   m_Layer: 0
@@ -1490,7 +1476,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 33418833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -1509,7 +1495,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -1545,18 +1531,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &33418837
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33418833}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &33418838
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2410,7 +2384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &53493321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7408,7 +7382,6 @@ GameObject:
   m_Component:
   - component: {fileID: 228513338}
   - component: {fileID: 228513342}
-  - component: {fileID: 228513341}
   - component: {fileID: 228513340}
   - component: {fileID: 228513339}
   m_Layer: 0
@@ -7437,7 +7410,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228513337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -7456,7 +7429,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -7492,18 +7465,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &228513341
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 228513337}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &228513342
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10030,7 +9991,6 @@ GameObject:
   m_Component:
   - component: {fileID: 308533488}
   - component: {fileID: 308533492}
-  - component: {fileID: 308533491}
   - component: {fileID: 308533490}
   - component: {fileID: 308533489}
   m_Layer: 0
@@ -10059,7 +10019,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308533487}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -10078,7 +10038,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -10114,18 +10074,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &308533491
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 308533487}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &308533492
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12052,7 +12000,6 @@ GameObject:
   m_Component:
   - component: {fileID: 375257142}
   - component: {fileID: 375257146}
-  - component: {fileID: 375257145}
   - component: {fileID: 375257144}
   - component: {fileID: 375257143}
   m_Layer: 0
@@ -12081,7 +12028,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 375257141}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -12100,7 +12047,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -12136,18 +12083,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &375257145
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 375257141}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &375257146
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19153,7 +19088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &553220541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23095,7 +23030,6 @@ GameObject:
   m_Component:
   - component: {fileID: 665842005}
   - component: {fileID: 665842009}
-  - component: {fileID: 665842008}
   - component: {fileID: 665842007}
   - component: {fileID: 665842006}
   m_Layer: 0
@@ -23124,7 +23058,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 665842004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -23143,7 +23077,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -23179,18 +23113,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &665842008
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 665842004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &665842009
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25353,7 +25275,6 @@ GameObject:
   m_Component:
   - component: {fileID: 747005271}
   - component: {fileID: 747005275}
-  - component: {fileID: 747005274}
   - component: {fileID: 747005273}
   - component: {fileID: 747005272}
   m_Layer: 0
@@ -25382,7 +25303,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747005270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -25401,7 +25322,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -25437,18 +25358,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &747005274
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 747005270}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &747005275
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25646,7 +25555,6 @@ GameObject:
   m_Component:
   - component: {fileID: 751603460}
   - component: {fileID: 751603464}
-  - component: {fileID: 751603463}
   - component: {fileID: 751603462}
   - component: {fileID: 751603461}
   m_Layer: 0
@@ -25675,7 +25583,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 751603459}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -25694,7 +25602,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -25730,18 +25638,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &751603463
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 751603459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &751603464
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26401,7 +26297,6 @@ GameObject:
   m_Component:
   - component: {fileID: 775381656}
   - component: {fileID: 775381660}
-  - component: {fileID: 775381659}
   - component: {fileID: 775381658}
   - component: {fileID: 775381657}
   m_Layer: 0
@@ -26430,7 +26325,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 775381655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -26449,7 +26344,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -26485,18 +26380,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &775381659
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 775381655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &775381660
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28968,7 +28851,7 @@ GameObject:
   - component: {fileID: 850228784}
   - component: {fileID: 850228785}
   m_Layer: 5
-  m_Name: Heart1 (4)
+  m_Name: Heart5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29626,7 +29509,6 @@ GameObject:
   m_Component:
   - component: {fileID: 872411392}
   - component: {fileID: 872411396}
-  - component: {fileID: 872411395}
   - component: {fileID: 872411394}
   - component: {fileID: 872411393}
   m_Layer: 0
@@ -29655,7 +29537,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 872411391}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -29674,7 +29556,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -29710,18 +29592,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &872411395
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 872411391}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &872411396
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33011,7 +32881,6 @@ GameObject:
   m_Component:
   - component: {fileID: 959520347}
   - component: {fileID: 959520351}
-  - component: {fileID: 959520350}
   - component: {fileID: 959520349}
   - component: {fileID: 959520348}
   m_Layer: 0
@@ -33040,7 +32909,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 959520346}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -33059,7 +32928,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -33095,18 +32964,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &959520350
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 959520346}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &959520351
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34264,7 +34121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc4b96fa8e01aa45b77da357ec1022b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 53493324}
+  target: {fileID: 1836444386}
   distance: -5
   height: 10
   interpRate: 10
@@ -39686,7 +39543,8 @@ Transform:
   m_LocalRotation: {x: -0.15293619, y: -0.06477013, z: -0.10746253, w: 0.9802383}
   m_LocalPosition: {x: 2.667006, y: -1.0267448, z: 56.45559}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1169462383}
   m_Father: {fileID: 1170389944}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39853,7 +39711,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1128868930}
   - component: {fileID: 1128868934}
-  - component: {fileID: 1128868933}
   - component: {fileID: 1128868932}
   - component: {fileID: 1128868931}
   m_Layer: 0
@@ -39882,7 +39739,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1128868929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -39901,7 +39758,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -39937,18 +39794,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1128868933
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1128868929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1128868934
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -41164,6 +41009,68 @@ Transform:
   m_Father: {fileID: 1075130772}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
+--- !u!1001 &1169462381
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1125311537}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.68933785
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.08426351
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5343108
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4818972
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 21.455133
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 21.45519
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 21.455112
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1169462382 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+  m_PrefabInternal: {fileID: 1169462381}
+--- !u!4 &1169462383 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
+  m_PrefabInternal: {fileID: 1169462381}
 --- !u!1001 &1170254475
 Prefab:
   m_ObjectHideFlags: 0
@@ -42269,7 +42176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1189023758}
   - component: {fileID: 1189023762}
-  - component: {fileID: 1189023761}
   - component: {fileID: 1189023760}
   - component: {fileID: 1189023759}
   m_Layer: 0
@@ -42298,7 +42204,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189023757}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -42317,7 +42223,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -42353,18 +42259,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1189023761
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1189023757}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1189023762
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42427,7 +42321,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1190933650}
   - component: {fileID: 1190933654}
-  - component: {fileID: 1190933653}
   - component: {fileID: 1190933652}
   - component: {fileID: 1190933651}
   m_Layer: 0
@@ -42456,7 +42349,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1190933649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -42475,7 +42368,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -42511,18 +42404,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1190933653
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190933649}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1190933654
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42756,7 +42637,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1195749087}
   - component: {fileID: 1195749091}
-  - component: {fileID: 1195749090}
   - component: {fileID: 1195749089}
   - component: {fileID: 1195749088}
   m_Layer: 0
@@ -42785,7 +42665,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1195749086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -42804,7 +42684,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -42840,18 +42720,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1195749090
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1195749086}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1195749091
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -50665,7 +50533,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1458835378}
   - component: {fileID: 1458835382}
-  - component: {fileID: 1458835381}
   - component: {fileID: 1458835380}
   - component: {fileID: 1458835379}
   m_Layer: 0
@@ -50694,7 +50561,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1458835377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -50713,7 +50580,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -50749,18 +50616,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1458835381
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1458835377}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1458835382
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -50836,7 +50691,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1464918092}
   - component: {fileID: 1464918096}
-  - component: {fileID: 1464918095}
   - component: {fileID: 1464918094}
   - component: {fileID: 1464918093}
   m_Layer: 0
@@ -50865,7 +50719,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464918091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -50884,7 +50738,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -50920,18 +50774,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1464918095
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1464918091}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1464918096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51966,7 +51808,7 @@ GameObject:
   - component: {fileID: 1485656699}
   - component: {fileID: 1485656700}
   m_Layer: 5
-  m_Name: Heart1 (3)
+  m_Name: Heart4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52341,7 +52183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1504126400}
   - component: {fileID: 1504126404}
-  - component: {fileID: 1504126403}
   - component: {fileID: 1504126402}
   - component: {fileID: 1504126401}
   m_Layer: 0
@@ -52370,7 +52211,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504126399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -52389,7 +52230,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -52425,18 +52266,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1504126403
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504126399}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1504126404
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -54001,7 +53830,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1549077003}
   - component: {fileID: 1549077007}
-  - component: {fileID: 1549077006}
   - component: {fileID: 1549077005}
   - component: {fileID: 1549077004}
   m_Layer: 0
@@ -54030,7 +53858,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549077002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -54049,7 +53877,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -54085,18 +53913,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1549077006
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1549077002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1549077007
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63449,6 +63265,7 @@ GameObject:
   - component: {fileID: 1836444385}
   - component: {fileID: 1836444384}
   - component: {fileID: 1836444383}
+  - component: {fileID: 1836444387}
   m_Layer: 0
   m_Name: RevisedGoblin_Rigged
   m_TagString: Untagged
@@ -63489,7 +63306,7 @@ MonoBehaviour:
   leftArm: {fileID: 206039054}
   rightArm: {fileID: 2136712102}
   spine: {fileID: 961436439}
-  ball: {fileID: 0}
+  ball: {fileID: 1169462382}
   LarsGoblin: {fileID: 1836444386}
 --- !u!114 &1836444385
 MonoBehaviour:
@@ -63521,6 +63338,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1836444387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836444382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6aa0e90fa5c56843a0600ebe34f22e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 5
+  playerCurrentHealth: 5
+  Invincibility: 2
+  Heart1: {fileID: 1335936573}
+  Heart2: {fileID: 384161472}
+  Heart3: {fileID: 121674313}
+  Heart4: {fileID: 1485656698}
+  Heart5: {fileID: 850228783}
 --- !u!1001 &1839606212
 Prefab:
   m_ObjectHideFlags: 0
@@ -67233,7 +67069,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1962607812}
   - component: {fileID: 1962607816}
-  - component: {fileID: 1962607815}
   - component: {fileID: 1962607814}
   - component: {fileID: 1962607813}
   m_Layer: 0
@@ -67262,7 +67097,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962607811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -67281,7 +67116,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -67317,18 +67152,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1962607815
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1962607811}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1962607816
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -67820,7 +67643,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1972154687}
   - component: {fileID: 1972154691}
-  - component: {fileID: 1972154690}
   - component: {fileID: 1972154689}
   - component: {fileID: 1972154688}
   m_Layer: 0
@@ -67849,7 +67671,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1972154686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -67868,7 +67690,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -67904,18 +67726,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1972154690
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1972154686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1972154691
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -69077,7 +68887,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2005073560}
   - component: {fileID: 2005073564}
-  - component: {fileID: 2005073563}
   - component: {fileID: 2005073562}
   - component: {fileID: 2005073561}
   m_Layer: 0
@@ -69106,7 +68915,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005073559}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -69125,7 +68934,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -69161,18 +68970,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &2005073563
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2005073559}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2005073564
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -70177,7 +69974,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2045228677}
   - component: {fileID: 2045228681}
-  - component: {fileID: 2045228680}
   - component: {fileID: 2045228679}
   - component: {fileID: 2045228678}
   m_Layer: 0
@@ -70206,7 +70002,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045228676}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -70225,7 +70021,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -70261,18 +70057,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &2045228680
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2045228676}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2045228681
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -71106,7 +70890,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2074801582}
   - component: {fileID: 2074801586}
-  - component: {fileID: 2074801585}
   - component: {fileID: 2074801584}
   - component: {fileID: 2074801583}
   m_Layer: 0
@@ -71135,7 +70918,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074801581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -71154,7 +70937,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -71190,18 +70973,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &2074801585
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2074801581}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2074801586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -71218,7 +70989,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2078898790}
   - component: {fileID: 2078898794}
-  - component: {fileID: 2078898793}
   - component: {fileID: 2078898792}
   - component: {fileID: 2078898791}
   m_Layer: 0
@@ -71247,7 +71017,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2078898789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
@@ -71266,7 +71036,7 @@ MonoBehaviour:
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}
-  Player: {fileID: 53493324}
+  Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
   levelManager: {fileID: 57649171}
@@ -71302,18 +71072,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &2078898793
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2078898789}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2078898794
 MeshFilter:
   m_ObjectHideFlags: 0

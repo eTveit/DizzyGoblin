@@ -96,7 +96,7 @@ public class steering : MonoBehaviour {
 
         float dt = Time.deltaTime;
         
-        handlePath(dt);
+        //handlePath(dt);
 
         //<JK> optimized!! check it out my young paduans!
         //avoidRats(dt);
@@ -420,6 +420,7 @@ public class steering : MonoBehaviour {
         int x = Mathf.RoundToInt(transform.position.x);
         int z = Mathf.RoundToInt(transform.position.z);
 
+/*
         //any time x OR z changes, unoccupy my previous x,z - be sure lastXZ has been set once
         if ((x != lastX && lastX > 0) || (z != lastZ && lastZ > 0))
         {
@@ -435,6 +436,7 @@ public class steering : MonoBehaviour {
             vi = terrain.getVertexIndexFromXZ(lastX, lastZ);
             levelManager.occupied[vi]++;
         }
+        */
      
     }
 }

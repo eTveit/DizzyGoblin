@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//@KITTIKORN -  I'm implementing the most ultra-optimized collision avoidance system known to man. I invented it,
+//              I think. Though probably it already did exist in some other form at some time, perhaps I only
+//              rediscovered it. It uses the level manager "occupied" array, also used to place rocks and trees,
+//              to simply find the things in my immediate area that I need to avoid.
+//              This way, I can do my avoidance without checking each and every possible obstacle in the world. 
+//              Rats must then occupy and un-occupy "tiles" in the terrain occupied array as they enter and exit them. 
+//              Rocks and trees are already there. I have used this before to great effect.
+
+
 /* 
-Simple steering behaiors for path following / goal seeking and obstacle avoidance
+Simple steering behaviors for path following / goal seeking and obstacle avoidance
 
 for the cube objects to be static ratObstacles in the path, disable the steering script.
 for the cube objects to behave like the sphere vehicle, enable the script.
@@ -30,6 +39,10 @@ public class steering : MonoBehaviour {
     public Transform ratObstacles = null;
 	public Transform treeObstacles = null;
 
+    //occupancy data x,z into level manager occupied array - initialize to -1 so I can flag them as "not yet set"
+    int lastX = -1;
+    int lastZ = -1;
+
 
 	public int curPoint = 0;
     public int pointCount = 0;
@@ -39,7 +52,7 @@ public class steering : MonoBehaviour {
     public Transform Player;
     public Vector3 goal;
     public TerrainMesh terrain;
-
+    public LJB_levelManager levelManager;
 
     public enum STATES
     {
@@ -85,8 +98,11 @@ public class steering : MonoBehaviour {
         
         handlePath(dt);
 
-        avoidRats(dt);
-		avoidTrees(dt);
+        //<JK> optimized!! check it out my young paduans!
+        //avoidRats(dt);
+        //avoidTrees(dt);
+        //avoidObstacles(dt);
+
 
 		if (state == STATES.SEEK)
 			seek(dt);
@@ -156,6 +172,7 @@ public class steering : MonoBehaviour {
 
     }
 
+    //Deprecated!!
     void avoidRats(float dt)
     {
 
@@ -189,9 +206,7 @@ public class steering : MonoBehaviour {
 
 
     }
-
-
-	void avoidTrees(float dt)
+    void avoidTrees(float dt)
 	{
 
 		return;
@@ -227,7 +242,81 @@ public class steering : MonoBehaviour {
 	}
 
 
-	void seek(float dt)
+    void avoidObstacles(float dt)
+    {
+
+        //Unity wastefull! I just want to ignore Y, and I have to allocate a new vector? totally crap!!!
+        Vector3 pos = new Vector3 (transform.position.x, 0, transform.position.z);
+
+        int x = Mathf.RoundToInt(pos.x);
+        int z = Mathf.RoundToInt(pos.z);
+        
+        //check the occupied value for the set of xz terrain points closest to me
+        //these are the 8 combinations of +- to my current x,z
+
+        //@KITIKORN - can you make a loop such that we don't have to copy/paste so damn many times?
+        //            if so, can you expand the area (x+-,z+-) that we check for occupancy, using that loop?
+        //@ULTRA-CHALLENGE!! can anyone figure out how to ignore obstacles BEHIND us? answer is in the dot product.
+
+        float tweaker = 50.0f; //adjustable value of "how much" to avoid
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x + 1, 0, z);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;  
+
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x - 1, 0, z);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z+1)] > 0)
+        {
+
+            Vector3 avoidPos = new Vector3(x + 1, 0, z + 1);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z+1)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x - 1, 0, z + 1);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z - 1)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x + 1, 0, z - 1);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z - 1)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x - 1, 0, z - 1);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x, z - 1)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x , 0, z - 1);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+
+        }
+        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x, z + 1)] > 0)
+        {
+            Vector3 avoidPos = new Vector3(x , 0, z + 1);
+            Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
+            velocity += targetDirection * dt * tweaker;
+
+        }
+
+
+
+    }
+
+    void seek(float dt)
     {
 
         Vector3 target = Player.position;
@@ -296,7 +385,13 @@ public class steering : MonoBehaviour {
 
         Vector3 curpos = transform.position;
 
+        //setting "last values" if not yet set (first frame) for collision avoidance map
+        if (lastX < 0)
+            lastX = Mathf.RoundToInt(curpos.x);
+        if (lastZ < 0)
+            lastZ = Mathf.RoundToInt(curpos.z);
 
+        //not yet implemented
         //velocity += (steeringForce * steeringForceFactor);
 
         //GENERAL RULE OF VELOCITY : don't let them go too fast!!!        
@@ -321,11 +416,25 @@ public class steering : MonoBehaviour {
 
         transform.position = Vector3.Lerp(curpos, pos, dt * speed);
 
+        //occupy a new tile if needed 
+        int x = Mathf.RoundToInt(transform.position.x);
+        int z = Mathf.RoundToInt(transform.position.z);
 
+        //any time x OR z changes, unoccupy my previous x,z - be sure lastXZ has been set once
+        if ((x != lastX && lastX > 0) || (z != lastZ && lastZ > 0))
+        {
+            //get the index of where i was before I moved into a tile
+            //and decrement the occupancy count
+            int vi = terrain.getVertexIndexFromXZ(lastX, lastZ);
+            levelManager.occupied[vi]--;
 
-
-
-
-
+            //last is now current
+            lastX = x;
+            lastZ = z;
+            //occupy it
+            vi = terrain.getVertexIndexFromXZ(lastX, lastZ);
+            levelManager.occupied[vi]++;
+        }
+     
     }
 }

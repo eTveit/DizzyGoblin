@@ -15,6 +15,7 @@ public class EnemyAttack : MonoBehaviour {
 		
 	}
 
+    /* <JK> no longer required
     void OnTriggerEnter(Collision other)
     {
         if(other.gameObject.tag == "Player")
@@ -23,5 +24,5 @@ public class EnemyAttack : MonoBehaviour {
 			Debug.Log ("HIT");
         }
     }
-
+    */
 }

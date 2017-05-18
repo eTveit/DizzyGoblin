@@ -243,12 +243,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4021061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -262,7 +262,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &4021064
 MeshRenderer:
@@ -1057,12 +1057,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 33418833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &33418836
 MeshRenderer:
@@ -2035,6 +2035,7 @@ MonoBehaviour:
   leftArm: {fileID: 2013677768}
   rightArm: {fileID: 2051472314}
   spine: {fileID: 414666810}
+  ball: {fileID: 0}
 --- !u!114 &53493323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2217,7 +2218,7 @@ MonoBehaviour:
   levelDifficulty: 0
   Trees: 0
   Rocks: 0
-  Enemies: 0
+  Rats: 0
 --- !u!4 &57649172
 Transform:
   m_ObjectHideFlags: 0
@@ -7148,12 +7149,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 228513337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -7167,7 +7168,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &228513340
 MeshRenderer:
@@ -9964,12 +9965,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 308533487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -9983,7 +9984,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &308533490
 MeshRenderer:
@@ -12159,12 +12160,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 375257141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -12178,7 +12179,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &375257144
 MeshRenderer:
@@ -13576,6 +13577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01864f8f9d1f954ba9967123304b9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
 --- !u!1001 &411108861
 Prefab:
   m_ObjectHideFlags: 0
@@ -13806,6 +13808,7 @@ MonoBehaviour:
   startPosition: {x: 0, y: 4.5, z: 0}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
+  leftFoot: {fileID: 0}
   phase: 1.5
   speed: 1
   range: 0.5
@@ -18204,6 +18207,7 @@ MonoBehaviour:
   leftArm: {fileID: 206039054}
   rightArm: {fileID: 2136712102}
   spine: {fileID: 961436439}
+  ball: {fileID: 0}
 --- !u!114 &553220544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22107,12 +22111,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 665842004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -22126,7 +22130,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &665842007
 MeshRenderer:
@@ -24141,12 +24145,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 747005270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -24160,7 +24164,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &747005273
 MeshRenderer:
@@ -24384,12 +24388,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 751603459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -24403,7 +24407,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &751603462
 MeshRenderer:
@@ -24918,6 +24922,7 @@ MonoBehaviour:
   startPosition: {x: 0.5, y: -0.14, z: 0.82}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
+  leftFoot: {fileID: 0}
   phase: 0
   speed: 1
   range: 1
@@ -25202,12 +25207,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 775381655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -25221,7 +25226,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &775381658
 MeshRenderer:
@@ -27991,12 +27996,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 872411391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -28010,7 +28015,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &872411394
 MeshRenderer:
@@ -31104,12 +31109,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 959520346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -31123,7 +31128,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &959520349
 MeshRenderer:
@@ -31272,6 +31277,7 @@ MonoBehaviour:
   startPosition: {x: 0, y: 4.5, z: 0}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
+  leftFoot: {fileID: 0}
   phase: 1.5
   speed: 1
   range: 0.5
@@ -31554,6 +31560,7 @@ MonoBehaviour:
   startPosition: {x: 0.5, y: -0.14, z: 0.82}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
+  leftFoot: {fileID: 0}
   phase: 0
   speed: 1
   range: 1
@@ -36888,12 +36895,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1128868929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -36907,7 +36914,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1128868932
 MeshRenderer:
@@ -38834,12 +38841,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1189023757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -38853,7 +38860,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1189023760
 MeshRenderer:
@@ -38945,12 +38952,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190933649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -38964,7 +38971,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1190933652
 MeshRenderer:
@@ -39218,12 +39225,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195749086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -39237,7 +39244,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1195749089
 MeshRenderer:
@@ -46668,12 +46675,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1458835377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -46687,7 +46694,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1458835380
 MeshRenderer:
@@ -47006,12 +47013,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464918091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -47025,7 +47032,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1464918094
 MeshRenderer:
@@ -48393,12 +48400,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504126399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -48412,7 +48419,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1504126402
 MeshRenderer:
@@ -49522,12 +49529,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549077002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -49541,7 +49548,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1549077005
 MeshRenderer:
@@ -60929,12 +60936,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962607811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -60948,7 +60955,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1962607814
 MeshRenderer:
@@ -61280,12 +61287,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1972154686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -61299,7 +61306,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &1972154689
 MeshRenderer:
@@ -62080,12 +62087,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2005073559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -62099,7 +62106,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &2005073562
 MeshRenderer:
@@ -63265,12 +63272,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045228676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -63284,7 +63291,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &2045228679
 MeshRenderer:
@@ -64026,12 +64033,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074801581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -64045,7 +64052,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &2074801584
 MeshRenderer:
@@ -64333,12 +64340,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2078898789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7747f9e01989cd14dace8734a0cd121e, type: 3}
+  m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 10
+  speed: 5
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
@@ -64352,7 +64359,7 @@ MonoBehaviour:
   ratHole: {fileID: 75632332}
   Player: {fileID: 53493324}
   goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
+  terrain: {fileID: 0}
   state: 1
 --- !u!23 &2078898792
 MeshRenderer:

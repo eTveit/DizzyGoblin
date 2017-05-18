@@ -55,8 +55,6 @@ public class targetMoveLeft : IKAnimationTarget
         if (interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
 
-        Vector3 curpos = transform.position;
-
         Vector3 rpos = transform.localPosition;
         rpos.Set(Mathf.Sin((Time.time * speed) + phase) * range + (Mathf.Clamp(transform.position.x, MinX, MaxX)), rpos.y, rpos.z);
         //Restriciting movement
@@ -67,12 +65,9 @@ public class targetMoveLeft : IKAnimationTarget
         float y = mesh.getHeightAt(pos);
         pos.y = y + 0.2f;
 
-        //here comes the interp to final position - we can use the object to perform the math
-        //in the correct spatial context, then do the interpolation using the position when 
-        //we first entered the Update(). Lerp or Slerp, depends on your preference
-        transform.position = Vector3.Lerp(curpos, pos, Time.deltaTime * speed);
-        //NOTE: I hate not being able to pass my own delta time to the mono update function
-        //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
+        //set the final position
+        transform.position = pos;
+
 
     }
 }

@@ -382,7 +382,7 @@ public class steering : MonoBehaviour {
     void handleMove(float dt)
     {
 
-
+         
         Vector3 curpos = transform.position;
 
         //setting "last values" if not yet set (first frame) for collision avoidance map

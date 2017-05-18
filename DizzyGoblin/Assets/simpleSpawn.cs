@@ -14,6 +14,7 @@ public class simpleSpawn : MonoBehaviour {
             int z = Random.Range(10, 120);
 
             rat.position = new Vector3(x, 1, z);
+			rat.gameObject.SetActive(true);
 
         }
 		

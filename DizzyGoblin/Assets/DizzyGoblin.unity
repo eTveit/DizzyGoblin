@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4021062
 Transform:
   m_ObjectHideFlags: 0
@@ -248,14 +248,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -1033,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &33418834
 Transform:
   m_ObjectHideFlags: 0
@@ -1060,14 +1061,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -7038,7 +7040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &228513338
 Transform:
   m_ObjectHideFlags: 0
@@ -7065,14 +7067,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -9693,7 +9696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &308533488
 Transform:
   m_ObjectHideFlags: 0
@@ -9720,14 +9723,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -11886,7 +11890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &375257142
 Transform:
   m_ObjectHideFlags: 0
@@ -11913,14 +11917,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -21768,7 +21773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665842005
 Transform:
   m_ObjectHideFlags: 0
@@ -21795,14 +21800,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -23800,7 +23806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747005271
 Transform:
   m_ObjectHideFlags: 0
@@ -23827,14 +23833,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -24041,7 +24048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &751603460
 Transform:
   m_ObjectHideFlags: 0
@@ -24068,14 +24075,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -24857,7 +24865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &775381656
 Transform:
   m_ObjectHideFlags: 0
@@ -24884,14 +24892,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -27580,7 +27589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &872411392
 Transform:
   m_ObjectHideFlags: 0
@@ -27607,14 +27616,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -30691,7 +30701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &959520347
 Transform:
   m_ObjectHideFlags: 0
@@ -30718,14 +30728,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -36473,7 +36484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1128868930
 Transform:
   m_ObjectHideFlags: 0
@@ -36500,14 +36511,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -38417,7 +38429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1189023758
 Transform:
   m_ObjectHideFlags: 0
@@ -38444,14 +38456,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -38526,7 +38539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1190933650
 Transform:
   m_ObjectHideFlags: 0
@@ -38553,14 +38566,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -38797,7 +38811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1195749087
 Transform:
   m_ObjectHideFlags: 0
@@ -38824,14 +38838,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -46181,7 +46196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1458835378
 Transform:
   m_ObjectHideFlags: 0
@@ -46208,14 +46223,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -46517,7 +46533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1464918092
 Transform:
   m_ObjectHideFlags: 0
@@ -46544,14 +46560,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -47838,7 +47855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1504126400
 Transform:
   m_ObjectHideFlags: 0
@@ -47865,14 +47882,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -48965,7 +48983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1549077003
 Transform:
   m_ObjectHideFlags: 0
@@ -48992,14 +49010,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -60370,7 +60389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1962607812
 Transform:
   m_ObjectHideFlags: 0
@@ -60397,14 +60416,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -60719,7 +60739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1972154687
 Transform:
   m_ObjectHideFlags: 0
@@ -60746,14 +60766,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -61517,7 +61538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2005073560
 Transform:
   m_ObjectHideFlags: 0
@@ -61544,14 +61565,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -62700,7 +62722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2045228677
 Transform:
   m_ObjectHideFlags: 0
@@ -62727,14 +62749,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -63459,7 +63482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2074801582
 Transform:
   m_ObjectHideFlags: 0
@@ -63486,14 +63509,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}
@@ -63764,7 +63788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2078898790
 Transform:
   m_ObjectHideFlags: 0
@@ -63791,14 +63815,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 1.5}
   maxSpeed: 5
-  speed: 0
+  speed: 10
   radius: 2
   useKeyboard: 0
   steeringForce: {x: 0, y: 0, z: 0}
   steeringForceFactor: 0.01
   dotproduct: 0
   path: {fileID: 0}
-  obstacles: {fileID: 410806598}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
   curPoint: 0
   pointCount: 0
   Player: {fileID: 53493324}

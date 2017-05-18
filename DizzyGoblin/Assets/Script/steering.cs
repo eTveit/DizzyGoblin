@@ -5,7 +5,7 @@ using UnityEngine;
 /* 
 Simple steering behaiors for path following / goal seeking and obstacle avoidance
 
-for the cube objects to be static obstacles in the path, disable the steering script.
+for the cube objects to be static ratObstacles in the path, disable the steering script.
 for the cube objects to behave like the sphere vehicle, enable the script.
 
 you could also create a boolean property that could be set in the inspector.
@@ -27,9 +27,11 @@ public class steering : MonoBehaviour {
 
     //PATH
     public Transform path = null;
-    public Transform obstacles = null;
+    public Transform ratObstacles = null;
+	public Transform treeObstacles = null;
 
-    public int curPoint = 0;
+
+	public int curPoint = 0;
     public int pointCount = 0;
     private Vector3[] points;
 
@@ -82,14 +84,17 @@ public class steering : MonoBehaviour {
         
         handlePath(dt);
 
-        handleObstacles(dt);
+        avoidRats(dt);
+		avoidTrees(dt);
 
-        if (state == STATES.SEEK)
-            seek(dt);
-        else if (state == STATES.FLEE)
-            flee(dt);
-        else if (state == STATES.WAIT)
-            wait(dt);
+		if (state == STATES.SEEK)
+			seek(dt);
+		else if (state == STATES.FLEE)
+			flee(dt);
+		else if (state == STATES.WAIT)
+			wait(dt);
+		else if (state == STATES.HIT)
+			hit(dt);
 
         handleMove(dt);
 
@@ -150,14 +155,14 @@ public class steering : MonoBehaviour {
 
     }
 
-    void handleObstacles(float dt)
+    void avoidRats(float dt)
     {
 
 
-        if (obstacles == null)
+        if (ratObstacles == null)
             return;
 
-        foreach (Transform obstacle in obstacles)
+        foreach (Transform obstacle in ratObstacles)
         {
 
 
@@ -184,7 +189,44 @@ public class steering : MonoBehaviour {
 
     }
 
-    void seek(float dt)
+
+	void avoidTrees(float dt)
+	{
+
+		return;
+
+		if (treeObstacles == null)
+			return;
+
+		foreach (Transform obstacle in ratObstacles)
+		{
+
+
+			float dist = Vector3.Distance(transform.position, obstacle.position);
+			if (dist < 4.0f && obstacle.transform.gameObject != this.transform.gameObject)
+			{
+				Vector3 targetDirection = Vector3.Normalize(transform.position - obstacle.position);
+
+				if (dist <= 0.0001f)
+					dist = 0.0001f;
+
+				float distfactor = 4.0f / dist;
+
+				targetDirection = Vector3.Slerp(targetDirection, transform.forward, (distfactor * dt));
+
+				velocity += targetDirection * dt * (30 * distfactor);
+
+			}
+
+
+
+		}
+
+
+	}
+
+
+	void seek(float dt)
     {
 
         Vector3 target = Player.position;
@@ -201,7 +243,10 @@ public class steering : MonoBehaviour {
         velocity += targetDirection * dt * 50;
 
     }
-
+	void hit(float dt)
+	{
+		velocity = new Vector3(0, 0, 0);
+	}
     void flee(float dt)
     {
         Vector3 target = Player.position;

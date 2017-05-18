@@ -20,7 +20,7 @@ public class treeAnimate : IKAnimationTarget
     
     //phase determines the relationship between multiple move points
     //as a function of PI, as Sin is the oscillating function
-    public float phase = 0;
+    public float phase = 7;
     
     //how fast the target point moves
     public float speed = 1;
@@ -49,7 +49,7 @@ public class treeAnimate : IKAnimationTarget
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(Mathf.Sin((Time.time * speed) + phase) * range, lpos.y, Mathf.Sin((Time.time * speed * 2) + phase) * range);
+        lpos.Set(Mathf.Sin((Time.time * speed) + phase) * range, lpos.y, Mathf.Sin((Time.time * speed * 1) + phase ) * range);
 
 
         //set the local

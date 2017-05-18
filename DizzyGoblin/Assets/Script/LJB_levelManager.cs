@@ -9,6 +9,10 @@ public class LJB_levelManager : MonoBehaviour {
     public MakeTrees makeTrees;
     public MakeFence makeFence;
     public MakeRocks makeRocks;
+    public Transform ratHole;
+    public TerrainMesh terrain;
+
+    public bool[] occupied;
 
     public int levelDifficulty = 1;
     public int Trees = 0;
@@ -64,6 +68,11 @@ public class LJB_levelManager : MonoBehaviour {
 
     void BuildLevel()
     {
+
+        terrain.Generate(levelDifficulty);
+
+        occupied = new bool[terrain.mesh.vertexCount];
+
         Trees = 10 * levelDifficulty;
         makeTrees.BuildTrees(Trees);
 
@@ -72,8 +81,59 @@ public class LJB_levelManager : MonoBehaviour {
 
         makeFence.BuildFence();
 
+        placeRatHole();
+
         //BuildEnemies;
 
     }
+
+    void placeRatHole()
+    {
+
+
+        int x, z;
+        float y;
+
+        x = Random.Range(terrain.xSize/2, terrain.xSize - 5);
+        z = Random.Range(terrain.zSize/2,terrain.xSize - 5);
+        y = 0;
+
+
+
+        int vi = terrain.getVertexIndexFromXZ(x, z); // z * (terrain.xSize + 1) + x;
+
+
+        int errorcount = 0;
+        while (occupied[vi])
+        {
+
+            Debug.Log("try again");
+
+            x = Random.Range(terrain.xSize / 2, terrain.xSize - 5);
+            z = Random.Range(terrain.zSize / 2, terrain.xSize - 5);
+            y = 0;
+
+            //check if this point is occupied
+            vi = terrain.getVertexIndexFromXZ(x, z); // z * (terrain.xSize + 1) + x;
+            errorcount++;
+
+            if (errorcount > 1000)
+            {
+                return;
+            }
+        }
+
+        occupied[vi] = true;
+
+        Vector3 pos = new Vector3((float)x, y, (float)z);
+
+        y = terrain.getHeightAt(pos) + 2.0f;
+
+        pos.Set(x, y, z);
+
+        ratHole.position = pos;
+
+    }
+
 }
 

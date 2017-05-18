@@ -19,13 +19,11 @@ public class TerrainMesh : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-
+        
 
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();
         mesh.name = "Procedural Terrain";
 
-
-        Generate();
 
     }
 
@@ -43,7 +41,7 @@ public class TerrainMesh : MonoBehaviour {
     }
 
 
-    void Generate()
+    public void Generate(int levelDifficulty)
     {
         
        
@@ -196,6 +194,13 @@ public class TerrainMesh : MonoBehaviour {
 
     public float getHeightAt(Vector3 pos)
     {
+        if (mesh == null)
+            return 1;
+        if (mesh.vertices == null)
+            return 1;
+        if (mesh.vertexCount < 1)
+            return 1;
+
         //get the one vertex closest to our rounded integer position
         float h = 0;
         int ix = Mathf.RoundToInt(pos.x);

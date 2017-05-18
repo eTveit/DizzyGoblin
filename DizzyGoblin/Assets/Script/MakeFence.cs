@@ -7,8 +7,7 @@ using UnityEngine;
 public class MakeFence : MonoBehaviour {
 
     public TerrainMesh terrain;
-    
-    public bool[] occupied;
+
     // Use this for initialization
 
 

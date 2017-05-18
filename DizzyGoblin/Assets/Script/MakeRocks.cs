@@ -7,8 +7,6 @@ public class MakeRocks : MonoBehaviour {
     public TerrainMesh terrain;
     public LJB_levelManager levelManager;
 
-    public bool[] occupied;
-
     private int rockCount = 0;
 
     private float rockSize = 1;
@@ -22,7 +20,7 @@ public class MakeRocks : MonoBehaviour {
         int vc = mesh.vertexCount;
 
 
-        occupied = new bool[vc];
+        // occupied = new bool[vc];
         int min = 20;////Random.Range(1, terrain.xSize);
         int max = terrain.xSize - 20; // min;
 
@@ -57,7 +55,7 @@ public class MakeRocks : MonoBehaviour {
 
 
                 int errorcount = 0;
-                while (occupied[vi]/* || x % 2 == 0 || z % 2 == 0*/)
+                while (levelManager.occupied[vi] || x % 2 == 0 || z % 2 == 0)
                 {
 
                     Debug.Log("try again");
@@ -76,7 +74,7 @@ public class MakeRocks : MonoBehaviour {
                     }
                 }
 
-                occupied[vi] = true;
+                levelManager.occupied[vi] = true;
 
                //Change size of rock
                 

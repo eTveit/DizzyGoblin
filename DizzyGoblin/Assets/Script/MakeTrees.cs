@@ -8,7 +8,6 @@ public class MakeTrees : MonoBehaviour
     public TerrainMesh terrain;
     public LJB_levelManager levelManager;
 
-    public bool[] occupied;
 
     private int treeCount = 0;
     
@@ -24,7 +23,7 @@ public class MakeTrees : MonoBehaviour
         int vc = mesh.vertexCount;
 
 
-        occupied = new bool[vc];
+        // occupied = new bool[vc];
 
         //initial position/range
         //<JK>  the clustering is too clustered, I think maybe better to spread evenly
@@ -60,7 +59,7 @@ public class MakeTrees : MonoBehaviour
 
 
                 int errorcount = 0;
-                while (occupied[vi]/* || x % 2 == 0 || z % 2 == 0*/)
+                while (levelManager.occupied[vi] || x % 2 == 0 || z % 2 == 0)
                 {
 
                     Debug.Log("try again");
@@ -79,7 +78,7 @@ public class MakeTrees : MonoBehaviour
                     }
                 }
 
-                occupied[vi] = true;
+                levelManager.occupied[vi] = true;
 
                 Vector3 pos = new Vector3((float)x, y, (float)z);
 

@@ -33,13 +33,13 @@ public class targetMoveSpin : targetMove {
 
         if(isKickingFoot) {
             phase = 0;
-            range = 1;
-            circularHeight = 1.2f;
+            range = 2;
+            circularHeight = 1.8f;
         }
         else {
             //Why would we settle for just six decimal points?
             phase = Mathf.PI;
-            range = 0.3f;
+            range = 0.6f;
             circularHeight = -1.0f;
         }
         rotationSpeed = 100;

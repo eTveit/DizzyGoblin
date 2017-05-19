@@ -24,12 +24,14 @@ public class IdleState : StateNode
 
     public override bool advanceTime(float dt)
     {
-            
 
-       
+        //ball should always be enabled. At least until we maybe give it some other animation
+        ballAnim.enabled = true;
+
+
         //if any child state is true, set my state and return
         //do not continue to process state tree (this can be overridden if desired)
-        if (advanceState(dt) == true)
+        if(advanceState(dt) == true)
         {
             //if any child state is true, I am false
             p_isInState = false;
@@ -40,7 +42,6 @@ public class IdleState : StateNode
         }
 
         return false;
-        ballAnim.enabled = true;
 
         //lets just say I am true, which in fact I always am if none of my children are true
         //as IDLE is the first state under root...

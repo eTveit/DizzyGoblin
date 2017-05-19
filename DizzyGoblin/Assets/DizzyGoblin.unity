@@ -466,25 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &4021064
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1481,25 +1462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &33418836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2897,6 +2859,7 @@ GameObject:
   - component: {fileID: 63073731}
   - component: {fileID: 63073730}
   - component: {fileID: 63073729}
+  - component: {fileID: 63073733}
   m_Layer: 0
   m_Name: targetLeftArm
   m_TagString: Untagged
@@ -2986,6 +2949,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63073727}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &63073733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63073727}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba37223def7fc4748beebf258dbd955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetArmsHoldBall
+  startPosition: {x: -0.3, y: 4.2, z: 4}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1001 &68537352
 Prefab:
   m_ObjectHideFlags: 0
@@ -5253,6 +5236,7 @@ Transform:
   - {fileID: 1835569137}
   - {fileID: 1563252449}
   - {fileID: 63073728}
+  - {fileID: 199365790}
   m_Father: {fileID: 1836444386}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6709,6 +6693,108 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 194713361}
+--- !u!1 &199365789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 199365790}
+  - component: {fileID: 199365794}
+  - component: {fileID: 199365793}
+  - component: {fileID: 199365792}
+  - component: {fileID: 199365791}
+  m_Layer: 0
+  m_Name: targetBall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199365790
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_LocalRotation: {x: -0, y: 1.2795854e-14, z: 2.7472643e-15, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 8}
+  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
+  m_Children: []
+  m_Father: {fileID: 144400131}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &199365791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62b27251c1a6bb4d9c9fa30023ec94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetMoveChain
+  startPosition: {x: 0, y: 5, z: 8}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  isSpinning: 0
+--- !u!23 &199365792
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &199365793
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &199365794
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &200964542
 GameObject:
   m_ObjectHideFlags: 0
@@ -7415,25 +7501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &228513340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10024,25 +10091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &308533490
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12033,25 +12081,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &375257144
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23063,25 +23092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &665842007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25308,25 +25318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &747005273
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25588,25 +25579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &751603462
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26330,25 +26302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &775381658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26840,7 +26793,7 @@ MonoBehaviour:
   circularHeight: 0.3
   rotationSpeed: 100
   rotationBoost: 100
-  isKickingFoot: 1
+  isKickingFoot: 0
   incrementingDT: 0
 --- !u!114 &789167005
 MonoBehaviour:
@@ -29542,25 +29495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &872411394
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32914,25 +32848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &959520349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36157,7 +36072,7 @@ MonoBehaviour:
   circularHeight: -1
   rotationSpeed: 100
   rotationBoost: 100
-  isKickingFoot: 0
+  isKickingFoot: 1
   incrementingDT: 0
 --- !u!114 &1060537430
 MonoBehaviour:
@@ -39744,25 +39659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1128868932
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41063,10 +40959,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1169462382 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
-  m_PrefabInternal: {fileID: 1169462381}
 --- !u!4 &1169462383 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
@@ -42209,25 +42101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1189023760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42354,25 +42227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1190933652
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42670,25 +42524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1195749089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50566,25 +50401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1458835380
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50724,25 +50540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1464918094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52216,25 +52013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1504126402
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53863,25 +53641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1549077005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54267,6 +54026,7 @@ GameObject:
   - component: {fileID: 1563252452}
   - component: {fileID: 1563252451}
   - component: {fileID: 1563252450}
+  - component: {fileID: 1563252454}
   m_Layer: 0
   m_Name: targetRightArm
   m_TagString: Untagged
@@ -54281,7 +54041,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
   m_LocalRotation: {x: -0, y: 3.3241325e-15, z: -4.212311e-15, w: 1}
-  m_LocalPosition: {x: 3.42, y: 2.45, z: 0}
+  m_LocalPosition: {x: 3.34, y: 2.46, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -54356,6 +54116,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1563252454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563252448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba37223def7fc4748beebf258dbd955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetArmsHoldBall
+  startPosition: {x: 0.3, y: 4.2, z: 4}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1001 &1563372846
 Prefab:
   m_ObjectHideFlags: 0
@@ -63301,12 +63081,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bd23783c2bc844a8db2add800aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftFoot: {fileID: 1713687969}
-  rightFoot: {fileID: 762947059}
-  leftArm: {fileID: 206039054}
-  rightArm: {fileID: 2136712102}
-  spine: {fileID: 961436439}
-  ball: {fileID: 1169462382}
+  leftFoot: {fileID: 1060537427}
+  rightFoot: {fileID: 789167002}
+  leftArm: {fileID: 63073728}
+  rightArm: {fileID: 1563252449}
+  spine: {fileID: 1835569137}
+  ball: {fileID: 199365790}
   LarsGoblin: {fileID: 1836444386}
 --- !u!114 &1836444385
 MonoBehaviour:
@@ -67102,25 +66882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1962607814
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67676,25 +67437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &1972154689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68920,25 +68662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &2005073562
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70007,25 +69730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &2045228679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70923,25 +70627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &2074801584
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71022,25 +70707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a030abf0db2f0ec41847011009abc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 1.5}
-  maxSpeed: 5
-  speed: 5
-  radius: 2
-  useKeyboard: 0
-  steeringForce: {x: 0, y: 0, z: 0}
-  steeringForceFactor: 0.01
-  dotproduct: 0
-  path: {fileID: 0}
-  ratObstacles: {fileID: 410806598}
-  treeObstacles: {fileID: 1068816215}
-  curPoint: 0
-  pointCount: 0
-  ratHole: {fileID: 75632332}
-  Player: {fileID: 1836444386}
-  goal: {x: 0, y: 0, z: 0}
-  terrain: {fileID: 1100547802}
-  levelManager: {fileID: 57649171}
-  state: 1
 --- !u!23 &2078898792
 MeshRenderer:
   m_ObjectHideFlags: 0

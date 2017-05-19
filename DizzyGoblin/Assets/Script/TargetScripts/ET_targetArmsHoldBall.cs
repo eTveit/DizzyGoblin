@@ -74,7 +74,7 @@ public class ET_targetArmsHoldBall : IKAnimationTarget
 
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, startPosition.y + Mathf.Sin((incrementingDT * speed) + phase) * range, startPosition.z + Mathf.Sin((incrementingDT * speed) + phase) * range);
+        lpos.Set(startPosition.x, startPosition.y + Mathf.Sin((incrementingDT * speed) + phase) * range, startPosition.z + Mathf.Sin((incrementingDT * speed) + phase) * range);
         
 
 

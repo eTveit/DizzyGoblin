@@ -2195,7 +2195,7 @@ MonoBehaviour:
   levelDifficulty: 0
   Trees: 0
   Rocks: 0
-  Enemies: 0
+  Rats: 0
 --- !u!4 &57649172
 Transform:
   m_ObjectHideFlags: 0
@@ -12846,14 +12846,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61fa665f6f7dd344583a898a76e2b5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: Lars_DeathAnimLeftFoot
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 4
+  speed: 1
   range: 1
   heightOffset: 0
+  speedMod: 1
 --- !u!114 &405017358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13264,6 +13265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01864f8f9d1f954ba9967123304b9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 57649171}
 --- !u!1001 &411108861
 Prefab:
   m_ObjectHideFlags: 0
@@ -13454,7 +13456,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414666809}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3.800001, z: 0.1184988}
+  m_LocalPosition: {x: 0, y: 3.800001, z: -0.245}
   m_LocalScale: {x: 0.3, y: 0.30000025, z: 0.30000025}
   m_Children: []
   m_Father: {fileID: 247044515}
@@ -13471,14 +13473,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4df215daabeeda4eb421b9f663e0a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: Lars_DeathAnimSpine
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 4
+  speed: 1
   range: 0.2
   heightOffset: 4
+  speedMod: 1
 --- !u!114 &414666812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31149,14 +31152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028699b544e4e5d4791bb2661e5b4b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: Lars_DeathAnimRightFoot
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   phase: 3.141597
-  speed: 4
+  speed: 1
   range: 1
   heightOffset: 0
+  speedMod: 1
 --- !u!114 &976268015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35098,6 +35102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e23d8fcc6720540a4eed74d21d529f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
   xSize: 128
   zSize: 128
   mesh: {fileID: 0}
@@ -61821,7 +61826,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2013677767}
   m_LocalRotation: {x: -0, y: 1.2795854e-14, z: 2.7472643e-15, w: 1}
-  m_LocalPosition: {x: -0.87, y: -0.42, z: -0.592494}
+  m_LocalPosition: {x: -1.621, y: 1.266, z: -0.396}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 247044515}
@@ -61838,14 +61843,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcadcb3b390f5504e8904e4140a4bf59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: Lars_DeathAnimLeftArm
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   phase: 3.141597
-  speed: 4
+  speed: 1
   range: 1
   heightOffset: 0
+  speedMod: 1
 --- !u!114 &2013677770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62933,14 +62939,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4937e379fbbaa8f428666e47f37c62a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: Lars_DeathAnimRightArm
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 53493324}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 4
+  speed: 1
   range: 1
   heightOffset: 0
+  speedMod: 1
 --- !u!114 &2051472316
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class ET_targetMoveChain : targetMove {
             Vector3 groundPos = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
             float localGroundY = startPosition.y -(initialWorldY -  mesh.getHeightAt(transform.position));
             groundPos.y = localGroundY;
+            groundPos.z = startPosition.z/3;
             MoveChain(groundPos);
         }
     }

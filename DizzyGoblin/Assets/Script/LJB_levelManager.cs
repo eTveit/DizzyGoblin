@@ -11,7 +11,7 @@ public class LJB_levelManager : MonoBehaviour {
     public MakeRocks makeRocks;
     public Transform ratHole;
     public TerrainMesh terrain;
-    public simpleSpawn ratsSpawn;
+    public PoolSystem poolSystem;
 
     //<JK> changed to integer so I can add rats as temporary "occupiers" to optimize collision avoidance.
     //     crazy optimize btw... ;)
@@ -93,7 +93,7 @@ public class LJB_levelManager : MonoBehaviour {
 
         //Enemies
         Rats = 10 * levelDifficulty;
-        ratsSpawn.Spawn(Rats);
+        poolSystem.spawnRats(Rats);
 
 
     }

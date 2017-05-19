@@ -194,7 +194,11 @@ public class TerrainMesh : MonoBehaviour {
             return 1;
 
         //this is the "simple" height
-        h = mesh.vertices[ v1 ].y;
+        h = mesh.vertices[ v1 ].y + 0.3f; //give him a lift, make it a param?
+
+		return h;
+
+		//code below is killing framerate, not sure why yet
 
         //if we are really close to it, "early out" so as to prevent the nasty NaN (see below)
         //AND we need to compare 2d distance because our current Y will cause inaccuracy

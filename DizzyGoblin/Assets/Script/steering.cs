@@ -101,7 +101,7 @@ public class steering : MonoBehaviour {
         //<JK> optimized!! check it out my young paduans!
         //avoidRats(dt);
         //avoidTrees(dt);
-        //avoidObstacles(dt);
+        avoidObstacles(dt);
 
 
 		if (state == STATES.SEEK)
@@ -390,8 +390,9 @@ public class steering : MonoBehaviour {
             lastX = Mathf.RoundToInt(curpos.x);
         if (lastZ < 0)
             lastZ = Mathf.RoundToInt(curpos.z);
-
-        //not yet implemented
+		
+        
+		//not yet implemented
         //velocity += (steeringForce * steeringForceFactor);
 
         //GENERAL RULE OF VELOCITY : don't let them go too fast!!!        
@@ -411,16 +412,20 @@ public class steering : MonoBehaviour {
 
         transform.position += velocity * dt;
 
+		//interpolate the Y (height) 
+		float prevy = curpos.y;
         float y = terrain.getHeightAt(transform.position);
+		y = Mathf.Lerp(y, prevy, dt );
+
         Vector3 pos = new Vector3(transform.position.x, y, transform.position.z);
 
-        transform.position = Vector3.Lerp(curpos, pos, dt * speed);
+		transform.position = pos;
 
         //occupy a new tile if needed 
         int x = Mathf.RoundToInt(transform.position.x);
         int z = Mathf.RoundToInt(transform.position.z);
 
-/*
+
         //any time x OR z changes, unoccupy my previous x,z - be sure lastXZ has been set once
         if ((x != lastX && lastX > 0) || (z != lastZ && lastZ > 0))
         {
@@ -436,7 +441,7 @@ public class steering : MonoBehaviour {
             vi = terrain.getVertexIndexFromXZ(lastX, lastZ);
             levelManager.occupied[vi]++;
         }
-        */
+        
      
     }
 }

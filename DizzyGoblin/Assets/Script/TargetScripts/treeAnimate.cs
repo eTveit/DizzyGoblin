@@ -16,22 +16,43 @@ public class treeAnimate : IKAnimationTarget
     {
         return animationName;
     }
-    
-    
+
+
+    public TerrainMesh terrain;
+    public TreeGlobals treeGlobals;
+    public Transform tree;
+
     //phase determines the relationship between multiple move points
     //as a function of PI, as Sin is the oscillating function
-    public float phase = 0;
+    public float phaseX = 7;
     
     //how fast the target point moves
-    public float speed = 1;
+    public float speedX = 1;
 
     //the range of motion of the move point
-    public float range = 1; 
+    public float rangeX = 1;
 
-        
 
-	// Use this for initialization
-	void Start ()
+    //phase determines the relationship between multiple move points
+    //as a function of PI, as Sin is the oscillating function
+    public float phaseZ = 1;
+
+    //how fast the target point moves
+    public float speedZ = 1;
+
+    //the range of motion of the move point
+    public float rangeZ = 1;
+
+
+
+    // Use this for initialization
+    void Awake()
+    {
+        tree = GetComponentInParent<Transform>();
+    }
+
+    // Use this for initialization
+    void Start ()
     {
 
 	}
@@ -41,20 +62,29 @@ public class treeAnimate : IKAnimationTarget
     {
 
 		//we need to smoothly transition to the new start point before running the animation
-		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+		if (interpolateToStartPosition(Time.deltaTime, speedX) == false)
 			return;
 
-	
+
+        Vector3 cpos = transform.localPosition;
+
         //to keep our targets in line with the hips, we simply want to
         //oscillate on z axis in the LOCAL space
 
-        Vector3 lpos = transform.localPosition;
-        lpos.Set(Mathf.Sin((Time.time * speed) + phase) * range, lpos.y, Mathf.Sin((Time.time * speed * 2) + phase) * range);
+        float xp = tree.position.x ;
+        float zp = 0; //tree.position.z ;
 
+        //xp and zp will need to have a coefficient of wind dir/speed
 
-        //set the local
-        transform.localPosition = lpos;
+        float xm = Mathf.Sin((Time.time * speedX) + phaseX + xp);
+        float zm = Mathf.Sin((Time.time * speedZ) + phaseX + zp);
         
+        Vector3 lpos = transform.localPosition;
+        lpos.Set(xm * rangeX, 10, zm * rangeZ);
+        
+        //interpolate to new pos
+        transform.localPosition = Vector3.Slerp(cpos,lpos,Time.deltaTime);
+
 
 
 

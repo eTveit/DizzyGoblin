@@ -12,12 +12,14 @@ public class DodgeState : StateNode
 	private targetMoveRight spineAnim = null;  //re-using the same anim on a different joint
 	private targetRightArmIdle rightArmAnim = null;
 	private targetLeftArmIdle leftArmAnim = null;
-
+    private HipSlide sidemoveanim = null;
+    
+    
 
 	//private IKAnimationTarget leftArmAnim = null;
 	//private IKAnimationTarget rightArmAnim = null;
 
-
+       
     //ctor
     public DodgeState(RootState _rs)
     {
@@ -33,6 +35,8 @@ public class DodgeState : StateNode
 		leftArmAnim = m_rootState.leftArm.GetComponent<targetLeftArmIdle>();
 		rightArmAnim = m_rootState.rightArm.GetComponent<targetRightArmIdle>();
 		spineAnim = m_rootState.spine.GetComponent<targetMoveRight>();
+        sidemoveanim = m_rootState.LarsGoblin.GetComponent<HipSlide>();
+
 
 		//because all we must do is enable them, we could access them as a base object
 		//if we dont need to read specific property values. so we can do this, by name
@@ -44,6 +48,10 @@ public class DodgeState : StateNode
 
     public override bool advanceTime(float dt)
     {
+
+
+        if (rightFootAnim.cycleCount > 8)
+            p_isInState = false;
 
 
         if (advanceState(dt) == true)
@@ -58,6 +66,7 @@ public class DodgeState : StateNode
 			leftArmAnim.enabled = false;
 			rightArmAnim.enabled = false;
 			spineAnim.enabled = false;
+            sidemoveanim.enabled = false;
 
 			//since a child state is true, return this fact!
 			return true;
@@ -80,14 +89,23 @@ public class DodgeState : StateNode
 				leftArmAnim.enabled = false;
 				rightArmAnim.enabled = false;
 				spineAnim.enabled = false;
-			}
+                sidemoveanim.enabled = false;
+            }
         }
-         
+
+
+
+
         if (p_isInState)
         {
             if (!m_isDoingItsState)
             {
                 Debug.Log("DODGE STATE");
+
+                
+
+                rightFootAnim.cycleCount = 0;
+
                 m_isDoingItsState = true;
 
                 //Do something, here we make a one-shot to initialize
@@ -98,15 +116,36 @@ public class DodgeState : StateNode
                 //and enable my specific
                 leftFootAnim.enabled = true;
                 rightFootAnim.enabled = true;
-				leftArmAnim.enabled = true;
-				rightArmAnim.enabled = true;
-				spineAnim.enabled = true;
+                leftArmAnim.enabled = true;
+                rightArmAnim.enabled = true;
+                spineAnim.enabled = true;
+                sidemoveanim.enabled = true;
 
-			}
+            }
+
+
+
+        }
+        else
+        {
+
+            p_isInState = false;
+            m_isDoingItsState = false;
+
+            //disable my anims
+            leftFootAnim.enabled = false;
+            rightFootAnim.enabled = false;
+            leftArmAnim.enabled = false;
+            rightArmAnim.enabled = false;
+            spineAnim.enabled = false;
+            sidemoveanim.enabled = false;
+
+            rightFootAnim.cycleCount = 0;
 
         }
         return p_isInState;
     }
+   
 
    
 

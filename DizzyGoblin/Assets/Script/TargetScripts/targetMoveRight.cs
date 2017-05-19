@@ -22,6 +22,11 @@ public class targetMoveRight : IKAnimationTarget
     public Transform AvatarObj;
     public TerrainMesh mesh = null;
     private GoblinGlobals goblinGlobals;
+    public Transform leftFoot;
+    
+
+
+
 
     //phase determines the relationship between multiple move points
     //as a function of PI, as Sin is the oscillating function
@@ -37,7 +42,8 @@ public class targetMoveRight : IKAnimationTarget
     public float heightOffset = 0;
     public float MinX = 1;
     public float MaxX = 1;
-        
+
+    public int cycleCount = 0;    
 
 	// Use this for initialization
 	void Start () {
@@ -48,7 +54,9 @@ public class targetMoveRight : IKAnimationTarget
 	// Update is called once per frame
 	void Update ()
     {
-		speed = goblinGlobals.speed;
+        float dt = Time.deltaTime;
+        speed = goblinGlobals.speed;
+       
 
         //<JK>  added new requirement to move to a start position
         //      this will help us transition animations
@@ -58,7 +66,15 @@ public class targetMoveRight : IKAnimationTarget
         Vector3 curpos = transform.position;
 
         Vector3 rpos = transform.localPosition;
-        rpos.Set(Mathf.Sin((Time.time * speed) + phase) * range + (Mathf.Clamp(transform.position.x, MinX, MaxX)), rpos.y, rpos.z);
+
+        float cycleX = Mathf.Sin((Time.time * speed) + phase) * range;
+
+        rpos.Set(cycleX + (Mathf.Clamp(transform.position.x, MinX, MaxX)), rpos.y, rpos.z);
+
+        if (cycleX > 0.99f)
+            cycleCount++;
+        
+        
         //Restriciting movement
 
         transform.localPosition = rpos;
@@ -74,6 +90,21 @@ public class targetMoveRight : IKAnimationTarget
         //NOTE: I hate not being able to pass my own delta time to the mono update function
         //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
 
+        /*if (leftFoot)
+        {
+            float dist = Vector3.Distance(leftFoot.position, transform.position);
+            print("Distance to LeftFoot: " + dist);
+          
+        }
+        */
+
+
+
+
+
 
     }
+
+
+
 }

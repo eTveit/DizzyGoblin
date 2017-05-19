@@ -17,6 +17,7 @@ public class HealthSystem : MonoBehaviour {
     public GameObject Heart4;
     public GameObject Heart5;
 
+
     // Use this for initialization
     void Start () {
         playerCurrentHealth = playerMaxHealth;
@@ -29,9 +30,37 @@ public class HealthSystem : MonoBehaviour {
     {
         Timer += Time.deltaTime;
 
+        Health();
+	}
+
+
+
+    public void DamagePlayer(int damage)
+    {
+        if (Timer > Invincibility)
+        { 
+            playerCurrentHealth -= damage;
+            Timer = 0;
+
+            Debug.Log("HIT");
+
+        }
+    }
+
+    public void SetMaxHealth()
+    {
+        playerCurrentHealth = playerMaxHealth;
+    }
+
+    void Health()
+    {
         if (playerCurrentHealth == 5)
         {
             Heart5.SetActive(true);
+            Heart4.SetActive(true);
+            Heart3.SetActive(true);
+            Heart2.SetActive(true);
+            Heart1.SetActive(true);
         }
 
         if (playerCurrentHealth == 4)
@@ -58,27 +87,11 @@ public class HealthSystem : MonoBehaviour {
             Heart1.SetActive(true);
         }
 
-        if (playerCurrentHealth == 0)
+        if (playerCurrentHealth <= 0)
         {
             Heart1.SetActive(false);
             GoblinGlobals.enabled = false;
         }
-	}
-
-
-
-    public void DamagePlayer(int damage)
-    {
-        if (Timer > Invincibility)
-        { 
-            playerCurrentHealth -= damage;
-            Timer = 0;
-        }
-    }
-
-    public void SetMaxHealth()
-    {
-        playerCurrentHealth = playerMaxHealth;
     }
 
 }

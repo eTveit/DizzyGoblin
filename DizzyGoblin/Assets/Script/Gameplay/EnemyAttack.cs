@@ -15,12 +15,14 @@ public class EnemyAttack : MonoBehaviour {
 		
 	}
 
-    void OnCollisionEnter(Collision other)
+    /* <JK> no longer required
+    void OnTriggerEnter(Collision other)
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<HealthSystem>().DamagePlayer(DamageToPlayer);
+            //other.gameObject.GetComponent<HealthSystem>().DamagePlayer(DamageToPlayer);
+			Debug.Log ("HIT");
         }
     }
-
+    */
 }

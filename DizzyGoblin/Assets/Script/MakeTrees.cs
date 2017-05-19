@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//Made by Lars Joar Bjørkeland
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,7 +61,7 @@ public class MakeTrees : MonoBehaviour
 
 
                 int errorcount = 0;
-                while (levelManager.occupied[vi] || x % 2 == 0 || z % 2 == 0)
+                while (levelManager.occupied[vi] > 0 || x % 2 == 0 || z % 2 == 0)
                 {
 
                     Debug.Log("try again");
@@ -78,7 +80,7 @@ public class MakeTrees : MonoBehaviour
                     }
                 }
 
-                levelManager.occupied[vi] = true;
+                levelManager.occupied[vi] = 1;
 
                 Vector3 pos = new Vector3((float)x, y, (float)z);
 

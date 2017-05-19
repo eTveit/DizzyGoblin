@@ -12,7 +12,7 @@ public class RootState : MonoBehaviour {
     public Transform rightArm;
     public Transform spine;
     public Transform ball;
-    public Transform LarsGoblin;
+    public Transform Avatar;
 
     protected List<StateNode> m_childStates ;
 

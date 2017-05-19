@@ -26791,7 +26791,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   circularHeight: 0.3
-  rotationSpeed: 100
+  rotationSpeed: 150
   rotationBoost: 100
   isKickingFoot: 0
   incrementingDT: 0
@@ -36104,7 +36104,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   circularHeight: -1
-  rotationSpeed: 100
+  rotationSpeed: 150
   rotationBoost: 100
   isKickingFoot: 1
   incrementingDT: 0
@@ -51162,9 +51162,10 @@ GameObject:
   - component: {fileID: 1477523082}
   - component: {fileID: 1477523081}
   - component: {fileID: 1477523083}
+  - component: {fileID: 1477523084}
   m_Layer: 0
   m_Name: Geo_Goblin_Weapon_Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51261,6 +51262,18 @@ MonoBehaviour:
   isRight: 0
   isTerminus: 0
   IKsys: {fileID: 0}
+--- !u!135 &1477523084
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477523079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 9.482583
+  m_Center: {x: -0.0000014894872, y: 0.0028311177, z: -8.874145}
 --- !u!1001 &1477735297
 Prefab:
   m_ObjectHideFlags: 0

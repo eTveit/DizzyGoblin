@@ -26742,7 +26742,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789167001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.01, y: -0.52, z: 0}
+  m_LocalPosition: {x: 1.01, y: -0.52, z: 1.764}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -26760,7 +26760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: Pvm_walkright
-  startPosition: {x: 0.5, y: -0.14, z: 0.82}
+  startPosition: {x: 0.5, y: -0.14, z: 1.7}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   leftFoot: {fileID: 0}
@@ -26768,7 +26768,7 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  MinX: 1
+  MinX: 0.3
   MaxX: 1
   cycleCount: 0
 --- !u!114 &789167004
@@ -36057,7 +36057,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9, y: -0.52, z: 0}
+  m_LocalPosition: {x: -0.9, y: -0.52, z: -2.01}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -36075,14 +36075,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: Pvm_walkleft
-  startPosition: {x: -0.5, y: -0.07, z: 0.26}
+  startPosition: {x: -0.5, y: -0.46, z: -2}
   AvatarObj: {fileID: 553220542}
   mesh: {fileID: 1100547802}
   phase: 3.141597
   speed: 1
-  range: 1
+  range: 2
   heightOffset: 5
-  MinX: 1
+  MinX: -0.3
   MaxX: 1
 --- !u!114 &1060537429
 MonoBehaviour:

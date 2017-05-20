@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2861,6 +2861,7 @@ GameObject:
   - component: {fileID: 63073729}
   - component: {fileID: 63073733}
   - component: {fileID: 63073734}
+  - component: {fileID: 63073735}
   m_Layer: 0
   m_Name: targetLeftArm
   m_TagString: Untagged
@@ -2976,7 +2977,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63073727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79c49aac4e398d54aa1e83361e01b6c1, type: 3}
   m_Name: 
@@ -2990,6 +2991,26 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+--- !u!114 &63073735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63073727}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0dbe92b012a8c48b49dfd7650737f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetArmsHitTree
+  startPosition: {x: -3.5, y: 4.35, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1001 &68537352
 Prefab:
   m_ObjectHideFlags: 0
@@ -10867,8 +10888,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1662184114}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0.0050716074}
-    m_Extent: {x: 0.0018871174, y: 0.0018871169, z: 0.0050654737}
+    m_Center: {x: 0, y: 0, z: 0.0042625936}
+    m_Extent: {x: 0.0018871174, y: 0.0018871169, z: 0.0058744876}
   m_DirtyAABB: 0
 --- !u!1 &333128886
 GameObject:
@@ -26750,6 +26771,7 @@ GameObject:
   - component: {fileID: 789167004}
   - component: {fileID: 789167003}
   - component: {fileID: 789167009}
+  - component: {fileID: 789167010}
   m_Layer: 0
   m_Name: targetRightFoot
   m_TagString: Untagged
@@ -26806,7 +26828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: ET_spin
   startPosition: {x: 0.5, y: 0, z: 0}
-  AvatarObj: {fileID: 553220542}
+  AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 3.141597
   speed: 1
@@ -26892,7 +26914,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789167001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9e19a816ca670f449fc274482f409d2, type: 3}
   m_Name: 
@@ -26906,6 +26928,28 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+--- !u!114 &789167010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789167001}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fad19bced6c2134cb1d94a8c0cc53d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetLegsHitTree
+  startPosition: {x: 1.5, y: 0, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  circularHeight: 1.8
+  isKickingFoot: 0
+  incrementingDT: -1
 --- !u!1 &791831308
 GameObject:
   m_ObjectHideFlags: 0
@@ -36086,6 +36130,7 @@ GameObject:
   - component: {fileID: 1060537429}
   - component: {fileID: 1060537428}
   - component: {fileID: 1060537434}
+  - component: {fileID: 1060537435}
   m_Layer: 0
   m_Name: targetLeftFoot
   m_TagString: Untagged
@@ -36140,7 +36185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: ET_spin
   startPosition: {x: -0.5, y: 0, z: 0}
-  AvatarObj: {fileID: 553220542}
+  AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
   speed: 1
@@ -36226,7 +36271,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d723582016df4646b08b4b56e9856cc, type: 3}
   m_Name: 
@@ -36240,6 +36285,28 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+--- !u!114 &1060537435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1060537426}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fad19bced6c2134cb1d94a8c0cc53d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetLegsHitTree
+  startPosition: {x: -1.5, y: 0, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  circularHeight: 1.8
+  isKickingFoot: 1
+  incrementingDT: -1
 --- !u!1 &1061404772
 GameObject:
   m_ObjectHideFlags: 0
@@ -51226,6 +51293,7 @@ GameObject:
   - component: {fileID: 1477523081}
   - component: {fileID: 1477523083}
   - component: {fileID: 1477523084}
+  - component: {fileID: 1477523085}
   m_Layer: 0
   m_Name: Geo_Goblin_Weapon_Ball
   m_TagString: Ball
@@ -51337,6 +51405,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 9.482583
   m_Center: {x: -0.0000014894872, y: 0.0028311177, z: -8.874145}
+--- !u!114 &1477523085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477523079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae54788260118c479f17cb2c582b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarObj: {fileID: 1836444386}
 --- !u!1001 &1477735297
 Prefab:
   m_ObjectHideFlags: 0
@@ -54272,6 +54352,7 @@ GameObject:
   - component: {fileID: 1563252450}
   - component: {fileID: 1563252454}
   - component: {fileID: 1563252455}
+  - component: {fileID: 1563252456}
   m_Layer: 0
   m_Name: targetRightArm
   m_TagString: Untagged
@@ -54387,7 +54468,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2503ffbf8371dd944a57aa9b53a209fb, type: 3}
   m_Name: 
@@ -54401,6 +54482,26 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+--- !u!114 &1563252456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563252448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0dbe92b012a8c48b49dfd7650737f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_targetArmsHitTree
+  startPosition: {x: 3.5, y: 4.35, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1001 &1563372846
 Prefab:
   m_ObjectHideFlags: 0
@@ -63401,7 +63502,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835569136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8effe7888b28ab841b93998a500ae5ae, type: 3}
   m_Name: 

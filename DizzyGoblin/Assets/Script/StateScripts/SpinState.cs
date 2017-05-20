@@ -169,7 +169,7 @@ public class SpinState : StateNode {
         m_transform.rotation *= rotation;
     }
 
-    void SwitchRotateDirection() {
+    public void SwitchRotateDirection() {
         //temp storage of values
         float lPhase = leftFootAnim.phase;
         float lSpeed = leftFootAnim.speed;

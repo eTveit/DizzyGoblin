@@ -16,7 +16,8 @@ public class EnemyAttack : MonoBehaviour {
 	}
 
     /* <JK> no longer required
-    void OnTriggerEnter(Collision other)
+     * Been put inside steering
+    void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -26,3 +27,4 @@ public class EnemyAttack : MonoBehaviour {
     }
     */
 }
+//Thieu Phong Le

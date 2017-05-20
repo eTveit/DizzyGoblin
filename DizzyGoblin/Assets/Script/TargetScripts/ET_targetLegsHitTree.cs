@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class targetMoveSpin : targetMove {
+public class ET_targetLegsHitTree : targetMove {
     //DONT FORGET TO NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
     //the FSM uses names of our creation to select animations to play
     //you can do it here, or in the editor. it is best to do it here
     //so when it is intantiated, it uses this name as the default
     /*
-         "ET_spin";
+         "ET_targetLegsHitTree";
     */
 
     public override string getAnimName() {
@@ -18,13 +18,12 @@ public class targetMoveSpin : targetMove {
 
 
     //for circular movement
-    public float circularHeight = -1;
-    public float rotationSpeed = 100;
-    public float rotationBoost = 1000;
+    public float circularHeight = 1.8f;
     [Tooltip("Left foot should be set as the kicking foot.")]
     public bool isKickingFoot = false;
     public float incrementingDT = -1;
-
+    
+    
     private GoblinGlobals goblinGlobals = null;
 
     // Use this for initialization
@@ -33,19 +32,14 @@ public class targetMoveSpin : targetMove {
 
         if(isKickingFoot) {
             phase = 0;
-            range = 2;
-            circularHeight = 1.8f;
         }
         else {
             //Why would we settle for just six decimal points?
             phase = Mathf.PI;
-            range = 0.6f;
-            circularHeight = -1.0f;
         }
-        rotationSpeed = 100;
-        rotationBoost = 100;
 
-        incrementingDT = 0;
+        range= 1.8f;
+        
     }
 
     // Update is called once per frame
@@ -54,14 +48,14 @@ public class targetMoveSpin : targetMove {
 
         incrementingDT += Time.deltaTime;
 
-        speed = goblinGlobals.speed;
+        speed = goblinGlobals.speed*1.8f;
 
         //<JK> we need to smoothly transition to the new start point before running the animation
-        if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+        if(interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
 
         //<JK> we also probably always want to interpolate target positions in general, less jitter.
-        Vector3 curpos = transform.position; 
+        Vector3 curpos = transform.position;
 
         float ypos = -666;
 
@@ -70,14 +64,8 @@ public class targetMoveSpin : targetMove {
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((incrementingDT * speed) + phase) * range);
+        lpos.Set(startPosition.x, lpos.y, -Mathf.Sin((incrementingDT * speed) + phase) * range);
 
-        if(isKickingFoot) {
-            lpos.x = startPosition.x;
-        }
-        else {
-            lpos.x = startPosition.x * 0.2f;
-        }
 
         if(circularHeight > 0) {
             ypos = Mathf.Cos((incrementingDT * speed) + phase + Mathf.PI) * circularHeight;
@@ -104,6 +92,8 @@ public class targetMoveSpin : targetMove {
         transform.position = Vector3.Lerp(curpos, pos, Time.deltaTime * speed);
         //NOTE: I hate not being able to pass my own delta time to the mono update function
         //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
+
+        AvatarObj.transform.position -= AvatarObj.transform.forward*0.1f;
 
     }
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class targetMoveSpin : targetMove {
+public class ET_targetArmsHitTree : targetMove {
     //DONT FORGET TO NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
     //the FSM uses names of our creation to select animations to play
     //you can do it here, or in the editor. it is best to do it here
     //so when it is intantiated, it uses this name as the default
     /*
-         "ET_spin";
+         "ET_targetArmsHitTree";
     */
 
     public override string getAnimName() {
@@ -18,12 +18,8 @@ public class targetMoveSpin : targetMove {
 
 
     //for circular movement
-    public float circularHeight = -1;
-    public float rotationSpeed = 100;
-    public float rotationBoost = 1000;
-    [Tooltip("Left foot should be set as the kicking foot.")]
-    public bool isKickingFoot = false;
     public float incrementingDT = -1;
+
 
     private GoblinGlobals goblinGlobals = null;
 
@@ -31,19 +27,10 @@ public class targetMoveSpin : targetMove {
     void Start() {
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
-        if(isKickingFoot) {
-            phase = 0;
-            range = 2;
-            circularHeight = 1.8f;
-        }
-        else {
-            //Why would we settle for just six decimal points?
-            phase = Mathf.PI;
-            range = 0.6f;
-            circularHeight = -1.0f;
-        }
-        rotationSpeed = 100;
-        rotationBoost = 100;
+        phase = 0;
+
+
+        range = 1.8f;
 
         incrementingDT = 0;
     }
@@ -54,49 +41,28 @@ public class targetMoveSpin : targetMove {
 
         incrementingDT += Time.deltaTime;
 
-        speed = goblinGlobals.speed;
+        speed = goblinGlobals.speed * 2.2f;
 
         //<JK> we need to smoothly transition to the new start point before running the animation
-        if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+        if(interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
 
         //<JK> we also probably always want to interpolate target positions in general, less jitter.
-        Vector3 curpos = transform.position; 
-
-        float ypos = -666;
-
+        Vector3 curpos = transform.position;
+        
 
         //to keep our targets in line with the hips, we simply want to
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((incrementingDT * speed) + phase) * range);
-
-        if(isKickingFoot) {
-            lpos.x = startPosition.x;
-        }
-        else {
-            lpos.x = startPosition.x * 0.2f;
-        }
-
-        if(circularHeight > 0) {
-            ypos = Mathf.Cos((incrementingDT * speed) + phase + Mathf.PI) * circularHeight;
-            ypos = -ypos;
-            lpos.y = ypos;
-        }
-
+        lpos.Set(lpos.x, startPosition.y + Mathf.Cos((incrementingDT * speed) + phase + Mathf.PI) * range, Mathf.Sin((incrementingDT * speed) + phase) * range);
+        
 
         //set the local
         transform.localPosition = lpos;
 
         //get the global, keep the target on the terrain surface
         Vector3 pos = transform.position;
-        float y = mesh.getHeightAt(pos);
-        pos.y = y + heightOffset;
-
-        if(ypos > 0) {
-            pos.y += ypos;
-        }
 
         //here comes the interp to final position - we can use the object to perform the math
         //in the correct spatial context, then do the interpolation using the position when 

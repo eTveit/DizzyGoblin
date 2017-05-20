@@ -59,6 +59,9 @@ public class RootState : MonoBehaviour {
 		DodgeState dodgestate = new DodgeState(this);
 		spinstate.addChildState(dodgestate);
 
+        StunState stunstate = new StunState(this);
+        dodgestate.addChildState(stunstate);
+
 		//add more states here...
 
 	}

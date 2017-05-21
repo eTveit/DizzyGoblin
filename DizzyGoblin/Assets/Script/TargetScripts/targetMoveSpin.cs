@@ -31,19 +31,25 @@ public class targetMoveSpin : targetMove {
     void Start() {
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
+        //<ET> Putting the feet's range in the if else to avoid running the same code twice. After all, this script runs once per foot.
+
         if(isKickingFoot) {
             phase = 0;
             range = 2;
             circularHeight = 1.8f;
+            Segment3d footL = goblinGlobals.Search(AvatarObj, "Foot_L").GetComponent<Segment3d>();
+            footL.Yrange = -0.2f;
         }
         else {
             //Why would we settle for just six decimal points?
             phase = Mathf.PI;
             range = 0.6f;
             circularHeight = -1.0f;
+            Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
+            footR.Yrange = -0.2f;
         }
-        rotationSpeed = 100;
-        rotationBoost = 100;
+        rotationSpeed = 350;
+        rotationBoost = 150;
 
         incrementingDT = 0;
     }
@@ -57,11 +63,11 @@ public class targetMoveSpin : targetMove {
         speed = goblinGlobals.speed;
 
         //<JK> we need to smoothly transition to the new start point before running the animation
-        if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+        if(interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
 
         //<JK> we also probably always want to interpolate target positions in general, less jitter.
-        Vector3 curpos = transform.position; 
+        Vector3 curpos = transform.position;
 
         float ypos = -666;
 

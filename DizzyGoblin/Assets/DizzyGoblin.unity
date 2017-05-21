@@ -36192,8 +36192,8 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   circularHeight: -1
-  rotationSpeed: 150
-  rotationBoost: 100
+  rotationSpeed: 350
+  rotationBoost: 150
   isKickingFoot: 1
   incrementingDT: 0
 --- !u!114 &1060537430

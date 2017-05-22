@@ -2988,11 +2988,11 @@ MonoBehaviour:
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 6
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 2
+  keyframeOffset: 1.82
 --- !u!114 &63073735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26988,11 +26988,11 @@ MonoBehaviour:
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 3
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 2
+  keyframeOffset: 1.82
 --- !u!114 &789167010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36402,11 +36402,11 @@ MonoBehaviour:
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 6
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 2
+  keyframeOffset: 1.82
 --- !u!114 &1060537435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54621,11 +54621,11 @@ MonoBehaviour:
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 6
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 2
+  keyframeOffset: 1.82
 --- !u!114 &1563252456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63676,11 +63676,11 @@ MonoBehaviour:
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 5
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 1.82
+  keyframeOffset: 1.82
 --- !u!114 &1835569143
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,6 +38,8 @@ public class TerrainMesh : MonoBehaviour {
         //here we can animate our surface
         if(passWave)
             PassZWave();
+
+        animateSurface(Time.deltaTime);
     }
 
 

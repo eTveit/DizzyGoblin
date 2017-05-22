@@ -7,7 +7,7 @@ using UnityEngine;
 public class KT_Goblin_HipBounceIdle : MonoBehaviour
 {
 
-    public float speed = 1;
+    public float speed = 0.1f;
     public float range = 0.25f;
     public float phase = 0;
     public float yOffset = 0;

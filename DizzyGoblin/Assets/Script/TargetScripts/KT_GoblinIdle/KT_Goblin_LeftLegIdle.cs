@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class KT_Goblin_LeftLeg : IKAnimationTarget
+public class KT_Goblin_LeftLegIdle : IKAnimationTarget
 {
 
     public override string getAnimName()
@@ -37,7 +37,10 @@ public class KT_Goblin_LeftLeg : IKAnimationTarget
     public float speedMod = 1.0f;
 
     // Keyframes and Keyframe Count
-    Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(-2.0f, 1.0f, 0.0f) };
+    Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(-0.5f, 0.0f, 0.0f) };
+
+    //Slow movement
+    //Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(-0.5f, 0.0f, 0.0f) };
     private int currentFrame = 0;
 
 

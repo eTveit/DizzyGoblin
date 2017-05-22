@@ -358,4 +358,53 @@ public class TerrainMesh : MonoBehaviour {
         return (ysin  * 0.5f);     //amplitude (how high to go)
 
     }
+    float timer = -1.0f;
+    float dirx = 1.0f;
+    float diry = 1.0f;
+    float goaldirx = 1.0f;
+    float goaldiry = 1.0f;
+
+    public Vector2 wind;
+
+    public void animateSurface(float dt)
+    {
+
+
+
+
+        Vector2[] uvs = mesh.uv;
+
+
+        if (timer < 0)
+            timer = Time.time;
+
+        for (int i = 0; i < uvs.Length; i++)
+        {
+            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.01f * dirx;
+            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.01f * diry;
+        }
+
+        //set uvs
+        mesh.uv = uvs;
+
+
+        //create variety
+        if (Time.time - timer > Random.Range(3, 5))
+        {
+
+            timer = -1.0f;
+
+            goaldirx = Random.Range(-1, 1);
+            goaldiry = Random.Range(-1, 1);
+
+        }
+
+        dirx = Mathf.Lerp(dirx, goaldirx, dt);
+        diry = Mathf.Lerp(diry, goaldiry, dt);
+
+
+    }
+
+
 }
+

@@ -2978,7 +2978,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63073727}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79c49aac4e398d54aa1e83361e01b6c1, type: 3}
   m_Name: 
@@ -2992,6 +2992,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+  keyframeOffset: 1
 --- !u!114 &63073735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13476,7 +13477,6 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
 --- !u!114 &405017358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14274,7 +14274,6 @@ MonoBehaviour:
   speed: 1
   range: 0.2
   heightOffset: 4
-  speedMod: 1
 --- !u!114 &414666812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26979,7 +26978,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789167001}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9e19a816ca670f449fc274482f409d2, type: 3}
   m_Name: 
@@ -26993,6 +26992,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+  keyframeOffset: 1
 --- !u!114 &789167010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33614,7 +33614,6 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
 --- !u!114 &976268015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36393,7 +36392,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d723582016df4646b08b4b56e9856cc, type: 3}
   m_Name: 
@@ -36407,6 +36406,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+  keyframeOffset: 1
 --- !u!114 &1060537435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38719,7 +38719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e23d8fcc6720540a4eed74d21d529f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
   xSize: 128
   zSize: 128
   mesh: {fileID: 0}
@@ -54612,7 +54611,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2503ffbf8371dd944a57aa9b53a209fb, type: 3}
   m_Name: 
@@ -54626,6 +54625,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+  keyframeOffset: 1
 --- !u!114 &1563252456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63666,7 +63666,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835569136}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8effe7888b28ab841b93998a500ae5ae, type: 3}
   m_Name: 
@@ -63680,6 +63680,7 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 1
+  keyframeOffset: 1
 --- !u!114 &1835569143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69696,7 +69697,6 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
 --- !u!114 &2013677770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70662,7 +70662,6 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
 --- !u!114 &2051472316
 MonoBehaviour:
   m_ObjectHideFlags: 0

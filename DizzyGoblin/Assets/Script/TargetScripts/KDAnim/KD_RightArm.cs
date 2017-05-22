@@ -42,7 +42,9 @@ public class KD_RightArm : IKAnimationTarget
 	// Keyframes and Keyframe Count
 	Vector3[] keyframes = new [] { new Vector3(1.0f,1.0f,2.20f), new Vector3(1.0f,6.0f,2.20f) };
 	private int currentFrame = 0;
-        
+
+	// EDVARD IS TRYING SOMETHING DUMB
+	public float keyframeOffset = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -65,6 +67,7 @@ public class KD_RightArm : IKAnimationTarget
 
         Vector3 lpos = transform.localPosition;
 		Vector3 goalPos = keyframes[currentFrame];
+		goalPos *= keyframeOffset;
 
 		//we need to transition smoothly from one target script to the next  
 		float dist = Vector3.Distance(lpos, goalPos);

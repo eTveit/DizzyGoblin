@@ -12,7 +12,7 @@ public class RootState : MonoBehaviour {
     public Transform rightArm;
     public Transform spine;
     public Transform ball;
-    public Transform LarsGoblin;
+    public Transform Avatar;
 
     protected List<StateNode> m_childStates ;
 
@@ -58,6 +58,9 @@ public class RootState : MonoBehaviour {
 
 		DodgeState dodgestate = new DodgeState(this);
 		spinstate.addChildState(dodgestate);
+
+        StunState stunstate = new StunState(this);
+        dodgestate.addChildState(stunstate);
 
 		//add more states here...
 

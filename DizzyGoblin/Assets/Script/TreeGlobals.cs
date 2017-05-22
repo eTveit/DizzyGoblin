@@ -16,3 +16,10 @@ public class TreeGlobals : MonoBehaviour {
 		
 	}
 }
+
+
+//public Transform tree;
+
+// Tree position
+
+//public tree.positon 

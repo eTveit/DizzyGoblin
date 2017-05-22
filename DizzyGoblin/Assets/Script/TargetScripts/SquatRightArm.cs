@@ -49,7 +49,7 @@ public class SquatRightArm : IKAnimationTarget
         positions = new Vector3[2];
 
         positions[0] = new Vector3(2.18f, 1.76f, 0.1f);
-        positions[1] = new Vector3(0.398f, 1.827f, 1.758f);
+        positions[1] = new Vector3(0.398f, 3.11f, 4.51f);
 
 
         //positions[0] = new Vector3(2.18f, 1.76f, 0.1f);
@@ -61,36 +61,42 @@ public class SquatRightArm : IKAnimationTarget
     // Update is called once per frame
     void Update ()
     {
+        if (Input.GetKey(KeyCode.Q))
+        {
+            //we need to smoothly transition to the new start point before running the animation
+            if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+                return;
 
-		//we need to smoothly transition to the new start point before running the animation
-		//if (interpolateToStartPosition(Time.deltaTime, speed) == false)
-			//return;
+            speed = goblinGlobals.speed;
 
-		speed = goblinGlobals.speed;
+            //to keep our targets in line with the hips, we simply want to
+            //oscillate on z axis in the LOCAL space
 
-        Vector3 lpos = transform.localPosition;
+            Vector3 lpos = transform.localPosition;
 
-        Vector3 goalPos = positions[curPos];
+            Vector3 goalPos = positions[curPos];
 
-        float dist = Vector3.Distance(lpos, goalPos);
+            float dist = Vector3.Distance(lpos, goalPos);
+
+            //we can use an sdjust to interp FASTER the closer we are to the goal
+            float adjust = (5.0f - dist);
+
+            //if it is too small, clamp it, otherwise we wont get anywhere
+            if (adjust < 0.5f)
+                adjust = 0.5f;
+
+            lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
+
+            transform.localPosition = lpos;
+            if (dist < 0.1f)
+                curPos++;
+            else if (squatState && dist < 0.1f)
+                curPos++;
+
+            if (curPos >= positions.Length && squatState == true)
+                curPos = 0;
 
 
-
-        lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
-
-
-        transform.localPosition = lpos;
-
-
-        if (dist < 0.1f && curPos < positions.Length - 1)
-            curPos++;
-        else if (squatState && dist < 0.1f )
-            curPos++;
-
-        if (curPos >= positions.Length && squatState == true)
-            curPos = 0;
-
-
-
+        }
     }
 }

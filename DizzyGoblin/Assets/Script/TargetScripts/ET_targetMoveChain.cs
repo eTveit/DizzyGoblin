@@ -15,7 +15,6 @@ public class ET_targetMoveChain : targetMove {
     }
 
     private GoblinGlobals goblinGlobals;
-    private Vector3 initialPos = new Vector3(0, 0, 0);
     private float initialWorldY = 0;
 
     public bool isSpinning = false;
@@ -23,22 +22,20 @@ public class ET_targetMoveChain : targetMove {
     // Use this for initialization
     void Start() {
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
-        initialPos = transform.localPosition;
         initialWorldY = transform.position.y;
     }
 
     // Update is called once per frame
     void Update() {
         if(isSpinning) {
-            MoveChain(initialPos);
+            MoveChain(startPosition);
         }
         else {
             Debug.Log("Falling to the ground");
             Vector3 groundPos = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
-            float localGroundY = -(initialWorldY -  mesh.getHeightAt(transform.position));
-            localGroundY += 3;
-            //float yDiff = mesh.getHeightAt(transform.position);
+            float localGroundY = startPosition.y -(initialWorldY -  mesh.getHeightAt(transform.position));
             groundPos.y = localGroundY;
+            groundPos.z = startPosition.z/3;
             MoveChain(groundPos);
         }
     }

@@ -12,8 +12,7 @@ public class DodgeState : StateNode
 	private targetMoveRight spineAnim = null;  //re-using the same anim on a different joint
 	private targetRightArmIdle rightArmAnim = null;
 	private targetLeftArmIdle leftArmAnim = null;
-    private HipSlide sidemoveanim = null;
-    
+    private GoblinGlobals m_globs = null;
     
 
 	//private IKAnimationTarget leftArmAnim = null;
@@ -28,6 +27,9 @@ public class DodgeState : StateNode
         m_transform = m_rootState.transform;
         m_gameObject = m_transform.gameObject;
 
+
+        m_globs = m_transform.GetComponent<GoblinGlobals>();
+        
         
         //get the target animations for Dodge by type
         rightFootAnim = m_rootState.rightFoot.GetComponent<targetMoveRight>();
@@ -35,8 +37,7 @@ public class DodgeState : StateNode
 		leftArmAnim = m_rootState.leftArm.GetComponent<targetLeftArmIdle>();
 		rightArmAnim = m_rootState.rightArm.GetComponent<targetRightArmIdle>();
 		spineAnim = m_rootState.spine.GetComponent<targetMoveRight>();
-        sidemoveanim = m_rootState.LarsGoblin.GetComponent<HipSlide>();
-
+    
 
 		//because all we must do is enable them, we could access them as a base object
 		//if we dont need to read specific property values. so we can do this, by name
@@ -66,8 +67,7 @@ public class DodgeState : StateNode
 			leftArmAnim.enabled = false;
 			rightArmAnim.enabled = false;
 			spineAnim.enabled = false;
-            sidemoveanim.enabled = false;
-
+    
 			//since a child state is true, return this fact!
 			return true;
         }
@@ -89,7 +89,6 @@ public class DodgeState : StateNode
 				leftArmAnim.enabled = false;
 				rightArmAnim.enabled = false;
 				spineAnim.enabled = false;
-                sidemoveanim.enabled = false;
             }
         }
 
@@ -119,11 +118,10 @@ public class DodgeState : StateNode
                 leftArmAnim.enabled = true;
                 rightArmAnim.enabled = true;
                 spineAnim.enabled = true;
-                sidemoveanim.enabled = true;
-
+    
             }
 
-
+            moveLeft(dt);
 
         }
         else
@@ -138,16 +136,22 @@ public class DodgeState : StateNode
             leftArmAnim.enabled = false;
             rightArmAnim.enabled = false;
             spineAnim.enabled = false;
-            sidemoveanim.enabled = false;
-
+    
             rightFootAnim.cycleCount = 0;
 
         }
         return p_isInState;
     }
-   
 
-   
+
+    void moveLeft(float dt)
+
+    {
+        
+        Vector3 right = m_transform.right;
+        m_transform.position -= right * dt * m_globs.speed;
+
+    }
 
 }
 

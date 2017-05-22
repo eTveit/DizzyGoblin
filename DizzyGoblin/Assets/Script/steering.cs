@@ -99,9 +99,9 @@ public class steering : MonoBehaviour {
         //handlePath(dt);
 
         //<JK> optimized!! check it out my young paduans!
-        //avoidRats(dt);
+        avoidRats(dt);
         //avoidTrees(dt);
-        avoidObstacles(dt);
+        avoidObstacles(dt);  //optimized method, not fully implemented yet
 
 
 		if (state == STATES.SEEK)

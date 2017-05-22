@@ -39,13 +39,15 @@ public class SquatLeftArm : IKAnimationTarget
 
     private int curPos = 0;
 
-	// Use this for initialization
-	void Start () {
+    public bool squatState = false;
+
+    // Use this for initialization
+    void Start () {
 
         positions = new Vector3[2];
 
         positions[0] = new Vector3(-2.24f, 1.72f, -0.02f);
-        positions[1] = new Vector3(-0.304f, 1.798f, 1.758f);
+        positions[1] = new Vector3(-0.549f, 3.11f, 4.88f);
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
 
@@ -63,36 +65,42 @@ public class SquatLeftArm : IKAnimationTarget
 	// Update is called once per frame
 	void Update ()
     {
+        if (Input.GetKey(KeyCode.Q))
+        {
 
-		//we need to smoothly transition to the new start point before running the animation
-		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
-			return;
-        
-                speed = goblinGlobals.speed;
 
-        //to keep our targets in line with the hips, we simply want to
-        //oscillate on z axis in the LOCAL space
+            //we need to smoothly transition to the new start point before running the animation
+            if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+                return;
 
-        Vector3 lpos = transform.localPosition;
+            speed = goblinGlobals.speed;
 
-        Vector3 goalPos = positions[curPos];
+            //to keep our targets in line with the hips, we simply want to
+            //oscillate on z axis in the LOCAL space
 
-        float dist = Vector3.Distance(lpos, goalPos);
+            Vector3 lpos = transform.localPosition;
 
-        //we can use an sdjust to interp FASTER the closer we are to the goal
-        float adjust = (3.0f - dist);
+            Vector3 goalPos = positions[curPos];
 
-        //if it is too small, clamp it, otherwise we wont get anywhere
-        if (adjust < 0.5f)
-            adjust = 0.5f;
+            float dist = Vector3.Distance(lpos, goalPos);
 
-        lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
+            //we can use an sdjust to interp FASTER the closer we are to the goal
+            float adjust = (5.0f - dist);
 
-        if (dist < 0.1f)
-            curPos++;
+            //if it is too small, clamp it, otherwise we wont get anywhere
+            if (adjust < 0.5f)
+                adjust = 0.5f;
 
-        if (curPos >= positions.Length)
-            curPos = 0;
+            lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
+            transform.localPosition = lpos;
+            if (dist < 0.1f)
+                curPos++;
+            else if (squatState && dist < 0.1f)
+                curPos++;
+
+            if (curPos >= positions.Length && squatState == true)
+                curPos = 0;
+        }
     }
 }

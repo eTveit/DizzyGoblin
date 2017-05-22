@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour {
 
-    GoblinGlobals GoblinGlobals;
+    MovementGoblin MovementGoblin;
     public int playerMaxHealth = 5;
     public int playerCurrentHealth = 5;
     float Timer = 0.0f;
@@ -21,7 +21,7 @@ public class HealthSystem : MonoBehaviour {
     // Use this for initialization
     void Start () {
         playerCurrentHealth = playerMaxHealth;
-        GoblinGlobals = GetComponent<GoblinGlobals>();
+        MovementGoblin = GetComponent<MovementGoblin>();
 		
 	}
 	
@@ -90,8 +90,9 @@ public class HealthSystem : MonoBehaviour {
         if (playerCurrentHealth <= 0)
         {
             Heart1.SetActive(false);
-            GoblinGlobals.enabled = false;
+            MovementGoblin.enabled = false;
         }
     }
 
 }
+//Thieu Phong Le

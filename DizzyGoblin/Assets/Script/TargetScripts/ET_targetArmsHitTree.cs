@@ -55,7 +55,7 @@ public class ET_targetArmsHitTree : targetMove {
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, startPosition.y + Mathf.Cos((incrementingDT * speed) + phase + Mathf.PI) * range, Mathf.Sin((incrementingDT * speed) + phase) * range);
+        lpos.Set(startPosition.x, startPosition.y + Mathf.Cos((incrementingDT * speed) + phase + Mathf.PI) * range, Mathf.Sin((incrementingDT * speed) + phase) * range);
         
 
         //set the local

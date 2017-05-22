@@ -32,10 +32,18 @@ public class ET_targetLegsHitTree : targetMove {
 
         if(isKickingFoot) {
             phase = 0;
+            Segment3d thighL = goblinGlobals.Search(AvatarObj, "Thigh_L").GetComponent<Segment3d>();
+            Segment3d footL = goblinGlobals.Search(AvatarObj, "Foot_L").GetComponent<Segment3d>();
+            thighL.Xrange = -0.13f;
+            footL.Yrange = -0.2f;
         }
         else {
             //Why would we settle for just six decimal points?
             phase = Mathf.PI;
+            Segment3d thighR = goblinGlobals.Search(AvatarObj, "Thigh_R").GetComponent<Segment3d>();
+            Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
+            thighR.Xrange = 1.13f;
+            footR.Yrange = -0.2f;
         }
 
         range= 1.8f;

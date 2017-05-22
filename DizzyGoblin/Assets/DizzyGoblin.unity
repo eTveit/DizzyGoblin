@@ -13957,6 +13957,14 @@ Prefab:
       propertyPath: m_Name
       value: KD_Rat
       objectReference: {fileID: 0}
+    - target: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027382309518474, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_IsPrefabParent: 0
@@ -22561,7 +22569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51af9db4fe9fd77479971d41f25d5866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KD_Walk
   startPosition: {x: 3.66, y: 2.34, z: 0}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
@@ -22569,8 +22577,8 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 4
+  keyframeOffset: 1.82
 --- !u!1 &642862584
 GameObject:
   m_ObjectHideFlags: 0
@@ -40386,6 +40394,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1131281151}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1131992981 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
+--- !u!114 &1131992982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131992981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8255f84268276334abfb2f23c0262deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1100547805}
+  heightOffset: 0
+  speed: 2.5
+  isGoblin: 0
+--- !u!114 &1131992983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131992981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31eb8ad6382feac45a09dedff3c94088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 1.5}
+  maxSpeed: 5
+  speed: 0
+  radius: 2
+  useKeyboard: 0
+  steeringForce: {x: 0, y: 0, z: 0}
+  steeringForceFactor: 0.01
+  dotproduct: 0
+  path: {fileID: 0}
+  ratObstacles: {fileID: 1356316219}
+  treeObstacles: {fileID: 1068816215}
+  curPoint: 1
+  pointCount: 0
+  ratHole: {fileID: 0}
+  Player: {fileID: 1836444386}
+  goal: {x: 0, y: 0, z: 0}
+  terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
+  state: 1
 --- !u!1 &1132132420
 GameObject:
   m_ObjectHideFlags: 0
@@ -42792,16 +42850,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca1c76250bdd2e4b8cb666900a18b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KD_Walk
   startPosition: {x: -0.9, y: -0.52, z: -2.01}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 7
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 4
+  keyframeOffset: 1.82
 --- !u!1 &1194437395
 GameObject:
   m_ObjectHideFlags: 0
@@ -45628,7 +45686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220d2e63666f6ec43abba89296549934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KD_Walk
   startPosition: {x: 0, y: 7.55, z: 0.1300001}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
@@ -45636,7 +45694,7 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
+  speedMod: 2
   keyframeOffset: 1
 --- !u!1001 &1266039295
 Prefab:
@@ -54495,8 +54553,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 99456058}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0.0050716074}
-    m_Extent: {x: 0.0018871174, y: 0.0018871169, z: 0.0050654737}
+    m_Center: {x: 0, y: 0, z: 0.0051924856}
+    m_Extent: {x: 0.0018871174, y: 0.0018871169, z: 0.0049445955}
   m_DirtyAABB: 0
 --- !u!1001 &1551020747
 Prefab:
@@ -62197,7 +62255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129c144ae9219f741b95d680ed7c3703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KD_Walk
   startPosition: {x: -4.42, y: 2.09, z: 0}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
@@ -62205,8 +62263,8 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 4
+  keyframeOffset: 1.82
 --- !u!1 &1777520259
 GameObject:
   m_ObjectHideFlags: 0
@@ -67342,16 +67400,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ea0c289376c214b80dd1ee843ce22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KD_Walk
   startPosition: {x: 1.01, y: -0.52, z: 1.764}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
   phase: 0
-  speed: 1
+  speed: 7
   range: 1
   heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
+  speedMod: 4
+  keyframeOffset: 1.82
 --- !u!1 &1943035000
 GameObject:
   m_ObjectHideFlags: 0
@@ -68639,7 +68697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c413ebb23488de440a6762fb10149d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KD_Walk
   startPosition: {x: 0, y: 4.96, z: -6.14}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}

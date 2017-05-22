@@ -40,7 +40,7 @@ public class KD_RatRightLeg : IKAnimationTarget
 	public float speedMod = 1.0f;
 
     // Keyframes and Keyframe Count
-    Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f) };
+    Vector3[] keyframes = new[] { new Vector3(1.01f, -0.52f, 3.0f), new Vector3(0.0f, -0.52f, -3.0f) };
     private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

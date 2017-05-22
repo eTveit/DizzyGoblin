@@ -40,7 +40,7 @@ public class KD_RatSpine : IKAnimationTarget
 	public float speedMod = 1.0f;
 
     // Keyframes and Keyframe Count
-    Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f) };
+    Vector3[] keyframes = new[] { new Vector3(0.0f, 7.55f, 0.13f), new Vector3(0.0f, 6.0f, 2.0f) };
     private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

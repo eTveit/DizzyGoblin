@@ -84,7 +84,7 @@ public class MakeTrees : MonoBehaviour
 
                 Vector3 pos = new Vector3((float)x, y, (float)z);
 
-                y = terrain.getHeightAt(pos) + 2.0f;
+                y = terrain.getHeightAt(pos) -0.5f;
 
                 pos.Set(x, y, z);
 

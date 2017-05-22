@@ -41,6 +41,9 @@ public class HealthSystem : MonoBehaviour {
         { 
             playerCurrentHealth -= damage;
             Timer = 0;
+
+            Debug.Log("HIT");
+
         }
     }
 
@@ -92,3 +95,4 @@ public class HealthSystem : MonoBehaviour {
     }
 
 }
+//Thieu Phong Le

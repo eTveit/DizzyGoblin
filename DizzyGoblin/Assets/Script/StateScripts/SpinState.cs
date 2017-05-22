@@ -11,10 +11,10 @@ public class SpinState : StateNode {
     //they could be any animations in the Avatar's targets list 
     private targetMoveSpin leftFootAnim = null;
     private targetMoveSpin rightFootAnim = null;
-
-    private IKAnimationTarget leftArmAnim = null;
-    private IKAnimationTarget rightArmAnim = null;
-
+    private ET_targetArmsHoldBall leftArmAnim = null;
+    private ET_targetArmsHoldBall rightArmAnim = null;
+    private ET_targetMoveChain ballAnim = null;
+    
 
     private float rotationSpeed = 100;
     private float rotationBoost = 1000;
@@ -36,13 +36,17 @@ public class SpinState : StateNode {
         //get the target animations for Spin by type
         rightFootAnim = m_rootState.rightFoot.GetComponent<targetMoveSpin>();
         leftFootAnim = m_rootState.leftFoot.GetComponent<targetMoveSpin>();
+        leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHoldBall>();
+        rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHoldBall>();
+        ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
 
+        /*
         //because all we must do is enable them, we could access them as a base object
         //if we dont need to read specific property values. so we can do this, by name
         //and then cast it if we need to  
         leftArmAnim = m_rootState.targetManager.getTargetByName("targetLeftArm", "targetArmMove");
         rightArmAnim = m_rootState.targetManager.getTargetByName("targetRightArm", "targetArmMove");
-
+        */
     }
 
 
@@ -57,6 +61,11 @@ public class SpinState : StateNode {
             //disable my anims
             leftFootAnim.enabled = false;
             rightFootAnim.enabled = false;
+            leftArmAnim.enabled = false;
+            rightArmAnim.enabled = false;
+
+            //drop ball
+            ballAnim.isSpinning = false;
 
             //since a child state is true, return this fact!
             return true;
@@ -66,10 +75,12 @@ public class SpinState : StateNode {
         if(Input.GetKeyUp(KeyCode.Q)) {
             //this will toggle states for testing
             p_isInState = !p_isInState;
-            if (m_isDoingItsState)
-            {
+            if(m_isDoingItsState) {
                 leftFootAnim.enabled = false;
                 rightFootAnim.enabled = false;
+                leftArmAnim.enabled = false;
+                rightArmAnim.enabled = false;
+                ballAnim.isSpinning = false;
                 m_isDoingItsState = false;
 
                 //<JK> maybe we want to sync accumTime to the system time, maybe not.
@@ -91,6 +102,10 @@ public class SpinState : StateNode {
                 //and enable my specific
                 leftFootAnim.enabled = true;
                 rightFootAnim.enabled = true;
+                leftArmAnim.enabled = true;
+                rightArmAnim.enabled = true;
+                ballAnim.enabled = true;
+                ballAnim.isSpinning = true;
 
 
 
@@ -113,7 +128,7 @@ public class SpinState : StateNode {
         }
         return p_isInState;
     }
-    
+
     void Rotate(float dt) {
         //Espen, you probably want dt here so we can do "slow-mo" or "fast-mo"
         //I tried first using just dt, but that is always a small value,
@@ -133,13 +148,12 @@ public class SpinState : StateNode {
         //That said, alternatively you could do this (accumTime a property of the state)
         //and indeed, one often wants to keep track in a state of overall time passage:
         accumTime += dt;
-        if (Mathf.Cos((accumTime * leftFootAnim.speed) + Mathf.PI) > 0.9f)
+        if(Mathf.Cos((accumTime * leftFootAnim.speed) + Mathf.PI) > 0.9f)
         //if (Mathf.Cos((leftFootAnim.incrementingDT * leftFootAnim.speed) + Mathf.PI) > 0.9f) 
         {
             boostRotation = true;
         }
-        else
-        {
+        else {
             boostRotation = false;
         }
 
@@ -155,7 +169,7 @@ public class SpinState : StateNode {
         m_transform.rotation *= rotation;
     }
 
-    void SwitchRotateDirection() {
+    public void SwitchRotateDirection() {
         //temp storage of values
         float lPhase = leftFootAnim.phase;
         float lSpeed = leftFootAnim.speed;

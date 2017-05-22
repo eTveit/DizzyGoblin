@@ -11,9 +11,11 @@ public class LJB_levelManager : MonoBehaviour {
     public MakeRocks makeRocks;
     public Transform ratHole;
     public TerrainMesh terrain;
-    public simpleSpawn ratsSpawn;
+    public PoolSystem poolSystem;
 
-    public bool[] occupied;
+    //<JK> changed to integer so I can add rats as temporary "occupiers" to optimize collision avoidance.
+    //     crazy optimize btw... ;)
+    public int[] occupied;
 
     public int levelDifficulty = 1;
     public int Trees = 0;
@@ -72,8 +74,8 @@ public class LJB_levelManager : MonoBehaviour {
 
         terrain.Generate(levelDifficulty);
 
-        //Stop objects from spawning on top of each other
-        occupied = new bool[terrain.mesh.vertexCount];
+        //Stop objects from spawning on top of each other, also use for collision avoidance
+        occupied = new int[terrain.mesh.vertexCount];
 
         //Trees
         Trees = 10 * levelDifficulty;
@@ -91,7 +93,7 @@ public class LJB_levelManager : MonoBehaviour {
 
         //Enemies
         Rats = 10 * levelDifficulty;
-        ratsSpawn.Spawn(Rats);
+        poolSystem.spawnRats(Rats);
 
 
     }
@@ -113,7 +115,7 @@ public class LJB_levelManager : MonoBehaviour {
 
 
         int errorcount = 0;
-        while (occupied[vi])
+        while (occupied[vi] > 0)
         {
 
             Debug.Log("try again");
@@ -132,7 +134,7 @@ public class LJB_levelManager : MonoBehaviour {
             }
         }
 
-        occupied[vi] = true;
+        occupied[vi] = 1;
 
         Vector3 pos = new Vector3((float)x, y, (float)z);
 

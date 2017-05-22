@@ -15,12 +15,16 @@ public class EnemyAttack : MonoBehaviour {
 		
 	}
 
+    /* <JK> no longer required
+     * Been put inside steering
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<HealthSystem>().DamagePlayer(DamageToPlayer);
+            //other.gameObject.GetComponent<HealthSystem>().DamagePlayer(DamageToPlayer);
+			Debug.Log ("HIT");
         }
     }
-
+    */
 }
+//Thieu Phong Le

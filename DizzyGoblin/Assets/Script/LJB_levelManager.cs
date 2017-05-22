@@ -132,7 +132,7 @@ public class LJB_levelManager : MonoBehaviour {
             {
                 return;
             }
-        }
+        } 
 
         occupied[vi] = 1;
 

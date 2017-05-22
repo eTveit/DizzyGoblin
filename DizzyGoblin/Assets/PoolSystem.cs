@@ -11,37 +11,42 @@ public class PoolSystem : MonoBehaviour
     int RatIndex;
     GameObject tpObject;
     public bool[] ratSelected;
- 
-    
+
+
+    //Experimenting
 
     
+   
 
+   
 
+   
 
-
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+	void Start ()
+    {
+        //Declares what gameobject is rats by tag "Rats"
         Rats = GameObject.FindGameObjectsWithTag("Rats");
+        //Declares new bool array based on number of "Rats" in pool
         ratSelected = new bool[Rats.Length];
 
+        
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         if(Input.GetKeyDown(KeyCode.G))
         {
             if (RatSelection() == false)
                 Debug.Log("no free rats");
         }
 
-        //if (RatHp == 0) {
-        //Rat.transform.position = pool.transform.position;
 
-        //}
     }
+
+    //Informs the game when there is no more rats to get from the pool
     public void spawnRats(int numRats)
     {
 
@@ -50,18 +55,16 @@ public class PoolSystem : MonoBehaviour
             if (RatSelection() == false)
                 Debug.Log("no free rats");
         }
-
-
-
-
     }
+
+
     bool RatSelection()
     {
-            
+        //RatIndex selects random gameobject within pool    
         RatIndex = Random.Range(0, Rats.Length);
 
         int errorCount = 0;
-
+        //A loop that checks if there is any rats left and stops when its empty
         while (ratSelected[RatIndex] == true)
         {
             RatIndex = Random.Range(0, Rats.Length);
@@ -75,9 +78,21 @@ public class PoolSystem : MonoBehaviour
 
         //assign an index
         RatSelect.GetComponent<ratData>().ratIndex = RatIndex;
-
+        //RatSelect is gameobject that is to be transformed to spawnpoint
+        Vector3 temp = new Vector3(Random.Range(-10.0f, 10.0f), 0.0f, Random.Range(-10.0f, 10.0f));
         tpObject = RatSelect;
-        tpObject.transform.position = Rathole.transform.position;
+        tpObject.transform.position = Rathole.transform.position + temp;
+
+        
+
+        
+
+        
+
+
+
+            
+       
 
         return true;
     }
@@ -89,6 +104,13 @@ public class PoolSystem : MonoBehaviour
         ratSelected[id] = false;
 
     }
+
+    
+    
+       
+        
+
+    
 
 }
     

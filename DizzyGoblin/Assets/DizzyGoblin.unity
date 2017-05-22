@@ -2396,6 +2396,7 @@ MonoBehaviour:
   terrain: {fileID: 1100547805}
   heightOffset: 0.2
   speed: 4
+  isGoblin: 0
 --- !u!4 &53493324
 Transform:
   m_ObjectHideFlags: 0
@@ -2864,6 +2865,7 @@ GameObject:
   - component: {fileID: 63073735}
   - component: {fileID: 63073736}
   - component: {fileID: 63073737}
+  - component: {fileID: 63073738}
   m_Layer: 0
   m_Name: targetLeftArm
   m_TagString: Untagged
@@ -3039,7 +3041,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63073727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ac5b02ed3b98940b4129276195b2f0, type: 3}
   m_Name: 
@@ -3053,6 +3055,26 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   squatState: 0
+--- !u!114 &63073738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63073727}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f261a74595827d469294de28a7db428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: EA_ratHitLeftArm
+  startPosition: {x: -3.06, y: 1.45, z: -0.35}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 8
 --- !u!1001 &68537352
 Prefab:
   m_ObjectHideFlags: 0
@@ -18106,7 +18128,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
@@ -19308,6 +19330,7 @@ MonoBehaviour:
   terrain: {fileID: 1100547805}
   heightOffset: 0.2
   speed: 4
+  isGoblin: 0
 --- !u!4 &553220542
 Transform:
   m_ObjectHideFlags: 0
@@ -26934,6 +26957,7 @@ GameObject:
   - component: {fileID: 789167010}
   - component: {fileID: 789167011}
   - component: {fileID: 789167012}
+  - component: {fileID: 789167013}
   m_Layer: 0
   m_Name: targetRightFoot
   m_TagString: Untagged
@@ -27139,7 +27163,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789167001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 277759269eb2470498b0001952d24206, type: 3}
   m_Name: 
@@ -27153,6 +27177,25 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   squatState: 0
+--- !u!114 &789167013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789167001}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d77a7bc6654dfc48831fed324070533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: EA_ratHitRightLeg
+  startPosition: {x: 1.01, y: -0.52, z: -0.329}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 1.26
+  speed: 1
+  range: 1.64
+  heightOffset: -1
 --- !u!1 &791831308
 GameObject:
   m_ObjectHideFlags: 0
@@ -36371,6 +36414,7 @@ GameObject:
   - component: {fileID: 1060537435}
   - component: {fileID: 1060537436}
   - component: {fileID: 1060537437}
+  - component: {fileID: 1060537438}
   m_Layer: 0
   m_Name: targetLeftFoot
   m_TagString: Untagged
@@ -36574,7 +36618,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eee4357bd06bbcb4885ce36ce4db32e0, type: 3}
   m_Name: 
@@ -36588,6 +36632,25 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   squatState: 0
+--- !u!114 &1060537438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1060537426}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1bb547d6d502d4e91cb216f27603c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: EA_ratHitLeftLeg
+  startPosition: {x: -1.01, y: -0.52, z: -0.329}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: -1.26
+  speed: 1
+  range: 1.64
+  heightOffset: -1
 --- !u!1 &1061404772
 GameObject:
   m_ObjectHideFlags: 0
@@ -49266,8 +49329,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1417485427}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0.0050716074}
-    m_Extent: {x: 0.0018871174, y: 0.0018871169, z: 0.0050654737}
+    m_Center: {x: 0, y: 0, z: 0.0045590373}
+    m_Extent: {x: 0.0018871174, y: 0.0018871169, z: 0.005578044}
   m_DirtyAABB: 0
 --- !u!1 &1385811998
 GameObject:
@@ -54710,6 +54773,7 @@ GameObject:
   - component: {fileID: 1563252456}
   - component: {fileID: 1563252457}
   - component: {fileID: 1563252458}
+  - component: {fileID: 1563252459}
   m_Layer: 0
   m_Name: targetRightArm
   m_TagString: Untagged
@@ -54885,7 +54949,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b5de090a9f426e4098938feaa8ea0a8, type: 3}
   m_Name: 
@@ -54899,6 +54963,26 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   squatState: 0
+--- !u!114 &1563252459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563252448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadca11a161f60b47ada199cc1d0662c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: EA_ratHitRightArm
+  startPosition: {x: 3.06, y: 1.45, z: -0.35}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 8
 --- !u!1001 &1563372846
 Prefab:
   m_ObjectHideFlags: 0
@@ -63828,6 +63912,7 @@ GameObject:
   - component: {fileID: 1835569142}
   - component: {fileID: 1835569143}
   - component: {fileID: 1835569144}
+  - component: {fileID: 1835569145}
   m_Layer: 0
   m_Name: targetSpine
   m_TagString: Untagged
@@ -63842,7 +63927,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835569136}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0.13000011}
+  m_LocalPosition: {x: 0, y: 7.78, z: 0.13000011}
   m_LocalScale: {x: 0.3, y: 0.30000025, z: 0.30000025}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -63968,7 +64053,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835569136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa1bef62dea829644be88ae53475864a, type: 3}
   m_Name: 
@@ -63982,6 +64067,26 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   squatState: 0
+--- !u!114 &1835569145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835569136}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292a25aeca6ad1c4abd376b56eb3c086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: EA_ratHitSpine
+  startPosition: {x: 0, y: 7.78, z: 0.1300001}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 2.3
 --- !u!1 &1836444382
 GameObject:
   m_ObjectHideFlags: 0
@@ -64050,6 +64155,7 @@ MonoBehaviour:
   terrain: {fileID: 1100547805}
   heightOffset: 0.2
   speed: 4
+  isGoblin: 0
 --- !u!4 &1836444386
 Transform:
   m_ObjectHideFlags: 0
@@ -64064,7 +64170,7 @@ Transform:
   - {fileID: 859579630}
   - {fileID: 144400131}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1836444387
 MonoBehaviour:

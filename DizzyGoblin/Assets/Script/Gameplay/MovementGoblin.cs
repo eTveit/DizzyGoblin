@@ -26,16 +26,16 @@ public class MovementGoblin : MonoBehaviour {
 
         //TODO: refactor this into a control FSM 
         //(see steering from last semester)
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
             x = x + speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
             x = x - speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
             z = z - speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
             z = z + speed * Time.deltaTime;
 
         float y = transform.position.y;

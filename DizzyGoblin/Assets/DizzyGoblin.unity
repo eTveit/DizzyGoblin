@@ -51499,6 +51499,7 @@ GameObject:
   - component: {fileID: 1477523081}
   - component: {fileID: 1477523083}
   - component: {fileID: 1477523084}
+  - component: {fileID: 1477523086}
   - component: {fileID: 1477523085}
   m_Layer: 0
   m_Name: Geo_Goblin_Weapon_Ball
@@ -51622,7 +51623,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae54788260118c479f17cb2c582b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarObj: {fileID: 1836444386}
+  spinningLeft: 0
+--- !u!54 &1477523086
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477523079}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1477735297
 Prefab:
   m_ObjectHideFlags: 0

@@ -39,14 +39,7 @@ public class StunState : StateNode {
         leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHitTree>();
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHitTree>();
         ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
-
-        /*
-        //because all we must do is enable them, we could access them as a base object
-        //if we dont need to read specific property values. so we can do this, by name
-        //and then cast it if we need to  
-        leftArmAnim = m_rootState.targetManager.getTargetByName("targetLeftArm", "targetArmMove");
-        rightArmAnim = m_rootState.targetManager.getTargetByName("targetRightArm", "targetArmMove");
-        */
+        
     }
 
 

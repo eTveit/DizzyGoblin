@@ -45,7 +45,7 @@ public class larsLegLeft : IKAnimationTarget
     {
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
-        DeathIndex = UnityEngine.Random.Range(0, RandomDeath.Length);
+        
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class larsLegLeft : IKAnimationTarget
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-       // Vector3 goalPos = DeathIndex;
+        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
 
 
         //set the local

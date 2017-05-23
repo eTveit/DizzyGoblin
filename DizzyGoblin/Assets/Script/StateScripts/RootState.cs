@@ -35,7 +35,7 @@ public class RootState : MonoBehaviour {
         //we may want to find a transform, lets say "TARGETS"
         m_someSpecificTransform = Search(transform, "TARGETS");
 
-        targetManager = new TargetManager(m_someSpecificTransform); 
+        targetManager = new TargetManager(this, m_someSpecificTransform); 
 
         m_childStates = new List<StateNode>();
 
@@ -117,9 +117,15 @@ public class TargetManager
     public int targetCount = 0;
     
     //ctor
-    public TargetManager(Transform _targets)
+    public TargetManager(RootState thisS, Transform _targets)
     {
         //get all of our targets, and put them into an easily accessable list
+        if (_targets == null)
+        {
+            Debug.Log(thisS.transform.name + " has no TARGETS?");
+            return;
+        }
+
         targetCount = _targets.childCount;
 
         //with my own list I can access by index though this might not be needed

@@ -15,6 +15,7 @@ public class TeleportObject : MonoBehaviour {
     steering steering;
     public float distance;
     public float distanceTrigger = 3;
+    
 
 	// Use this for initialization
 	void Start ()
@@ -25,6 +26,7 @@ public class TeleportObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+ 
         distance = Vector3.Distance(transform.position, Target.position);
     
         timer += Time.deltaTime;
@@ -36,6 +38,8 @@ public class TeleportObject : MonoBehaviour {
             //The ideal would be to disable steering while they are in hell and enable it when they spawn. rather than enable it when they go to hell. Takes too much uneeded power.
             steering.enabled = true;
         }
+
+        
     }
 
 	void HitByBall()

@@ -16,7 +16,7 @@ public class RJ_SquatLeftArm : IKAnimationTarget
     {
         return animationName;
     }
-    
+
     Vector3[] positions;
 
     //we probably always want these references
@@ -27,12 +27,12 @@ public class RJ_SquatLeftArm : IKAnimationTarget
     //phase determines the relationship between multiple move points
     //as a function of PI, as Sin is the oscillating function
     public float phase = 0;
-    
+
     //how fast the target point moves
     public float speed = 1;
 
     //the range of motion of the move point
-    public float range = 1; 
+    public float range = 1;
 
     //how high the movepoint sits above terrain surface
     public float heightOffset = 0;
@@ -41,29 +41,30 @@ public class RJ_SquatLeftArm : IKAnimationTarget
 
     public bool squatState = false;
 
+    private Segment3d shoL;
+    private Segment3d armL;
+    private Segment3d elbL;
+    private Segment3d handL;
+
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         positions = new Vector3[2];
 
         positions[0] = new Vector3(-3.06f, 1.45f, -0.35f);
         positions[1] = new Vector3(-0.549f, 3.11f, 4.88f);
 
-        goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
+        goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
-        Segment3d shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
-        Segment3d armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
-        Segment3d elbL = goblinGlobals.Search(AvatarObj, "Elbow_L").GetComponent<Segment3d>();
-        Segment3d handL = goblinGlobals.Search(AvatarObj, "Hand_L").GetComponent<Segment3d>();
+        
 
-        shoL.Zcomp = 0;
-        armL.Zcomp = 0;
-        elbL.Zcomp = 0;
-        handL.Zcomp = 30;
+
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKey(KeyCode.Q))
         {
@@ -93,30 +94,45 @@ public class RJ_SquatLeftArm : IKAnimationTarget
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
-            transform.localPosition = lpos;
-            if (dist < 0.05f)
-            {
-                curPos++;
-                squatState = true;
+            Segment3d shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
+            Segment3d armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
+            Segment3d elbL = goblinGlobals.Search(AvatarObj, "Elbow_L").GetComponent<Segment3d>();
+            Segment3d handL = goblinGlobals.Search(AvatarObj, "Hand_L").GetComponent<Segment3d>();
 
-            }
-            if (dist > 0.01f)
-                squatState = false;
+            shoL.Zcomp = 0;
+            armL.Zcomp = 0;
+            elbL.Zcomp = 0;
+            handL.Zcomp = 30;
+
+            transform.localPosition = lpos;
+
+            curPos = 1;
+
+            squatState = true;
+
 
 
 
         }
+
         else if (squatState == false)
-            
+
         {
             Vector3 goalPos = positions[curPos];
             Vector3 lpos = transform.localPosition;
 
             curPos = 0;
-            
+
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
-            
+
             transform.localPosition = lpos;
+
+            elbL.Zcomp = 0;
         }
-    }
+
+    
+        if (Input.GetKeyUp(KeyCode.Q))
+            squatState = false;
+        print("hello");
+}
 }

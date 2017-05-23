@@ -130,9 +130,14 @@ public class RJ_SquatLeftArm : IKAnimationTarget
             elbL.Zcomp = 0;
         }
 
-    
+
         if (Input.GetKeyUp(KeyCode.Q))
+        {
             squatState = false;
-        print("hello");
-}
+
+            //<JPK> @ruben - make sure debug output is removed when you are happy, as it floods the log
+            //      also, I believe you want this in the keyup?
+            print("hello");
+        }
+    }
 }

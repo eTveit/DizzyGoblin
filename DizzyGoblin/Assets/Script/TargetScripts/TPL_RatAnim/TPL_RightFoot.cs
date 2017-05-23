@@ -98,3 +98,4 @@ public class TPL_RightFoot : IKAnimationTarget
     }
 }
 //Thieu Phong Le
+//used Edvards script to make basic animations

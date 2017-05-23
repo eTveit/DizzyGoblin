@@ -96,3 +96,4 @@ public class TPL_RightArm : IKAnimationTarget
     }
 }
 //Thieu Phong Le
+//used Edvards script to make basic animations

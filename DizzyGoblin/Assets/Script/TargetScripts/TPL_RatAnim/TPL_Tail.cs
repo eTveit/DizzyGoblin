@@ -96,3 +96,4 @@ public class TPL_Tail : IKAnimationTarget
     }
 }
 //Thieu Phong Le
+//used Edvards script to make basic animations

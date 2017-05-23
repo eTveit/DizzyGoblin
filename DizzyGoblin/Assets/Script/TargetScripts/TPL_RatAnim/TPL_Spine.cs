@@ -95,4 +95,5 @@ public class TPL_Spine : IKAnimationTarget
 
     }
 }
-//Thieu Phong Le
+//Thieu Phong Le 
+//used Edvards script to make basic animations

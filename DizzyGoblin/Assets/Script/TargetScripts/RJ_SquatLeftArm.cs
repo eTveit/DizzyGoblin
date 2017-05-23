@@ -126,6 +126,8 @@ public class RJ_SquatLeftArm : IKAnimationTarget
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
 
             transform.localPosition = lpos;
+
+            elbL.Zcomp = 0;
         }
 
     

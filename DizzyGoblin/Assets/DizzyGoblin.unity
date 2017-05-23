@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2310,7 +2310,6 @@ MonoBehaviour:
   leftArm: {fileID: 2013677768}
   rightArm: {fileID: 2051472314}
   spine: {fileID: 414666810}
-  ball: {fileID: 2065630824}
   Avatar: {fileID: 0}
 --- !u!114 &53493323
 MonoBehaviour:
@@ -14014,6 +14013,26 @@ Prefab:
     - {fileID: 114168672783748242, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &407562572 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4027382309518474, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
+--- !u!4 &407562573 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4359747333180490, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
+--- !u!4 &407562574 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
+--- !u!4 &407562575 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
 --- !u!1 &407682983
 GameObject:
   m_ObjectHideFlags: 0
@@ -19449,7 +19468,6 @@ MonoBehaviour:
   leftArm: {fileID: 206039054}
   rightArm: {fileID: 2136712102}
   spine: {fileID: 961436439}
-  ball: {fileID: 0}
   Avatar: {fileID: 0}
 --- !u!114 &553220544
 MonoBehaviour:
@@ -40538,6 +40556,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7e89270e0cc243bccf5e4d6aa709e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFoot: {fileID: 407562575}
+  rightFoot: {fileID: 407562574}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 407562572}
+  spine: {fileID: 407562573}
+  Avatar: {fileID: 1356316219}
+  steer: {fileID: 1131992983}
+  tail: {fileID: 1974052376}
 --- !u!1 &1132132420
 GameObject:
   m_ObjectHideFlags: 0
@@ -64214,9 +64240,9 @@ GameObject:
   - component: {fileID: 1836444386}
   - component: {fileID: 1836444385}
   - component: {fileID: 1836444384}
-  - component: {fileID: 1836444383}
   - component: {fileID: 1836444387}
   - component: {fileID: 1836444388}
+  - component: {fileID: 1836444383}
   m_Layer: 0
   m_Name: RevisedGoblin_Rigged
   m_TagString: Player
@@ -64249,7 +64275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836444382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22bd23783c2bc844a8db2add800aad1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6826af9b7e9163e498a9336e09cc4a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftFoot: {fileID: 1060537427}
@@ -64257,8 +64283,8 @@ MonoBehaviour:
   leftArm: {fileID: 63073728}
   rightArm: {fileID: 1563252449}
   spine: {fileID: 1835569137}
-  ball: {fileID: 199365790}
   Avatar: {fileID: 1836444386}
+  ball: {fileID: 199365790}
 --- !u!114 &1836444385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68953,6 +68979,11 @@ Transform:
 --- !u!1 &1974052375 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1699119241880816, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
+--- !u!4 &1974052376 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4652546817154910, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 407562571}
 --- !u!114 &1974052377

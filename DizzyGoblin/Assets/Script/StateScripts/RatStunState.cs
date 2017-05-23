@@ -38,7 +38,7 @@ public class RatStunState : StateNode {
         leftFootAnim = m_rootState.leftFoot.GetComponent<ET_targetLegsHitTree>();
         leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHitTree>();
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHitTree>();
-        ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
+        
         
     }
 

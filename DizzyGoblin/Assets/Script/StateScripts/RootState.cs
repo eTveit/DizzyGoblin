@@ -10,12 +10,10 @@ public class RootState : MonoBehaviour {
     public Transform rightFoot;
     public Transform leftArm;
     public Transform rightArm;
-    public Transform spine;
-    public Transform ball;
+    public Transform spine; 
     public Transform Avatar;
 
-    //<JPK> @Espen made public
-    public SpinState spinstate;
+
 
     protected List<StateNode> m_childStates ;
 
@@ -28,45 +26,6 @@ public class RootState : MonoBehaviour {
     // Use this for initialization prior to anything else happening
     void Awake () {
 
-
-        //EXAMPLE CODE: buffer a pointer to some transform we may need
-        //GetComponent is expensive (particularly if we get by name)
-        //so we get all the things we need in advance. For some reason
-        //unity does not have its own "find by name" so we make our own
-        //"recursive" search
-
-        //we may want to find a transform, lets say "TARGETS"
-        m_someSpecificTransform = Search(transform, "TARGETS");
-
-        targetManager = new TargetManager(this, m_someSpecificTransform); 
-
-        m_childStates = new List<StateNode>();
-
-        //now lets build some states:
-        //we must always add at least one, if we want the graph to run
-        //here we pass the root state of our game object,
-        //from that we can indeed get anything. we use the keyword "this"
-        //meaning, "this" root state 
-        IdleState idlestate = new IdleState(this);
-        m_childStates.Add(idlestate);
-
-        WalkState walkstate = new WalkState(this);
-        idlestate.addChildState(walkstate);
-
-        WalkBackState walkbackstate = new WalkBackState(this);
-        walkstate.addChildState(walkbackstate);
-
-        //<JPK> made spin state public
-        spinstate = new SpinState(this);
-        walkbackstate.addChildState(spinstate);
-
-		DodgeState dodgestate = new DodgeState(this);
-		spinstate.addChildState(dodgestate);
-
-        StunState stunstate = new StunState(this);
-        dodgestate.addChildState(stunstate);
-
-		//add more states here...
 
 	}
 

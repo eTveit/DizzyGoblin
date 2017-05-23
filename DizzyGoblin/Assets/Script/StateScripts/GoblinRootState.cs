@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RatRootState : RootState
-{
+public class GoblinRootState : RootState {
 
-    //root state will offer-up the steering handler to all child states.
-    public steering steer;
-    public Transform tail;
+   
+    //<JPK> @Espen made public and now exist only for goblins
+    public Transform ball;
+    public SpinState spinstate;
 
+    
     // Use this for initialization prior to anything else happening
-    void Awake()
-    {
+    void Awake () {
 
 
         //EXAMPLE CODE: buffer a pointer to some transform we may need
@@ -23,9 +23,7 @@ public class RatRootState : RootState
         //we may want to find a transform, lets say "TARGETS"
         m_someSpecificTransform = Search(transform, "TARGETS");
 
-        //and then use it some way - this is not stricly needed in our game
-        //but has some advanced functionality
-        targetManager = new TargetManager(this, m_someSpecificTransform);
+        targetManager = new TargetManager(this, m_someSpecificTransform); 
 
         m_childStates = new List<StateNode>();
 
@@ -34,37 +32,45 @@ public class RatRootState : RootState
         //here we pass the root state of our game object,
         //from that we can indeed get anything. we use the keyword "this"
         //meaning, "this" root state 
-        RatIdleState idlestate = new RatIdleState(this);
+        IdleState idlestate = new IdleState(this);
         m_childStates.Add(idlestate);
 
-        RatWalkState walkstate = new RatWalkState(this);
+        WalkState walkstate = new WalkState(this);
         idlestate.addChildState(walkstate);
-                       
-        RatDodgeState dodgestate = new RatDodgeState(this);
-        walkstate.addChildState(dodgestate);
 
-        RatStunState stunstate = new RatStunState(this);
+        WalkBackState walkbackstate = new WalkBackState(this);
+        walkstate.addChildState(walkbackstate);
+
+        //<JPK> made spin state public
+        spinstate = new SpinState(this);
+        walkbackstate.addChildState(spinstate);
+
+		DodgeState dodgestate = new DodgeState(this);
+		spinstate.addChildState(dodgestate);
+
+        StunState stunstate = new StunState(this);
         dodgestate.addChildState(stunstate);
 
-        //add more states here...
+		//add more states here...
 
-    }
+	}
 
     void Start()
     {
-       
+        //place the dude
+        transform.position.Set(5, 0, 5);
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ()
     {
-
+        
         //iterate the child states, calling advanceTime
         foreach (StateNode child in m_childStates)
         {
             child.advanceTime(Time.deltaTime);
         }
-
+        
     }
 
     //here we will override any keyframe animations on specific nodes
@@ -73,5 +79,6 @@ public class RatRootState : RootState
 
 
     }
-    
+
+  
 }

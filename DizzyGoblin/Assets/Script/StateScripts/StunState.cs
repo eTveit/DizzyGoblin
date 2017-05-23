@@ -23,7 +23,7 @@ public class StunState : StateNode {
     private float accumTime = 0;
 
     //ctor
-    public StunState(RootState _rs) {
+    public StunState(GoblinRootState _rs) {
         m_childStates = new List<StateNode>();
         m_rootState = _rs;
         m_transform = m_rootState.transform;
@@ -38,7 +38,9 @@ public class StunState : StateNode {
         leftFootAnim = m_rootState.leftFoot.GetComponent<ET_targetLegsHitTree>();
         leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHitTree>();
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHitTree>();
-        ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
+
+        //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
+        ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
         
     }
 

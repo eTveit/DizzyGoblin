@@ -82,7 +82,7 @@ public class SpinState : StateNode {
         //if no child state is true, see if I need to be true
         if(Input.GetKeyUp(KeyCode.Space)) {
             //this will toggle states for testing
-            p_isInState = !p_isInState;
+            p_isInState = false;
             if(m_isDoingItsState) {
                 leftFootAnim.enabled = false;
                 rightFootAnim.enabled = false;
@@ -95,6 +95,10 @@ public class SpinState : StateNode {
                 //I usually dont (see below state process)- zero start time is useful.
                 accumTime = 0; // Time.time;
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            p_isInState = true;
         }
 
 
@@ -131,6 +135,7 @@ public class SpinState : StateNode {
 
             //<ET>Something screwy is happening here. Gotta find out what!
             if(ballHit.spinningLeft = !spinningLeft) {
+            if(false) {
                 SwitchRotateDirection();
             }
 

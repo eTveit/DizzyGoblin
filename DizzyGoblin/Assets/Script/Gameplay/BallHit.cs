@@ -10,6 +10,7 @@ public class BallHit : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         if(collision.collider.tag == "Tree") {
             spinningLeft = !spinningLeft;
+            Debug.Log(spinningLeft);
         }
     }
 }

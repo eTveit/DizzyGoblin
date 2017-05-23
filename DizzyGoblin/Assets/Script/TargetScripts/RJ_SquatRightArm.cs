@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SquatRightArm : IKAnimationTarget
+public class RJ_SquatRightArm : IKAnimationTarget
 {
 
     //DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SquatHip : MonoBehaviour {
+public class RJ_SquatHip : MonoBehaviour {
 
     public float heightOffset = 1.166f;
     public Vector3 hipRotation = new Vector3(150.077f, 0, 0);

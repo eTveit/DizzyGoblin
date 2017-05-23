@@ -37,11 +37,11 @@ public class TPL_RightFoot : IKAnimationTarget
 	public float heightOffset = 0;
 
 	// Speed Modifier
-	public float speedMod = 8.0f;
+	public float speedMod = 13.0f;
 
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(1.0f, -0.9f, -3.0f), new Vector3(1.0f, -0.9f, 3.0f) };
+	Vector3[] keyframes = new [] { new Vector3(1.0f, -0.9f, -3.0f), new Vector3(1.0f, -0.9f, 0.0f), new Vector3(1.0f, -0.9f, 3.0f), new Vector3(1.0f, -0.9f, 0.0f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB
@@ -97,3 +97,4 @@ public class TPL_RightFoot : IKAnimationTarget
 
     }
 }
+//Thieu Phong Le

@@ -92,6 +92,7 @@ public class TPL_Tail : IKAnimationTarget
 		//set the local
 		transform.localPosition = lpos;
 
-
+       
     }
 }
+//Thieu Phong Le

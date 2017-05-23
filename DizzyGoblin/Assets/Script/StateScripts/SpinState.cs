@@ -56,10 +56,12 @@ public class SpinState : StateNode {
     }
 
 
-    public override bool advanceTime(float dt) {
+    public override bool advanceTime(float dt)
+    {
 
 
-        if(advanceState(dt) == true) {
+        if(advanceState(dt) == true)
+        {
             //if any child state is true, I am false
             p_isInState = false;
             m_isDoingItsState = false;
@@ -80,7 +82,8 @@ public class SpinState : StateNode {
 
         //TODO: Modify to spin only when holding SPACE
         //if no child state is true, see if I need to be true
-        if(Input.GetKeyUp(KeyCode.Space)) {
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
             //this will toggle states for testing
             p_isInState = false;
             if(m_isDoingItsState) {
@@ -97,13 +100,16 @@ public class SpinState : StateNode {
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
             p_isInState = true;
         }
 
 
-        if(p_isInState) {
-            if(!m_isDoingItsState) {
+        if(p_isInState)
+        {
+            if(!m_isDoingItsState)
+            {
                 Debug.Log("SPIN STATE");
                 m_isDoingItsState = true;
 
@@ -134,9 +140,12 @@ public class SpinState : StateNode {
             Rotate(dt);
 
             //<ET>Something screwy is happening here. Gotta find out what!
-            if(ballHit.spinningLeft = !spinningLeft) {
-            if(false) {
-                SwitchRotateDirection();
+            if(ballHit.spinningLeft = !spinningLeft)
+            {
+                //<JPK> @Espen we had a {} scope error here when I last syncd - be sure your scripts are
+                //      error free before committing/syncing
+                if (false) 
+                    SwitchRotateDirection();
             }
 
 

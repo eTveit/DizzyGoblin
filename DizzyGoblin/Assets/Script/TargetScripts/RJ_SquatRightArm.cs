@@ -88,18 +88,15 @@ public class RJ_SquatRightArm : IKAnimationTarget
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
             transform.localPosition = lpos;
-            if (dist < 0.05f)
-            {
-                curPos++;
-                squatState = true;
+            curPos = 1;
 
-            }
-           if (dist > 0.01f)
-                squatState = false;
+            squatState = true;
+
 
 
 
         }
+
         else if (squatState == false)
 
         {
@@ -112,5 +109,10 @@ public class RJ_SquatRightArm : IKAnimationTarget
 
             transform.localPosition = lpos;
         }
+
+
+        if (Input.GetKeyUp(KeyCode.Q))
+            squatState = false;
     }
-}
+    }
+

@@ -80,7 +80,7 @@ public class MakeTrees : MonoBehaviour
                     }
                 }
 
-                levelManager.occupied[vi] = 1;
+                levelManager.occupyArea(x, z);
 
                 Vector3 pos = new Vector3((float)x, y, (float)z);
 

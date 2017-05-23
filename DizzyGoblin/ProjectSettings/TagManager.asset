@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Rats
   - SpawnPoint
+  - Ball
+  - Tree
   layers:
   - Default
   - TransparentFX

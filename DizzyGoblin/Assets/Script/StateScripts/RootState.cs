@@ -14,6 +14,9 @@ public class RootState : MonoBehaviour {
     public Transform ball;
     public Transform Avatar;
 
+    //<JPK> @Espen made public
+    public SpinState spinstate;
+
     protected List<StateNode> m_childStates ;
 
     //to find and hold a game object by name - makes it easy to access
@@ -35,7 +38,7 @@ public class RootState : MonoBehaviour {
         //we may want to find a transform, lets say "TARGETS"
         m_someSpecificTransform = Search(transform, "TARGETS");
 
-        targetManager = new TargetManager(m_someSpecificTransform); 
+        targetManager = new TargetManager(this, m_someSpecificTransform); 
 
         m_childStates = new List<StateNode>();
 
@@ -53,7 +56,8 @@ public class RootState : MonoBehaviour {
         WalkBackState walkbackstate = new WalkBackState(this);
         walkstate.addChildState(walkbackstate);
 
-        SpinState spinstate = new SpinState(this);
+        //<JPK> made spin state public
+        spinstate = new SpinState(this);
         walkbackstate.addChildState(spinstate);
 
 		DodgeState dodgestate = new DodgeState(this);
@@ -117,9 +121,15 @@ public class TargetManager
     public int targetCount = 0;
     
     //ctor
-    public TargetManager(Transform _targets)
+    public TargetManager(RootState thisS, Transform _targets)
     {
         //get all of our targets, and put them into an easily accessable list
+        if (_targets == null)
+        {
+            Debug.Log(thisS.transform.name + " has no TARGETS?");
+            return;
+        }
+
         targetCount = _targets.childCount;
 
         //with my own list I can access by index though this might not be needed

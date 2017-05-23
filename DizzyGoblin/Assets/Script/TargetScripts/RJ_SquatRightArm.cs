@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SquatRightArm : IKAnimationTarget
+public class RJ_SquatRightArm : IKAnimationTarget
 {
 
     //DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -48,7 +48,7 @@ public class SquatRightArm : IKAnimationTarget
 
         positions = new Vector3[2];
 
-        positions[0] = new Vector3(2.18f, 1.76f, 0.1f);
+        positions[0] = new Vector3(3.06f, 1.45f, -0.35f);
         positions[1] = new Vector3(0.398f, 3.11f, 4.51f);
 
 
@@ -59,7 +59,7 @@ public class SquatRightArm : IKAnimationTarget
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (Input.GetKey(KeyCode.Q))
         {
@@ -88,15 +88,29 @@ public class SquatRightArm : IKAnimationTarget
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
             transform.localPosition = lpos;
-            if (dist < 0.1f)
+            if (dist < 0.05f)
+            {
                 curPos++;
-            else if (squatState && dist < 0.1f)
-                curPos++;
+                squatState = true;
 
-            if (curPos >= positions.Length && squatState == true)
-                curPos = 0;
+            }
+           if (dist > 0.01f)
+                squatState = false;
 
 
+
+        }
+        else if (squatState == false)
+
+        {
+            Vector3 goalPos = positions[curPos];
+            Vector3 lpos = transform.localPosition;
+
+            curPos = 0;
+
+            lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
+
+            transform.localPosition = lpos;
         }
     }
 }

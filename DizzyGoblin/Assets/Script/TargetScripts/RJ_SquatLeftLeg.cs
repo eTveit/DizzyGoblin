@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SquatLeftLeg : IKAnimationTarget
+public class RJ_SquatLeftLeg : IKAnimationTarget
 {
 
     //DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -47,7 +47,7 @@ public class SquatLeftLeg : IKAnimationTarget
 
         positions = new Vector3[2];
 
-        positions[0] = new Vector3(-1.01f, -0.52f, -0.329f);
+        positions[0] = new Vector3(-0.53f, -0.52f, -0.329f);
         positions[1] = new Vector3(-0.459f, -0.04f, 0.133f);
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
@@ -95,14 +95,28 @@ public class SquatLeftLeg : IKAnimationTarget
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
             transform.localPosition = lpos;
-            if (dist < 0.1f)
+            if (dist < 0.01f)
+            {
                 curPos++;
-            else if (squatState && dist < 0.1f)
-                curPos++;
+                squatState = true;
+                
+            }
+            if (dist > 0.01f)
+                squatState = false;
 
-            if (curPos >= positions.Length && squatState == true)
-                curPos = 0;
 
+        }
+        else if (squatState == false)
+
+        {
+            Vector3 goalPos = positions[curPos];
+            Vector3 lpos = transform.localPosition;
+
+            curPos = 0;
+
+            lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
+
+            transform.localPosition = lpos;
         }
     }
 }

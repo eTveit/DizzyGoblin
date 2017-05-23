@@ -15,10 +15,6 @@ public class SpinState : StateNode {
     private ET_targetArmsHoldBall rightArmAnim = null;
     private ET_targetMoveChain ballAnim = null;
 
-    private BallHit ballHit = null;
-    private bool spinningLeft = false;
-
-
     private float rotationSpeed = 100;
     private float rotationBoost = 1000;
 
@@ -43,8 +39,6 @@ public class SpinState : StateNode {
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHoldBall>();
         ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
 
-
-        ballHit = m_gameObject.GetComponent<GoblinGlobals>().Search(m_transform, "Geo_Goblin_Weapon_Ball").GetComponent<BallHit>();
 
         /*
         //because all we must do is enable them, we could access them as a base object
@@ -82,7 +76,7 @@ public class SpinState : StateNode {
         //if no child state is true, see if I need to be true
         if(Input.GetKeyUp(KeyCode.Space)) {
             //this will toggle states for testing
-            p_isInState = !p_isInState;
+            p_isInState = false;
             if(m_isDoingItsState) {
                 leftFootAnim.enabled = false;
                 rightFootAnim.enabled = false;
@@ -95,6 +89,10 @@ public class SpinState : StateNode {
                 //I usually dont (see below state process)- zero start time is useful.
                 accumTime = 0; // Time.time;
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            p_isInState = true;
         }
 
 
@@ -129,10 +127,10 @@ public class SpinState : StateNode {
 
             Rotate(dt);
 
-            //<ET>Something screwy is happening here. Gotta find out what!
-            if(ballHit.spinningLeft = !spinningLeft) {
-                SwitchRotateDirection();
-            }
+
+            //<JPK> @Espen we had a {} scope error here when I last syncd - be sure your scripts are
+            //error free before committing/syncing
+
 
 
         }
@@ -205,8 +203,6 @@ public class SpinState : StateNode {
 
         leftFootAnim.rotationSpeed = -leftFootAnim.rotationSpeed;
         leftFootAnim.rotationBoost = -leftFootAnim.rotationBoost;
-
-        spinningLeft = !spinningLeft;
 
     }
 

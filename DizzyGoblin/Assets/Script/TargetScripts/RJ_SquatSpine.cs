@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SquatRightLeg : IKAnimationTarget
+public class RJ_SquatSpine : IKAnimationTarget
 {
 
     //DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -47,20 +47,10 @@ public class SquatRightLeg : IKAnimationTarget
 
         positions = new Vector3[2];
 
-        positions[0] = new Vector3(1.01f, -0.52f, -0.329f);
-        positions[1] = new Vector3(0.405f, -0.05f, 0.133f);
+        positions[0] = new Vector3(0f, 7.55f, 0.1300001f);
+        positions[1] = new Vector3(0, 4.66f, -1.92f);
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
-
-        Segment3d thighR = goblinGlobals.Search(AvatarObj, "Thigh_R").GetComponent<Segment3d>();
-        Segment3d calfR = goblinGlobals.Search(AvatarObj, "Calf_R").GetComponent<Segment3d>();
-        Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
-
-
-
-        thighR.Ycomp = 30;
-        calfR.Ycomp = -30;
-        footR.Ycomp = -20;
 
 
     }
@@ -95,19 +85,28 @@ public class SquatRightLeg : IKAnimationTarget
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
             transform.localPosition = lpos;
-            if (dist < 0.1f)
+            if (dist < 0.01f)
+            {
                 curPos++;
-            else if (squatState && dist < 0.1f)
-                curPos++;
+                squatState = true;
 
-            if (curPos >= positions.Length && squatState == true)
-                curPos = 0;
+            }
+            if (dist > 0.01f)
+                squatState = false;
+        }
+        else if (squatState == false)
+
+        {
+            Vector3 goalPos = positions[curPos];
+            Vector3 lpos = transform.localPosition;
+
+            curPos = 0;
+
+            lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
+
+            transform.localPosition = lpos;
         }
     }
 }
 
 
-
-
-
-   

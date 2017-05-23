@@ -18,7 +18,8 @@ public class TPL_LeftArm : IKAnimationTarget
 	}
 
 
-	//we probably always want these references
+    //we probably always want these references
+    private int RandomNumber;
 	public Transform AvatarObj;
 	public TerrainMesh mesh = null;
 	private GoblinGlobals goblinGlobals;
@@ -40,11 +41,11 @@ public class TPL_LeftArm : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(-2.88f, 4.49f, -5.31f), new Vector3(-1.88f, 4.49f, -5.31f) };
+	Vector3[] keyframes = new [] { new Vector3(-2.88f, 4.49f, -5.31f), new Vector3(-1.88f, 4.49f, -5.31f), new Vector3(-1.999847f, 4.56f, -5.309998f), new Vector3(-1.999847f, 5.248f, -5.309998f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB
-	public float keyframeOffset = 1.0f;
+	public float keyframeOffset = 8.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -74,16 +75,17 @@ public class TPL_LeftArm : IKAnimationTarget
 
 		//this threshold probably needs a tweak, if I am close enough, complete the task
 		if (dist < 0.1f)
-		{
-			// current keyframe met, change to next one.
-			currentFrame++;
-			if (currentFrame==keyframes.Length) {
-				// If the current frame indicator is higher than the number
-				// of elements in the keyframes element, it should reset.
-				currentFrame = 0;
-			}
-			return;
-		}
+        {
+            // current keyframe met, change to next one.
+            currentFrame++;
+            if (currentFrame == keyframes.Length)
+            {
+                // If the current frame indicator is higher than the number
+                // of elements in the keyframes element, it should reset.
+                currentFrame = 0;
+            }
+            return;
+        }
 		else {
 			//move quickly to that position
 			lpos = Vector3.Lerp(lpos, goalPos, Time.deltaTime * speed * speedMod);

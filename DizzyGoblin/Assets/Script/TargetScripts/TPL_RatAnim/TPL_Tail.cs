@@ -37,10 +37,10 @@ public class TPL_Tail : IKAnimationTarget
 	public float heightOffset = 0;
 
 	// Speed Modifier
-	public float speedMod = 1.0f;
+	public float speedMod = 8.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(0.0f, 2.3f, -9.68f), new Vector3(-0.83f, 2.3f, -9.68f) };
+	Vector3[] keyframes = new [] { new Vector3(1.0f, 2.3f, -9.68f), new Vector3(-1.0f, 2.3f, -9.68f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

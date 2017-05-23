@@ -94,13 +94,29 @@ public class SquatLeftArm : IKAnimationTarget
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
             transform.localPosition = lpos;
-            if (dist < 0.1f)
+            if (dist < 0.05f)
+            {
                 curPos++;
-            else if (squatState && dist < 0.1f)
-                curPos++;
+                squatState = true;
 
-            if (curPos >= positions.Length && squatState == true)
-                curPos = 0;
+            }
+            if (dist > 0.01f)
+                squatState = false;
+
+
+
+        }
+        else if (squatState == false)
+            
+        {
+            Vector3 goalPos = positions[curPos];
+            Vector3 lpos = transform.localPosition;
+
+            curPos = 0;
+            
+            lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
+            
+            transform.localPosition = lpos;
         }
     }
 }

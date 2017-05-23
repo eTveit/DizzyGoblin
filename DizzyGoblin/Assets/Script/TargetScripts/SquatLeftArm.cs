@@ -46,7 +46,7 @@ public class SquatLeftArm : IKAnimationTarget
 
         positions = new Vector3[2];
 
-        positions[0] = new Vector3(-2.24f, 1.72f, -0.02f);
+        positions[0] = new Vector3(-3.06f, 1.45f, -0.35f);
         positions[1] = new Vector3(-0.549f, 3.11f, 4.88f);
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();

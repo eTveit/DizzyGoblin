@@ -48,7 +48,7 @@ public class SquatRightArm : IKAnimationTarget
 
         positions = new Vector3[2];
 
-        positions[0] = new Vector3(2.18f, 1.76f, 0.1f);
+        positions[0] = new Vector3(3.06f, 1.45f, -0.35f);
         positions[1] = new Vector3(0.398f, 3.11f, 4.51f);
 
 

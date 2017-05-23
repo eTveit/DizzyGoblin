@@ -132,9 +132,13 @@ public class LJB_levelManager : MonoBehaviour {
             {
                 return;
             }
-        } 
+        }
 
-        occupied[vi] = 1;
+        //expand the occupied area to encompass a larger footprint
+        //occupied now keeps track of rats and goblin too, at run-time
+        //so we can use occupied to optimize collision avoidance
+        occupyArea(x, z);
+        
 
         Vector3 pos = new Vector3((float)x, y, (float)z);
 
@@ -146,5 +150,24 @@ public class LJB_levelManager : MonoBehaviour {
 
     }
 
+    public void occupyArea(int x, int z)
+    {
+        int vi = terrain.getVertexIndexFromXZ(x, z);
+        occupied[vi] = 1;
+
+        //expand area
+        occupied[terrain.getVertexIndexFromXZ(x + 1, z)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x - 1, z)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x + 1, z + 1)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x - 1, z + 1)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x + 1, z - 1)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x - 1, z - 1)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x, z - 1)] = 1;
+        occupied[terrain.getVertexIndexFromXZ(x, z + 1)] = 1;
+
+
+
+
+    }
 }
 

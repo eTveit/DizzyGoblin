@@ -135,11 +135,11 @@ public class SpinState : StateNode {
 
             //<ET>Something screwy is happening here. Gotta find out what!
             if(ballHit.spinningLeft = !spinningLeft) {
-            if(false) {
-                SwitchRotateDirection();
+                if(false) {
+                    SwitchRotateDirection();
+                }
+
             }
-
-
         }
 
         return p_isInState;

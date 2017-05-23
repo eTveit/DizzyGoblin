@@ -41,10 +41,6 @@ public class RJ_SquatLeftLeg : IKAnimationTarget
 
     public bool squatState = false;
 
-    private Segment3d thighL;
-    private Segment3d calfL;
-    private Segment3d footL;
-
 
     // Use this for initialization
     void Start()
@@ -93,7 +89,9 @@ public class RJ_SquatLeftLeg : IKAnimationTarget
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
-            
+            Segment3d thighL = goblinGlobals.Search(AvatarObj, "Thigh_L").GetComponent<Segment3d>();
+            Segment3d calfL = goblinGlobals.Search(AvatarObj, "Calf_L").GetComponent<Segment3d>();
+            Segment3d footL = goblinGlobals.Search(AvatarObj, "Foot_L").GetComponent<Segment3d>();
 
             thighL.Ycomp = 30;
             calfL.Ycomp = -30;
@@ -118,6 +116,10 @@ public class RJ_SquatLeftLeg : IKAnimationTarget
             curPos = 0;
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
+
+            Segment3d thighL = goblinGlobals.Search(AvatarObj, "Thigh_L").GetComponent<Segment3d>();
+            Segment3d calfL = goblinGlobals.Search(AvatarObj, "Calf_L").GetComponent<Segment3d>();
+            Segment3d footL = goblinGlobals.Search(AvatarObj, "Foot_L").GetComponent<Segment3d>();
 
             thighL.Ycomp = 0;
             calfL.Ycomp = 0;

@@ -4380,6 +4380,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 114372318}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &115701900 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1729583344801640, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &115701902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115701900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f6cac989b345e4292c19c1cc8877dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: TheWave
+  startPosition: {x: 0.6, y: 0.2, z: -0.25}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 0
+  range: 0
+  heightOffset: 0
+  speedMod: 0
+  keyframeOffset: 0
 --- !u!1001 &115725993
 Prefab:
   m_ObjectHideFlags: 0
@@ -4492,6 +4518,32 @@ Transform:
   m_Father: {fileID: 521160854}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &121888297 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1699119241880816, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &121888299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121888297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3e25d546aad604a9712d780a7c0b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: TheWave
+  startPosition: {x: 0, y: 4, z: -6.14}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 5
+  range: 1
+  heightOffset: 0
+  speedMod: 2
+  keyframeOffset: 1
 --- !u!1 &127106996
 GameObject:
   m_ObjectHideFlags: 0
@@ -11808,6 +11860,32 @@ Transform:
   m_Father: {fileID: 887636058}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &362209247 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1047764924279370, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &362209249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362209247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16bd3aa0d06614439450ade8f881a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: TheWave
+  startPosition: {x: -0.6, y: 0.2, z: -0.25}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 0
+  range: 0
+  heightOffset: 0
+  speedMod: 0
+  keyframeOffset: 0
 --- !u!1001 &362428941
 Prefab:
   m_ObjectHideFlags: 0
@@ -17501,6 +17579,31 @@ Transform:
   m_Father: {fileID: 610670228}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &500923967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &500923968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 500923967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8255f84268276334abfb2f23c0262deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 0}
+  heightOffset: 0
+  speed: 2.5
+  isGoblin: 0
+--- !u!4 &500923969 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
 --- !u!1 &501454815
 GameObject:
   m_ObjectHideFlags: 0
@@ -18101,6 +18204,32 @@ Transform:
   m_Father: {fileID: 1075130772}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 220, z: 0}
+--- !u!1 &525225946 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1295996519487946, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &525225948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525225946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b581b50b7c5e2974780744edb0544e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: TheWave
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 0
+  range: 0
+  heightOffset: 0
+  speedMod: 0
+  keyframeOffset: 0
 --- !u!1 &527991436
 GameObject:
   m_ObjectHideFlags: 0
@@ -18236,7 +18365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95889166041909652, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
@@ -20558,6 +20687,7 @@ MonoBehaviour:
   path: {fileID: 0}
   ratObstacles: {fileID: 410806598}
   treeObstacles: {fileID: 1068816215}
+  rockObstacles: {fileID: 0}
   curPoint: 1
   pointCount: 0
   ratHole: {fileID: 75632332}
@@ -41305,6 +41435,32 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1136625694}
+--- !u!1 &1138366296 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1352922821073982, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &1138366298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138366296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d60bdfe69a6946bebe8c22f3fd789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: TheWave
+  startPosition: {x: -4.42, y: 2.09, z: 0}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 6
+  range: 2
+  heightOffset: 0
+  speedMod: 2
+  keyframeOffset: 1
 --- !u!1001 &1138475190
 Prefab:
   m_ObjectHideFlags: 0
@@ -45532,16 +45688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c023f226cbc4da4197b688f8f927bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: Flee
-  startPosition: {x: 1, y: -0.9, z: -3}
-  AvatarObj: {fileID: 2050254619}
-  mesh: {fileID: 1100547802}
-  phase: 0
-  speed: 1
-  range: 1
-  heightOffset: 0
-  speedMod: 13
-  keyframeOffset: 1
 --- !u!1 &1253681170
 GameObject:
   m_ObjectHideFlags: 0
@@ -51515,6 +51661,81 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1442569663}
+--- !u!1001 &1443470705
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 36.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 24.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: HK_Rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.25
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95889166041909652, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1447378929
 GameObject:
   m_ObjectHideFlags: 0
@@ -53061,6 +53282,32 @@ MonoBehaviour:
   parent: {fileID: 586530710}
   child: {fileID: 0}
   IKsys: {fileID: 236956560}
+--- !u!1 &1495464007 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984533858615652, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443470705}
+--- !u!114 &1495464009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495464007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb6f71735288e043915309473469f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: TheWave
+  startPosition: {x: 3.66, y: 2.34, z: 0}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 6
+  range: 2
+  heightOffset: 0
+  speedMod: 2
+  keyframeOffset: 1
 --- !u!1 &1499674202
 GameObject:
   m_ObjectHideFlags: 0
@@ -72016,6 +72263,7 @@ MonoBehaviour:
   path: {fileID: 0}
   ratObstacles: {fileID: 410806598}
   treeObstacles: {fileID: 1068816215}
+  rockObstacles: {fileID: 0}
   curPoint: 0
   pointCount: 0
   ratHole: {fileID: 75632332}

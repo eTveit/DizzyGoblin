@@ -42987,14 +42987,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: Rat_Dodge
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: -0.5, y: -0.46, z: -2}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
-  phase: 0
+  phase: 3.141597
   speed: 1
-  range: 1
-  heightOffset: 0
-  MinX: 1
+  range: 2
+  heightOffset: 5
+  MinX: -0.3
   MaxX: 1
 --- !u!114 &1193349958
 MonoBehaviour:
@@ -45779,7 +45779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c242c55e24dd1c4fa56df9fc3a7fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: Rat_Dodge
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
@@ -45787,7 +45787,7 @@ MonoBehaviour:
   phase: 0
   speed: 1
   range: 1
-  heightOffset: 0
+  heightOffset: 7
   MinX: 1
   MaxX: 1
   cycleCount: 0
@@ -58818,7 +58818,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4359747333180490, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.y
@@ -68057,7 +68057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: Rat_Dodge
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0.5, y: -0.14, z: 1.7}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
   leftFoot: {fileID: 407562575}
@@ -68065,7 +68065,7 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
-  MinX: 1
+  MinX: 0.3
   MaxX: 1
   cycleCount: 0
 --- !u!114 &1942935592

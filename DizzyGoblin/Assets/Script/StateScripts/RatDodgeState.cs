@@ -109,7 +109,8 @@ public class RatDodgeState : StateNode
                 //Do something, here we make a one-shot to initialize
 
                 //often we will simply want to switch everything else off
-                m_rootState.targetManager.disableAllTargetAnimations();
+                //<JPK> seem to have an issue with this on rats
+                //m_rootState.targetManager.disableAllTargetAnimations();
 
                 //and enable my specific
                 leftFootAnim.enabled = true;

@@ -65,6 +65,9 @@ public class KT_Goblin_RightArmIdle : IKAnimationTarget
         transform.localPosition = lpos;
 
 
+
+
+
         //to keep the target on the terrain surface
         /*
         //get the world 

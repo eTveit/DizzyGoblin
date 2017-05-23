@@ -1,13 +1,12 @@
 ﻿//copyright Kitty Toft 2017
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-public class KT_Goblin_Spine : IKAnimationTarget
+public class KT_Goblin_RightLegIdle : IKAnimationTarget
 {
 
     public override string getAnimName()
@@ -38,8 +37,9 @@ public class KT_Goblin_Spine : IKAnimationTarget
     public float speedMod = 1.0f;
 
     // Keyframes and Keyframe Count
-    Vector3[] keyframes = new[] { new Vector3(0.0f, 4.0f, 0.0f), new Vector3(-0.0f, 4.0f, 0.0f) };
-    //Vector3[] keyframes = new[] { new Vector3(0.0f, 4.5f, 0.1f), new Vector3(0.0f, 4.0f, 1.0f) };
+    Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(-0.10f, 0.0f, 0.0f) };
+    // Slow movement
+    //Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.5f, 0.0f, 0.0f) };
     private int currentFrame = 0;
 
 
@@ -57,6 +57,8 @@ public class KT_Goblin_Spine : IKAnimationTarget
         //we need to smoothly transition to the new start point before running the animation
         if (interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
+
+
 
         speed = goblinGlobals.speed;
 
@@ -88,8 +90,21 @@ public class KT_Goblin_Spine : IKAnimationTarget
             lpos = Vector3.Lerp(lpos, goalPos, Time.deltaTime * speed * speedMod);
         }
 
+
         //set the local
         transform.localPosition = lpos;
+
+        //get the global, keep the target on the terrain surface
+        Vector3 pos = transform.position;
+        float y = mesh.getHeightAt(pos);
+        pos.y = y + heightOffset;
+
+        //here comes the interp to final position - we can use the object to perform the math
+        //in the correct spatial context, then do the interpolation using the position when 
+        //we first entered the Update(). Lerp or Slerp, depends on your preference
+        //transform.position = Vector3.Lerp(curpos, pos, Time.deltaTime * speed);
+        //NOTE: I hate not being able to pass my own delta time to the mono update function
+        //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
 
 
     }

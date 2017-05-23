@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2703,9 +2703,9 @@ GameObject:
   - component: {fileID: 63073733}
   - component: {fileID: 63073734}
   - component: {fileID: 63073735}
-  - component: {fileID: 63073736}
   - component: {fileID: 63073737}
   - component: {fileID: 63073738}
+  - component: {fileID: 63073736}
   m_Layer: 0
   m_Name: targetLeftArm
   m_TagString: Untagged
@@ -2864,17 +2864,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 63073727}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1bcc114468a2f478c93f1b7a09b371, type: 3}
+  m_Script: {fileID: 11500000, guid: 382ef60ae0ece4041a52d12f44e42391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: LeftArmIdle
-  startPosition: {x: -0.3, y: 4.2, z: 4}
+  animationName: KT_LeftArmIdle
+  startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
-  phase: 1
+  phase: 0
   speed: 1
-  range: 0.5
-  heightOffset: 1
+  range: 0.39
+  heightOffset: 0
 --- !u!114 &63073737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6651,6 +6651,7 @@ GameObject:
   - component: {fileID: 199365793}
   - component: {fileID: 199365792}
   - component: {fileID: 199365791}
+  - component: {fileID: 199365795}
   m_Layer: 0
   m_Name: targetBall
   m_TagString: Untagged
@@ -6741,6 +6742,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 199365789}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &199365795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e8f0c63c35c6d4b91ce66b957abafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: KT_Chain
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  isSpinning: 0
 --- !u!1 &200964542
 GameObject:
   m_ObjectHideFlags: 0
@@ -26495,7 +26516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6021bad1d6630b64795fb7699cf253ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: RightLegIdle
+  animationName: KT_RightLegIdle
   startPosition: {x: 0.6, y: 0, z: 0}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
@@ -28847,11 +28868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f8f0097724ec44898a017f3c1be4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  range: 0.03
-  phase: 0
-  yOffset: 0
-  AvatarObj: {fileID: 1836444386}
 --- !u!1 &866863903
 GameObject:
   m_ObjectHideFlags: 0
@@ -35836,7 +35852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee4357bd06bbcb4885ce36ce4db32e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
+  animationName: KT_LeftLegIdle
   startPosition: {x: -0.53, y: -0.52, z: -0.329}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
@@ -53574,7 +53590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1bcc114468a2f478c93f1b7a09b371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: RightArmIdle
+  animationName: KT_RightArmIdle
   startPosition: {x: 0.3, y: 4.2, z: 4}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
@@ -62715,8 +62731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c4af61f88c4924f99720ff07b6d52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: Spine
-  startPosition: {x: 0, y: 0, z: 0}
+  animationName: KT_Spine
+  startPosition: {x: 0, y: 7.78, z: 0.1300001}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
@@ -62848,7 +62864,7 @@ Transform:
   - {fileID: 859579630}
   - {fileID: 144400131}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1836444387
 MonoBehaviour:
@@ -65865,7 +65881,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive

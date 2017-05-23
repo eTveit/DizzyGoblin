@@ -14,6 +14,9 @@ public class RootState : MonoBehaviour {
     public Transform ball;
     public Transform Avatar;
 
+    //<JPK> @Espen made public
+    public SpinState spinstate;
+
     protected List<StateNode> m_childStates ;
 
     //to find and hold a game object by name - makes it easy to access
@@ -53,7 +56,8 @@ public class RootState : MonoBehaviour {
         WalkBackState walkbackstate = new WalkBackState(this);
         walkstate.addChildState(walkbackstate);
 
-        SpinState spinstate = new SpinState(this);
+        //<JPK> made spin state public
+        spinstate = new SpinState(this);
         walkbackstate.addChildState(spinstate);
 
 		DodgeState dodgestate = new DodgeState(this);

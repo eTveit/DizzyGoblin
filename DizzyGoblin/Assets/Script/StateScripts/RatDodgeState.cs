@@ -10,8 +10,8 @@ public class RatDodgeState : StateNode
     private targetMoveLeft leftFootAnim = null;
     private targetMoveRight rightFootAnim = null;
 	private targetMoveRight spineAnim = null;  //re-using the same anim on a different joint
-	private targetRightArmIdle rightArmAnim = null;
-	private targetLeftArmIdle leftArmAnim = null;
+	private KD_RatRightArm rightArmAnim = null;
+	private KD_RatLeftArm leftArmAnim = null;
     private GoblinGlobals m_globs = null;
     
 
@@ -34,8 +34,8 @@ public class RatDodgeState : StateNode
         //get the target animations for Dodge by type
         rightFootAnim = m_rootState.rightFoot.GetComponent<targetMoveRight>();
         leftFootAnim = m_rootState.leftFoot.GetComponent<targetMoveLeft>();
-		leftArmAnim = m_rootState.leftArm.GetComponent<targetLeftArmIdle>();
-		rightArmAnim = m_rootState.rightArm.GetComponent<targetRightArmIdle>();
+		leftArmAnim = m_rootState.leftArm.GetComponent<KD_RatLeftArm>();
+		rightArmAnim = m_rootState.rightArm.GetComponent<KD_RatRightArm>();
 		spineAnim = m_rootState.spine.GetComponent<targetMoveRight>();
     
 

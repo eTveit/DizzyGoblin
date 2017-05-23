@@ -35,10 +35,8 @@ public class RatIdleState : StateNode
             return true;
         }
 
-        return false;
-
         //lets just say I am true, which in fact I always am if none of my children are true
-        //as IDLE is the first state under root...
+        //as IDLE is the first state under root, well except death maybe...
         p_isInState = true;  //we assume it is true if we got this far
 
         if (p_isInState)
@@ -57,8 +55,7 @@ public class RatIdleState : StateNode
                 //reset timer should we want to play different idles
                 m_idleChooseTimer = -1;
 
-                m_rootState.targetManager.disableAllTargetAnimations();
-                
+                //m_rootState.targetManager.disableAllTargetAnimations();                
                 //we have no idle animations yet
 
 

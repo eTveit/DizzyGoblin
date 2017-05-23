@@ -22867,7 +22867,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 639900370}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51af9db4fe9fd77479971d41f25d5866, type: 3}
   m_Name: 
@@ -22876,7 +22876,7 @@ MonoBehaviour:
   startPosition: {x: 3.66, y: 2.34, z: 0}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
-  phase: 0
+  phase: 3.141597
   speed: 1
   range: 1
   heightOffset: 0
@@ -40644,7 +40644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftFoot: {fileID: 407562575}
   rightFoot: {fileID: 407562574}
-  leftArm: {fileID: 0}
+  leftArm: {fileID: 1777051158}
   rightArm: {fileID: 407562572}
   spine: {fileID: 407562573}
   Avatar: {fileID: 1356316219}
@@ -42975,13 +42975,34 @@ GameObject:
   m_PrefabParentObject: {fileID: 1047764924279370, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 407562571}
+--- !u!114 &1193349957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193349956}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a42785d9777d6d44a0218eba267eb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dodge
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1356316219}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  MinX: 1
+  MaxX: 1
 --- !u!114 &1193349958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1193349956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ca1c76250bdd2e4b8cb666900a18b68, type: 3}
   m_Name: 
@@ -42990,7 +43011,7 @@ MonoBehaviour:
   startPosition: {x: -0.9, y: -0.52, z: -2.01}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
-  phase: 0
+  phase: 3.141597
   speed: 7
   range: 1
   heightOffset: 0
@@ -45747,13 +45768,36 @@ GameObject:
   m_PrefabParentObject: {fileID: 1295996519487946, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 407562571}
+--- !u!114 &1265583683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265583682}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c242c55e24dd1c4fa56df9fc3a7fd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1356316219}
+  mesh: {fileID: 1100547802}
+  leftFoot: {fileID: 407562575}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  MinX: 1
+  MaxX: 1
+  cycleCount: 0
 --- !u!114 &1265583684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1265583682}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 220d2e63666f6ec43abba89296549934, type: 3}
   m_Name: 
@@ -62512,13 +62556,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1352922821073982, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 407562571}
+--- !u!4 &1777051158 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4714208433418886, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 407562571}
 --- !u!114 &1777051159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1777051157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 129c144ae9219f741b95d680ed7c3703, type: 3}
   m_Name: 
@@ -67996,13 +68045,36 @@ GameObject:
   m_PrefabParentObject: {fileID: 1729583344801640, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 407562571}
+--- !u!114 &1942935591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1942935590}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c242c55e24dd1c4fa56df9fc3a7fd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dodge
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1356316219}
+  mesh: {fileID: 1100547802}
+  leftFoot: {fileID: 407562575}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  MinX: 1
+  MaxX: 1
+  cycleCount: 0
 --- !u!114 &1942935592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1942935590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10ea0c289376c214b80dd1ee843ce22d, type: 3}
   m_Name: 
@@ -69204,7 +69276,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974052375}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c413ebb23488de440a6762fb10149d6b, type: 3}
   m_Name: 

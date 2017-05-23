@@ -18218,7 +18218,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95889166041909652, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
@@ -51816,7 +51816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae54788260118c479f17cb2c582b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootState: {fileID: 1836444384}
+  rootState: {fileID: 0}
 --- !u!54 &1477523086
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67508,7 +67508,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_Name

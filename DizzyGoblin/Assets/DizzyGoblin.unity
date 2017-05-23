@@ -13973,7 +13973,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714208433418886, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.06
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114168672783748242, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
@@ -40973,6 +40977,7 @@ MonoBehaviour:
   path: {fileID: 0}
   ratObstacles: {fileID: 410806598}
   treeObstacles: {fileID: 1068816215}
+  rockObstacles: {fileID: 1075130772}
   curPoint: 1
   pointCount: 0
   ratHole: {fileID: 75632332}
@@ -55753,6 +55758,7 @@ MonoBehaviour:
   path: {fileID: 0}
   ratObstacles: {fileID: 410806598}
   treeObstacles: {fileID: 1068816215}
+  rockObstacles: {fileID: 0}
   curPoint: 1
   pointCount: 0
   ratHole: {fileID: 75632332}
@@ -62915,7 +62921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: KD_Walk
-  startPosition: {x: -4.42, y: 2.09, z: 0}
+  startPosition: {x: -4.42, y: 2.09, z: 2}
   AvatarObj: {fileID: 1356316219}
   mesh: {fileID: 1100547802}
   phase: 0

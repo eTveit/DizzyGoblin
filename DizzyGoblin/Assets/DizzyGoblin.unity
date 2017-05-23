@@ -27073,7 +27073,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789167001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.01, y: -0.52, z: -0.329}
+  m_LocalPosition: {x: 0.57, y: -0.52, z: -0.329}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -27270,7 +27270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: DONT_FORGET_TO_NAME_IT
-  startPosition: {x: 1.01, y: -0.52, z: -0.329}
+  startPosition: {x: 0.57, y: -0.52, z: -0.329}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
@@ -36561,7 +36561,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.01, y: -0.52, z: -0.329}
+  m_LocalPosition: {x: -0.53, y: -0.52, z: -0.329}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -36756,7 +36756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: DONT_FORGET_TO_NAME_IT
-  startPosition: {x: -1.01, y: -0.52, z: -0.329}
+  startPosition: {x: -0.53, y: -0.52, z: -0.329}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0

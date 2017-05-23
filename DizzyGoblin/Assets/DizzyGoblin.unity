@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.46169513, g: 0.5124164, b: 0.58993304, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -10650,6 +10650,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &327408038 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1699119241880816, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &327408040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327408038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7233968c27b64834f93a616406c807a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: OAS_Idle_Tail
+  startPosition: {x: -0.76, y: 2.32, z: -6.85}
+  AvatarObj: {fileID: 579157279}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 1
+  keyframeOffset: 1
 --- !u!1001 &328766466
 Prefab:
   m_ObjectHideFlags: 0
@@ -18197,6 +18223,32 @@ Transform:
   m_Father: {fileID: 74547825}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &528593326 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1352922821073982, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &528593328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528593326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe343edfc652064aac28b9af1a2e9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: OAS_Idle_LeftArm
+  startPosition: {x: -2.053, y: 2.32, z: 0}
+  AvatarObj: {fileID: 579157279}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 1
+  keyframeOffset: 1
 --- !u!1001 &528847330
 Prefab:
   m_ObjectHideFlags: 0
@@ -18214,7 +18266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 24.92
+      value: 24.62
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalRotation.x
@@ -18238,7 +18290,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95889166041909652, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
@@ -18682,6 +18734,57 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 538573002}
+--- !u!1001 &538797405
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 17.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: OAS_RatAnim
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95889166041909652, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &538979397
 GameObject:
   m_ObjectHideFlags: 0
@@ -20462,6 +20565,31 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 578877311}
+--- !u!1 &579157278 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!4 &579157279 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &579157280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579157278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8255f84268276334abfb2f23c0262deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1100547805}
+  heightOffset: 0
+  speed: 2.5
+  isGoblin: 0
 --- !u!1 &586530709
 GameObject:
   m_ObjectHideFlags: 0
@@ -38216,6 +38344,32 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1086305173}
+--- !u!1 &1086773594 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1047764924279370, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &1086773596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086773594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4952f541a08a05e478070598576c9db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: OAS_Idle_LeftFoot
+  startPosition: {x: -0.64, y: -0.167, z: 0.035}
+  AvatarObj: {fileID: 579157279}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 1
+  keyframeOffset: 1
 --- !u!1 &1089290978
 GameObject:
   m_ObjectHideFlags: 0
@@ -49804,6 +49958,32 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1388476507}
+--- !u!1 &1389895278 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1729583344801640, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &1389895280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389895278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c4667277726bd40a0f1203ddd02c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: OAS_Idle_RightFoot
+  startPosition: {x: 0.75, y: -0.068, z: -0.32}
+  AvatarObj: {fileID: 579157279}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 1
+  keyframeOffset: 1
 --- !u!1 &1390034270
 GameObject:
   m_ObjectHideFlags: 0
@@ -50620,6 +50800,32 @@ MonoBehaviour:
   parent: {fileID: 185817656}
   child: {fileID: 0}
   IKsys: {fileID: 2105395845}
+--- !u!1 &1425868942 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984533858615652, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &1425868944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425868942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c5ede33e192f547bae37c668e1114d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: OAS_Idle_RightArm
+  startPosition: {x: 2.58, y: 2.34, z: 0}
+  AvatarObj: {fileID: 579157279}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 1
+  keyframeOffset: 1
 --- !u!1 &1426231311
 GameObject:
   m_ObjectHideFlags: 0
@@ -55865,6 +56071,32 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1592844373}
+--- !u!1 &1595646658 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1295996519487946, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 538797405}
+--- !u!114 &1595646660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1595646658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72340b483957fe44ca2ccfe0faeb4e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: OAS_Idle_Spine
+  startPosition: {x: 0, y: 7.55, z: 0.1300001}
+  AvatarObj: {fileID: 579157279}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 1
+  keyframeOffset: 1
 --- !u!1 &1595775627
 GameObject:
   m_ObjectHideFlags: 0

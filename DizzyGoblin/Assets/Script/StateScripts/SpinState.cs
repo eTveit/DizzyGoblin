@@ -15,10 +15,6 @@ public class SpinState : StateNode {
     private ET_targetArmsHoldBall rightArmAnim = null;
     private ET_targetMoveChain ballAnim = null;
 
-    private BallHit ballHit = null;
-    private bool spinningLeft = false;
-
-
     private float rotationSpeed = 100;
     private float rotationBoost = 1000;
 
@@ -44,8 +40,6 @@ public class SpinState : StateNode {
         ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
 
 
-        ballHit = m_gameObject.GetComponent<GoblinGlobals>().Search(m_transform, "Geo_Goblin_Weapon_Ball").GetComponent<BallHit>();
-
         /*
         //because all we must do is enable them, we could access them as a base object
         //if we dont need to read specific property values. so we can do this, by name
@@ -56,12 +50,10 @@ public class SpinState : StateNode {
     }
 
 
-    public override bool advanceTime(float dt)
-    {
+    public override bool advanceTime(float dt) {
 
 
-        if(advanceState(dt) == true)
-        {
+        if(advanceState(dt) == true) {
             //if any child state is true, I am false
             p_isInState = false;
             m_isDoingItsState = false;
@@ -82,8 +74,7 @@ public class SpinState : StateNode {
 
         //TODO: Modify to spin only when holding SPACE
         //if no child state is true, see if I need to be true
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
+        if(Input.GetKeyUp(KeyCode.Space)) {
             //this will toggle states for testing
             p_isInState = false;
             if(m_isDoingItsState) {
@@ -100,16 +91,13 @@ public class SpinState : StateNode {
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
+        if(Input.GetKeyDown(KeyCode.Space)) {
             p_isInState = true;
         }
 
 
-        if(p_isInState)
-        {
-            if(!m_isDoingItsState)
-            {
+        if(p_isInState) {
+            if(!m_isDoingItsState) {
                 Debug.Log("SPIN STATE");
                 m_isDoingItsState = true;
 
@@ -139,14 +127,10 @@ public class SpinState : StateNode {
 
             Rotate(dt);
 
-            //<ET>Something screwy is happening here. Gotta find out what!
-            if(ballHit.spinningLeft = !spinningLeft)
-            {
-                //<JPK> @Espen we had a {} scope error here when I last syncd - be sure your scripts are
-                //      error free before committing/syncing
-                if (false) 
-                    SwitchRotateDirection();
-            }
+
+            //<JPK> @Espen we had a {} scope error here when I last syncd - be sure your scripts are
+            //error free before committing/syncing
+
 
 
         }
@@ -219,8 +203,6 @@ public class SpinState : StateNode {
 
         leftFootAnim.rotationSpeed = -leftFootAnim.rotationSpeed;
         leftFootAnim.rotationBoost = -leftFootAnim.rotationBoost;
-
-        spinningLeft = !spinningLeft;
 
     }
 

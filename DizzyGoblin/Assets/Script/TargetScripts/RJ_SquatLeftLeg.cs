@@ -63,7 +63,7 @@ public class RJ_SquatLeftLeg : IKAnimationTarget
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Space))
         {
             //we need to smoothly transition to the new start point before running the animation
             if (interpolateToStartPosition(Time.deltaTime, speed) == false)
@@ -129,7 +129,7 @@ public class RJ_SquatLeftLeg : IKAnimationTarget
         }
 
 
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetKeyUp(KeyCode.Space))
             squatState = false;
     }
     }

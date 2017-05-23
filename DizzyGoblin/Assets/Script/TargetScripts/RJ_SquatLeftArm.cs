@@ -69,7 +69,7 @@ public class RJ_SquatLeftArm : IKAnimationTarget
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Space))
         {
 
 
@@ -138,13 +138,11 @@ public class RJ_SquatLeftArm : IKAnimationTarget
         }
 
 
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             squatState = false;
 
-            //<JPK> @ruben - make sure debug output is removed when you are happy, as it floods the log
-            //      also, I believe you want this in the keyup?
-            print("hello");
+           
         }
     }
 }

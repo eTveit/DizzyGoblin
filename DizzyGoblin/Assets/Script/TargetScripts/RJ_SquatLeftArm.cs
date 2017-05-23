@@ -41,6 +41,12 @@ public class RJ_SquatLeftArm : IKAnimationTarget
 
     public bool squatState = false;
 
+    private Segment3d shoL;
+    private Segment3d armL;
+    private Segment3d elbL;
+    private Segment3d handL;
+
+
     // Use this for initialization
     void Start()
     {
@@ -51,6 +57,8 @@ public class RJ_SquatLeftArm : IKAnimationTarget
         positions[1] = new Vector3(-0.549f, 3.11f, 4.88f);
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
+
+        
 
 
     }

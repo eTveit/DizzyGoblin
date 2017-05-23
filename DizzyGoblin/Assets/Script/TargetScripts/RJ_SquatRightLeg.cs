@@ -41,6 +41,9 @@ public class RJ_SquatRightLeg : IKAnimationTarget
 
     public bool squatState = false;
 
+    
+  
+
     // Use this for initialization
     void Start()
     {
@@ -53,7 +56,6 @@ public class RJ_SquatRightLeg : IKAnimationTarget
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
         
-
 
     }
 
@@ -90,8 +92,6 @@ public class RJ_SquatRightLeg : IKAnimationTarget
             Segment3d calfR = goblinGlobals.Search(AvatarObj, "Calf_R").GetComponent<Segment3d>();
             Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
 
-
-
             thighR.Ycomp = 30;
             calfR.Ycomp = -30;
             footR.Ycomp = -20;
@@ -116,6 +116,14 @@ public class RJ_SquatRightLeg : IKAnimationTarget
             curPos = 0;
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
+
+            Segment3d thighR = goblinGlobals.Search(AvatarObj, "Thigh_R").GetComponent<Segment3d>();
+            Segment3d calfR = goblinGlobals.Search(AvatarObj, "Calf_R").GetComponent<Segment3d>();
+            Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
+
+            thighR.Ycomp = 0;
+            calfR.Ycomp = 0;
+            footR.Ycomp = 0;
 
             transform.localPosition = lpos;
         }

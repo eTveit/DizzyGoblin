@@ -51853,7 +51853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae54788260118c479f17cb2c582b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootState: {fileID: 0}
+  rootState: {fileID: 1836444384}
 --- !u!54 &1477523086
 Rigidbody:
   m_ObjectHideFlags: 0

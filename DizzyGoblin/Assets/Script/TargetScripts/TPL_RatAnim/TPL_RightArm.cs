@@ -40,7 +40,7 @@ public class TPL_RightArm : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(-0.87f,1.00f,2.20f), new Vector3(-0.87f,6.00f,2.20f) };
+	Vector3[] keyframes = new [] { new Vector3(2.62f, 4.7f, -5.4f), new Vector3(1.94f, 4.7f,-5.4f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

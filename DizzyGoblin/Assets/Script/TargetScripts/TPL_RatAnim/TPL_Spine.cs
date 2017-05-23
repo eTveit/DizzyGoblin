@@ -40,7 +40,7 @@ public class TPL_Spine : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(-0.87f,1.00f,2.20f), new Vector3(-0.87f,6.00f,2.20f) };
+	Vector3[] keyframes = new [] { new Vector3(0.0f, 7.74f, -3f), new Vector3(0f, 7.74f, -1.32f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

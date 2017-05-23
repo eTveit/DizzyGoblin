@@ -18365,10 +18365,56 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052976975726820, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: RightArmSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155381937057250, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: LeftArmSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302014525096012, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Shoulder_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996914701907572, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Arm_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375724286960666, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Elbow_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714952521877572, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Hand_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871393785233706, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Shoulder_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020783767592960, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Arm_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025842552259684, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Elbow_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184859310338744, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_Name
+      value: Hand_L
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95889166041909652, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+    - {fileID: 135024416312911096, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+    - {fileID: 135210490295771040, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+    - {fileID: 135453753398725620, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+    - {fileID: 135171386111099868, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+    - {fileID: 135033687791795774, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+    - {fileID: 135980637942001702, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &530051934

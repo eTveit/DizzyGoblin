@@ -79,9 +79,9 @@ public class PoolSystem : MonoBehaviour
         //assign an index
         RatSelect.GetComponent<ratData>().ratIndex = RatIndex;
         //RatSelect is gameobject that is to be transformed to spawnpoint
-        Vector3 temp = new Vector3(Random.Range(-10.0f, 10.0f), 0.0f, Random.Range(-10.0f, 10.0f));
+        Vector3 posOffset = new Vector3(Random.Range(-10.0f, 10.0f), 0.0f, Random.Range(-10.0f, 10.0f));
         tpObject = RatSelect;
-        tpObject.transform.position = Rathole.transform.position + temp;
+        tpObject.transform.position = Rathole.transform.position + posOffset;
 
         
 
@@ -110,7 +110,7 @@ public class PoolSystem : MonoBehaviour
        
         
 
-    
+    //Ole Andreas Stavå
 
 }
     

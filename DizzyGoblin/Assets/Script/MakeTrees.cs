@@ -80,11 +80,11 @@ public class MakeTrees : MonoBehaviour
                     }
                 }
 
-                levelManager.occupyArea(x, z);
+                levelManager.occupied[vi] = 1;
 
                 Vector3 pos = new Vector3((float)x, y, (float)z);
 
-                y = terrain.getHeightAt(pos) -0.5f;
+                y = terrain.getHeightAt(pos) - 0.5f;
 
                 pos.Set(x, y, z);
 

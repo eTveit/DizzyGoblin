@@ -129,6 +129,7 @@ public class TerrainMesh : MonoBehaviour {
 
 
 
+<<<<<<< HEAD
         for (int i = 0; i < 10; i++)
         {
 
@@ -141,6 +142,21 @@ public class TerrainMesh : MonoBehaviour {
         }
    
         
+=======
+       
+
+        for (int i = 0; i < 20; i++)
+        {
+
+            int xp = Random.Range(0, xSize - 20);
+            int zp = Random.Range(0, zSize - 20);
+
+            Vector3 bumpPos = new Vector3(xp, 0, zp);
+            makeBump(10, 0.3f, bumpPos);
+        }
+
+
+>>>>>>> origin/master
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
@@ -155,6 +171,8 @@ public class TerrainMesh : MonoBehaviour {
         Vector3[] vertices = mesh.vertices;
 
         float r = radius; //LD
+        r = Random.Range(0.0f, 10.0f);
+
         //make sure we have enough vertices in our terrain to make bumps of this size!!!
         Vector3 center = pos;
         for (float phi = 0.0f; phi < 2 * Mathf.PI; phi += Mathf.PI / 100.0f) // Azimuth [0, 2PI]

@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class TerrainMesh : MonoBehaviour {
 
+    //altered by Ruben Junger (bumps), Lars Joar Bjørkeland, Bjørn Johansen (texure animation)
 
     public int xSize, zSize;
 

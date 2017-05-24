@@ -77,11 +77,11 @@ public class LJB_levelManager : MonoBehaviour {
         occupied = new int[terrain.mesh.vertexCount];
 
         //Trees
-        Trees = 10 * levelDifficulty;
+        Trees = 5 * levelDifficulty;
         makeTrees.BuildTrees(Trees);
 
         //Rocks
-        Rocks = 10 * levelDifficulty;
+        Rocks = 3 * levelDifficulty;
         makeRocks.BuildRocks(Rocks);
 
         //Fence

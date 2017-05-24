@@ -2795,6 +2795,7 @@ GameObject:
   - component: {fileID: 63073737}
   - component: {fileID: 63073738}
   - component: {fileID: 63073736}
+  - component: {fileID: 63073739}
   m_Layer: 0
   m_Name: targetLeftArm
   m_TagString: Untagged
@@ -2970,7 +2971,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63073727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ac5b02ed3b98940b4129276195b2f0, type: 3}
   m_Name: 
@@ -3004,6 +3005,25 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 8
+--- !u!114 &63073739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63073727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcadcb3b390f5504e8904e4140a4bf59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: -4.76, y: 4.63, z: -0.35}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
 --- !u!1001 &68537352
 Prefab:
   m_ObjectHideFlags: 0
@@ -4396,16 +4416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f6cac989b345e4292c19c1cc8877dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
-  startPosition: {x: 0.6, y: 0.2, z: -0.25}
-  AvatarObj: {fileID: 500923969}
-  mesh: {fileID: 1100547802}
-  phase: 0
-  speed: 0
-  range: 0
-  heightOffset: 0
-  speedMod: 0
-  keyframeOffset: 0
 --- !u!1001 &115725993
 Prefab:
   m_ObjectHideFlags: 0
@@ -27553,6 +27563,7 @@ GameObject:
   - component: {fileID: 789167011}
   - component: {fileID: 789167012}
   - component: {fileID: 789167013}
+  - component: {fileID: 789167014}
   m_Layer: 0
   m_Name: targetRightFoot
   m_TagString: Untagged
@@ -27758,7 +27769,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789167001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 277759269eb2470498b0001952d24206, type: 3}
   m_Name: 
@@ -27791,6 +27802,25 @@ MonoBehaviour:
   speed: 1
   range: 1.64
   heightOffset: -1
+--- !u!114 &789167014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789167001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028699b544e4e5d4791bb2661e5b4b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
 --- !u!1 &791831308
 GameObject:
   m_ObjectHideFlags: 0
@@ -37134,6 +37164,7 @@ GameObject:
   - component: {fileID: 1060537436}
   - component: {fileID: 1060537437}
   - component: {fileID: 1060537438}
+  - component: {fileID: 1060537439}
   m_Layer: 0
   m_Name: targetLeftFoot
   m_TagString: Untagged
@@ -37337,7 +37368,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eee4357bd06bbcb4885ce36ce4db32e0, type: 3}
   m_Name: 
@@ -37370,6 +37401,25 @@ MonoBehaviour:
   speed: 1
   range: 1.64
   heightOffset: -1
+--- !u!114 &1060537439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1060537426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa665f6f7dd344583a898a76e2b5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
 --- !u!1 &1061404772
 GameObject:
   m_ObjectHideFlags: 0
@@ -51744,7 +51794,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
@@ -55436,6 +55486,7 @@ GameObject:
   - component: {fileID: 1563252457}
   - component: {fileID: 1563252458}
   - component: {fileID: 1563252459}
+  - component: {fileID: 1563252460}
   m_Layer: 0
   m_Name: targetRightArm
   m_TagString: Untagged
@@ -55611,7 +55662,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b5de090a9f426e4098938feaa8ea0a8, type: 3}
   m_Name: 
@@ -55645,6 +55696,25 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 8
+--- !u!114 &1563252460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563252448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937e379fbbaa8f428666e47f37c62a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: 3.06, y: 1.4, z: -0.35}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
 --- !u!1001 &1563372846
 Prefab:
   m_ObjectHideFlags: 0
@@ -64967,6 +65037,7 @@ GameObject:
   - component: {fileID: 1835569143}
   - component: {fileID: 1835569144}
   - component: {fileID: 1835569145}
+  - component: {fileID: 1835569146}
   m_Layer: 0
   m_Name: targetSpine
   m_TagString: Untagged
@@ -65098,7 +65169,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835569136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa1bef62dea829644be88ae53475864a, type: 3}
   m_Name: 
@@ -65132,6 +65203,25 @@ MonoBehaviour:
   range: 1
   heightOffset: 0
   speedMod: 2.3
+--- !u!114 &1835569146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835569136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4df215daabeeda4eb421b9f663e0a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: DONT_FORGET_TO_NAME_IT
+  startPosition: {x: 0, y: 6.78, z: 0.1300001}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
 --- !u!1 &1836444382
 GameObject:
   m_ObjectHideFlags: 0
@@ -65216,7 +65306,7 @@ Transform:
   - {fileID: 859579630}
   - {fileID: 144400131}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1836444387
 MonoBehaviour:

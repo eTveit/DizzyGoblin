@@ -132,7 +132,7 @@ public class TerrainMesh : MonoBehaviour {
 
        
 
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < levelDifficulty * 2; i++)
         {
 
             int xp = Random.Range(0, xSize - 20);
@@ -157,7 +157,7 @@ public class TerrainMesh : MonoBehaviour {
         Vector3[] vertices = mesh.vertices;
 
         float r = radius; //LD
-        r = Random.Range(0.0f, 10.0f);
+        r = Random.Range(5.0f, 10.0f);
 
         //make sure we have enough vertices in our terrain to make bumps of this size!!!
         Vector3 center = pos;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Made by Lars Joar Bjørkeland
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,9 +24,6 @@ public class larsLegLeft : IKAnimationTarget
     public Transform AvatarObj;
     public TerrainMesh mesh = null;
     private GoblinGlobals goblinGlobals;
-    int DeathIndex;
-
-    Vector3[] RandomDeath = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f) };
 
     //phase determines the relationship between multiple move points
     //as a function of PI, as Sin is the oscillating function
@@ -53,32 +52,32 @@ public class larsLegLeft : IKAnimationTarget
     {
 
         //we need to smoothly transition to the new start point before running the animation
-      //  if (interpolateToStartPosition(Time.deltaTime, speed) == false)
-        //    return;
+        if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+            return;
 
-        Vector3 curpos = transform.position;
+        Vector3 curpos = transform.localPosition;
 
         speed = goblinGlobals.speed;
 
-        //to keep our targets in line with the hips, we simply want to
-        //oscillate on z axis in the LOCAL space
-
-        Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
-
-
-        //set the local
-        transform.localPosition = lpos;
 
         //get the global, keep the target on the terrain surface
         Vector3 pos = transform.position;
         float y = mesh.getHeightAt(pos);
         pos.y = y + heightOffset;
 
+        //to keep our targets in line with the hips, we simply want to
+        //oscillate on z axis in the LOCAL space
+
+        Vector3 deathPos = new Vector3 (-0.53f, y, 3.11f);
+        //set the local
+
+
+
+
         //here comes the interp to final position - we can use the object to perform the math
         //in the correct spatial context, then do the interpolation using the position when 
         //we first entered the Update(). Lerp or Slerp, depends on your preference
-        transform.position = Vector3.Lerp(curpos, pos, Time.deltaTime * speed);
+        transform.localPosition = Vector3.Slerp(curpos, deathPos, Time.deltaTime * speed);
         //NOTE: I hate not being able to pass my own delta time to the mono update function
         //      this means I have to rely upon a global variable to change "world" time for slo/fast mo
 

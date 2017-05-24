@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class TerrainMesh : MonoBehaviour {
-    //Made by Ruben Junger, Lars Joar Bjørkeland, Bjørn Johansen
+
 
     public int xSize, zSize;
 
@@ -15,6 +15,9 @@ public class TerrainMesh : MonoBehaviour {
     public float yplus = 0;
     public bool passWave = false;
     public float lastGoodY = 0;
+
+    //to tell the trees it's time to animate
+    public bool built = false;
 
     // Use this for initialization
     void Awake()
@@ -39,7 +42,8 @@ public class TerrainMesh : MonoBehaviour {
         if(passWave)
             PassZWave();
 
-        animateSurface(Time.deltaTime);
+        if(built)
+            animateSurface(Time.deltaTime);
     }
 
 
@@ -128,22 +132,6 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-       /* for (int i = 0; i < 10; i++)
-        {
-
-            int xp = Random.Range(20, xSize - 20);
-            int zp = Random.Range(20, zSize - 20);
-            float height = ((float)Random.Range(1, 5)) / 10.0f;
-            float radius = Random.Range(10, 20);
-            Vector3 bumpPos = new Vector3(xp , 0, zp);
-            makeBump(radius, height, bumpPos);
-        }
-        */
-   
-        
-
-       
-
         for (int i = 0; i < levelDifficulty*2; i++)
         {
 
@@ -157,12 +145,13 @@ public class TerrainMesh : MonoBehaviour {
         }
 
 
-
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
         //reallocate to our buffer
         verts = mesh.vertices;
+
+        built = true;
 
     }
 
@@ -389,6 +378,7 @@ public class TerrainMesh : MonoBehaviour {
         return (ysin  * 0.5f);     //amplitude (how high to go)
 
     }
+
     float timer = -1.0f;
     float dirx = 1.0f;
     float diry = 1.0f;
@@ -411,8 +401,8 @@ public class TerrainMesh : MonoBehaviour {
 
         for (int i = 0; i < uvs.Length; i++)
         {
-            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.01f * dirx;
-            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.01f * diry;
+            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.1f * dirx;
+            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.1f * diry;
         }
 
         //set uvs

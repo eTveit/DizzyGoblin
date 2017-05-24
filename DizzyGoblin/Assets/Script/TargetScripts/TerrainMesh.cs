@@ -128,23 +128,6 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-
-<<<<<<< HEAD
-        for (int i = 0; i < 10; i++)
-        {
-
-            int xp = Random.Range(20, xSize - 20);
-            int zp = Random.Range(20, zSize - 20);
-            float height = ((float)Random.Range(1, 5)) / 10.0f;
-            float radius = Random.Range(10, 20);
-            Vector3 bumpPos = new Vector3(xp , 0, zp);
-            makeBump(radius, height, bumpPos);
-        }
-   
-        
-=======
-       
-
         for (int i = 0; i < levelDifficulty*2; i++)
         {
 
@@ -158,7 +141,6 @@ public class TerrainMesh : MonoBehaviour {
         }
 
 
->>>>>>> origin/master
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 

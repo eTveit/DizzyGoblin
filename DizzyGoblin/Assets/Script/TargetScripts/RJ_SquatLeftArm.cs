@@ -58,15 +58,18 @@ public class RJ_SquatLeftArm : IKAnimationTarget
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
-        
-
+        //<JPK> @RUBEN grab once at start so we always have them later
+        shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
+        armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
+        elbL = goblinGlobals.Search(AvatarObj, "Elbow_L").GetComponent<Segment3d>();
+        handL = goblinGlobals.Search(AvatarObj, "Hand_L").GetComponent<Segment3d>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Space))
         {
 
 
@@ -94,10 +97,14 @@ public class RJ_SquatLeftArm : IKAnimationTarget
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
-            Segment3d shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
-            Segment3d armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
-            Segment3d elbL = goblinGlobals.Search(AvatarObj, "Elbow_L").GetComponent<Segment3d>();
-            Segment3d handL = goblinGlobals.Search(AvatarObj, "Hand_L").GetComponent<Segment3d>();
+
+            //<JPK> @RUBEN - moved these and made them "persistant" so we only need to grab them once
+            //      re-decaring them here, means they "scope" only when Q key is pressed
+
+            //Segment3d shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
+            //Segment3d armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
+            //Segment3d elbL = goblinGlobals.Search(AvatarObj, "Elbow_L").GetComponent<Segment3d>();
+            //Segment3d handL = goblinGlobals.Search(AvatarObj, "Hand_L").GetComponent<Segment3d>();
 
             shoL.Zcomp = 0;
             armL.Zcomp = 0;
@@ -130,9 +137,12 @@ public class RJ_SquatLeftArm : IKAnimationTarget
             elbL.Zcomp = 0;
         }
 
-    
-        if (Input.GetKeyUp(KeyCode.Q))
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
             squatState = false;
-        print("hello");
-}
+
+           
+        }
+    }
 }

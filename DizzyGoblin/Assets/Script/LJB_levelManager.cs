@@ -48,7 +48,6 @@ public class LJB_levelManager : MonoBehaviour {
             Lose();
         }
 
-
     }
 
     void Win()

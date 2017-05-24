@@ -128,13 +128,37 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-               
 
-        Vector3 bumpPos = new Vector3(60, 0, 60);
-        makeBump(10, 0.3f, bumpPos);
-       
+<<<<<<< HEAD
+        for (int i = 0; i < 10; i++)
+        {
+
+            int xp = Random.Range(20, xSize - 20);
+            int zp = Random.Range(20, zSize - 20);
+            float height = ((float)Random.Range(1, 5)) / 10.0f;
+            float radius = Random.Range(10, 20);
+            Vector3 bumpPos = new Vector3(xp , 0, zp);
+            makeBump(radius, height, bumpPos);
+        }
    
         
+=======
+       
+
+        for (int i = 0; i < levelDifficulty*2; i++)
+        {
+
+            int xp = Random.Range(0, xSize - 20);
+            int zp = Random.Range(0, zSize - 20);
+
+            Vector3 bumpPos = new Vector3(xp, 0, zp);
+
+            //(radius, height, position of bump)
+            makeBump(10, 0.1f * levelDifficulty, bumpPos);
+        }
+
+
+>>>>>>> origin/master
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
@@ -149,23 +173,29 @@ public class TerrainMesh : MonoBehaviour {
         Vector3[] vertices = mesh.vertices;
 
         float r = radius; //LD
+        r = Random.Range(0.0f, 10.0f);
+
+      
+
         //make sure we have enough vertices in our terrain to make bumps of this size!!!
         Vector3 center = pos;
         for (float phi = 0.0f; phi < 2 * Mathf.PI; phi += Mathf.PI / 100.0f) // Azimuth [0, 2PI]
         {
             for (float theta = 0.0f; theta < Mathf.PI; theta += Mathf.PI / 100.0f) // Elevation [0, PI]
             {
-
+               
                 int x = Mathf.RoundToInt(r * Mathf.Cos(phi) * Mathf.Sin(theta) + center.x);
                 float y = Mathf.Abs(r * Mathf.Sin(phi) * Mathf.Sin(theta) + center.y) * height;  //LD
                 int z = Mathf.RoundToInt(r * Mathf.Cos(theta) + center.z);
 
                 //give it some detail - we could use perlin here too dont let i be too large
                 int i = getVertexIndexFromXZ(x, z);
-                Vector3 vert = vertices[i];
-                vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
-                vertices[i] = vert;
-
+                if (i < vertices.Length)
+                {
+                    Vector3 vert = vertices[i];
+                    vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
+                    vertices[i] = vert;
+                }
             }
         }
 

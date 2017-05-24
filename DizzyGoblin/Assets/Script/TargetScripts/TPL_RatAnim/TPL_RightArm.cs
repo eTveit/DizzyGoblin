@@ -37,10 +37,10 @@ public class TPL_RightArm : IKAnimationTarget
 	public float heightOffset = 0;
 
 	// Speed Modifier
-	public float speedMod = 1.0f;
+	public float speedMod = 8.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(2.62f, 4.7f, -5.4f), new Vector3(1.94f, 4.7f,-5.4f) };
+	Vector3[] keyframes = new [] { new Vector3(2.62f, 4.7f, -5.4f), new Vector3(1.94f, 4.7f,-5.4f), new Vector3(2.352f, 5.01f, -5.399997f), new Vector3(2.352f, 4.358f, -5.399997f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB
@@ -95,3 +95,5 @@ public class TPL_RightArm : IKAnimationTarget
 
     }
 }
+//Thieu Phong Le
+//used Edvards script to make basic animations

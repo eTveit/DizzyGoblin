@@ -37,7 +37,9 @@ public class SpinState : StateNode {
         leftFootAnim = m_rootState.leftFoot.GetComponent<targetMoveSpin>();
         leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHoldBall>();
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHoldBall>();
-        ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
+
+        //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
+        ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
 
 
         /*

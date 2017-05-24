@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TPL_Tail : IKAnimationTarget
+public class TPL_RightFoot : IKAnimationTarget
 {
 
 	//DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -37,10 +37,10 @@ public class TPL_Tail : IKAnimationTarget
 	public float heightOffset = 0;
 
 	// Speed Modifier
-	public float speedMod = 8.0f;
+	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(1.0f, 2.3f, -9.68f), new Vector3(-1.0f, 2.3f, -9.68f) };
+	Vector3[] keyframes = new [] { new Vector3(-0.87f,1.00f,2.20f), new Vector3(-0.87f,6.00f,2.20f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB
@@ -92,8 +92,6 @@ public class TPL_Tail : IKAnimationTarget
 		//set the local
 		transform.localPosition = lpos;
 
-       
+
     }
 }
-//Thieu Phong Le
-//used Edvards script to make basic animations

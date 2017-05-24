@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TPL_Tail : IKAnimationTarget
+public class HK_RightFoot : IKAnimationTarget
 {
 
 	//DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
 	//the FSM uses names of our creation to select animations to play
 	/*
-         "TPL_Flee";
+         "JK_walk";
     */
 	public override string getAnimName()
 	{
@@ -37,10 +37,10 @@ public class TPL_Tail : IKAnimationTarget
 	public float heightOffset = 0;
 
 	// Speed Modifier
-	public float speedMod = 8.0f;
+	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(1.0f, 2.3f, -9.68f), new Vector3(-1.0f, 2.3f, -9.68f) };
+	Vector3[] keyframes = new [] { new Vector3(0.6f, 0.2f, -0.25f), new Vector3(0.6f, 0.2f, -0.25f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB
@@ -92,8 +92,6 @@ public class TPL_Tail : IKAnimationTarget
 		//set the local
 		transform.localPosition = lpos;
 
-       
+
     }
 }
-//Thieu Phong Le
-//used Edvards script to make basic animations

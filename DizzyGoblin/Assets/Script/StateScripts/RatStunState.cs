@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StunState : StateNode {
+public class RatStunState : StateNode {
     
     //we specify by type the animations we need for this state
     //they could be any animations in the Avatar's targets list 
@@ -23,7 +23,7 @@ public class StunState : StateNode {
     private float accumTime = 0;
 
     //ctor
-    public StunState(GoblinRootState _rs) {
+    public RatStunState(RatRootState _rs) {
         m_childStates = new List<StateNode>();
         m_rootState = _rs;
         m_transform = m_rootState.transform;
@@ -38,9 +38,7 @@ public class StunState : StateNode {
         leftFootAnim = m_rootState.leftFoot.GetComponent<ET_targetLegsHitTree>();
         leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHitTree>();
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHitTree>();
-
-        //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
-        ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
+        
         
     }
 
@@ -86,7 +84,7 @@ public class StunState : StateNode {
 
         if(p_isInState) {
             if(!m_isDoingItsState) {
-                Debug.Log("STUN STATE");
+                Debug.Log("RAT STUN STATE");
                 m_isDoingItsState = true;
 
                 //Do something, here we make a one-shot to initialize

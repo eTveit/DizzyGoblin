@@ -37,14 +37,17 @@ public class TPL_RightFoot : IKAnimationTarget
 	public float heightOffset = 0;
 
 	// Speed Modifier
-	public float speedMod = 1.0f;
+	public float speedMod = 13.0f;
+
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(0.62f, 0.83f, 5.82f), new Vector3(0.62f, -0.83f, -3.8f) };
+	Vector3[] keyframes = new [] { new Vector3(1.0f, -0.9f, -3.0f), new Vector3(1.0f, -0.9f, 0.0f), new Vector3(1.0f, -0.9f, 3.0f), new Vector3(1.0f, -0.9f, 0.0f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB
 	public float keyframeOffset = 1.0f;
+
+    
 
 	// Use this for initialization
 	void Start () {
@@ -55,7 +58,6 @@ public class TPL_RightFoot : IKAnimationTarget
 	// Update is called once per frame
 	void Update ()
 	{
-
 		//we need to smoothly transition to the new start point before running the animation
 		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
 			return;
@@ -75,8 +77,8 @@ public class TPL_RightFoot : IKAnimationTarget
 		//this threshold probably needs a tweak, if I am close enough, complete the task
 		if (dist < 0.1f)
 		{
-			// current keyframe met, change to next one.
-			currentFrame++;
+            // current keyframe met, change to next one.
+                currentFrame++;
 			if (currentFrame==keyframes.Length) {
 				// If the current frame indicator is higher than the number
 				// of elements in the keyframes element, it should reset.
@@ -95,3 +97,5 @@ public class TPL_RightFoot : IKAnimationTarget
 
     }
 }
+//Thieu Phong Le
+//used Edvards script to make basic animations

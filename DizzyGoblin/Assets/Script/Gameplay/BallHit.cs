@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BallHit : MonoBehaviour {
 
-    public RootState rootState = null;
+    public GoblinRootState rootState = null;
 
     private void OnCollisionEnter(Collision collision) {
-        if(collision.collider.tag == "Tree") {
+        if(collision.collider.tag == "Tree")
+        { 
             rootState.spinstate.SwitchRotateDirection();
         }
     }

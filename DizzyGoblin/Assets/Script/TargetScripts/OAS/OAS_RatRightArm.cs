@@ -40,7 +40,7 @@ public class OAS_RatRightArm : IKAnimationTarget
 	public float speedMod = 1.0f;
 
     // Keyframes and Keyframe Count
-    Vector3[] keyframes = new[] { new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f) };
+    Vector3[] keyframes = new[] { new Vector3(2.58f, 2.34f, 0.0f), new Vector3(2.114f, 2.34f, 0.0f), new Vector3(2.905f, 3.414f, 1.425f)  };
     private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

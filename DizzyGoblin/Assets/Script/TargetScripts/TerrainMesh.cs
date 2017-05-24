@@ -16,6 +16,9 @@ public class TerrainMesh : MonoBehaviour {
     public bool passWave = false;
     public float lastGoodY = 0;
 
+    //to tell the trees it's time to animate
+    public bool built = false;
+
     // Use this for initialization
     void Awake()
     {
@@ -39,7 +42,8 @@ public class TerrainMesh : MonoBehaviour {
         if(passWave)
             PassZWave();
 
-        animateSurface(Time.deltaTime);
+        if(built)
+            animateSurface(Time.deltaTime);
     }
 
 
@@ -146,6 +150,8 @@ public class TerrainMesh : MonoBehaviour {
 
         //reallocate to our buffer
         verts = mesh.vertices;
+
+        built = true;
 
     }
 
@@ -372,11 +378,12 @@ public class TerrainMesh : MonoBehaviour {
         return (ysin  * 0.5f);     //amplitude (how high to go)
 
     }
+
     float timer = -1.0f;
     float dirx = 1.0f;
     float diry = 1.0f;
-    float goaldirx = 1.0f;
-    float goaldiry = 1.0f;
+    public float goaldirx = 1.0f;
+    public float goaldiry = 1.0f;
 
     public Vector2 wind;
 
@@ -394,8 +401,8 @@ public class TerrainMesh : MonoBehaviour {
 
         for (int i = 0; i < uvs.Length; i++)
         {
-            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.01f * dirx;
-            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.01f * diry;
+            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.1f * dirx;
+            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.1f * diry;
         }
 
         //set uvs

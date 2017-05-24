@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,6 +42,9 @@ public class treeAnimate : IKAnimationTarget
     //the range of motion of the move point
     public float rangeZ = 1;
 
+    float timer = -1.0f;
+    float dirx = 1.0f;
+    float diry = 1.0f;
 
 
     // Use this for initialization
@@ -61,29 +63,34 @@ public class treeAnimate : IKAnimationTarget
 	void Update ()
     {
 
-		//we need to smoothly transition to the new start point before running the animation
-		if (interpolateToStartPosition(Time.deltaTime, speedX) == false)
-			return;
+        //we need to smoothly transition to the new start point before running the animation
+        //if (interpolateToStartPosition(Time.deltaTime, speedX) == false)
+        //	return;
 
+
+        if (!terrain.built)
+            return;
 
         Vector3 cpos = transform.localPosition;
 
-        //to keep our targets in line with the hips, we simply want to
-        //oscillate on z axis in the LOCAL space
 
-        float xp = tree.position.x ;
-        float zp = 0; //tree.position.z ;
-
-        //xp and zp will need to have a coefficient of wind dir/speed
-
-        float xm = Mathf.Sin((Time.time * speedX) + phaseX + xp);
-        float zm = Mathf.Sin((Time.time * speedZ) + phaseX + zp);
         
-        Vector3 lpos = transform.localPosition;
-        lpos.Set(xm * rangeX, 10, zm * rangeZ);
-        
+        if (timer < 0)
+            timer = Time.time;
+
+
+
+        dirx = Mathf.Lerp(dirx, terrain.goaldirx, Time.deltaTime);
+        diry = Mathf.Lerp(diry, terrain.goaldiry, Time.deltaTime);
+
+
+        float xp = cpos.x - Mathf.Sin(Time.time) * Time.deltaTime * dirx;
+        float zp = cpos.z - Mathf.Cos(Time.time) * Time.deltaTime * diry;
+
+        Vector3 lpos = new Vector3(xp, cpos.y, zp);
+
         //interpolate to new pos
-        transform.localPosition = Vector3.Slerp(cpos,lpos,Time.deltaTime);
+        transform.localPosition = lpos; // Vector3.Slerp(cpos,lpos,Time.deltaTime);
 
 
 

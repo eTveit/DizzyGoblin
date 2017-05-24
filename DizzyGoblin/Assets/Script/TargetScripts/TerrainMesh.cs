@@ -145,14 +145,16 @@ public class TerrainMesh : MonoBehaviour {
 =======
        
 
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < levelDifficulty*2; i++)
         {
 
             int xp = Random.Range(0, xSize - 20);
             int zp = Random.Range(0, zSize - 20);
 
             Vector3 bumpPos = new Vector3(xp, 0, zp);
-            makeBump(10, 0.3f, bumpPos);
+
+            //(radius, height, position of bump)
+            makeBump(10, 0.1f * levelDifficulty, bumpPos);
         }
 
 
@@ -173,13 +175,15 @@ public class TerrainMesh : MonoBehaviour {
         float r = radius; //LD
         r = Random.Range(0.0f, 10.0f);
 
+      
+
         //make sure we have enough vertices in our terrain to make bumps of this size!!!
         Vector3 center = pos;
         for (float phi = 0.0f; phi < 2 * Mathf.PI; phi += Mathf.PI / 100.0f) // Azimuth [0, 2PI]
         {
             for (float theta = 0.0f; theta < Mathf.PI; theta += Mathf.PI / 100.0f) // Elevation [0, PI]
             {
-
+               
                 int x = Mathf.RoundToInt(r * Mathf.Cos(phi) * Mathf.Sin(theta) + center.x);
                 float y = Mathf.Abs(r * Mathf.Sin(phi) * Mathf.Sin(theta) + center.y) * height;  //LD
                 int z = Mathf.RoundToInt(r * Mathf.Cos(theta) + center.z);

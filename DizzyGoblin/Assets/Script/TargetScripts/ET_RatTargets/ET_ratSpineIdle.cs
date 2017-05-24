@@ -54,13 +54,13 @@ public class ET_ratSpineIdle : IKAnimationTarget {
         Segment3d spiT = ratGlobals.Search(AvatarObj, "Spine_Top").GetComponent<Segment3d>();
         Segment3d head = ratGlobals.Search(AvatarObj, "Head001").GetComponent<Segment3d>();
 
-        thiL.Ycomp = -70;
+        thiL.Ycomp = -50;
         fooL.Ycomp = -90;
-        thiR.Ycomp = -70;
+        thiR.Ycomp = -50;
         fooR.Ycomp = -90;
         spiM.Ycomp = -60;
-        spiT.Ycomp = -30;
-        head.Ycomp = -30;
+        spiT.Ycomp = -20;
+        head.Ycomp = -20;
 
         phase = 0;
 

@@ -4396,16 +4396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f6cac989b345e4292c19c1cc8877dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
-  startPosition: {x: 0.6, y: 0.2, z: -0.25}
-  AvatarObj: {fileID: 500923969}
-  mesh: {fileID: 1100547802}
-  phase: 0
-  speed: 0
-  range: 0
-  heightOffset: 0
-  speedMod: 0
-  keyframeOffset: 0
 --- !u!1001 &115725993
 Prefab:
   m_ObjectHideFlags: 0
@@ -21444,6 +21434,11 @@ MonoBehaviour:
   startPosition: {x: 0, y: 5, z: 2.5}
   AvatarObj: {fileID: 1582743229}
   mesh: {fileID: 1100547802}
+  rightArmTarget: {fileID: 1451955649}
+  leftArmTarget: {fileID: 1710283285}
+  rightLegTarget: {fileID: 972583987}
+  leftLegTarget: {fileID: 1431377456}
+  tailTarget: {fileID: 1137045535}
   phase: 0
   speed: 1
   range: 1
@@ -34046,6 +34041,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 972208063}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &972583982 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1729583344801640, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &972583987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972583982}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48da53d21511c346860e0b20ac08bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratRightLegAttack
+  startPosition: {x: 0.5, y: 0, z: -0.7}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  curPos: 0
+  incrementingDT: -1
+--- !u!114 &972583988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972583982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e454aba220eff458ab5f004e1b7097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratLegsIdle
+  startPosition: {x: 0.5, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1 &972756809
 GameObject:
   m_ObjectHideFlags: 0
@@ -41481,6 +41522,51 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1136625694}
+--- !u!1 &1137045530 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1699119241880816, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1137045535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137045530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df249a6768999484faeee85015f9821e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratTailAttack
+  startPosition: {x: 0, y: 5, z: -6}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  curPos: 0
+--- !u!114 &1137045536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137045530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c98ab5e15ae12842bc9646274210af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratTailIdle
+  startPosition: {x: 0, y: 5, z: -6}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1 &1138366296 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1352922821073982, guid: 14dcf1ea18ae01b4bac13a96855ca946,
@@ -51363,6 +51449,52 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1431377451 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1047764924279370, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1431377456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431377451}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86630c0f409a83042b1c297be378f8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratLeftLegAttack
+  startPosition: {x: -0.5, y: 0, z: -0.7}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  curPos: 0
+  incrementingDT: -1
+--- !u!114 &1431377457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431377451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e454aba220eff458ab5f004e1b7097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratLegsIdle
+  startPosition: {x: -0.5, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
 --- !u!1 &1437083504
 GameObject:
   m_ObjectHideFlags: 0
@@ -51811,6 +51943,33 @@ Transform:
   m_Father: {fileID: 1075130772}
   m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
+--- !u!1 &1451955644 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984533858615652, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1451955649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451955644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37a607c14fd514419130cd5ee8cfbcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratRightArmAttack
+  startPosition: {x: 1.55, y: 2.5, z: 3}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  curPos: 0
+  incrementingDT: -1
+  speedAdjust: -1
 --- !u!1 &1459645826
 GameObject:
   m_ObjectHideFlags: 0
@@ -56035,7 +56194,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1582743228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31eb8ad6382feac45a09dedff3c94088, type: 3}
   m_Name: 
@@ -56072,7 +56231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 1100547805}
-  heightOffset: 0
+  heightOffset: 200
   speed: 2.2
   isGoblin: 0
 --- !u!114 &1582743232
@@ -59419,7 +59578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.z
@@ -59451,7 +59610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027382309518474, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.z
@@ -59472,6 +59631,18 @@ Prefab:
     - target: {fileID: 4359747333180490, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114168672783748242, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
@@ -60525,6 +60696,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 1709706768}
+--- !u!1 &1710283280 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1352922821073982, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1710283285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710283280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb63cafae8176bc428dd95a5d2a1732a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratLeftArmAttack
+  startPosition: {x: -1.55, y: 2.5, z: 3}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  curPos: 0
+  incrementingDT: -1
+  speedAdjust: -1
 --- !u!1 &1711580235
 GameObject:
   m_ObjectHideFlags: 0

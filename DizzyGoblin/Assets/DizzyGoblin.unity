@@ -11249,7 +11249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 24.62
+      value: 64.14
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalRotation.x
@@ -12265,6 +12265,92 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 366374575}
+--- !u!1 &371151706 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946,
+    type: 2}
+  m_PrefabInternal: {fileID: 345843074}
+--- !u!114 &371151707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371151706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination: {fileID: 75632332}
+  Target: {fileID: 1477523080}
+  DeSpawn: 3
+  distance: 0
+  distanceTrigger: 3
+--- !u!114 &371151708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371151706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b7e89270e0cc243bccf5e4d6aa709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftFoot: {fileID: 407562575}
+  rightFoot: {fileID: 407562574}
+  leftArm: {fileID: 1777051158}
+  rightArm: {fileID: 407562572}
+  spine: {fileID: 407562573}
+  Avatar: {fileID: 54608073}
+  steer: {fileID: 371151709}
+  tail: {fileID: 1974052376}
+--- !u!114 &371151709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371151706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31eb8ad6382feac45a09dedff3c94088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 1.5}
+  maxSpeed: 5
+  speed: 0
+  radius: 2
+  useKeyboard: 0
+  steeringForce: {x: 0, y: 0, z: 0}
+  steeringForceFactor: 0.01
+  dotproduct: 0
+  path: {fileID: 0}
+  ratObstacles: {fileID: 410806598}
+  treeObstacles: {fileID: 1068816215}
+  rockObstacles: {fileID: 1075130772}
+  curPoint: 1
+  pointCount: 0
+  ratHole: {fileID: 75632332}
+  Player: {fileID: 1836444386}
+  goal: {x: 0, y: 0, z: 0}
+  terrain: {fileID: 1100547802}
+  levelManager: {fileID: 57649171}
+  state: 1
+--- !u!114 &371151710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371151706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8255f84268276334abfb2f23c0262deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1100547805}
+  heightOffset: 0
+  speed: 2.5
+  isGoblin: 0
 --- !u!1001 &371403650
 Prefab:
   m_ObjectHideFlags: 0

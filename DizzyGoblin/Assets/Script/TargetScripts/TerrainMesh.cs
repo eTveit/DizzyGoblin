@@ -128,11 +128,17 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-               
 
-        Vector3 bumpPos = new Vector3(60, 0, 60);
-        makeBump(10, 0.3f, bumpPos);
-       
+        for (int i = 0; i < 10; i++)
+        {
+
+            int xp = Random.Range(20, xSize - 20);
+            int zp = Random.Range(20, zSize - 20);
+            float height = ((float)Random.Range(1, 5)) / 10.0f;
+            float radius = Random.Range(10, 20);
+            Vector3 bumpPos = new Vector3(xp , 0, zp);
+            makeBump(radius, height, bumpPos);
+        }
    
         
         mesh.RecalculateBounds();
@@ -162,10 +168,12 @@ public class TerrainMesh : MonoBehaviour {
 
                 //give it some detail - we could use perlin here too dont let i be too large
                 int i = getVertexIndexFromXZ(x, z);
-                Vector3 vert = vertices[i];
-                vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
-                vertices[i] = vert;
-
+                if (i < vertices.Length)
+                {
+                    Vector3 vert = vertices[i];
+                    vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
+                    vertices[i] = vert;
+                }
             }
         }
 

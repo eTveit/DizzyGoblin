@@ -128,8 +128,6 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-
-<<<<<<< HEAD
         for (int i = 0; i < 10; i++)
         {
 
@@ -142,7 +140,7 @@ public class TerrainMesh : MonoBehaviour {
         }
    
         
-=======
+
        
 
         for (int i = 0; i < levelDifficulty*2; i++)
@@ -158,7 +156,7 @@ public class TerrainMesh : MonoBehaviour {
         }
 
 
->>>>>>> origin/master
+
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 

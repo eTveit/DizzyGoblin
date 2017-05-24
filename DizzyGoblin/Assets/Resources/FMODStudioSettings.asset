@@ -54,13 +54,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: Master Bank
-  Banks:
-  - Character
-  - Weapons
-  - Music
-  - Vehicles
-  - VO_Menu_English
-  - Object Panning
-  - Surround_Ambience
-  - UI_Menu
+  MasterBank: 
+  Banks: []

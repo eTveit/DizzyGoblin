@@ -402,8 +402,8 @@ public class TerrainMesh : MonoBehaviour {
 
         for (int i = 0; i < uvs.Length; i++)
         {
-            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.1f * dirx;
-            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.1f * diry;
+            uvs[i].x += Mathf.Sin(Time.time) * dt * 0.01f * dirx;
+            uvs[i].y += Mathf.Cos(Time.time) * dt * 0.01f * diry;
         }
 
         //set uvs

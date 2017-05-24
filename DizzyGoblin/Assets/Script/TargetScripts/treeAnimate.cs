@@ -84,8 +84,8 @@ public class treeAnimate : IKAnimationTarget
         diry = Mathf.Lerp(diry, terrain.goaldiry, Time.deltaTime);
 
 
-        float xp = cpos.x - Mathf.Sin(Time.time) * Time.deltaTime * dirx * 0.5f;
-        float zp = cpos.z - Mathf.Cos(Time.time) * Time.deltaTime * diry * 0.5f;
+        float xp = cpos.x - Mathf.Sin(Time.time) * Time.deltaTime * dirx * 0.4f;
+        float zp = cpos.z - Mathf.Cos(Time.time) * Time.deltaTime * diry * 0.4f;
 
         Vector3 lpos = new Vector3(xp, cpos.y, zp);
 

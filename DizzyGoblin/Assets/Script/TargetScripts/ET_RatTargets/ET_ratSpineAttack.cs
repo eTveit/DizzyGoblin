@@ -24,6 +24,11 @@ public class ET_ratSpineAttack : IKAnimationTarget {
     public Transform AvatarObj;
     public TerrainMesh mesh = null;
     private GoblinGlobals ratGlobals;
+    public ET_ratRightArmAttack rightArmTarget;
+    public ET_ratLeftArmAttack leftArmTarget;
+    public ET_ratRightLegAttack rightLegTarget;
+    public ET_ratLeftLegAttack leftLegTarget;
+    public ET_ratTailAttack tailTarget;
 
     //phase determines the relationship between multiple move points
     //as a function of PI, as Sin is the oscillating function
@@ -67,9 +72,9 @@ public class ET_ratSpineAttack : IKAnimationTarget {
         Segment3d spiT = ratGlobals.Search(AvatarObj, "Spine_Top").GetComponent<Segment3d>();
         Segment3d head = ratGlobals.Search(AvatarObj, "Head001").GetComponent<Segment3d>();
 
-        thiL.Ycomp = -70;
+        thiL.Ycomp = -50;
         fooL.Ycomp = -90;
-        thiR.Ycomp = -70;
+        thiR.Ycomp = -50;
         fooR.Ycomp = -90;
         spiM.Ycomp = -60;
         spiT.Ycomp = -30;
@@ -120,6 +125,11 @@ public class ET_ratSpineAttack : IKAnimationTarget {
         if(curPos >= positions.Length)
             curPos = 0;
 
+        rightArmTarget.curPos = curPos;
+        leftArmTarget.curPos = curPos;
+        rightLegTarget.curPos = curPos;
+        leftLegTarget.curPos = curPos;
+        tailTarget.curPos = curPos;
 
         //set the local
         transform.localPosition = lpos;

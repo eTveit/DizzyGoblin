@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class TerrainMesh : MonoBehaviour {
-
+    //Made by Ruben Junger, Lars Joar Bjørkeland, Bjørn Johansen
 
     public int xSize, zSize;
 
@@ -128,7 +128,7 @@ public class TerrainMesh : MonoBehaviour {
         pnp.MakeSomeNoise(mesh);
 
 
-        for (int i = 0; i < 10; i++)
+       /* for (int i = 0; i < 10; i++)
         {
 
             int xp = Random.Range(20, xSize - 20);
@@ -138,6 +138,7 @@ public class TerrainMesh : MonoBehaviour {
             Vector3 bumpPos = new Vector3(xp , 0, zp);
             makeBump(radius, height, bumpPos);
         }
+        */
    
         
 

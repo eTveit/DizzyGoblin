@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class RJ_SquatRightLeg : IKAnimationTarget
+public class RJ_SquatLeftArm : IKAnimationTarget
 {
 
     //DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -41,8 +41,11 @@ public class RJ_SquatRightLeg : IKAnimationTarget
 
     public bool squatState = false;
 
-    
-  
+    private Segment3d shoL;
+    private Segment3d armL;
+    private Segment3d elbL;
+    private Segment3d handL;
+
 
     // Use this for initialization
     void Start()
@@ -50,12 +53,16 @@ public class RJ_SquatRightLeg : IKAnimationTarget
 
         positions = new Vector3[2];
 
-        positions[0] = new Vector3(0.57f, -0.52f, -0.329f);
-        positions[1] = new Vector3(0.405f, -0.05f, 0.133f);
+        positions[0] = new Vector3(-3.06f, 1.45f, -0.35f);
+        positions[1] = new Vector3(-0.549f, 3.11f, 4.88f);
 
         goblinGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
         
+        shoL = goblinGlobals.Search(AvatarObj, "Shoulder_L").GetComponent<Segment3d>();
+        armL = goblinGlobals.Search(AvatarObj, "Arm_L").GetComponent<Segment3d>();
+        elbL = goblinGlobals.Search(AvatarObj, "Elbow_L").GetComponent<Segment3d>();
+        handL = goblinGlobals.Search(AvatarObj, "Hand_L").GetComponent<Segment3d>();
 
     }
 
@@ -64,6 +71,8 @@ public class RJ_SquatRightLeg : IKAnimationTarget
     {
         if (Input.GetKey(KeyCode.Space))
         {
+
+
             //we need to smoothly transition to the new start point before running the animation
             if (interpolateToStartPosition(Time.deltaTime, speed) == false)
                 return;
@@ -80,7 +89,7 @@ public class RJ_SquatRightLeg : IKAnimationTarget
             float dist = Vector3.Distance(lpos, goalPos);
 
             //we can use an sdjust to interp FASTER the closer we are to the goal
-            float adjust = (3.0f - dist);
+            float adjust = (5.0f - dist);
 
             //if it is too small, clamp it, otherwise we wont get anywhere
             if (adjust < 0.5f)
@@ -88,13 +97,7 @@ public class RJ_SquatRightLeg : IKAnimationTarget
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime * adjust);
 
-            Segment3d thighR = goblinGlobals.Search(AvatarObj, "Thigh_R").GetComponent<Segment3d>();
-            Segment3d calfR = goblinGlobals.Search(AvatarObj, "Calf_R").GetComponent<Segment3d>();
-            Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
-
-            thighR.Ycomp = 30;
-            calfR.Ycomp = -30;
-            footR.Ycomp = -20;
+            handL.Zcomp = 30;
 
             transform.localPosition = lpos;
 
@@ -117,26 +120,17 @@ public class RJ_SquatRightLeg : IKAnimationTarget
 
             lpos = Vector3.Slerp(lpos, goalPos, Time.deltaTime);
 
-            Segment3d thighR = goblinGlobals.Search(AvatarObj, "Thigh_R").GetComponent<Segment3d>();
-            Segment3d calfR = goblinGlobals.Search(AvatarObj, "Calf_R").GetComponent<Segment3d>();
-            Segment3d footR = goblinGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
-
-            thighR.Ycomp = 0;
-            calfR.Ycomp = 0;
-            footR.Ycomp = 0;
-
             transform.localPosition = lpos;
+
+            elbL.Zcomp = 0;
         }
 
 
         if (Input.GetKeyUp(KeyCode.Space))
+        {
             squatState = false;
+
+           
+        }
     }
-    }
-
-
-
-
-
-
-   
+}

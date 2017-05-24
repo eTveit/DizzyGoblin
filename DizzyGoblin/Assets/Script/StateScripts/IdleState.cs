@@ -16,8 +16,9 @@ public class IdleState : StateNode
         m_rootState = _rs;
         m_transform = m_rootState.transform;
         m_gameObject = m_transform.gameObject;
-
-        ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
+   
+        //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
+        ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
 
     }
 

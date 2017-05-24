@@ -10,6 +10,8 @@ using UnityEngine;
 //              Rats must then occupy and un-occupy "tiles" in the terrain occupied array as they enter and exit them. 
 //              Rocks and trees are already there. I have used this before to great effect.
 
+// Have seen your comments, I understand what you have done and why you have done it, but have no Idea on how to optimize your script, so it will have to stay as it is.
+
 
 /* 
 Simple steering behaviors for path following / goal seeking and obstacle avoidance
@@ -38,6 +40,7 @@ public class steering : MonoBehaviour {
     public Transform path = null;
     public Transform ratObstacles = null;
 	public Transform treeObstacles = null;
+    public Transform rockObstacles = null;
 
     //occupancy data x,z into level manager occupied array - initialize to -1 so I can flag them as "not yet set"
     int lastX = -1;
@@ -99,9 +102,9 @@ public class steering : MonoBehaviour {
         //handlePath(dt);
 
         //<JK> optimized!! check it out my young paduans!
-        avoidRats(dt);
+        //avoidRats(dt);
         //avoidTrees(dt);
-        avoidObstacles(dt);  //optimized method, not fully implemented yet
+        avoidObstacles(dt);  //optimized method using terrain occupancy
 
 
 		if (state == STATES.SEEK)

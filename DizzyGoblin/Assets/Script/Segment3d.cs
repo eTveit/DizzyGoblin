@@ -76,6 +76,9 @@ public class Segment3d : MonoBehaviour
         //get the intital rotation as was mapped to the skinned model
         initialRotation = transform.localRotation;
 
+        //get a reference to the parent system
+        IKsys = transform.GetComponentInParent<IKSystem3d>();
+
 
 
 	}

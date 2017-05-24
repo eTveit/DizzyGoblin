@@ -34,6 +34,7 @@ public class KT_Goblin_LeftArmIdle : IKAnimationTarget
     public float heightOffset = 0;
 
 
+
     float prevLAXcomp = 0;
     float prevLSXcomp = 0;
     Segment3d shoL = null;
@@ -52,6 +53,8 @@ public class KT_Goblin_LeftArmIdle : IKAnimationTarget
         prevLAXcomp = armL.Xcomp;
         prevLSXcomp = shoL.Xcomp;
         //set to what we want
+        var start = startPosition;
+        var trans = gameObject.transform;
         armL.Xcomp = 30;
         shoL.Xcomp = 30;
 
@@ -79,7 +82,7 @@ public class KT_Goblin_LeftArmIdle : IKAnimationTarget
 
         Vector3 lpos = transform.localPosition;
 
-       lpos.Set(-3f + Mathf.Sin((Time.time * speed) + phase) * range, 1 + Mathf.Sin((Time.time * speed) + phase) * range, 0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
+        lpos.Set(-7f + Mathf.Sin((Time.time * speed) + phase) * range, 1 + Mathf.Sin((Time.time * speed) + phase) * range, 0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
 
 
         //set the local

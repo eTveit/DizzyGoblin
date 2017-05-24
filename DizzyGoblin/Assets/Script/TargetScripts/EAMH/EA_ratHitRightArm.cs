@@ -40,7 +40,7 @@ public class EA_ratHitRightArm : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(4.0f,3.0f,0.0f), new Vector3(9.0f,2.0f,7.0f), new Vector3(1.0f,3.0f,1.0f) };
+	Vector3[] keyframes = new [] { new Vector3(3.06f,1.45f,-0.35f), new Vector3(3.06f,4.25f,3.77f), new Vector3(3.06f,6.71f,2.28f), new Vector3(3.848392f,7.48f,0.1f), new Vector3(3.06f,5.19f,-4.47f) };
 	private int currentFrame = 0;
         
 

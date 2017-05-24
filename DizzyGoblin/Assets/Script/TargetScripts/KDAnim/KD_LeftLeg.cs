@@ -44,6 +44,8 @@ public class KD_LeftLeg : IKAnimationTarget
     private int currentFrame = 0;
 
 
+	// EDVARD IS TRYING SOMETHING DUMB
+	public float keyframeOffset = 1.0f;
 
     // Use this for initialization
     void Start () {
@@ -66,7 +68,8 @@ public class KD_LeftLeg : IKAnimationTarget
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        Vector3 goalPos = keyframes[currentFrame];
+		Vector3 goalPos = keyframes[currentFrame];
+		goalPos *= keyframeOffset;
 
         //we need to transition smoothly from one target script to the next  
         float dist = Vector3.Distance(lpos, goalPos);

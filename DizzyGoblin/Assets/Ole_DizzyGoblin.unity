@@ -1984,7 +1984,7 @@ MonoBehaviour:
   makeRocks: {fileID: 1075130771}
   ratHole: {fileID: 75632332}
   terrain: {fileID: 1100547802}
-  poolSystem: {fileID: 0}
+  poolSystem: {fileID: 680656084}
   occupied: 
   levelDifficulty: 0
   Trees: 0
@@ -3616,6 +3616,23 @@ MonoBehaviour:
   parent: {fileID: 362070758}
   child: {fileID: 0}
   IKsys: {fileID: 1075502494}
+--- !u!1 &109743945 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697022225079028, guid: 18503bcb93034104992a452dbd0d0e9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 616041321}
+--- !u!114 &109743947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109743945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdb2ead2fcf61341b5bc65f202a0ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratIndex: -1
 --- !u!1 &109972731
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,6 +5827,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 188870915}
+--- !u!1 &190961426 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697022225079028, guid: 18503bcb93034104992a452dbd0d0e9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 357332663}
+--- !u!114 &190961428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190961426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdb2ead2fcf61341b5bc65f202a0ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratIndex: -1
 --- !u!1001 &193901858
 Prefab:
   m_ObjectHideFlags: 0
@@ -40810,6 +40844,23 @@ Transform:
   m_Father: {fileID: 1068816215}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1298233148 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697022225079028, guid: 18503bcb93034104992a452dbd0d0e9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 333361501}
+--- !u!114 &1298233150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1298233148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdb2ead2fcf61341b5bc65f202a0ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratIndex: -1
 --- !u!1001 &1299836821
 Prefab:
   m_ObjectHideFlags: 0
@@ -45214,6 +45265,23 @@ Transform:
   m_Father: {fileID: 1075130772}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1461598709 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697022225079028, guid: 18503bcb93034104992a452dbd0d0e9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 640234575}
+--- !u!114 &1461598711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461598709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdb2ead2fcf61341b5bc65f202a0ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratIndex: -1
 --- !u!1 &1462069152
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class SpinState : StateNode {
     private ET_targetArmsHoldBall leftArmAnim = null;
     private ET_targetArmsHoldBall rightArmAnim = null;
     private ET_targetMoveChain ballAnim = null;
-    
 
     private float rotationSpeed = 100;
     private float rotationBoost = 1000;
@@ -38,7 +37,10 @@ public class SpinState : StateNode {
         leftFootAnim = m_rootState.leftFoot.GetComponent<targetMoveSpin>();
         leftArmAnim = m_rootState.leftArm.GetComponent<ET_targetArmsHoldBall>();
         rightArmAnim = m_rootState.rightArm.GetComponent<ET_targetArmsHoldBall>();
-        ballAnim = m_rootState.ball.GetComponent<ET_targetMoveChain>();
+
+        //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
+        ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
+
 
         /*
         //because all we must do is enable them, we could access them as a base object
@@ -71,10 +73,12 @@ public class SpinState : StateNode {
             return true;
         }
 
+
+        //TODO: Modify to spin only when holding SPACE
         //if no child state is true, see if I need to be true
-        if(Input.GetKeyUp(KeyCode.Q)) {
+        if(Input.GetKeyUp(KeyCode.Space)) {
             //this will toggle states for testing
-            p_isInState = !p_isInState;
+            p_isInState = false;
             if(m_isDoingItsState) {
                 leftFootAnim.enabled = false;
                 rightFootAnim.enabled = false;
@@ -88,6 +92,11 @@ public class SpinState : StateNode {
                 accumTime = 0; // Time.time;
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            p_isInState = true;
+        }
+
 
         if(p_isInState) {
             if(!m_isDoingItsState) {
@@ -120,12 +129,14 @@ public class SpinState : StateNode {
 
             Rotate(dt);
 
-            if(Input.GetKeyDown(KeyCode.F)) {
-                SwitchRotateDirection();
-            }
+
+            //<JPK> @Espen we had a {} scope error here when I last syncd - be sure your scripts are
+            //error free before committing/syncing
+
 
 
         }
+
         return p_isInState;
     }
 
@@ -194,6 +205,7 @@ public class SpinState : StateNode {
 
         leftFootAnim.rotationSpeed = -leftFootAnim.rotationSpeed;
         leftFootAnim.rotationBoost = -leftFootAnim.rotationBoost;
+
     }
 
 }

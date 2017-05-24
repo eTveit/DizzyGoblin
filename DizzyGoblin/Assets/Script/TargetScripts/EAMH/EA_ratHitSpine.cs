@@ -40,7 +40,7 @@ public class EA_ratHitSpine : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(0.0f,4.5f,0.1f) };
+	Vector3[] keyframes = new [] { new Vector3(0.0f,7.78f,0.1300001f), new Vector3(0.0f,7.12f,-1.0f) };
 	private int currentFrame = 0;
 
 

@@ -60,7 +60,7 @@ public class MakeRocks : MonoBehaviour {
                 while (levelManager.occupied[vi] > 0 || x % 2 == 0 || z % 2 == 0)
                 {
 
-                    Debug.Log("try again");
+                    Debug.Log("try again " + errorcount);
 
                     x = Random.Range(min, max);
                     z = Random.Range(min, max);
@@ -76,7 +76,7 @@ public class MakeRocks : MonoBehaviour {
                     }
                 }
 
-                levelManager.occupied[vi] = 1;
+                levelManager.occupyArea(x, z);
 
                //Change size of rock
                 

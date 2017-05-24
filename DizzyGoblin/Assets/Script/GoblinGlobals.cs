@@ -9,7 +9,7 @@ public class GoblinGlobals : MonoBehaviour {
     public float heightOffset = 0;
 
     public float speed = 2.5f;
-
+    public bool isGoblin = false;
     
     // Use this for initialization
     void Start()
@@ -19,6 +19,10 @@ public class GoblinGlobals : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+
+        if (!isGoblin)
+            return;
 
         float x = transform.position.x;
         float z = transform.position.z;

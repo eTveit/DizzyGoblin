@@ -10,9 +10,10 @@ public class RootState : MonoBehaviour {
     public Transform rightFoot;
     public Transform leftArm;
     public Transform rightArm;
-    public Transform spine;
-    public Transform ball;
+    public Transform spine; 
     public Transform Avatar;
+
+
 
     protected List<StateNode> m_childStates ;
 
@@ -25,44 +26,6 @@ public class RootState : MonoBehaviour {
     // Use this for initialization prior to anything else happening
     void Awake () {
 
-
-        //EXAMPLE CODE: buffer a pointer to some transform we may need
-        //GetComponent is expensive (particularly if we get by name)
-        //so we get all the things we need in advance. For some reason
-        //unity does not have its own "find by name" so we make our own
-        //"recursive" search
-
-        //we may want to find a transform, lets say "TARGETS"
-        m_someSpecificTransform = Search(transform, "TARGETS");
-
-        targetManager = new TargetManager(m_someSpecificTransform); 
-
-        m_childStates = new List<StateNode>();
-
-        //now lets build some states:
-        //we must always add at least one, if we want the graph to run
-        //here we pass the root state of our game object,
-        //from that we can indeed get anything. we use the keyword "this"
-        //meaning, "this" root state 
-        IdleState idlestate = new IdleState(this);
-        m_childStates.Add(idlestate);
-
-        WalkState walkstate = new WalkState(this);
-        idlestate.addChildState(walkstate);
-
-        WalkBackState walkbackstate = new WalkBackState(this);
-        walkstate.addChildState(walkbackstate);
-
-        SpinState spinstate = new SpinState(this);
-        walkbackstate.addChildState(spinstate);
-
-		DodgeState dodgestate = new DodgeState(this);
-		spinstate.addChildState(dodgestate);
-
-        StunState stunstate = new StunState(this);
-        dodgestate.addChildState(stunstate);
-
-		//add more states here...
 
 	}
 
@@ -117,9 +80,15 @@ public class TargetManager
     public int targetCount = 0;
     
     //ctor
-    public TargetManager(Transform _targets)
+    public TargetManager(RootState thisS, Transform _targets)
     {
         //get all of our targets, and put them into an easily accessable list
+        if (_targets == null)
+        {
+            Debug.Log(thisS.transform.name + " has no TARGETS?");
+            return;
+        }
+
         targetCount = _targets.childCount;
 
         //with my own list I can access by index though this might not be needed

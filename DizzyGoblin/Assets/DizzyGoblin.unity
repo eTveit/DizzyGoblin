@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4216,16 +4216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95733749d8d3b8145a1583d8b2b77ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: DONT_FORGET_TO_NAME_IT
-  startPosition: {x: 0.6, y: 0.2, z: -0.25}
-  AvatarObj: {fileID: 500923969}
-  mesh: {fileID: 1100547802}
-  phase: 0
-  speed: 1
-  range: 1
-  heightOffset: 0
-  speedMod: 1
-  keyframeOffset: 1
 --- !u!1001 &115725993
 Prefab:
   m_ObjectHideFlags: 0
@@ -11300,7 +11290,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!114 &371151708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11740,15 +11730,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383574092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0005094809}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 278.99396, y: 895.97125}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &383574094
@@ -19471,7 +19461,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1 &586530709
 GameObject:
   m_ObjectHideFlags: 0
@@ -21439,15 +21429,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627558610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00061137707}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 368.9922, y: 896.015}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 136, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!1001 &630091785
@@ -22808,15 +22798,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 686954314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00005094809}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.31279212, y: 0.31279188, z: 0.31279188}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 14.999512, y: 896.0001}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &686954316
@@ -28244,15 +28234,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860387497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00005094809}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 101.99304, y: 895.99316}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 52, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &860387499
@@ -34099,15 +34089,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1032826620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00010189618}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 189.99304, y: 895.99316}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1032826622
@@ -38774,7 +38764,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1 &1132132420
 GameObject:
   m_ObjectHideFlags: 0
@@ -41062,7 +41052,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1193349956}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ca1c76250bdd2e4b8cb666900a18b68, type: 3}
   m_Name: 
@@ -42798,9 +42788,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1251041176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c023f226cbc4da4197b688f8f927bf8, type: 3}
+  m_Script: {fileID: 11500000, guid: 27e9b08dc1baed9428254746331b644a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationName: Flee
+  startPosition: {x: 1, y: -0.9, z: -3}
+  AvatarObj: {fileID: 2050254619}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 13
+  keyframeOffset: 1
 --- !u!1 &1253681170
 GameObject:
   m_ObjectHideFlags: 0
@@ -52739,7 +52739,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1001 &1582844000
 Prefab:
   m_ObjectHideFlags: 0
@@ -67836,7 +67836,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1 &2051472313
 GameObject:
   m_ObjectHideFlags: 0

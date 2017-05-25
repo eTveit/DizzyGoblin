@@ -33,7 +33,7 @@ public class TerrainMesh : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
@@ -144,7 +144,7 @@ public class TerrainMesh : MonoBehaviour {
             int zp = Random.Range(0, zSize - 20);
 
             Vector3 bumpPos = new Vector3(xp, 0, zp);
-            makeBump(10, 0.3f, bumpPos);
+            makeBump(10, 0.1f*levelDifficulty, bumpPos);
         }
 
 

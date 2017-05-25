@@ -15,6 +15,10 @@ public abstract class IKAnimationTarget : MonoBehaviour
 	//returns true when near the initial position of the animation 
 	public bool interpolateToStartPosition(float dt, float speed)
 	{
+
+        //disable for now
+        return true;
+
 		if (madeStartPosition)
 			return true;
 

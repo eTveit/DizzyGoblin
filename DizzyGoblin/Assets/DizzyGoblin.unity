@@ -2190,7 +2190,7 @@ MonoBehaviour:
   makeTrees: {fileID: 1068816214}
   makeFence: {fileID: 1098625052}
   makeRocks: {fileID: 1075130771}
-  ratHole: {fileID: 75632332}
+  ratHole: {fileID: 805913862}
   terrain: {fileID: 1100547802}
   poolSystem: {fileID: 0}
   occupied: 
@@ -2209,7 +2209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &59093867
 GameObject:
@@ -2786,87 +2786,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 71375338}
---- !u!1 &75632328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 75632332}
-  - component: {fileID: 75632331}
-  - component: {fileID: 75632330}
-  - component: {fileID: 75632329}
-  m_Layer: 0
-  m_Name: RatHole
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &75632329
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &75632330
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &75632331
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &75632332
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.752808, y: 1.8566821, z: 4.7528076}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &75700673
 Prefab:
   m_ObjectHideFlags: 0
@@ -3994,9 +3913,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: DONT_FORGET_TO_NAME_IT
-  startPosition: {x: 0.6, y: 0.2, z: -0.25}
-  AvatarObj: {fileID: 500923969}
-  mesh: {fileID: 1100547802}
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 0}
+  mesh: {fileID: 0}
   phase: 0
   speed: 1
   range: 1
@@ -10904,11 +10823,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {fileID: 75632332}
+  Destination: {fileID: 0}
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!114 &371151708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10953,7 +10872,7 @@ MonoBehaviour:
   rockObstacles: {fileID: 1075130772}
   curPoint: 1
   pointCount: 0
-  ratHole: {fileID: 75632332}
+  ratHole: {fileID: 0}
   Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -11348,15 +11267,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383574092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0005094809}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 278.99396, y: 895.97125}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &383574094
@@ -18353,7 +18272,7 @@ MonoBehaviour:
   rockObstacles: {fileID: 0}
   curPoint: 1
   pointCount: 0
-  ratHole: {fileID: 75632332}
+  ratHole: {fileID: 0}
   Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -18370,11 +18289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {fileID: 75632332}
+  Destination: {fileID: 0}
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1 &586530709
 GameObject:
   m_ObjectHideFlags: 0
@@ -18992,7 +18911,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601949568}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 046d993e88b033a45a15afed7dc0977a, type: 3}
   m_Name: 
@@ -20291,15 +20210,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627558610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00061137707}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 368.9922, y: 896.015}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 136, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!1001 &630091785
@@ -21591,15 +21510,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 686954314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00005094809}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.31279212, y: 0.31279188, z: 0.31279188}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 14.999512, y: 896.0001}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &686954316
@@ -25173,7 +25092,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &805296503
 GameObject:
@@ -25279,6 +25198,53 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 805296503}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &805913861
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 31.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4c1744b024aed7c4a931659902196bc8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &805913862 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4891367825577372, guid: 4c1744b024aed7c4a931659902196bc8,
+    type: 2}
+  m_PrefabInternal: {fileID: 805913861}
 --- !u!1 &806041461
 GameObject:
   m_ObjectHideFlags: 0
@@ -26959,15 +26925,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860387497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00005094809}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 101.99304, y: 895.99316}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 52, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &860387499
@@ -30638,7 +30604,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 972583982}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10e454aba220eff458ab5f004e1b7097, type: 3}
   m_Name: 
@@ -32615,15 +32581,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1032826620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00010189618}
-  m_LocalScale: {x: 1.000138, y: 1.0001384, z: 1.0001385}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 0.3128353, y: 0.3128352, z: 0.31283522}
   m_Children: []
   m_Father: {fileID: 271593629}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 189.99304, y: 895.99316}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1032826622
@@ -34103,7 +34069,7 @@ Transform:
   - {fileID: 365470376}
   - {fileID: 1153907925}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1068816216
 MonoBehaviour:
@@ -34388,7 +34354,7 @@ Transform:
   - {fileID: 1604957505}
   - {fileID: 1173120224}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1076898780
 Prefab:
@@ -35669,7 +35635,7 @@ Transform:
   - {fileID: 193901859}
   - {fileID: 29874954}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1099732597
 GameObject:
@@ -35836,7 +35802,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105041932
 GameObject:
@@ -37103,7 +37069,7 @@ MonoBehaviour:
   rockObstacles: {fileID: 1075130772}
   curPoint: 1
   pointCount: 0
-  ratHole: {fileID: 75632332}
+  ratHole: {fileID: 0}
   Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -37139,11 +37105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {fileID: 75632332}
+  Destination: {fileID: 0}
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1 &1132132420
 GameObject:
   m_ObjectHideFlags: 0
@@ -37459,7 +37425,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1137045530}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c98ab5e15ae12842bc9646274210af3, type: 3}
   m_Name: 
@@ -39431,7 +39397,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1193349956}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ca1c76250bdd2e4b8cb666900a18b68, type: 3}
   m_Name: 
@@ -41024,7 +40990,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1251041176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c023f226cbc4da4197b688f8f927bf8, type: 3}
+  m_Script: {fileID: 11500000, guid: 27e9b08dc1baed9428254746331b644a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1253681170
@@ -46256,7 +46222,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1431377451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10e454aba220eff458ab5f004e1b7097, type: 3}
   m_Name: 
@@ -46632,7 +46598,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1451955644}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37a607c14fd514419130cd5ee8cfbcb, type: 3}
   m_Name: 
@@ -50558,7 +50524,7 @@ MonoBehaviour:
   rockObstacles: {fileID: 0}
   curPoint: 1
   pointCount: 0
-  ratHole: {fileID: 75632332}
+  ratHole: {fileID: 0}
   Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -50590,11 +50556,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {fileID: 75632332}
+  Destination: {fileID: 0}
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1001 &1582844000
 Prefab:
   m_ObjectHideFlags: 0
@@ -54650,7 +54616,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710283280}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb63cafae8176bc428dd95a5d2a1732a, type: 3}
   m_Name: 
@@ -65156,7 +65122,7 @@ MonoBehaviour:
   rockObstacles: {fileID: 0}
   curPoint: 0
   pointCount: 0
-  ratHole: {fileID: 75632332}
+  ratHole: {fileID: 0}
   Player: {fileID: 1836444386}
   goal: {x: 0, y: 0, z: 0}
   terrain: {fileID: 1100547802}
@@ -65173,11 +65139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {fileID: 75632332}
+  Destination: {fileID: 0}
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-  distanceTrigger: 3
+  distanceTrigger: 5
 --- !u!1 &2053377646
 GameObject:
   m_ObjectHideFlags: 0

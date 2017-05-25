@@ -14,7 +14,7 @@ public class TeleportObject : MonoBehaviour {
     bool Dead = false;
     steering steering;
     public float distance;
-    public float distanceTrigger = 3;
+    public float distanceTrigger = 5;
     
 
 	// Use this for initialization

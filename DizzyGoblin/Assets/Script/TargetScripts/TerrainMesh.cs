@@ -136,7 +136,7 @@ public class TerrainMesh : MonoBehaviour {
                
 
        
-
+        //Ruben Junger
         for (int i = 0; i < levelDifficulty * 2; i++)
         {
 
@@ -157,7 +157,7 @@ public class TerrainMesh : MonoBehaviour {
         built = true;
 
     }
-
+    //Ruben Junger
     public void makeBump(float radius, float height, Vector3 pos)
     {
 

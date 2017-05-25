@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class HK_Spine : IKAnimationTarget
+public class HKEB_TailDance : IKAnimationTarget
 {
 
 	//DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -40,7 +40,7 @@ public class HK_Spine : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(0.0f,7.55f,0.13f), new Vector3(0.0f,7.55f,0.13f) };
+	Vector3[] keyframes = new [] { new Vector3(1.5f,4.0f,-6.14f), new Vector3(-3.0f,4.0f,-6.14f) };
 	private int currentFrame = 0;
 
 	// EDVARD IS TRYING SOMETHING DUMB

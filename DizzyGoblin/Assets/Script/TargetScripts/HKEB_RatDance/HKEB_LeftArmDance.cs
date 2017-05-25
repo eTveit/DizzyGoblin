@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class HK_LeftArm : IKAnimationTarget
+public class HKEB_LeftArmDance : IKAnimationTarget
 {
 
 	//DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -28,7 +28,7 @@ public class HK_LeftArm : IKAnimationTarget
 	public float phase = 0;
 
 	//how fast the target point moves
-	public float speed = 1;
+	public float speed = 10;
 
 	//the range of motion of the move point
 	public float range = 1; 
@@ -40,16 +40,14 @@ public class HK_LeftArm : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(-1.5f,1.00f,1.20f), new Vector3(-3.0f,11.00f,2.20f) };
+	Vector3[] keyframes = new [] { new Vector3(-0.8f,2.00f,1.20f), new Vector3(-1.4f,8.0f,2.20f) };
 	private int currentFrame = 0;
-
-	// EDVARD IS TRYING SOMETHING DUMB
-	public float keyframeOffset = 1.0f;
 
 	// Use this for initialization
 	void Start () {
 
 		goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
+
 	}
 
 	// Update is called once per frame
@@ -67,7 +65,6 @@ public class HK_LeftArm : IKAnimationTarget
 
 		Vector3 lpos = transform.localPosition;
 		Vector3 goalPos = keyframes[currentFrame];
-		goalPos *= keyframeOffset;
 
 		//we need to transition smoothly from one target script to the next  
 		float dist = Vector3.Distance(lpos, goalPos);

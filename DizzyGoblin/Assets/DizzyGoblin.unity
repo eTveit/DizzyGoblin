@@ -4413,9 +4413,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 115701900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f6cac989b345e4292c19c1cc8877dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fb6f71735288e043915309473469f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationName: The_Wave
+  startPosition: {x: 0.6, y: 0.2, z: -0.25}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 0
+  range: 0
+  heightOffset: 0
+  speedMod: 0
+--- !u!114 &115701906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115701900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312a9b51a443941449082691277005cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dance
+  startPosition: {x: 0.6, y: 0.2, z: -0.25}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 10
+  range: 1
+  heightOffset: 1
+  speedMod: 2
 --- !u!1001 &115725993
 Prefab:
   m_ObjectHideFlags: 0
@@ -4544,7 +4573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e25d546aad604a9712d780a7c0b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
+  animationName: The_Wave
   startPosition: {x: 0, y: 4, z: -6.14}
   AvatarObj: {fileID: 500923969}
   mesh: {fileID: 1100547802}
@@ -4552,6 +4581,27 @@ MonoBehaviour:
   speed: 5
   range: 1
   heightOffset: 0
+  speedMod: 2
+  keyframeOffset: 1
+--- !u!114 &121888303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121888297}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5f4ad3033f6ac41be60f4b09248fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dance
+  startPosition: {x: 0, y: 4, z: -6.14}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 8
+  range: 1
+  heightOffset: 1
   speedMod: 2
   keyframeOffset: 1
 --- !u!1 &127106996
@@ -11886,7 +11936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16bd3aa0d06614439450ade8f881a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
+  animationName: The_Wave
   startPosition: {x: -0.6, y: 0.2, z: -0.25}
   AvatarObj: {fileID: 500923969}
   mesh: {fileID: 1100547802}
@@ -11896,6 +11946,26 @@ MonoBehaviour:
   heightOffset: 0
   speedMod: 0
   keyframeOffset: 0
+--- !u!114 &362209253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362209247}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7417b36943dc2b64fa9899f1861c99f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dance
+  startPosition: {x: -0.6, y: 0.2, z: -0.25}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 10
+  range: 1
+  heightOffset: 1
+  speedMod: 2
 --- !u!1001 &362428941
 Prefab:
   m_ObjectHideFlags: 0
@@ -17605,7 +17675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8255f84268276334abfb2f23c0262deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrain: {fileID: 0}
+  terrain: {fileID: 1100547805}
   heightOffset: 0
   speed: 2.5
   isGoblin: 0
@@ -18230,7 +18300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b581b50b7c5e2974780744edb0544e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
+  animationName: The_Wave
   startPosition: {x: 0, y: 0, z: 0}
   AvatarObj: {fileID: 500923969}
   mesh: {fileID: 1100547802}
@@ -18240,6 +18310,26 @@ MonoBehaviour:
   heightOffset: 0
   speedMod: 0
   keyframeOffset: 0
+--- !u!114 &525225952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525225946}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7082a39597b694393d0df0f0584450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dance
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 0
+  range: 0
+  heightOffset: 0
+  speedMod: 0
 --- !u!1 &527991436
 GameObject:
   m_ObjectHideFlags: 0
@@ -18371,11 +18461,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1052976975726820, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_Name
@@ -39773,6 +39863,9 @@ MonoBehaviour:
   yplus: 0
   passWave: 0
   lastGoodY: 0
+  built: 0
+  goaldirx: 1
+  goaldiry: 1
   wind: {x: 0, y: 0}
 --- !u!23 &1100547803
 MeshRenderer:
@@ -41643,7 +41736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502d60bdfe69a6946bebe8c22f3fd789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
+  animationName: The_Wave
   startPosition: {x: -4.42, y: 2.09, z: 0}
   AvatarObj: {fileID: 500923969}
   mesh: {fileID: 1100547802}
@@ -41652,7 +41745,26 @@ MonoBehaviour:
   range: 2
   heightOffset: 0
   speedMod: 2
-  keyframeOffset: 1
+--- !u!114 &1138366302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138366296}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74f5367ed65bb149921c5158ddbc1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dance
+  startPosition: {x: -4.42, y: 2.09, z: 0}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 1
+  speed: 10
+  range: 1
+  heightOffset: 1
+  speedMod: 2
 --- !u!1001 &1138475190
 Prefab:
   m_ObjectHideFlags: 0
@@ -51936,7 +52048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162747862918556, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_IsActive
@@ -51944,7 +52056,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_Name
-      value: HK_Rat
+      value: HKEB_Rat
       objectReference: {fileID: 0}
     - target: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
       propertyPath: m_LocalPosition.x
@@ -53563,7 +53675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb6f71735288e043915309473469f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: TheWave
+  animationName: The_Wave
   startPosition: {x: 3.66, y: 2.34, z: 0}
   AvatarObj: {fileID: 500923969}
   mesh: {fileID: 1100547802}
@@ -53572,7 +53684,26 @@ MonoBehaviour:
   range: 2
   heightOffset: 0
   speedMod: 2
-  keyframeOffset: 1
+--- !u!114 &1495464013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495464007}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2744d3855053c94b83d8d8fc7c095f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Rat_Dance
+  startPosition: {x: -4.42, y: 2.34, z: 0}
+  AvatarObj: {fileID: 500923969}
+  mesh: {fileID: 1100547802}
+  phase: 1
+  speed: 10
+  range: 1
+  heightOffset: 1
+  speedMod: 2
 --- !u!1 &1499674202
 GameObject:
   m_ObjectHideFlags: 0

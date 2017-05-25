@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class HK_RightFoot : IKAnimationTarget
+public class HKEB_SpineDance : IKAnimationTarget
 {
 
 	//DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
@@ -40,11 +40,9 @@ public class HK_RightFoot : IKAnimationTarget
 	public float speedMod = 1.0f;
 
 	// Keyframes and Keyframe Count
-	Vector3[] keyframes = new [] { new Vector3(0.6f, 0.2f, -0.25f), new Vector3(0.6f, 0.2f, -0.25f) };
+	Vector3[] keyframes = new [] { new Vector3(1.0f,1.0f,1.00f), new Vector3(2.0f,2.0f,2.00f) };
 	private int currentFrame = 0;
 
-	// EDVARD IS TRYING SOMETHING DUMB
-	public float keyframeOffset = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -67,7 +65,6 @@ public class HK_RightFoot : IKAnimationTarget
 
 		Vector3 lpos = transform.localPosition;
 		Vector3 goalPos = keyframes[currentFrame];
-		goalPos *= keyframeOffset;
 
 		//we need to transition smoothly from one target script to the next  
 		float dist = Vector3.Distance(lpos, goalPos);

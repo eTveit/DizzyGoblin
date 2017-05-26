@@ -654,8 +654,6 @@ GameObject:
   - component: {fileID: 12700250}
   - component: {fileID: 12700252}
   - component: {fileID: 12700251}
-  - component: {fileID: 12700254}
-  - component: {fileID: 12700253}
   m_Layer: 0
   m_Name: Tree (54)
   m_TagString: Tree
@@ -706,41 +704,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &12700253
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 12700249}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &12700254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 12700249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &13220886
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,8 +867,6 @@ GameObject:
   - component: {fileID: 18156066}
   - component: {fileID: 18156068}
   - component: {fileID: 18156067}
-  - component: {fileID: 18156070}
-  - component: {fileID: 18156069}
   m_Layer: 0
   m_Name: Tree (43)
   m_TagString: Tree
@@ -956,41 +917,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &18156069
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 18156065}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &18156070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 18156065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &19689005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,8 +1872,6 @@ GameObject:
   - component: {fileID: 43217394}
   - component: {fileID: 43217396}
   - component: {fileID: 43217395}
-  - component: {fileID: 43217398}
-  - component: {fileID: 43217397}
   m_Layer: 0
   m_Name: Tree (15)
   m_TagString: Tree
@@ -1998,41 +1922,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &43217397
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43217393}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &43217398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43217393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &47395927
 Prefab:
   m_ObjectHideFlags: 0
@@ -2893,143 +2782,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d23ce658e7925ad4798f09973977498b, type: 3}
   m_PrefabInternal: {fileID: 71375338}
-<<<<<<< HEAD
---- !u!1 &74547824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 74547825}
-  - component: {fileID: 74547826}
-  m_Layer: 0
-  m_Name: SpineSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &74547825
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 74547824}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.019701004, y: -0.10501063, z: -0.090358734}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 538979399}
-  - {fileID: 527991438}
-  - {fileID: 405069571}
-  - {fileID: 1441966214}
-  m_Father: {fileID: 2087725649}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &74547826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 74547824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb923027f5e96104b8dd65dfe19770b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segments:
-  - {fileID: 538979398}
-  - {fileID: 527991437}
-  - {fileID: 405069570}
-  - {fileID: 1441966215}
-  childcount: 4
-  target: {fileID: 414666810}
-  isReaching: 1
-  isDragging: 0
---- !u!1 &75632328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 75632332}
-  - component: {fileID: 75632331}
-  - component: {fileID: 75632330}
-  - component: {fileID: 75632329}
-  m_Layer: 0
-  m_Name: RatHole
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &75632329
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &75632330
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &75632331
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &75632332
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75632328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2, y: 0, z: 0}
-  m_LocalScale: {x: 4.752808, y: 1.8566821, z: 4.7528076}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1001 &75700673
 Prefab:
   m_ObjectHideFlags: 0
@@ -3546,8 +3298,6 @@ GameObject:
   - component: {fileID: 84596717}
   - component: {fileID: 84596719}
   - component: {fileID: 84596718}
-  - component: {fileID: 84596721}
-  - component: {fileID: 84596720}
   m_Layer: 0
   m_Name: Tree (50)
   m_TagString: Tree
@@ -3598,41 +3348,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &84596720
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 84596716}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &84596721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 84596716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &87499635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,8 +3908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95733749d8d3b8145a1583d8b2b77ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
   animationName: 444f4e545f464f524745545f544f5f4e414d455f4954
   startPosition: {x: 0, y: 0, z: 0}
   madeStartPosition: 0
@@ -4211,7 +3924,6 @@ MonoBehaviour:
   - {x: 0.6, y: 0.2, z: -0.25}
   currentFrame: 0
   keyframeOffset: 1
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1001 &115725993
 Prefab:
   m_ObjectHideFlags: 0
@@ -4350,20 +4062,6 @@ MonoBehaviour:
   heightOffset: 0
   speedMod: 2
   keyframeOffset: 1
-<<<<<<< HEAD
---- !u!114 &121888303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121888297}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb5f4ad3033f6ac41be60f4b09248fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &127106996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5196,8 +4894,6 @@ GameObject:
   - component: {fileID: 149935772}
   - component: {fileID: 149935774}
   - component: {fileID: 149935773}
-  - component: {fileID: 149935776}
-  - component: {fileID: 149935775}
   m_Layer: 0
   m_Name: Tree (26)
   m_TagString: Tree
@@ -5248,41 +4944,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &149935775
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 149935771}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &149935776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 149935771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &150012682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,8 +5290,6 @@ GameObject:
   - component: {fileID: 166989583}
   - component: {fileID: 166989585}
   - component: {fileID: 166989584}
-  - component: {fileID: 166989587}
-  - component: {fileID: 166989586}
   m_Layer: 0
   m_Name: Tree (63)
   m_TagString: Tree
@@ -5681,41 +5340,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &166989586
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 166989582}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &166989587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 166989582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &168585066
 GameObject:
   m_ObjectHideFlags: 0
@@ -6981,8 +6605,6 @@ GameObject:
   - component: {fileID: 207272910}
   - component: {fileID: 207272912}
   - component: {fileID: 207272911}
-  - component: {fileID: 207272914}
-  - component: {fileID: 207272913}
   m_Layer: 0
   m_Name: Tree (58)
   m_TagString: Tree
@@ -7033,41 +6655,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &207272913
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 207272909}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &207272914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 207272909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &216733371
 Prefab:
   m_ObjectHideFlags: 0
@@ -7519,8 +7106,6 @@ GameObject:
   - component: {fileID: 246728708}
   - component: {fileID: 246728710}
   - component: {fileID: 246728709}
-  - component: {fileID: 246728712}
-  - component: {fileID: 246728711}
   m_Layer: 0
   m_Name: Tree (48)
   m_TagString: Tree
@@ -7571,77 +7156,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!136 &246728711
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246728707}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &246728712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246728707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!1 &247044514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 247044515}
-  m_Layer: 0
-  m_Name: TARGETS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &247044515
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 247044514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 405017356}
-  - {fileID: 976268013}
-  - {fileID: 414666810}
-  - {fileID: 2051472314}
-  - {fileID: 2013677768}
-  m_Father: {fileID: 53493324}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &249984449
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,8 +7714,6 @@ GameObject:
   - component: {fileID: 266594617}
   - component: {fileID: 266594619}
   - component: {fileID: 266594618}
-  - component: {fileID: 266594621}
-  - component: {fileID: 266594620}
   m_Layer: 0
   m_Name: Tree (27)
   m_TagString: Tree
@@ -8252,41 +7764,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &266594620
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266594616}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &266594621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266594616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &269260598
 Prefab:
   m_ObjectHideFlags: 0
@@ -9483,8 +8960,6 @@ GameObject:
   - component: {fileID: 315874938}
   - component: {fileID: 315874940}
   - component: {fileID: 315874939}
-  - component: {fileID: 315874942}
-  - component: {fileID: 315874941}
   m_Layer: 0
   m_Name: Tree (32)
   m_TagString: Tree
@@ -9535,41 +9010,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &315874941
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 315874937}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &315874942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 315874937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &316381763
 GameObject:
   m_ObjectHideFlags: 0
@@ -10022,8 +9462,6 @@ GameObject:
   - component: {fileID: 329793051}
   - component: {fileID: 329793053}
   - component: {fileID: 329793052}
-  - component: {fileID: 329793055}
-  - component: {fileID: 329793054}
   m_Layer: 0
   m_Name: Tree (17)
   m_TagString: Tree
@@ -10074,41 +9512,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &329793054
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329793050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &329793055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329793050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &331155321
 Prefab:
   m_ObjectHideFlags: 0
@@ -10440,8 +9843,6 @@ GameObject:
   - component: {fileID: 344118100}
   - component: {fileID: 344118102}
   - component: {fileID: 344118101}
-  - component: {fileID: 344118104}
-  - component: {fileID: 344118103}
   m_Layer: 0
   m_Name: Tree (61)
   m_TagString: Tree
@@ -10492,43 +9893,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!136 &344118103
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 344118099}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &344118104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 344118099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
-=======
 --- !u!1001 &345843074
 Prefab:
   m_ObjectHideFlags: 0
@@ -10626,7 +9990,6 @@ Prefab:
     - {fileID: 135980637942001702, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14dcf1ea18ae01b4bac13a96855ca946, type: 2}
   m_IsPrefabParent: 0
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &347089439
 GameObject:
   m_ObjectHideFlags: 0
@@ -10910,8 +10273,6 @@ GameObject:
   - component: {fileID: 358183390}
   - component: {fileID: 358183392}
   - component: {fileID: 358183391}
-  - component: {fileID: 358183394}
-  - component: {fileID: 358183393}
   m_Layer: 0
   m_Name: Tree (19)
   m_TagString: Tree
@@ -10962,41 +10323,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &358183393
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 358183389}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &358183394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 358183389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &358813341
 GameObject:
   m_ObjectHideFlags: 0
@@ -11367,8 +10693,6 @@ GameObject:
   - component: {fileID: 365470376}
   - component: {fileID: 365470378}
   - component: {fileID: 365470377}
-  - component: {fileID: 365470380}
-  - component: {fileID: 365470379}
   m_Layer: 0
   m_Name: Tree (64)
   m_TagString: Tree
@@ -11419,41 +10743,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &365470379
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 365470375}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &365470380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 365470375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &366374575
 Prefab:
   m_ObjectHideFlags: 0
@@ -13149,8 +12438,6 @@ GameObject:
   - component: {fileID: 407682984}
   - component: {fileID: 407682986}
   - component: {fileID: 407682985}
-  - component: {fileID: 407682988}
-  - component: {fileID: 407682987}
   m_Layer: 0
   m_Name: Tree (12)
   m_TagString: Tree
@@ -13201,41 +12488,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &407682987
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 407682983}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &407682988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 407682983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &410806597
 GameObject:
   m_ObjectHideFlags: 0
@@ -18466,8 +17718,6 @@ GameObject:
   - component: {fileID: 565071437}
   - component: {fileID: 565071439}
   - component: {fileID: 565071438}
-  - component: {fileID: 565071441}
-  - component: {fileID: 565071440}
   m_Layer: 0
   m_Name: Tree (4)
   m_TagString: Tree
@@ -18518,112 +17768,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!114 &565071440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 565071436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
---- !u!136 &565071441
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 565071436}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!1 &570829145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100028, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 570829147}
-  - component: {fileID: 570829146}
-  m_Layer: 0
-  m_Name: Shoulder_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &570829146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 570829145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4767f49b843c06848b576b850bb391db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Apos: {x: 21.765974, y: 3.714174, z: 14.87191}
-  Bpos: {x: 21.452486, y: 3.4484587, z: 14.791937}
-  length: 0.418659
-  parent: {fileID: 0}
-  child: {fileID: 56979317}
-  interpolate: 0
-  interpRate: 1
-  Xcomp: 0
-  Ycomp: 0
-  Zcomp: 0
-  Xrange: 1
-  Yrange: 1
-  Zrange: 1
-  alignX: 0
-  alignY: 0
-  alignZ: 1
-  minEulers: {x: 0, y: 0, z: 0}
-  maxEulers: {x: 0, y: 0, z: 0}
-  rot: {x: -0.34297952, y: 0.10298132, z: -0.081569165, w: -0.93011093}
-  euler: {x: 40.90587, y: 349.66312, z: -8.938081}
-  fwd: {x: 0, y: 0, z: 0}
-  Xaccum: 0
-  Yaccum: 0
-  Zaccum: 0
-  dotNext: 0
-  isRight: 0
-  isTerminus: 0
-  IKsys: {fileID: 1395248571}
---- !u!4 &570829147
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400028, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 570829145}
-  m_LocalRotation: {x: -0.35353583, y: 0.057030812, z: 0.04132837, w: -0.9327657}
-  m_LocalPosition: {x: -0.000015258789, y: 0.000002384186, z: -2.2737368e-13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1395248570}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1001 &571175579
 Prefab:
   m_ObjectHideFlags: 0
@@ -19151,45 +18295,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-<<<<<<< HEAD
-  distanceTrigger: 3
---- !u!65 &579157283
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 579157278}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0811539, y: 7.500683, z: 1.8278606}
-  m_Center: {x: 0.02779007, y: 3.2503414, z: -0.101882935}
---- !u!114 &579157284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 579157278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Rat Hit
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
-=======
   distanceTrigger: 5
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &586530709
 GameObject:
   m_ObjectHideFlags: 0
@@ -19746,8 +18852,6 @@ GameObject:
   - component: {fileID: 600980507}
   - component: {fileID: 600980509}
   - component: {fileID: 600980508}
-  - component: {fileID: 600980511}
-  - component: {fileID: 600980510}
   m_Layer: 0
   m_Name: Tree (46)
   m_TagString: Tree
@@ -19798,41 +18902,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &600980510
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 600980506}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &600980511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 600980506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &601949568 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1295996519487946, guid: 14dcf1ea18ae01b4bac13a96855ca946,
@@ -20025,8 +19094,6 @@ GameObject:
   - component: {fileID: 604169701}
   - component: {fileID: 604169703}
   - component: {fileID: 604169702}
-  - component: {fileID: 604169705}
-  - component: {fileID: 604169704}
   m_Layer: 0
   m_Name: Tree (34)
   m_TagString: Tree
@@ -20077,41 +19144,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &604169704
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 604169700}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &604169705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 604169700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &604888703
 GameObject:
   m_ObjectHideFlags: 0
@@ -20595,8 +19627,6 @@ GameObject:
   - component: {fileID: 616085528}
   - component: {fileID: 616085530}
   - component: {fileID: 616085529}
-  - component: {fileID: 616085532}
-  - component: {fileID: 616085531}
   m_Layer: 0
   m_Name: Tree (3)
   m_TagString: Tree
@@ -20647,95 +19677,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!136 &616085531
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 616085527}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &616085532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 616085527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
---- !u!1 &617414258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 617414259}
-  - component: {fileID: 617414260}
-  m_Layer: 0
-  m_Name: LeftLegSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &617414259
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 617414258}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0.31261793, y: -8.581505, z: 0.5607196}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1840429425}
-  - {fileID: 1218976340}
-  - {fileID: 347506031}
-  m_Father: {fileID: 538979399}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
---- !u!114 &617414260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 617414258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb923027f5e96104b8dd65dfe19770b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segments:
-  - {fileID: 1840429424}
-  - {fileID: 1218976339}
-  - {fileID: 347506032}
-  childcount: 3
-  target: {fileID: 405017356}
-  isReaching: 1
-  isDragging: 0
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1001 &619087785
 Prefab:
   m_ObjectHideFlags: 0
@@ -21659,129 +20600,6 @@ MonoBehaviour:
   heightOffset: 0
   speedMod: 4
   keyframeOffset: 1.82
-<<<<<<< HEAD
---- !u!1 &640378748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 640378749}
-  - component: {fileID: 640378750}
-  m_Layer: 0
-  m_Name: Ambience
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &640378749
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640378748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 992409553}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &640378750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640378748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Ambiance
-  PlayEvent: 11
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!1 &642862584
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100020, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 642862585}
-  - component: {fileID: 642862586}
-  m_Layer: 0
-  m_Name: Hand_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &642862585
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400020, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 642862584}
-  m_LocalRotation: {x: 0.31537652, y: -0.1817052, z: 0.03035187, w: -0.9309134}
-  m_LocalPosition: {x: 19.43098, y: 32.346935, z: 41.158955}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1264182652}
-  m_Father: {fileID: 1499674203}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &642862586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 642862584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4767f49b843c06848b576b850bb391db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Apos: {x: 23.224333, y: 2.8329399, z: 15.291948}
-  Bpos: {x: 23.224333, y: 2.8329399, z: 15.291948}
-  length: 0
-  parent: {fileID: 1978764178}
-  child: {fileID: 0}
-  interpolate: 0
-  interpRate: 1
-  Xcomp: 0
-  Ycomp: 0
-  Zcomp: -30
-  Xrange: 1
-  Yrange: 1
-  Zrange: 1
-  alignX: 0
-  alignY: 0
-  alignZ: 1
-  minEulers: {x: 0, y: 0, z: 0}
-  maxEulers: {x: 0, y: 0, z: 0}
-  rot: {x: -0.1999681, y: -0.30412465, z: -0.93108475, w: 0.024539787}
-  euler: {x: 324.82007, y: 25.933485, z: -12.084946}
-  fwd: {x: 0, y: 0, z: 0}
-  Xaccum: 0
-  Yaccum: 0
-  Zaccum: 0
-  dotNext: 0
-  isRight: 0
-  isTerminus: 0
-  IKsys: {fileID: 1499674204}
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &643503903
 GameObject:
   m_ObjectHideFlags: 0
@@ -22068,8 +20886,6 @@ GameObject:
   - component: {fileID: 657401456}
   - component: {fileID: 657401458}
   - component: {fileID: 657401457}
-  - component: {fileID: 657401460}
-  - component: {fileID: 657401459}
   m_Layer: 0
   m_Name: Tree (41)
   m_TagString: Tree
@@ -22120,41 +20936,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &657401459
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 657401455}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &657401460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 657401455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &657509867
 GameObject:
   m_ObjectHideFlags: 0
@@ -22488,57 +21269,6 @@ MonoBehaviour:
   parent: {fileID: 1232782261}
   child: {fileID: 0}
   IKsys: {fileID: 1964697630}
---- !u!1 &670917726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 670917727}
-  - component: {fileID: 670917728}
-  m_Layer: 0
-  m_Name: SoundObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &670917727
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 670917726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1477523080}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &670917728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 670917726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/ChainBuildup_mixdown1
-  PlayEvent: 11
-  StopEvent: 12
-  CollisionTag: 
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
 --- !u!1 &675039575
 GameObject:
   m_ObjectHideFlags: 0
@@ -23017,8 +21747,6 @@ GameObject:
   - component: {fileID: 692394467}
   - component: {fileID: 692394469}
   - component: {fileID: 692394468}
-  - component: {fileID: 692394471}
-  - component: {fileID: 692394470}
   m_Layer: 0
   m_Name: Tree (60)
   m_TagString: Tree
@@ -23069,41 +21797,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &692394470
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 692394466}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &692394471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 692394466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &694261607
 GameObject:
   m_ObjectHideFlags: 0
@@ -23815,8 +22508,6 @@ GameObject:
   - component: {fileID: 724582068}
   - component: {fileID: 724582070}
   - component: {fileID: 724582069}
-  - component: {fileID: 724582072}
-  - component: {fileID: 724582071}
   m_Layer: 0
   m_Name: Tree (55)
   m_TagString: Tree
@@ -23867,41 +22558,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &724582071
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724582067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &724582072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724582067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &725164475
 GameObject:
   m_ObjectHideFlags: 0
@@ -24250,8 +22906,6 @@ GameObject:
   - component: {fileID: 734769405}
   - component: {fileID: 734769407}
   - component: {fileID: 734769406}
-  - component: {fileID: 734769409}
-  - component: {fileID: 734769408}
   m_Layer: 0
   m_Name: Tree (20)
   m_TagString: Tree
@@ -24302,41 +22956,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &734769408
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 734769404}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &734769409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 734769404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &737893385
 GameObject:
   m_ObjectHideFlags: 0
@@ -26045,8 +24664,6 @@ GameObject:
   - component: {fileID: 791831309}
   - component: {fileID: 791831311}
   - component: {fileID: 791831310}
-  - component: {fileID: 791831313}
-  - component: {fileID: 791831312}
   m_Layer: 0
   m_Name: Tree (10)
   m_TagString: Tree
@@ -26097,41 +24714,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &791831312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 791831308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!136 &791831313
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 791831308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1 &793213477
 GameObject:
   m_ObjectHideFlags: 0
@@ -29588,8 +28170,6 @@ GameObject:
   - component: {fileID: 897825634}
   - component: {fileID: 897825636}
   - component: {fileID: 897825635}
-  - component: {fileID: 897825638}
-  - component: {fileID: 897825637}
   m_Layer: 0
   m_Name: Tree (42)
   m_TagString: Tree
@@ -29640,41 +28220,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &897825637
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 897825633}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &897825638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 897825633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &897937864
 GameObject:
   m_ObjectHideFlags: 0
@@ -29780,8 +28325,6 @@ GameObject:
   - component: {fileID: 898356855}
   - component: {fileID: 898356857}
   - component: {fileID: 898356856}
-  - component: {fileID: 898356859}
-  - component: {fileID: 898356858}
   m_Layer: 0
   m_Name: Tree (49)
   m_TagString: Tree
@@ -29832,41 +28375,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &898356858
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 898356854}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &898356859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 898356854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &900015343
 GameObject:
   m_ObjectHideFlags: 0
@@ -31905,8 +30413,6 @@ GameObject:
   - component: {fileID: 961517031}
   - component: {fileID: 961517033}
   - component: {fileID: 961517032}
-  - component: {fileID: 961517035}
-  - component: {fileID: 961517034}
   m_Layer: 0
   m_Name: Tree (18)
   m_TagString: Tree
@@ -31957,41 +30463,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &961517034
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961517030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &961517035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961517030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &972208063
 GameObject:
   m_ObjectHideFlags: 0
@@ -32711,8 +31182,6 @@ GameObject:
   - component: {fileID: 992335348}
   - component: {fileID: 992335350}
   - component: {fileID: 992335349}
-  - component: {fileID: 992335352}
-  - component: {fileID: 992335351}
   m_Layer: 0
   m_Name: Tree (44)
   m_TagString: Tree
@@ -32763,41 +31232,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &992335351
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 992335347}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &992335352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 992335347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &992409548
 GameObject:
   m_ObjectHideFlags: 0
@@ -32811,7 +31245,6 @@ GameObject:
   - component: {fileID: 992409550}
   - component: {fileID: 992409549}
   - component: {fileID: 992409554}
-  - component: {fileID: 992409555}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -32883,9 +31316,7 @@ Transform:
   m_LocalRotation: {x: 0.69796664, y: 0.014395604, z: -0.014036017, w: 0.715848}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 640378749}
-  - {fileID: 1346004347}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 88.551, y: 2.3040001, z: 0}
@@ -32905,18 +31336,6 @@ MonoBehaviour:
   height: 15
   interpRate: 10
   speed: 50
---- !u!114 &992409555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 992409548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!1 &993809763
 GameObject:
   m_ObjectHideFlags: 0
@@ -33187,8 +31606,6 @@ GameObject:
   - component: {fileID: 1001799629}
   - component: {fileID: 1001799631}
   - component: {fileID: 1001799630}
-  - component: {fileID: 1001799633}
-  - component: {fileID: 1001799632}
   m_Layer: 0
   m_Name: Tree (1)
   m_TagString: Tree
@@ -33239,40 +31656,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1001799632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001799628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
---- !u!65 &1001799633
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001799628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.1514187, y: 10.49829, z: 2.6973493}
-  m_Center: {x: -0.11123657, y: 4.749145, z: -0.14566231}
 --- !u!1001 &1007832939
 Prefab:
   m_ObjectHideFlags: 0
@@ -34740,8 +33123,6 @@ GameObject:
   - component: {fileID: 1052393721}
   - component: {fileID: 1052393723}
   - component: {fileID: 1052393722}
-  - component: {fileID: 1052393725}
-  - component: {fileID: 1052393724}
   m_Layer: 0
   m_Name: Tree (39)
   m_TagString: Tree
@@ -34792,41 +33173,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1052393724
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1052393720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1052393725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1052393720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1052395721
 GameObject:
   m_ObjectHideFlags: 0
@@ -35648,7 +33994,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068816213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1733503387}
@@ -37621,8 +35967,6 @@ GameObject:
   - component: {fileID: 1106340744}
   - component: {fileID: 1106340746}
   - component: {fileID: 1106340745}
-  - component: {fileID: 1106340748}
-  - component: {fileID: 1106340747}
   m_Layer: 0
   m_Name: Tree (45)
   m_TagString: Tree
@@ -37673,41 +36017,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1106340747
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1106340743}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1106340748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1106340743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1108380879
 Prefab:
   m_ObjectHideFlags: 0
@@ -38611,8 +36920,6 @@ GameObject:
   - component: {fileID: 1131139845}
   - component: {fileID: 1131139847}
   - component: {fileID: 1131139846}
-  - component: {fileID: 1131139849}
-  - component: {fileID: 1131139848}
   m_Layer: 0
   m_Name: Tree (8)
   m_TagString: Tree
@@ -38663,41 +36970,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1131139848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131139844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!136 &1131139849
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131139844}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1 &1131235451
 GameObject:
   m_ObjectHideFlags: 0
@@ -38832,45 +37104,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-<<<<<<< HEAD
-  distanceTrigger: 3
---- !u!65 &1131992986
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131992981}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.3618228, y: 8.009012, z: 2.4834461}
-  m_Center: {x: -0.086200714, y: 3.504506, z: -0.1632843}
---- !u!114 &1131992987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131992981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Rat Hit
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
-=======
   distanceTrigger: 5
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &1132132420
 GameObject:
   m_ObjectHideFlags: 0
@@ -39720,8 +37954,6 @@ GameObject:
   - component: {fileID: 1153907925}
   - component: {fileID: 1153907927}
   - component: {fileID: 1153907926}
-  - component: {fileID: 1153907929}
-  - component: {fileID: 1153907928}
   m_Layer: 0
   m_Name: Tree (65)
   m_TagString: Tree
@@ -39772,41 +38004,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1153907928
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1153907924}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1153907929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1153907924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1154650863
 GameObject:
   m_ObjectHideFlags: 0
@@ -39987,8 +38184,6 @@ GameObject:
   - component: {fileID: 1162288051}
   - component: {fileID: 1162288053}
   - component: {fileID: 1162288052}
-  - component: {fileID: 1162288055}
-  - component: {fileID: 1162288054}
   m_Layer: 0
   m_Name: Tree (51)
   m_TagString: Tree
@@ -40039,41 +38234,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1162288054
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1162288050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1162288055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1162288050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1167724852
 GameObject:
   m_ObjectHideFlags: 0
@@ -40639,8 +38799,6 @@ GameObject:
   - component: {fileID: 1179628258}
   - component: {fileID: 1179628260}
   - component: {fileID: 1179628259}
-  - component: {fileID: 1179628262}
-  - component: {fileID: 1179628261}
   m_Layer: 0
   m_Name: Tree (28)
   m_TagString: Tree
@@ -40691,41 +38849,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1179628261
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1179628257}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1179628262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1179628257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1179805919
 Prefab:
   m_ObjectHideFlags: 0
@@ -43695,8 +41818,6 @@ GameObject:
   - component: {fileID: 1282012557}
   - component: {fileID: 1282012559}
   - component: {fileID: 1282012558}
-  - component: {fileID: 1282012561}
-  - component: {fileID: 1282012560}
   m_Layer: 0
   m_Name: Tree (62)
   m_TagString: Tree
@@ -43747,41 +41868,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1282012560
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282012556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1282012561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282012556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1282535971
 GameObject:
   m_ObjectHideFlags: 0
@@ -43945,8 +42031,6 @@ GameObject:
   - component: {fileID: 1286349257}
   - component: {fileID: 1286349259}
   - component: {fileID: 1286349258}
-  - component: {fileID: 1286349261}
-  - component: {fileID: 1286349260}
   m_Layer: 0
   m_Name: Tree (59)
   m_TagString: Tree
@@ -43997,41 +42081,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1286349260
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1286349256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1286349261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1286349256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1288379474
 Prefab:
   m_ObjectHideFlags: 0
@@ -45280,8 +43329,6 @@ GameObject:
   - component: {fileID: 1331803324}
   - component: {fileID: 1331803326}
   - component: {fileID: 1331803325}
-  - component: {fileID: 1331803328}
-  - component: {fileID: 1331803327}
   m_Layer: 0
   m_Name: Tree (5)
   m_TagString: Tree
@@ -45332,41 +43379,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1331803327
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331803323}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1331803328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331803323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
 --- !u!1001 &1333344037
 Prefab:
   m_ObjectHideFlags: 0
@@ -45574,108 +43586,6 @@ MonoBehaviour:
   parent: {fileID: 2103268723}
   child: {fileID: 0}
   IKsys: {fileID: 475262990}
-<<<<<<< HEAD
---- !u!1 &1345835148
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1345835149}
-  - component: {fileID: 1345835150}
-  m_Layer: 0
-  m_Name: LeftLegSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1345835149
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1345835148}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0.31261793, y: -8.581505, z: 0.5607196}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2063209917}
-  - {fileID: 1184524420}
-  - {fileID: 632046524}
-  m_Father: {fileID: 1258753286}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
---- !u!114 &1345835150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1345835148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb923027f5e96104b8dd65dfe19770b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segments: []
-  childcount: 0
-  target: {fileID: 1713687969}
-  isReaching: 1
-  isDragging: 0
---- !u!1 &1346004346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1346004347}
-  - component: {fileID: 1346004348}
-  m_Layer: 0
-  m_Name: BG music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1346004347
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1346004346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 992409553}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1346004348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1346004346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/BackGround-Music
-  PlayEvent: 1
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1001 &1346058781
 Prefab:
   m_ObjectHideFlags: 0
@@ -45884,8 +43794,6 @@ GameObject:
   - component: {fileID: 1350494954}
   - component: {fileID: 1350494956}
   - component: {fileID: 1350494955}
-  - component: {fileID: 1350494958}
-  - component: {fileID: 1350494957}
   m_Layer: 0
   m_Name: Tree (53)
   m_TagString: Tree
@@ -45936,41 +43844,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1350494957
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1350494953}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1350494958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1350494953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1351821900
 GameObject:
   m_ObjectHideFlags: 0
@@ -48745,8 +46618,6 @@ GameObject:
   - component: {fileID: 1459645827}
   - component: {fileID: 1459645829}
   - component: {fileID: 1459645828}
-  - component: {fileID: 1459645831}
-  - component: {fileID: 1459645830}
   m_Layer: 0
   m_Name: Tree (6)
   m_TagString: Tree
@@ -48797,41 +46668,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1459645830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1459645826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!136 &1459645831
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1459645826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1 &1461477645
 GameObject:
   m_ObjectHideFlags: 0
@@ -49474,8 +47310,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.00000015805065, z: -0.000000010536707, w: 1}
   m_LocalPosition: {x: 0.061525773, y: 0.024604607, z: -68.34124}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 670917727}
+  m_Children: []
   m_Father: {fileID: 1804441907}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50864,8 +48699,6 @@ GameObject:
   - component: {fileID: 1519783912}
   - component: {fileID: 1519783914}
   - component: {fileID: 1519783913}
-  - component: {fileID: 1519783916}
-  - component: {fileID: 1519783915}
   m_Layer: 0
   m_Name: Tree (25)
   m_TagString: Tree
@@ -50916,41 +48749,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1519783915
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1519783911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1519783916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1519783911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1521514679
 Prefab:
   m_ObjectHideFlags: 0
@@ -52033,8 +49831,6 @@ GameObject:
   - component: {fileID: 1557340656}
   - component: {fileID: 1557340658}
   - component: {fileID: 1557340657}
-  - component: {fileID: 1557340660}
-  - component: {fileID: 1557340659}
   m_Layer: 0
   m_Name: Tree (56)
   m_TagString: Tree
@@ -52085,41 +49881,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1557340659
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1557340655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1557340660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1557340655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1563252448
 GameObject:
   m_ObjectHideFlags: 0
@@ -52792,45 +50553,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-<<<<<<< HEAD
-  distanceTrigger: 3
---- !u!114 &1582743233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1582743228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Rat Hit
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
---- !u!65 &1582743234
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1582743228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.6192884, y: 7.8151608, z: 2.819656}
-  m_Center: {x: 0.080046654, y: 3.4075804, z: 0.14557266}
-=======
   distanceTrigger: 5
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1001 &1582844000
 Prefab:
   m_ObjectHideFlags: 0
@@ -54256,8 +51979,6 @@ GameObject:
   - component: {fileID: 1636212932}
   - component: {fileID: 1636212934}
   - component: {fileID: 1636212933}
-  - component: {fileID: 1636212936}
-  - component: {fileID: 1636212935}
   m_Layer: 0
   m_Name: Tree (37)
   m_TagString: Tree
@@ -54308,41 +52029,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1636212935
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1636212931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1636212936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1636212931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1638496019
 Prefab:
   m_ObjectHideFlags: 0
@@ -55016,8 +52702,6 @@ GameObject:
   - component: {fileID: 1652969332}
   - component: {fileID: 1652969334}
   - component: {fileID: 1652969333}
-  - component: {fileID: 1652969336}
-  - component: {fileID: 1652969335}
   m_Layer: 0
   m_Name: Tree (24)
   m_TagString: Tree
@@ -55068,41 +52752,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1652969335
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1652969331}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1652969336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1652969331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1653080647
 GameObject:
   m_ObjectHideFlags: 0
@@ -55565,8 +53214,6 @@ GameObject:
   - component: {fileID: 1668451405}
   - component: {fileID: 1668451407}
   - component: {fileID: 1668451406}
-  - component: {fileID: 1668451409}
-  - component: {fileID: 1668451408}
   m_Layer: 0
   m_Name: Tree (30)
   m_TagString: Tree
@@ -55617,41 +53264,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1668451408
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1668451404}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1668451409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1668451404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1668660237
 GameObject:
   m_ObjectHideFlags: 0
@@ -56804,8 +54416,6 @@ GameObject:
   - component: {fileID: 1704958019}
   - component: {fileID: 1704958021}
   - component: {fileID: 1704958020}
-  - component: {fileID: 1704958023}
-  - component: {fileID: 1704958022}
   m_Layer: 0
   m_Name: Tree (9)
   m_TagString: Tree
@@ -56856,41 +54466,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1704958022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704958018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!136 &1704958023
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704958018}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1001 &1705317135
 Prefab:
   m_ObjectHideFlags: 0
@@ -57499,10 +55074,8 @@ GameObject:
   - component: {fileID: 1733503387}
   - component: {fileID: 1733503389}
   - component: {fileID: 1733503388}
-  - component: {fileID: 1733503391}
-  - component: {fileID: 1733503390}
   m_Layer: 0
-  m_Name: Tree /w Sound
+  m_Name: Tree (0)
   m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57551,40 +55124,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1733503390
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733503386}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.2511077, y: 10.3600445, z: 3.4748821}
-  m_Center: {x: 0.046108246, y: 4.6800222, z: -0.17257977}
---- !u!114 &1733503391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733503386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
 --- !u!1 &1735946452
 GameObject:
   m_ObjectHideFlags: 0
@@ -58107,8 +55646,6 @@ GameObject:
   - component: {fileID: 1745873602}
   - component: {fileID: 1745873604}
   - component: {fileID: 1745873603}
-  - component: {fileID: 1745873606}
-  - component: {fileID: 1745873605}
   m_Layer: 0
   m_Name: Tree (14)
   m_TagString: Tree
@@ -58159,41 +55696,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1745873605
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1745873601}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1745873606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1745873601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1746136642
 GameObject:
   m_ObjectHideFlags: 0
@@ -61273,8 +58775,6 @@ GameObject:
   - component: {fileID: 1846629665}
   - component: {fileID: 1846629667}
   - component: {fileID: 1846629666}
-  - component: {fileID: 1846629669}
-  - component: {fileID: 1846629668}
   m_Layer: 0
   m_Name: Tree (31)
   m_TagString: Tree
@@ -61325,41 +58825,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1846629668
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1846629664}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1846629669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1846629664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1848748802
 GameObject:
   m_ObjectHideFlags: 0
@@ -61370,8 +58835,6 @@ GameObject:
   - component: {fileID: 1848748803}
   - component: {fileID: 1848748805}
   - component: {fileID: 1848748804}
-  - component: {fileID: 1848748807}
-  - component: {fileID: 1848748806}
   m_Layer: 0
   m_Name: Tree (35)
   m_TagString: Tree
@@ -61422,41 +58885,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1848748806
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1848748802}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1848748807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1848748802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1849104278
 Prefab:
   m_ObjectHideFlags: 0
@@ -61869,8 +59297,6 @@ GameObject:
   - component: {fileID: 1859542583}
   - component: {fileID: 1859542585}
   - component: {fileID: 1859542584}
-  - component: {fileID: 1859542587}
-  - component: {fileID: 1859542586}
   m_Layer: 0
   m_Name: Tree (33)
   m_TagString: Tree
@@ -61921,41 +59347,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1859542586
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1859542582}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1859542587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1859542582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1861507800
 GameObject:
   m_ObjectHideFlags: 0
@@ -62161,8 +59552,6 @@ GameObject:
   - component: {fileID: 1866126796}
   - component: {fileID: 1866126798}
   - component: {fileID: 1866126797}
-  - component: {fileID: 1866126800}
-  - component: {fileID: 1866126799}
   m_Layer: 0
   m_Name: Tree (40)
   m_TagString: Tree
@@ -62213,41 +59602,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1866126799
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1866126795}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1866126800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1866126795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1867945308
 GameObject:
   m_ObjectHideFlags: 0
@@ -62584,8 +59938,6 @@ GameObject:
   - component: {fileID: 1877551794}
   - component: {fileID: 1877551796}
   - component: {fileID: 1877551795}
-  - component: {fileID: 1877551798}
-  - component: {fileID: 1877551797}
   m_Layer: 0
   m_Name: Tree (13)
   m_TagString: Tree
@@ -62636,41 +59988,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1877551797
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1877551793}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1877551798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1877551793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1878207712
 Prefab:
   m_ObjectHideFlags: 0
@@ -62868,8 +60185,6 @@ GameObject:
   - component: {fileID: 1885318419}
   - component: {fileID: 1885318421}
   - component: {fileID: 1885318420}
-  - component: {fileID: 1885318423}
-  - component: {fileID: 1885318422}
   m_Layer: 0
   m_Name: Tree (47)
   m_TagString: Tree
@@ -62920,41 +60235,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1885318422
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1885318418}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1885318423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1885318418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1892936555
 GameObject:
   m_ObjectHideFlags: 0
@@ -64214,8 +61494,6 @@ GameObject:
   - component: {fileID: 1929761770}
   - component: {fileID: 1929761772}
   - component: {fileID: 1929761771}
-  - component: {fileID: 1929761774}
-  - component: {fileID: 1929761773}
   m_Layer: 0
   m_Name: Tree (7)
   m_TagString: Tree
@@ -64266,41 +61544,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1929761773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1929761769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!136 &1929761774
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1929761769}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1 &1932588281
 GameObject:
   m_ObjectHideFlags: 0
@@ -64854,8 +62097,6 @@ GameObject:
   - component: {fileID: 1946576803}
   - component: {fileID: 1946576805}
   - component: {fileID: 1946576804}
-  - component: {fileID: 1946576807}
-  - component: {fileID: 1946576806}
   m_Layer: 0
   m_Name: Tree (21)
   m_TagString: Tree
@@ -64906,41 +62147,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1946576806
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1946576802}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1946576807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1946576802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1948542783
 GameObject:
   m_ObjectHideFlags: 0
@@ -64980,8 +62186,6 @@ GameObject:
   - component: {fileID: 1949989644}
   - component: {fileID: 1949989646}
   - component: {fileID: 1949989645}
-  - component: {fileID: 1949989648}
-  - component: {fileID: 1949989647}
   m_Layer: 0
   m_Name: Tree (52)
   m_TagString: Tree
@@ -65032,136 +62236,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!136 &1949989647
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1949989643}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &1949989648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1949989643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!1 &1954727174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100016, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1954727175}
-  - component: {fileID: 1954727176}
-  m_Layer: 0
-  m_Name: Goblin_Body
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1954727175
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400016, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1954727174}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16527122, y: 1.9188116, z: 0.18915462}
-  m_LocalScale: {x: 2.54, y: 2.5399997, z: 2.5399997}
-  m_Children: []
-  m_Father: {fileID: 931043979}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1954727176
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13700000, guid: 55c8c25a07aa5a84991b8301ee9dc92c,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1954727174}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: e807e480b51d02149a6fb0adedc031f9, type: 2}
-  - {fileID: 2100000, guid: e7e0baaade1e31b4fb3c7b5a6a143fd2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: 55c8c25a07aa5a84991b8301ee9dc92c, type: 3}
-  m_Bones:
-  - {fileID: 465031436}
-  - {fileID: 763122815}
-  - {fileID: 251609756}
-  - {fileID: 1659073478}
-  - {fileID: 538979399}
-  - {fileID: 642862585}
-  - {fileID: 1978764179}
-  - {fileID: 1840429425}
-  - {fileID: 527991438}
-  - {fileID: 1218976340}
-  - {fileID: 405069571}
-  - {fileID: 570829147}
-  - {fileID: 1904724713}
-  - {fileID: 1441966214}
-  - {fileID: 347506031}
-  - {fileID: 1490221569}
-  - {fileID: 476325585}
-  - {fileID: 56979318}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1904724713}
-  m_AABB:
-    m_Center: {x: 13.840836, y: 25.062284, z: 8.405476}
-    m_Extent: {x: 58.968254, y: 84.67637, z: 66.41847}
-  m_DirtyAABB: 0
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &1954816149
 GameObject:
   m_ObjectHideFlags: 0
@@ -67027,8 +64101,6 @@ GameObject:
   - component: {fileID: 2012926131}
   - component: {fileID: 2012926133}
   - component: {fileID: 2012926132}
-  - component: {fileID: 2012926135}
-  - component: {fileID: 2012926134}
   m_Layer: 0
   m_Name: Tree (11)
   m_TagString: Tree
@@ -67079,41 +64151,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2012926134
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2012926130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2012926135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2012926130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &2013418535
 Prefab:
   m_ObjectHideFlags: 0
@@ -67823,8 +64860,6 @@ GameObject:
   - component: {fileID: 2042204706}
   - component: {fileID: 2042204708}
   - component: {fileID: 2042204707}
-  - component: {fileID: 2042204710}
-  - component: {fileID: 2042204709}
   m_Layer: 0
   m_Name: Tree (38)
   m_TagString: Tree
@@ -67875,41 +64910,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2042204709
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2042204705}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2042204710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2042204705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &2042374139
 Prefab:
   m_ObjectHideFlags: 0
@@ -68015,8 +65015,6 @@ GameObject:
   - component: {fileID: 2049563875}
   - component: {fileID: 2049563877}
   - component: {fileID: 2049563876}
-  - component: {fileID: 2049563879}
-  - component: {fileID: 2049563878}
   m_Layer: 0
   m_Name: Tree (22)
   m_TagString: Tree
@@ -68067,92 +65065,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!136 &2049563878
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049563874}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2049563879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049563874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!1 &2050038672
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2050038673}
-  - component: {fileID: 2050038674}
-  m_Layer: 0
-  m_Name: LeftLegSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2050038673
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050038672}
-  m_LocalRotation: {x: 0.99669236, y: -0.0140915215, z: -0.0069071655, w: 0.07973796}
-  m_LocalPosition: {x: -0.007869721, y: -0.21797316, z: 0.014243945}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 818595999}
-  - {fileID: 1226441368}
-  - {fileID: 973170262}
-  m_Father: {fileID: 1527708608}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050038674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050038672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb923027f5e96104b8dd65dfe19770b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segments: []
-  childcount: 0
-  target: {fileID: 1808803849}
-  isReaching: 1
-  isDragging: 0
-=======
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &2050254617 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1984849040661472, guid: 14dcf1ea18ae01b4bac13a96855ca946,
@@ -68224,166 +65136,7 @@ MonoBehaviour:
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
-<<<<<<< HEAD
-  distanceTrigger: 3
---- !u!114 &2050254622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050254617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Rat Hit
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
---- !u!65 &2050254623
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050254617}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.4326844, y: 7.6619473, z: 2.4276075}
-  m_Center: {x: 0.0006504059, y: 3.3309736, z: 0.02558899}
---- !u!1 &2051472313
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2051472314}
-  - component: {fileID: 2051472319}
-  - component: {fileID: 2051472318}
-  - component: {fileID: 2051472317}
-  - component: {fileID: 2051472316}
-  - component: {fileID: 2051472315}
-  m_Layer: 0
-  m_Name: targetRightArm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2051472314
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051472313}
-  m_LocalRotation: {x: -0, y: 3.3241325e-15, z: -4.212311e-15, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: 0.59248924}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_Children: []
-  m_Father: {fileID: 247044515}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2051472315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051472313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4937e379fbbaa8f428666e47f37c62a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationName: Lars_DeathAnimRightArm
-  startPosition: {x: 0, y: 0, z: 0}
-  AvatarObj: {fileID: 53493324}
-  mesh: {fileID: 1100547802}
-  phase: 0
-  speed: 1
-  range: 1
-  heightOffset: 0
---- !u!114 &2051472316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051472313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5837837e719eb46835169b7c019d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationName: JK_rightArmIdle
-  startPosition: {x: 2, y: 1, z: 0}
-  AvatarObj: {fileID: 53493324}
-  mesh: {fileID: 1100547802}
-  phase: 1.3
-  speed: 1
-  range: 0.5
-  heightOffset: 0
---- !u!23 &2051472317
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051472313}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!135 &2051472318
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051472313}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &2051472319
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051472313}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-=======
   distanceTrigger: 5
->>>>>>> e7fa3d58f5c1f1ed2272efaeb1f2f3338c765dd4
 --- !u!1 &2053377646
 GameObject:
   m_ObjectHideFlags: 0
@@ -68741,8 +65494,6 @@ GameObject:
   - component: {fileID: 2071692234}
   - component: {fileID: 2071692236}
   - component: {fileID: 2071692235}
-  - component: {fileID: 2071692238}
-  - component: {fileID: 2071692237}
   m_Layer: 0
   m_Name: Tree (2)
   m_TagString: Tree
@@ -68793,40 +65544,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2071692237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2071692233}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.167204, y: 10.29315, z: 2.766841}
-  m_Center: {x: -0.255558, y: 4.646575, z: 0.15300226}
---- !u!114 &2071692238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2071692233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 30
 --- !u!1 &2072857927
 GameObject:
   m_ObjectHideFlags: 0
@@ -68890,8 +65607,6 @@ GameObject:
   - component: {fileID: 2079438478}
   - component: {fileID: 2079438480}
   - component: {fileID: 2079438479}
-  - component: {fileID: 2079438482}
-  - component: {fileID: 2079438481}
   m_Layer: 0
   m_Name: Tree (29)
   m_TagString: Tree
@@ -68942,41 +65657,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2079438481
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2079438477}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2079438482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2079438477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &2079808417
 GameObject:
   m_ObjectHideFlags: 0
@@ -69016,8 +65696,6 @@ GameObject:
   - component: {fileID: 2082933358}
   - component: {fileID: 2082933360}
   - component: {fileID: 2082933359}
-  - component: {fileID: 2082933362}
-  - component: {fileID: 2082933361}
   m_Layer: 0
   m_Name: Tree (23)
   m_TagString: Tree
@@ -69068,41 +65746,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2082933361
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2082933357}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2082933362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2082933357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &2083125385
 GameObject:
   m_ObjectHideFlags: 0
@@ -69958,8 +66601,6 @@ GameObject:
   - component: {fileID: 2109359726}
   - component: {fileID: 2109359728}
   - component: {fileID: 2109359727}
-  - component: {fileID: 2109359730}
-  - component: {fileID: 2109359729}
   m_Layer: 0
   m_Name: Tree (16)
   m_TagString: Tree
@@ -70010,41 +66651,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2109359729
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109359725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2109359730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109359725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &2109520307
 GameObject:
   m_ObjectHideFlags: 0
@@ -70259,8 +66865,6 @@ GameObject:
   - component: {fileID: 2118386910}
   - component: {fileID: 2118386912}
   - component: {fileID: 2118386911}
-  - component: {fileID: 2118386914}
-  - component: {fileID: 2118386913}
   m_Layer: 0
   m_Name: Tree (57)
   m_TagString: Tree
@@ -70311,41 +66915,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2118386913
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2118386909}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2118386914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2118386909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &2120470593
 GameObject:
   m_ObjectHideFlags: 0
@@ -71047,8 +67616,6 @@ GameObject:
   - component: {fileID: 2146003513}
   - component: {fileID: 2146003515}
   - component: {fileID: 2146003514}
-  - component: {fileID: 2146003517}
-  - component: {fileID: 2146003516}
   m_Layer: 0
   m_Name: Tree (36)
   m_TagString: Tree
@@ -71099,38 +67666,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2146003516
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2146003512}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 10
-  m_Direction: 1
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2146003517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2146003512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Birds_mixdown
-  PlayEvent: 3
-  StopEvent: 0
-  CollisionTag: Ball
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20

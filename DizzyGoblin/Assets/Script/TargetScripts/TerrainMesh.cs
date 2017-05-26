@@ -179,10 +179,13 @@ public class TerrainMesh : MonoBehaviour {
 
                 //give it some detail - we could use perlin here too dont let i be too large
                 int i = getVertexIndexFromXZ(x, z);
-                Vector3 vert = vertices[i];
-                vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
-                vertices[i] = vert;
 
+                if (i < vertices.Length)
+                {
+                    Vector3 vert = vertices[i];
+                    vert.Set(x, y + Random.Range(-1, 1) * 0.3f, z);
+                    vertices[i] = vert;
+                }
             }
         }
 

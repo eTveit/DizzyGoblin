@@ -19730,7 +19730,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601949568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 046d993e88b033a45a15afed7dc0977a, type: 3}
   m_Name: 
@@ -19750,7 +19750,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601949568}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa804d58a3388f641a0546a976d9eecb, type: 3}
   m_Name: 
@@ -19759,7 +19759,7 @@ MonoBehaviour:
   startPosition: {x: 0, y: 5, z: 2.5}
   AvatarObj: {fileID: 1582743229}
   mesh: {fileID: 1100547802}
-  phase: 0
+  phase: 1.570796
   speed: 1
   range: 2
   heightOffset: 0
@@ -31847,6 +31847,26 @@ MonoBehaviour:
   AvatarObj: {fileID: 1582743229}
   mesh: {fileID: 1100547802}
   phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
+--- !u!114 &972583989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972583982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5327f0cb4530e3946a4ad9035726e8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratLegsWalk
+  startPosition: {x: 1, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 3.141593
   speed: 1
   range: 1
   heightOffset: 0
@@ -47947,13 +47967,33 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1431377451}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10e454aba220eff458ab5f004e1b7097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: ET_ratLegsIdle
   startPosition: {x: -0.5, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  incrementingDT: -1
+--- !u!114 &1431377458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431377451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5327f0cb4530e3946a4ad9035726e8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: ET_ratLegsWalk
+  startPosition: {x: -1, y: 0, z: 0}
   AvatarObj: {fileID: 1582743229}
   mesh: {fileID: 1100547802}
   phase: 0

@@ -110,6 +110,9 @@ public class StunState : StateNode {
 
             //<ET> Okay, the idea was to quit the state, and go back to what he was doing, but he doesn't seem to return to some other state.
             //Probably because the previous state in inactive? Could we get active state before activating this, and then reactivate it?
+
+            //<JPK> shouldn't need to, the m_isDoingItsState flag should re-enable the parent state when stun
+            //is no longer true
             accumTime += dt;
             if(accumTime > 2.0f) {
                 p_isInState = false;
@@ -121,6 +124,9 @@ public class StunState : StateNode {
                 m_isDoingItsState = false;
 
                 accumTime = 0;
+
+                Debug.Log("TIMEOUT STUN STATE");
+
             }
         }
         return p_isInState;

@@ -52,7 +52,7 @@ public class SpinState : StateNode {
         */
     }
 
-
+    bool wasChildOverride = false;  //<JPK> debug why this does not continue??
     public override bool advanceTime(float dt) {
 
 
@@ -60,6 +60,8 @@ public class SpinState : StateNode {
             //if any child state is true, I am false
             p_isInState = false;
             m_isDoingItsState = false;
+
+            wasChildOverride = true;
 
             //disable my anims
             leftFootAnim.enabled = false;
@@ -73,14 +75,25 @@ public class SpinState : StateNode {
             //drop ball
             ballAnim.isSpinning = false;
 
+            Debug.Log("SPIN CHILD TRUE");
+
             //since a child state is true, return this fact!
             return true;
         }
 
+        if(wasChildOverride)
+        {
+            Debug.Log("Child was true, no longer true");
+            wasChildOverride = false;
+            //<JPK> maybe re-init state here? but to be honest, keydown below is better
+
+
+        }
 
         //TODO: Modify to spin only when holding SPACE
         //if no child state is true, see if I need to be true
-        if(Input.GetKeyUp(KeyCode.Space)) {
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
             //this will toggle states for testing
             p_isInState = false;
             if(m_isDoingItsState) {
@@ -94,14 +107,20 @@ public class SpinState : StateNode {
                 //disable ball and chain sound
                 soundtarget.gameObject.SetActive(false);
 
-                //<JK> maybe we want to sync accumTime to the system time, maybe not.
+                //<JPK> maybe we want to sync accumTime to the system time, maybe not.
                 //I usually dont (see below state process)- zero start time is useful.
                 accumTime = 0; // Time.time;
+                
+                //<JPK> log to see if my key is canceled by another key - Not multi???
+                Debug.Log("SPIN KEY UP");
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        //<JPK> we need to remain holding this after a child is true, to return to state
+        //      changed from getkeydown to getkey
+        if(Input.GetKey(KeyCode.Space)) {
             p_isInState = true;
+            Debug.Log("SPIN KEY DOWN");
         }
 
 
@@ -138,11 +157,6 @@ public class SpinState : StateNode {
             Rotate(dt);
 
 
-            //<JPK> @Espen we had a {} scope error here when I last syncd - be sure your scripts are
-            //error free before committing/syncing
-
-
-
         }
 
         return p_isInState;
@@ -155,7 +169,7 @@ public class SpinState : StateNode {
         //Using a float that increments using dt, we get a cos wave, 
         //while still being able to affect it through dt
 
-        //<JK> exactly, sin/cos always need "what time is it?" not "how much since last time?"
+        //<JPK> exactly, sin/cos always need "what time is it?" not "how much since last time?"
         //but dt should proliferate anywhere you use Time.deltaTime, or Time.time thus,
         //dt is our slow/fast mo value.
 
@@ -172,7 +186,8 @@ public class SpinState : StateNode {
         {
             boostRotation = true;
         }
-        else {
+        else
+        {
             boostRotation = false;
         }
 

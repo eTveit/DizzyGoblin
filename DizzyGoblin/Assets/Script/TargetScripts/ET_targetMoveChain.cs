@@ -31,7 +31,7 @@ public class ET_targetMoveChain : targetMove {
             MoveChain(startPosition);
         }
         else {
-            Debug.Log("Falling to the ground");
+            //Debug.Log("Falling to the ground");
             Vector3 groundPos = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
             float localGroundY = startPosition.y -(initialWorldY -  mesh.getHeightAt(transform.position));
             groundPos.y = localGroundY;

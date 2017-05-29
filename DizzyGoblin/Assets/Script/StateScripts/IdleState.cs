@@ -42,7 +42,8 @@ public class IdleState : StateNode
             return true;
         }
 
-        return false;
+        //lets enable the state and find some anims for it
+        //return false;
 
         //lets just say I am true, which in fact I always am if none of my children are true
         //as IDLE is the first state under root...

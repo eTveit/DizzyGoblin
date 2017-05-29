@@ -51,9 +51,9 @@ public class GoblinRootState : RootState {
         StunState stunstate = new StunState(this);
         dodgestate.addChildState(stunstate);
 
-		//add more states here...
-
-	}
+        //add more states here...
+        spinstate.soundtarget = Search(transform, "SoundObject");
+    }
 
     void Start()
     {

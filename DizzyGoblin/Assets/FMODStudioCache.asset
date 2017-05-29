@@ -11,12 +11,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
-  MasterBankRef: {fileID: 0}
-  StringsBankRef: {fileID: 0}
-  stringsBankWriteTime: 0
+  EditorBanks:
+  - {fileID: 114554695304864456}
+  - {fileID: 114778873767804378}
+  - {fileID: 114062115358007894}
+  - {fileID: 114670709725140392}
+  - {fileID: 114455390357735484}
+  - {fileID: 114773501778391348}
+  - {fileID: 114716201851408696}
+  - {fileID: 114429632931816314}
+  - {fileID: 114413244650045536}
+  - {fileID: 114330838413466804}
+  EditorEvents:
+  - {fileID: 114685312634122582}
+  - {fileID: 114938238498198720}
+  - {fileID: 114296436624670532}
+  - {fileID: 114793275679634270}
+  - {fileID: 114533471886025148}
+  - {fileID: 114052000870092240}
+  MasterBankRef: {fileID: 114670709725140392}
+  StringsBankRef: {fileID: 114554695304864456}
+  stringsBankWriteTime: 636316590263415858
   cacheVersion: 2
+--- !u!114 &114002515017155214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Character.bank
+  lastModified: 636314052327350636
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114052000870092240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Birds_mixdown
+  guid: cc0f6c981f0a1248ac677a3d5ebc9b12
+  Banks:
+  - {fileID: 114670709725140392}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114055163225120070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,6 +111,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 416
   Exists: 1
+--- !u!114 &114062115358007894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Weapons.bank
+  lastModified: 636316590267947330
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
 --- !u!114 &114101935709049600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +146,43 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 416
+  Exists: 1
+--- !u!114 &114103358900221026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\UI_Menu.bank
+  lastModified: 636314052327420822
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114113346680460108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636314052327315542
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3510656
   Exists: 1
 --- !u!114 &114172280852939960
 MonoBehaviour:
@@ -105,6 +215,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Vehicles.bank
   lastModified: 636311378990939857
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114186406079265510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Weapons.bank
+  lastModified: 636314052327470956
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -146,6 +274,45 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1760
   Exists: 1
+--- !u!114 &114296436624670532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance
+  guid: 35cd1b07c33cd74e867eba36c1d5936f
+  Banks:
+  - {fileID: 114670709725140392}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &114330838413466804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\UI_Menu.bank
+  lastModified: 636316590265915976
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
 --- !u!114 &114362776220121808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +334,43 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &114413244650045536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Surround_Ambience.bank
+  lastModified: 636316590265290951
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114429632931816314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Object
+    Panning.bank
+  lastModified: 636316590264665912
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
 --- !u!114 &114430542380987256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +389,24 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 3510656
+  Exists: 1
+--- !u!114 &114455390357735484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Music.bank
+  lastModified: 636316590264040906
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
   Exists: 1
 --- !u!114 &114492612748764442
 MonoBehaviour:
@@ -223,6 +445,121 @@ MonoBehaviour:
   - Name: Desktop
     Value: 416
   Exists: 1
+--- !u!114 &114533471886025148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ChainBuildup_mixdown1
+  guid: bc022d3fba580c4a907b27f830bfdb7b
+  Banks:
+  - {fileID: 114670709725140392}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &114538419533153332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Music.bank
+  lastModified: 636314052327370690
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114554695304864456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Resources\Stian_Sounds\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636316590263415858
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1760
+  Exists: 1
+--- !u!114 &114595523298319436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\VO_Menu_English.bank
+  lastModified: 636314052327455921
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114670709725140392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636316590262478354
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3510656
+  Exists: 1
+--- !u!114 &114685312634122582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/BackGround-Music
+  guid: 1501821ec551f94d8ac82f221f10f601
+  Banks:
+  - {fileID: 114670709725140392}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114688339578876870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +581,43 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &114704217190949922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Object
+    Panning.bank
+  lastModified: 636314052327390740
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114716201851408696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\VO_Menu_English.bank
+  lastModified: 636316590267166035
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
 --- !u!114 &114718672499354838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +639,99 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114721238706083880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Vehicles.bank
+  lastModified: 636314052327435865
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114773501778391348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Vehicles.bank
+  lastModified: 636316590266541001
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114778873767804378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Bix\Desktop\DGSTIAN\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Character.bank
+  lastModified: 636316590259040670
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
+--- !u!114 &114793275679634270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/IngamePause
+  guid: 98a405e3182b1d46b35c6eaea45fafd6
+  Banks:
+  - {fileID: 114670709725140392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114816971610129694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\spret\DizzyGoblin\DizzyGoblin\Assets\Resources\Stian_Sounds\Build\Desktop\Surround_Ambience.bank
+  lastModified: 636314052327405784
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 416
+  Exists: 1
 --- !u!114 &114849254554561716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +789,27 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &114938238498198720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Rat Hit
+  guid: 207f73c3d88fd743af4a94c236948498
+  Banks:
+  - {fileID: 114670709725140392}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

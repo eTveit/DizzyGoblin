@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpinState : StateNode {
 
+    public Transform soundtarget;
     private bool boostRotation = false;
 
 
@@ -66,6 +67,9 @@ public class SpinState : StateNode {
             leftArmAnim.enabled = false;
             rightArmAnim.enabled = false;
 
+            //disable ball and chain sound
+            soundtarget.gameObject.SetActive(false);
+
             //drop ball
             ballAnim.isSpinning = false;
 
@@ -86,6 +90,9 @@ public class SpinState : StateNode {
                 rightArmAnim.enabled = false;
                 ballAnim.isSpinning = false;
                 m_isDoingItsState = false;
+
+                //disable ball and chain sound
+                soundtarget.gameObject.SetActive(false);
 
                 //<JK> maybe we want to sync accumTime to the system time, maybe not.
                 //I usually dont (see below state process)- zero start time is useful.
@@ -116,7 +123,8 @@ public class SpinState : StateNode {
                 ballAnim.enabled = true;
                 ballAnim.isSpinning = true;
 
-
+                //enable ball and chain sound
+                soundtarget.gameObject.SetActive(true);
 
 
             }

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6407,6 +6407,7 @@ GameObject:
   - component: {fileID: 199365792}
   - component: {fileID: 199365791}
   - component: {fileID: 199365795}
+  - component: {fileID: 199365796}
   m_Layer: 0
   m_Name: targetBall
   m_TagString: Untagged
@@ -6516,6 +6517,26 @@ MonoBehaviour:
   speed: 1
   range: 1
   heightOffset: 0
+  isSpinning: 0
+--- !u!114 &199365796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199365789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c0420c29c80fd46bff46f62c37f0be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: KT_idle
+  startPosition: {x: 0, y: 0, z: 8}
+  AvatarObj: {fileID: 1836444386}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 1
   isSpinning: 0
 --- !u!1 &200964542
 GameObject:
@@ -34975,7 +34996,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060537426}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0785b160ff542e49a3cae6f9b9a1750, type: 3}
   m_Name: 
@@ -49115,7 +49136,6 @@ GameObject:
   - component: {fileID: 1477523080}
   - component: {fileID: 1477523082}
   - component: {fileID: 1477523081}
-  - component: {fileID: 1477523083}
   - component: {fileID: 1477523084}
   - component: {fileID: 1477523086}
   - component: {fileID: 1477523085}
@@ -49180,45 +49200,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1477523079}
   m_Mesh: {fileID: 4300002, guid: 0494c02834c758e44b95fb68eca782b9, type: 3}
---- !u!114 &1477523083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1477523079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4767f49b843c06848b576b850bb391db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Apos: {x: 0, y: 0, z: 0}
-  Bpos: {x: 0, y: 0, z: 0}
-  length: 0
-  parent: {fileID: 1927488503}
-  child: {fileID: 0}
-  interpolate: 0
-  interpRate: 1
-  Xcomp: 0
-  Ycomp: 0
-  Zcomp: 0
-  Xrange: 1
-  Yrange: 1
-  Zrange: 1
-  alignX: 0
-  alignY: 0
-  alignZ: 0
-  minEulers: {x: 0, y: 0, z: 0}
-  maxEulers: {x: 0, y: 0, z: 0}
-  rot: {x: 0, y: 0, z: 0, w: 0}
-  euler: {x: 0, y: 0, z: 0}
-  fwd: {x: 0, y: 0, z: 0}
-  Xaccum: 0
-  Yaccum: 0
-  Zaccum: 0
-  dotNext: 0
-  isRight: 0
-  isTerminus: 0
-  IKsys: {fileID: 0}
 --- !u!135 &1477523084
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -51813,7 +51794,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563252448}
   m_LocalRotation: {x: -0, y: 3.3241325e-15, z: -4.212311e-15, w: 1}
-  m_LocalPosition: {x: 3.06, y: 1.45, z: -0.35}
+  m_LocalPosition: {x: 3.479, y: 1.813, z: -0.35}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 144400131}
@@ -51941,7 +51922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationName: ET_targetArmsHitTree
-  startPosition: {x: 3.5, y: 4.35, z: 0}
+  startPosition: {x: 3.5, y: 1.85, z: 0}
   AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   phase: 0
@@ -60584,7 +60565,6 @@ GameObject:
   - component: {fileID: 1835569139}
   - component: {fileID: 1835569138}
   - component: {fileID: 1835569142}
-  - component: {fileID: 1835569143}
   - component: {fileID: 1835569144}
   - component: {fileID: 1835569145}
   m_Layer: 0
@@ -60620,7 +60600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: moveSpineonRight
   startPosition: {x: 0, y: 7, z: 0}
-  AvatarObj: {fileID: 0}
+  AvatarObj: {fileID: 1836444386}
   mesh: {fileID: 1100547802}
   leftFoot: {fileID: 0}
   phase: 1.5
@@ -60701,17 +60681,6 @@ MonoBehaviour:
   heightOffset: 0
   speedMod: 1.82
   keyframeOffset: 1.82
---- !u!114 &1835569143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1835569136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c4af61f88c4924f99720ff07b6d52a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1835569144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63855,7 +63824,7 @@ MonoBehaviour:
   Bpos: {x: 0, y: 0, z: 0}
   length: 0
   parent: {fileID: 1549313579}
-  child: {fileID: 1477523083}
+  child: {fileID: 0}
   interpolate: 0
   interpRate: 1
   Xcomp: 0

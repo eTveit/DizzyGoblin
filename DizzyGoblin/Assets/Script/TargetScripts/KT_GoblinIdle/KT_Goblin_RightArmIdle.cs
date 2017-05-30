@@ -51,20 +51,23 @@ public class KT_Goblin_RightArmIdle : IKAnimationTarget
     {
         speed = goblinGlobals.speed;
 
+        Vector3 curPos = transform.position;
+
         //to keep our targets in line with the hips, we simply want to
         //oscillate on z axis in the LOCAL space. we will always want something
         //sort of like this:
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(3f + Mathf.Sin((Time.time * speed) + phase) * range,
-                1 + Mathf.Sin((Time.time * speed) + phase) * range,
-                 0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
+        lpos.Set( 3f + Mathf.Sin((Time.time * speed) + phase) * range,
+                  2 + Mathf.Sin((Time.time * speed) + phase) * range,
+                  0.5f + Mathf.Sin((Time.time * speed) + phase) * range);
 
 
         //set the local
         transform.localPosition = lpos;
+        Vector3 targetPos = transform.position;
 
-
+        transform.position = Vector3.Slerp(curPos, targetPos, Time.deltaTime * 4);
 
 
 

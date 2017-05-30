@@ -6,7 +6,11 @@ public class IdleState : StateNode
 {
 
     private ET_targetMoveChain ballAnim = null;
-
+    private KT_Goblin_LeftLegIdle leftLegIdle;
+    private KT_Goblin_RightLegIdle rightLegIdle;
+    private KT_Goblin_LeftArmIdle leftArmIdle;
+    private KT_Goblin_RightArmIdle rightArmIdle;
+    private KT_Goblin_HipSlideIdle hipIdle;
 
     float m_idleChooseTimer = -1;
     public float idleSwitchTime = 3.0f;
@@ -20,6 +24,13 @@ public class IdleState : StateNode
         //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
         ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
 
+        //get the target animations for idle by type
+        rightLegIdle = m_rootState.rightFoot.GetComponent<KT_Goblin_RightLegIdle>();
+        leftLegIdle = m_rootState.leftFoot.GetComponent<KT_Goblin_LeftLegIdle>();
+        leftArmIdle= m_rootState.leftArm.GetComponent<KT_Goblin_LeftArmIdle>();
+        rightArmIdle = m_rootState.rightArm.GetComponent<KT_Goblin_RightArmIdle>();
+        //TODO: find it...
+        //hipIdle = m_rootState.rightArm.GetComponent<KT_Goblin_RightArmIdle>();
     }
 
 
@@ -37,6 +48,10 @@ public class IdleState : StateNode
             //if any child state is true, I am false
             p_isInState = false;
             m_isDoingItsState = false;
+            leftArmIdle.enabled = false;
+            rightArmIdle.enabled = false;
+            leftLegIdle.enabled = false;
+            rightLegIdle.enabled = false;
 
             //since a child state is true, return this fact!
             return true;
@@ -67,8 +82,12 @@ public class IdleState : StateNode
                 m_idleChooseTimer = -1;
 
                 m_rootState.targetManager.disableAllTargetAnimations();
-                
-                //we have no idle animations yet
+
+                //play
+                leftArmIdle.enabled = true;
+                rightArmIdle.enabled = true;
+                leftLegIdle.enabled = true;
+                rightLegIdle.enabled = true;
 
 
                 //flag that we did our one-shot, so don't do it again

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class RatWalkState : StateNode
+public class KD_RatWalkState : StateNode
 {
 
     RatRootState m_ratRootState;
 
-    ET_ratArmsIdle leftArm;
-    ET_ratArmsIdle rightArm;
-    ET_ratLegsWalk leftLeg;
-    ET_ratLegsWalk rightLeg;
-    ET_ratSpineWalk spine;
-    ET_ratTailIdle tail;
+    KD_RatLeftArm leftArm;
+    KD_RatRightArm rightArm;
+    KD_RatLeftLeg leftLeg;
+    KD_RatRightLeg rightLeg;
+    KD_RatSpine spine;
+    KD_RatTail tail;
 
-    public RatWalkState(RatRootState _rs)
+    public KD_RatWalkState(RatRootState _rs)
     {
         m_childStates = new List<StateNode>();
         m_rootState = _rs;
@@ -24,12 +24,14 @@ public class RatWalkState : StateNode
         m_transform = m_rootState.transform;
         m_gameObject = m_transform.gameObject;
         
-        leftArm = m_ratRootState.leftArm.GetComponent<ET_ratArmsIdle>();
-        rightArm = m_ratRootState.rightArm.GetComponent <ET_ratArmsIdle>();
-        leftLeg = m_ratRootState.leftFoot.GetComponent<ET_ratLegsWalk>();
-        rightLeg = m_ratRootState.rightFoot.GetComponent<ET_ratLegsWalk>();
-        spine = m_ratRootState.spine.GetComponent<ET_ratSpineWalk>();
-        tail = m_ratRootState.tail.GetComponent<ET_ratTailIdle>();
+        leftArm = m_ratRootState.leftArm.GetComponent<KD_RatLeftArm>();
+        rightArm = m_ratRootState.rightArm.GetComponent <KD_RatRightArm>();
+        leftLeg = m_ratRootState.leftFoot.GetComponent<KD_RatLeftLeg>();
+        rightLeg = m_ratRootState.rightFoot.GetComponent<KD_RatRightLeg>();
+        spine = m_ratRootState.spine.GetComponent<KD_RatSpine>();
+
+        //upcast to rat root state which exposes the tail - see also goblin ball
+        tail = m_ratRootState.tail.GetComponent<KD_RatTail>();
 
 
     }

@@ -48,8 +48,8 @@ public class targetMove : IKAnimationTarget
     {
 
 		//we need to smoothly transition to the new start point before running the animation
-		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
-			return;
+		//if (interpolateToStartPosition(Time.deltaTime, speed) == false)
+		//	return;
 
         Vector3 curpos = transform.position;
 

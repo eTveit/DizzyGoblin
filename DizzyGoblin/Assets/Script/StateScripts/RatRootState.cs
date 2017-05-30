@@ -34,18 +34,20 @@ public class RatRootState : RootState
         //here we pass the root state of our game object,
         //from that we can indeed get anything. we use the keyword "this"
         //meaning, "this" root state 
-        RatIdleState idlestate = new RatIdleState(this);
-        m_childStates.Add(idlestate);
+        
+        //RatIdleState idlestate = new RatIdleState(this);
+        //m_childStates.Add(idlestate);
 
         RatWalkState walkstate = new RatWalkState(this);
-        idlestate.addChildState(walkstate);
+        m_childStates.Add(walkstate);
                        
+        /*
         RatDodgeState dodgestate = new RatDodgeState(this);
         walkstate.addChildState(dodgestate);
 
         RatStunState stunstate = new RatStunState(this);
         dodgestate.addChildState(stunstate);
-
+        */
         //add more states here...
 
     }

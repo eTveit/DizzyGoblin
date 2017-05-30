@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//<JPK> @Kitti - not such a great implementation of a walk cycle. 
+//      Why not use sin(time) rather than keyframe placement?
+//      basically just a copy  of edvard's script. 
+
 public class KD_RatRightLeg : IKAnimationTarget
 {
 
@@ -50,7 +54,8 @@ public class KD_RatRightLeg : IKAnimationTarget
 	void Start () {
 
 		goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
-	}
+        currentFrame = (int)phase;
+    }
 
 	// Update is called once per frame
 	void Update ()
@@ -67,7 +72,9 @@ public class KD_RatRightLeg : IKAnimationTarget
 
 		Vector3 lpos = transform.localPosition;
 		Vector3 goalPos = keyframes[currentFrame];
-		goalPos *= keyframeOffset;
+
+        //<JPK> this does not make sense - to modulate L/R leg anims why not phase on a sin?
+        goalPos *= keyframeOffset;
 
 		//we need to transition smoothly from one target script to the next  
 		float dist = Vector3.Distance(lpos, goalPos);

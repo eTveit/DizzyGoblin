@@ -7,12 +7,12 @@ using UnityEngine;
 
 
 
-public class ET_ratSpineIdle : IKAnimationTarget {
+public class ET_ratLegsWalk : IKAnimationTarget {
 
     //DONT FORGET TO RE-NAME IT, YOUR INITIALS, AND SOME LOGICAL NAME
     //the FSM uses names of our creation to select animations to play
     /*
-         "ET_ratSpineIdle";
+         "ET_ratLegsWalk";
     */
     public override string getAnimName() {
         return animationName;
@@ -42,29 +42,9 @@ public class ET_ratSpineIdle : IKAnimationTarget {
     // Use this for initialization
     void Start() {
 
-
         ratGlobals = AvatarObj.GetComponent<GoblinGlobals>();
 
-
-        Segment3d thiL = ratGlobals.Search(AvatarObj, "Thigh_L").GetComponent<Segment3d>();
-        Segment3d fooL = ratGlobals.Search(AvatarObj, "Foot_L").GetComponent<Segment3d>();
-        Segment3d thiR = ratGlobals.Search(AvatarObj, "Thigh_R").GetComponent<Segment3d>();
-        Segment3d fooR = ratGlobals.Search(AvatarObj, "Foot_R").GetComponent<Segment3d>();
-        Segment3d spiM = ratGlobals.Search(AvatarObj, "Spine_Middle").GetComponent<Segment3d>();
-        Segment3d spiT = ratGlobals.Search(AvatarObj, "Spine_Top").GetComponent<Segment3d>();
-        Segment3d head = ratGlobals.Search(AvatarObj, "Head001").GetComponent<Segment3d>();
-
-        thiL.Ycomp = -50;
-        fooL.Ycomp = -90;
-        thiR.Ycomp = -50;
-        fooR.Ycomp = -90;
-        spiM.Ycomp = -60;
-        spiT.Ycomp = -20;
-        head.Ycomp = -20;
-
-        phase = 0;
-
-        range = 1;
+        range = 2;
 
         incrementingDT = 0;
 
@@ -73,11 +53,13 @@ public class ET_ratSpineIdle : IKAnimationTarget {
     // Update is called once per frame
     void Update() {
 
+        speed = ratGlobals.speed * 2;
+
         //we need to smoothly transition to the new start point before running the animation
         if(interpolateToStartPosition(Time.deltaTime, speed) == false)
             return;
 
-        speed = ratGlobals.speed/2;
+        speed = ratGlobals.speed*2;
 
         incrementingDT += Time.deltaTime;
 
@@ -88,7 +70,7 @@ public class ET_ratSpineIdle : IKAnimationTarget {
 
         Vector3 lpos = transform.localPosition;
 
-        lpos.Set(startPosition.x + (Mathf.Sin((incrementingDT * speed) + phase) * range), startPosition.y + Mathf.Abs(Mathf.Sin((incrementingDT * speed) + phase+Mathf.PI/2) * range*2), startPosition.z);
+        lpos.Set(startPosition.x, startPosition.y + (Mathf.Sin((incrementingDT * speed) + phase) * range),  startPosition.z - Mathf.Sin((incrementingDT * speed) + phase + Mathf.PI / 2) * range * 2);
 
 
         //lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);

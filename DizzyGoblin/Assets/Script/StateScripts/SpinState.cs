@@ -92,7 +92,7 @@ public class SpinState : StateNode {
 
         //TODO: Modify to spin only when holding SPACE
         //if no child state is true, see if I need to be true
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(!Input.GetKey(KeyCode.Space))
         {
             //this will toggle states for testing
             p_isInState = false;

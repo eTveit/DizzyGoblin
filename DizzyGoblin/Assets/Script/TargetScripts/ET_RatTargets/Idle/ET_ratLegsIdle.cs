@@ -84,7 +84,6 @@ public class ET_ratLegsIdle : IKAnimationTarget {
             moveTimer = 0;
             transform.localPosition = goalPos;
             goalPos = transform.position;
-            Debug.Log(transform.name);
         }
 
         

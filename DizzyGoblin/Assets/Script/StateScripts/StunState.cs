@@ -129,7 +129,10 @@ public class StunState : StateNode {
 
             }
         }
-        return p_isInState;
+        if(accumTime >= 1) {
+            return p_isInState;
+        }
+        return false;
     }
 
 

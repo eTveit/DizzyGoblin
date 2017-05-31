@@ -19,6 +19,8 @@ public class SpinState : StateNode {
     private float rotationSpeed = 100;
     private float rotationBoost = 1000;
 
+    public Collider ballCollider = null;
+
     //how much time has passed since we started this state
     private float accumTime = 0;
 
@@ -41,6 +43,7 @@ public class SpinState : StateNode {
 
         //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
         ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
+        ballCollider = ((GoblinRootState)m_rootState).ballCollider;
 
 
         /*
@@ -74,6 +77,7 @@ public class SpinState : StateNode {
 
             //drop ball
             ballAnim.isSpinning = false;
+            ballCollider.enabled = false;
 
             Debug.Log("SPIN CHILD TRUE");
 
@@ -102,6 +106,7 @@ public class SpinState : StateNode {
                 leftArmAnim.enabled = false;
                 rightArmAnim.enabled = false;
                 ballAnim.isSpinning = false;
+                ballCollider.enabled = false;
                 m_isDoingItsState = false;
 
                 //disable ball and chain sound
@@ -141,6 +146,7 @@ public class SpinState : StateNode {
                 rightArmAnim.enabled = true;
                 ballAnim.enabled = true;
                 ballAnim.isSpinning = true;
+                ballCollider.enabled = true;
 
                 //enable ball and chain sound
                 soundtarget.gameObject.SetActive(true);

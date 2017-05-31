@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -49278,7 +49278,7 @@ SphereCollider:
   m_GameObject: {fileID: 1477523079}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 9.482583
   m_Center: {x: -0.0000014894872, y: 0.0028311177, z: -8.874145}
@@ -60874,6 +60874,7 @@ MonoBehaviour:
   spine: {fileID: 1835569137}
   Avatar: {fileID: 1836444386}
   ball: {fileID: 199365790}
+  ballCollider: {fileID: 1477523084}
 --- !u!114 &1836444385
 MonoBehaviour:
   m_ObjectHideFlags: 0

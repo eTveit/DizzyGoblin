@@ -8,6 +8,7 @@ public class GoblinRootState : RootState {
     //<JPK> @Espen made public and now exist only for goblins
     public Transform ball;
     public Collider ballCollider;
+    public Rigidbody ballRB;
     public SpinState spinstate;
 
     

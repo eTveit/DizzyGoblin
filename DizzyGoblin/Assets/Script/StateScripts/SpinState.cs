@@ -19,7 +19,8 @@ public class SpinState : StateNode {
     private float rotationSpeed = 100;
     private float rotationBoost = 1000;
 
-    public Collider ballCollider = null;
+    private Collider ballCollider = null;
+    private Rigidbody ballRB = null;
 
     //how much time has passed since we started this state
     private float accumTime = 0;
@@ -44,6 +45,8 @@ public class SpinState : StateNode {
         //<JPK> @espen - upcasted root state to goblin root state cause he has the ball
         ballAnim = ((GoblinRootState)m_rootState).ball.GetComponent<ET_targetMoveChain>();
         ballCollider = ((GoblinRootState)m_rootState).ballCollider;
+        ballRB = ((GoblinRootState)m_rootState).ballRB;
+        
 
 
         /*
@@ -162,7 +165,7 @@ public class SpinState : StateNode {
 
             Rotate(dt);
 
-
+            ballRB.AddForce(((m_transform.forward + new Vector3(0, 0.2f, 0))*100));
         }
 
         return p_isInState;

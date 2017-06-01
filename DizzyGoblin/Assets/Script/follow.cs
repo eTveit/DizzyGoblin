@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//Revised by Espen Tveit to remove shakiness
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ public class follow : MonoBehaviour {
     public float height = 5;
     public float interpRate = 10.0f;
     public float speed = 50.0f;
+
+    public Vector3 offset = new Vector3(0, 15, 15);
 
     private Vector3 goalPos = new Vector3(0, 0, 0);
 
@@ -42,15 +46,16 @@ public class follow : MonoBehaviour {
         }
     }
     // Update is called once per frame
-    void LateUpdate () {
-
+    void LateUpdate() {
+        /*
                         // change - to +, to make the camera position behind the Goblin.
         goalPos = target.position - (target.forward * distance);
         goalPos.y += height;
+        */
 
+        goalPos = target.position + offset;
         transform.position = Vector3.Slerp(transform.position, goalPos, Time.deltaTime * interpRate);
         transform.LookAt(target.position);
-
 
     }
 }

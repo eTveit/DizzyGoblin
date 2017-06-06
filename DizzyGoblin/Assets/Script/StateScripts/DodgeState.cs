@@ -18,6 +18,10 @@ public class DodgeState : StateNode
 	//private IKAnimationTarget leftArmAnim = null;
 	//private IKAnimationTarget rightArmAnim = null;
 
+
+    private float accumTime = 0;
+
+    private float speedModifier = 2.8f;
        
     //ctor
     public DodgeState(RootState _rs)
@@ -89,6 +93,8 @@ public class DodgeState : StateNode
 				leftArmAnim.enabled = false;
 				rightArmAnim.enabled = false;
 				spineAnim.enabled = false;
+
+                accumTime = 0;
             }
         }
 
@@ -121,26 +127,27 @@ public class DodgeState : StateNode
     
             }
 
+            accumTime += dt;
             moveLeft(dt);
+            if(accumTime > 0.5f) {
+                p_isInState = false;
+                leftFootAnim.enabled = false;
+                rightFootAnim.enabled = false;
+                leftArmAnim.enabled = false;
+                rightArmAnim.enabled = false;
+                spineAnim.enabled = false;
 
+                rightFootAnim.cycleCount = 0;
+
+                m_isDoingItsState = false;
+
+                accumTime = 0;
+                
+            }
         }
-        else
-        {
-
-            p_isInState = false;
-            m_isDoingItsState = false;
-
-            //disable my anims
-            leftFootAnim.enabled = false;
-            rightFootAnim.enabled = false;
-            leftArmAnim.enabled = false;
-            rightArmAnim.enabled = false;
-            spineAnim.enabled = false;
-    
-            rightFootAnim.cycleCount = 0;
-
-        }
-        return p_isInState;
+        
+            return p_isInState;
+        
     }
 
 
@@ -149,7 +156,7 @@ public class DodgeState : StateNode
     {
         
         Vector3 right = m_transform.right;
-        m_transform.position -= right * dt * m_globs.speed;
+        m_transform.position -= right * dt * m_globs.speed * speedModifier;
 
     }
 

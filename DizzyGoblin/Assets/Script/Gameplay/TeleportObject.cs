@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//@phong - teleport is the effect, rather than the cause, so perhaps this should be called 
+//         "RatHit" rather than teleport.
+ 
 public class TeleportObject : MonoBehaviour {
 
     //Script should be placed on rats
@@ -15,7 +19,8 @@ public class TeleportObject : MonoBehaviour {
     steering steering;
     public float distance;
     public float distanceTrigger = 5;
-    
+
+    public bool isHitByBall = false;
 
 	// Use this for initialization
 	void Start ()
@@ -44,18 +49,22 @@ public class TeleportObject : MonoBehaviour {
 
 	void HitByBall()
 	{
+        //<JPK> we probaly also want to confirm that the goblin is spinning AND use a collision
+        //      box with the ball and chain as an event handler.
 		if (distance < distanceTrigger && !Dead)
 		{
             timer = 0;
             Dead = true;
             //Disable steering script on rat so that it stays still when dead
             steering.enabled = false;
+            isHitByBall = true;
         }
     }
 
     void teleport()
     {
         transform.position = Destination.position;
+        isHitByBall = false;
     }
 }
 //Thieu Phong Le

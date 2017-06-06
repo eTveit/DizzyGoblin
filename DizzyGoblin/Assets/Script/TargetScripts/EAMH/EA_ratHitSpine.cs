@@ -58,12 +58,12 @@ public class EA_ratHitSpine : IKAnimationTarget
 		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
 			return;
 
-		speed = goblinGlobals.speed;
+        speed = goblinGlobals.speed + speed;
 
-		//to keep our targets in line with the hips, we simply want to
-		//oscillate on z axis in the LOCAL space
+        //to keep our targets in line with the hips, we simply want to
+        //oscillate on z axis in the LOCAL space
 
-		Vector3 lpos = transform.localPosition;
+        Vector3 lpos = transform.localPosition;
 		Vector3 goalPos = keyframes[currentFrame];
 
 		//we need to transition smoothly from one target script to the next  

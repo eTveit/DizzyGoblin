@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11404,6 +11404,7 @@ MonoBehaviour:
   DeSpawn: 3
   distance: 0
   distanceTrigger: 5
+  isHitByBall: 0
 --- !u!114 &371151708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19068,6 +19069,7 @@ MonoBehaviour:
   DeSpawn: 3
   distance: 0
   distanceTrigger: 5
+  isHitByBall: 0
 --- !u!65 &579157283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19755,6 +19757,26 @@ Transform:
   m_PrefabParentObject: {fileID: 4359747333180490, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &601949570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 601949568}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292a25aeca6ad1c4abd376b56eb3c086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: rat hit
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 3
 --- !u!114 &601949573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31841,6 +31863,25 @@ GameObject:
   m_PrefabParentObject: {fileID: 1729583344801640, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &972583983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972583982}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d77a7bc6654dfc48831fed324070533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: rat hit
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
 --- !u!4 &972583986 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4095435822679564, guid: 14dcf1ea18ae01b4bac13a96855ca946,
@@ -32670,6 +32711,7 @@ MonoBehaviour:
   height: 15
   interpRate: 10
   speed: 50
+  offset: {x: 0, y: 15, z: 15}
 --- !u!114 &992409555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38599,6 +38641,7 @@ MonoBehaviour:
   DeSpawn: 3
   distance: 0
   distanceTrigger: 5
+  isHitByBall: 0
 --- !u!65 &1131992986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48021,6 +48064,25 @@ GameObject:
   m_PrefabParentObject: {fileID: 1047764924279370, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1431377452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431377451}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1bb547d6d502d4e91cb216f27603c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: rat hit
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 3
+  range: 1
+  heightOffset: 0
 --- !u!4 &1431377455 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4650288726029364, guid: 14dcf1ea18ae01b4bac13a96855ca946,
@@ -48448,6 +48510,26 @@ Transform:
   m_PrefabParentObject: {fileID: 4027382309518474, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1451955646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451955644}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadca11a161f60b47ada199cc1d0662c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: rat hit
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 3
 --- !u!114 &1451955649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52572,11 +52654,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e6e0cc94921c14da9537551ff98186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {fileID: 0}
+  Destination: {fileID: 805913862}
   Target: {fileID: 1477523080}
   DeSpawn: 3
   distance: 0
   distanceTrigger: 5
+  isHitByBall: 0
 --- !u!65 &1582743233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56836,6 +56919,26 @@ Transform:
   m_PrefabParentObject: {fileID: 4714208433418886, guid: 14dcf1ea18ae01b4bac13a96855ca946,
     type: 2}
   m_PrefabInternal: {fileID: 1672722538}
+--- !u!114 &1710283282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710283280}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f261a74595827d469294de28a7db428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: rat hit
+  startPosition: {x: 0, y: 0, z: 0}
+  AvatarObj: {fileID: 1582743229}
+  mesh: {fileID: 1100547802}
+  phase: 0
+  speed: 1
+  range: 1
+  heightOffset: 0
+  speedMod: 3
 --- !u!114 &1710283285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61013,6 +61116,7 @@ MonoBehaviour:
   terrain: {fileID: 1100547805}
   heightOffset: 0
   speed: 30
+  newSystem: 1
 --- !u!1001 &1839606212
 Prefab:
   m_ObjectHideFlags: 0
@@ -67994,6 +68098,7 @@ MonoBehaviour:
   DeSpawn: 3
   distance: 0
   distanceTrigger: 5
+  isHitByBall: 0
 --- !u!65 &2050254622
 BoxCollider:
   m_ObjectHideFlags: 0

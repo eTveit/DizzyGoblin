@@ -41,13 +41,18 @@ public class RatRootState : RootState
         RatWalkState walkstate = new RatWalkState(this);
         m_childStates.Add(walkstate);
                        
-        /*
-        RatDodgeState dodgestate = new RatDodgeState(this);
-        walkstate.addChildState(dodgestate);
+        
+        //add here rat attack and rat dodge
 
+        //RatDodgeState dodgestate = new RatDodgeState(this);
+        //walkstate.addChildState(dodgestate);
+
+
+        //stun state is triggered by teleport, but teleport needs to trigger
+        //based on a collision box.
         RatStunState stunstate = new RatStunState(this);
-        dodgestate.addChildState(stunstate);
-        */
+        walkstate.addChildState(stunstate);
+        
         //add more states here...
 
     }

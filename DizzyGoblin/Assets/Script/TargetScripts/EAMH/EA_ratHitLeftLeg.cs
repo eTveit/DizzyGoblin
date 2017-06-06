@@ -35,10 +35,11 @@ public class EA_ratHitLeftLeg : IKAnimationTarget
 
     //how high the movepoint sits above terrain surface
     public float heightOffset = 0;
-        
 
-	// Use this for initialization
-	void Start () {
+    private float totalSpeed = 1;
+
+    // Use this for initialization
+    void Start () {
 
 		goblinGlobals = AvatarObj.GetComponent<GoblinGlobals> ();
 	}
@@ -51,13 +52,13 @@ public class EA_ratHitLeftLeg : IKAnimationTarget
 		if (interpolateToStartPosition(Time.deltaTime, speed) == false)
 			return;
 
-		speed = goblinGlobals.speed;
+		totalSpeed = goblinGlobals.speed + speed;
     
         //to keep our targets in line with the hips, we simply want to
         //oscillate on z axis in the LOCAL space
 
         Vector3 lpos = transform.localPosition;
-        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * speed) + phase) * range);
+        lpos.Set(lpos.x, lpos.y, Mathf.Sin((Time.time * totalSpeed) + phase) * range);
 
 
         //set the local

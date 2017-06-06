@@ -24,8 +24,9 @@ public class LJB_levelManager : MonoBehaviour {
 
     void Start()
     {
+        levelDifficulty = 1;
 
-
+        BuildLevel();
     }
 
     void Update()
@@ -141,7 +142,7 @@ public class LJB_levelManager : MonoBehaviour {
 
         Vector3 pos = new Vector3((float)x, y, (float)z);
 
-        y = terrain.getHeightAt(pos) + 2.0f;
+        y = terrain.getHeightAt(pos);
 
         pos.Set(x, y, z);
 

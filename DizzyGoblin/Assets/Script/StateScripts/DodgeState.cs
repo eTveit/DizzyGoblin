@@ -13,11 +13,10 @@ public class DodgeState : StateNode
 	private targetRightArmIdle rightArmAnim = null;
 	private targetLeftArmIdle leftArmAnim = null;
     private GoblinGlobals m_globs = null;
-    
 
-	//private IKAnimationTarget leftArmAnim = null;
-	//private IKAnimationTarget rightArmAnim = null;
 
+    //private IKAnimationTarget leftArmAnim = null;
+    //private IKAnimationTarget rightArmAnim = null;
 
     private float accumTime = 0;
 

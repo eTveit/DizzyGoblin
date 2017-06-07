@@ -43,7 +43,7 @@ public class ET_ratSpineAttack : IKAnimationTarget {
     //how high the movepoint sits above terrain surface
     public float heightOffset = 0;
 
-    private int curPos = 0;
+    public int curPos = 0;
 
     public float incrementingDT = -1;
 

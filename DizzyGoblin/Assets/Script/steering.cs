@@ -39,7 +39,7 @@ public class steering : MonoBehaviour {
     //PATH
     public Transform path = null;
     public Transform ratObstacles = null;
-	public Transform treeObstacles = null;
+    public Transform treeObstacles = null;
     public Transform rockObstacles = null;
 
     //occupancy data x,z into level manager occupied array - initialize to -1 so I can flag them as "not yet set"
@@ -47,7 +47,7 @@ public class steering : MonoBehaviour {
     int lastZ = -1;
 
 
-	public int curPoint = 0;
+    public int curPoint = 0;
     public int pointCount = 0;
     private Vector3[] points;
 
@@ -57,26 +57,22 @@ public class steering : MonoBehaviour {
     public TerrainMesh terrain;
     public LJB_levelManager levelManager;
 
-    public enum STATES
-    {
+    public enum STATES {
 
         WAIT = 0,
         SEEK = 1,
         FLEE = 2,
         HIT = 3,
     }
-     
+
     public STATES state = STATES.SEEK;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
 
-        if (path)
-        {
+        if(path) {
 
-            foreach (Transform pathpoint in path)
-            {
+            foreach(Transform pathpoint in path) {
                 Debug.Log(pathpoint.name);
                 pointCount++;
             }
@@ -84,8 +80,7 @@ public class steering : MonoBehaviour {
             points = new Vector3[pointCount];
 
             int i = 0;
-            foreach (Transform pathpoint in path)
-            {
+            foreach(Transform pathpoint in path) {
                 points[i] = pathpoint.position;
                 i++;
             }
@@ -94,11 +89,11 @@ public class steering : MonoBehaviour {
 
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update() {
 
         float dt = Time.deltaTime;
-        
+
         //handlePath(dt);
 
         //<JK> optimized!! check it out my young paduans!
@@ -106,44 +101,39 @@ public class steering : MonoBehaviour {
         //avoidTrees(dt);
         avoidObstacles(dt);  //optimized method using terrain occupancy
 
-
-		if (state == STATES.SEEK)
-			seek(dt);
-		else if (state == STATES.FLEE)
-			flee(dt);
-		else if (state == STATES.WAIT)
-			wait(dt);
-		else if (state == STATES.HIT)
-			hit(dt);
+        if(state == STATES.SEEK)
+            seek(dt);
+        else if(state == STATES.FLEE)
+            flee(dt);
+        else if(state == STATES.WAIT)
+            wait(dt);
+        else if(state == STATES.HIT)
+            velocity = new Vector3(0, 0, 0);
 
         handleMove(dt);
-
     }
 
-    void handlePath(float dt)
-    {
+    void handlePath(float dt) {
 
-
-        if (path == null)
+        if(path == null)
             return;
 
-        if (points.Length < 1)
+        if(points.Length < 1)
             return;
 
         Vector3 target = points[curPoint];
 
-        if (Vector3.Distance(target, transform.position) < 2.0f)
-        {
-            
-             
+        if(Vector3.Distance(target, transform.position) < 2.0f) {
+
+
             //to follow a path in sequence
             curPoint++;
 
-            if (curPoint >= pointCount)
+            if(curPoint >= pointCount)
                 curPoint = 0;
 
-                       
-                
+
+
             /*
             //to move to random points
             curPoint = Random.Range(0, pointCount - 1);
@@ -152,7 +142,7 @@ public class steering : MonoBehaviour {
             */
 
         }
-        
+
         Vector3 targetDirection = Vector3.Normalize(target - transform.position);
 
         velocity += targetDirection * dt * 50;
@@ -176,84 +166,77 @@ public class steering : MonoBehaviour {
     }
 
     //Deprecated!!
-    void avoidRats(float dt)
-    {
+    void avoidRats(float dt) {
 
 
-        if (ratObstacles == null)
+        if(ratObstacles == null)
             return;
 
-        foreach (Transform obstacle in ratObstacles)
-        {
+        foreach(Transform obstacle in ratObstacles) {
 
 
             float dist = Vector3.Distance(transform.position, obstacle.position);
-            if (dist < 2.0f && obstacle.transform.gameObject != this.transform.gameObject)
-            {
+            if(dist < 2.0f && obstacle.transform.gameObject != this.transform.gameObject) {
                 Vector3 targetDirection = Vector3.Normalize(transform.position - obstacle.position);
-                
-                if (dist <= 0.0001f)
+
+                if(dist <= 0.0001f)
                     dist = 0.0001f;
 
                 float distfactor = 2.0f / dist;
 
                 targetDirection = Vector3.Slerp(targetDirection, transform.forward, (distfactor * dt));
-                
+
                 velocity += targetDirection * dt * (30 * distfactor);
 
             }
 
-            
+
 
         }
 
 
     }
-    void avoidTrees(float dt)
-	{
+    void avoidTrees(float dt) {
 
-		return;
+        return;
 
-		if (treeObstacles == null)
-			return;
+        if(treeObstacles == null)
+            return;
 
-		foreach (Transform obstacle in ratObstacles)
-		{
+        foreach(Transform obstacle in ratObstacles) {
 
 
-			float dist = Vector3.Distance(transform.position, obstacle.position);
-			if (dist < 4.0f && obstacle.transform.gameObject != this.transform.gameObject)
-			{
-				Vector3 targetDirection = Vector3.Normalize(transform.position - obstacle.position);
+            float dist = Vector3.Distance(transform.position, obstacle.position);
+            if(dist < 4.0f && obstacle.transform.gameObject != this.transform.gameObject) {
+                Vector3 targetDirection = Vector3.Normalize(transform.position - obstacle.position);
 
-				if (dist <= 0.0001f)
-					dist = 0.0001f;
+                if(dist <= 0.0001f)
+                    dist = 0.0001f;
 
-				float distfactor = 4.0f / dist;
+                float distfactor = 4.0f / dist;
 
-				targetDirection = Vector3.Slerp(targetDirection, transform.forward, (distfactor * dt));
+                targetDirection = Vector3.Slerp(targetDirection, transform.forward, (distfactor * dt));
 
-				velocity += targetDirection * dt * (30 * distfactor);
+                velocity += targetDirection * dt * (30 * distfactor);
 
-			}
+            }
 
 
 
-		}
+        }
 
 
-	}
+    }
 
 
-    void avoidObstacles(float dt)
-    {
+    void avoidObstacles(float dt) {
 
         //Unity wastefull! I just want to ignore Y, and I have to allocate a new vector? totally crap!!!
-        Vector3 pos = new Vector3 (transform.position.x, 0, transform.position.z);
+        Vector3 pos = new Vector3(transform.position.x, 0, transform.position.z);
 
         int x = Mathf.RoundToInt(pos.x);
         int z = Mathf.RoundToInt(pos.z);
-        
+
         //check the occupied value for the set of xz terrain points closest to me
         //these are the 8 combinations of +- to my current x,z
 
@@ -262,54 +245,46 @@ public class steering : MonoBehaviour {
         //@ULTRA-CHALLENGE!! can anyone figure out how to ignore obstacles BEHIND us? answer is in the dot product.
 
         float tweaker = 50.0f; //adjustable value of "how much" to avoid
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z)] > 0)
-        {
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z)] > 0) {
             Vector3 avoidPos = new Vector3(x + 1, 0, z);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
-            velocity += targetDirection * dt * tweaker;  
+            velocity += targetDirection * dt * tweaker;
 
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z)] > 0)
-        {
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z)] > 0) {
             Vector3 avoidPos = new Vector3(x - 1, 0, z);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z+1)] > 0)
-        {
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z + 1)] > 0) {
 
             Vector3 avoidPos = new Vector3(x + 1, 0, z + 1);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z+1)] > 0)
-        {
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z + 1)] > 0) {
             Vector3 avoidPos = new Vector3(x - 1, 0, z + 1);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z - 1)] > 0)
-        {
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x + 1, z - 1)] > 0) {
             Vector3 avoidPos = new Vector3(x + 1, 0, z - 1);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z - 1)] > 0)
-        {
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x - 1, z - 1)] > 0) {
             Vector3 avoidPos = new Vector3(x - 1, 0, z - 1);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x, z - 1)] > 0)
-        {
-            Vector3 avoidPos = new Vector3(x , 0, z - 1);
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x, z - 1)] > 0) {
+            Vector3 avoidPos = new Vector3(x, 0, z - 1);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
 
         }
-        if (levelManager.occupied[terrain.getVertexIndexFromXZ(x, z + 1)] > 0)
-        {
-            Vector3 avoidPos = new Vector3(x , 0, z + 1);
+        if(levelManager.occupied[terrain.getVertexIndexFromXZ(x, z + 1)] > 0) {
+            Vector3 avoidPos = new Vector3(x, 0, z + 1);
             Vector3 targetDirection = Vector3.Normalize(pos - avoidPos);
             velocity += targetDirection * dt * tweaker;
 
@@ -319,35 +294,36 @@ public class steering : MonoBehaviour {
 
     }
 
-    void seek(float dt)
-    {
+    public float CheckDistance() {
+        Vector3 target = Player.position;
+
+        return Vector3.Distance(target, transform.position);
+    }
+
+    void seek(float dt) {
 
         Vector3 target = Player.position;
 
-        if (Vector3.Distance(target, transform.position) < 1.0f)
-        {
+        if(CheckDistance() < 5.0f) {
 
             state = STATES.HIT;
             return;
         }
-        
+
         Vector3 targetDirection = Vector3.Normalize(target - transform.position);
 
         velocity += targetDirection * dt * 50;
 
     }
-	void hit(float dt)
-	{
-		velocity = new Vector3(0, 0, 0);
+
+    public void hit(float dt) {
         Player.GetComponent<HealthSystem>().DamagePlayer(1);
-        state = STATES.FLEE;
     }
-    void flee(float dt)
-    {
+
+    void flee(float dt) {
         Vector3 target = ratHole.position;
 
-        if (Vector3.Distance(target, transform.position) < 20.0f)
-        {
+        if(Vector3.Distance(target, transform.position) < 20.0f) {
 
             state = STATES.SEEK;
             return;
@@ -358,8 +334,8 @@ public class steering : MonoBehaviour {
         velocity += targetDirection * dt * 50;
 
     }
-    void wait(float dt)
-    {
+
+    void wait(float dt) {
 
         int x = Random.Range((int)transform.position.x - 2, (int)transform.position.x + 2);
         int z = Random.Range((int)transform.position.z - 2, (int)transform.position.z + 2);
@@ -367,8 +343,7 @@ public class steering : MonoBehaviour {
         Vector3 target = new Vector3(x, 0, z);
 
 
-        if (Vector3.Distance(target, transform.position) < 0.5f)
-        {
+        if(Vector3.Distance(target, transform.position) < 0.5f) {
 
             //find a new point
 
@@ -382,30 +357,28 @@ public class steering : MonoBehaviour {
     }
 
 
-    void handleMove(float dt)
-    {
+    void handleMove(float dt) {
 
-         
+
         Vector3 curpos = transform.position;
 
         //setting "last values" if not yet set (first frame) for collision avoidance map
-        if (lastX < 0)
+        if(lastX < 0)
             lastX = Mathf.RoundToInt(curpos.x);
-        if (lastZ < 0)
+        if(lastZ < 0)
             lastZ = Mathf.RoundToInt(curpos.z);
-		
-        
-		//not yet implemented
+
+
+        //not yet implemented
         //velocity += (steeringForce * steeringForceFactor);
 
         //GENERAL RULE OF VELOCITY : don't let them go too fast!!!        
         float maxSpeedSquared = maxSpeed * maxSpeed;
         float velMagSquared = velocity.magnitude * velocity.magnitude;
-        if (velMagSquared > maxSpeedSquared)
-        {
+        if(velMagSquared > maxSpeedSquared) {
             velocity *= (maxSpeed / velocity.magnitude);
         }
-                
+
         //and then we "normalize" to get a heading, or rather, a lookAt position
         Vector3 heading = velocity;
         heading.Normalize();
@@ -415,14 +388,14 @@ public class steering : MonoBehaviour {
 
         transform.position += velocity * dt;
 
-		//interpolate the Y (height) 
-		float prevy = curpos.y;
+        //interpolate the Y (height) 
+        float prevy = curpos.y;
         float y = terrain.getHeightAt(transform.position);
-		y = Mathf.Lerp(y, prevy, dt );
+        y = Mathf.Lerp(y, prevy, dt);
 
         Vector3 pos = new Vector3(transform.position.x, y, transform.position.z);
 
-		transform.position = pos;
+        transform.position = pos;
 
         //occupy a new tile if needed 
         int x = Mathf.RoundToInt(transform.position.x);
@@ -430,8 +403,7 @@ public class steering : MonoBehaviour {
 
 
         //any time x OR z changes, unoccupy my previous x,z - be sure lastXZ has been set once
-        if ((x != lastX && lastX > 0) || (z != lastZ && lastZ > 0))
-        {
+        if((x != lastX && lastX > 0) || (z != lastZ && lastZ > 0)) {
             //get the index of where i was before I moved into a tile
             //and decrement the occupancy count
             int vi = terrain.getVertexIndexFromXZ(lastX, lastZ);
@@ -444,7 +416,7 @@ public class steering : MonoBehaviour {
             vi = terrain.getVertexIndexFromXZ(lastX, lastZ);
             levelManager.occupied[vi]++;
         }
-        
-     
+
+
     }
 }

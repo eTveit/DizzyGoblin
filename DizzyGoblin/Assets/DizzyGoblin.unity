@@ -66920,7 +66920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrain: {fileID: 1100547805}
   heightOffset: 0
-  speed: 30
+  speed: 35
   newSystem: 1
 --- !u!1001 &1839606212
 Prefab:

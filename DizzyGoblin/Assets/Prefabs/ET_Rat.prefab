@@ -1786,8 +1786,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  DeSpawn: 3
+  DeSpawn: 2
   isHitByBall: 0
+  poolSystem: {fileID: 0}
 --- !u!114 &114234840293957974
 MonoBehaviour:
   m_ObjectHideFlags: 1

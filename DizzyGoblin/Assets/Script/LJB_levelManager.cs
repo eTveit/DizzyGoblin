@@ -51,7 +51,7 @@ public class LJB_levelManager : MonoBehaviour {
 
     }
 
-    void Win()
+    public void Win()
     {
         levelDifficulty++;
         if (levelDifficulty > 6)    //60 trees

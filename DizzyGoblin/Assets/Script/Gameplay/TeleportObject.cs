@@ -7,13 +7,15 @@ public class TeleportObject : MonoBehaviour {
     //Script should be placed on rats
 
     //Put the rats spawn pool in Destination
-    public Transform Destination;
+    public Transform destination;
     float timer;
     public float DeSpawn = 3;
     bool Dead = false;
     steering steering;
 
     public bool isHitByBall = false;
+
+    public PoolSystem poolSystem;
 
     // Use this for initialization
     void Start() {
@@ -30,8 +32,9 @@ public class TeleportObject : MonoBehaviour {
             Dead = false;
             //The ideal would be to disable steering while they are in hell and enable it when they spawn. rather than enable it when they go to hell. Takes too much uneeded power.
             steering.enabled = true;
+            poolSystem.ReturnRatToPool(gameObject);
+            gameObject.SetActive(false);
         }
-
 
     }
 
@@ -44,7 +47,7 @@ public class TeleportObject : MonoBehaviour {
     }
 
     void teleport() {
-        transform.position = Destination.position;
+        transform.position = destination.position;
         isHitByBall = false;
     }
 }
